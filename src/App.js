@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 /* ============================================================================
    MAN3131 EMPLOYMENT LAW — MULTI-CHAPTER APP
@@ -425,14 +425,15 @@ const ES_INTERACTIVES = {
     type: "slider", title: "Control Dial", tag: "Judge the control", icon: "🎛️", color: "#7B9E87",
     blurb: "Estimate how much control the employer has in each scenario.",
     rounds: [
-      { scenario: "A factory line worker is told exactly what to do, how to do it, when to clock in, and is closely supervised all shift.", lo: 78, hi: 100, verdict: "Very high control — a classic pointer toward employee status under the control test." },
-      { scenario: "A consultant surgeon decides their own clinical methods; the hospital cannot dictate how an operation is performed.", lo: 0, hi: 35, verdict: "Low control over the manner of work — which is why the control test alone fails for skilled professionals (they're still integrated)." },
-      { scenario: "An Uber driver: the app sets the fare, suggests the route, and rates performance, but they choose when to log on.", lo: 55, hi: 88, verdict: "High practical control through fares and ratings — central to why Uber drivers were held to be 'workers'." }
+      { scenario: "A factory line worker is told exactly what to do, how to do it, when to clock in, and is closely supervised all shift.", lo: 78, hi: 100, min: 0, max: 100, suffix: "%", verdict: "Very high control — a classic pointer toward employee status under the control test." },
+      { scenario: "A consultant surgeon decides their own clinical methods; the hospital cannot dictate how an operation is performed.", lo: 0, hi: 35, min: 0, max: 100, suffix: "%", verdict: "Low control over the manner of work — which is why the control test alone fails for skilled professionals (they're still integrated)." },
+      { scenario: "An Uber driver: the app sets the fare, suggests the route, and rates performance, but they choose when to log on.", lo: 55, hi: 88, min: 0, max: 100, suffix: "%", verdict: "High practical control through fares and ratings — central to why Uber drivers were held to be 'workers'." }
     ]
   },
   L3: {
     type: "pickN", title: "Build the Test", tag: "Pick the 3 limbs", icon: "🚚", color: "#4A90B8",
     blurb: "Select the three conditions MacKenna J required for a contract of service.",
+    resultNote: "Personal service, control, and terms consistent with a contract of service — all three must be satisfied.",
     options: [
       { text: "The worker owns their own tools", correct: false },
       { text: "Personal service in exchange for a wage", correct: true },
@@ -852,14 +853,15 @@ const RT_INTERACTIVES = {
     type: "slider", title: "Rate the System", tag: "Estimate the number", icon: "🏛️", color: "#E07B39",
     blurb: "Slide to estimate the real figures behind the court and reporting system.",
     rounds: [
-      { scenario: "Of the roughly 200,000 cases heard each year in the courts of England and Wales, only around 2,500 are reported. Roughly what percentage does that represent?", lo: 1, hi: 2, verdict: "About 1.25% — only a small fraction of cases, usually those setting new precedent, are ever formally reported." },
-      { scenario: "How many days does a party have to lodge an appeal from an Employment Tribunal to the EAT?", lo: 38, hi: 46, verdict: "42 days — and the grounds for appeal must be submitted together with the notice of appeal." },
-      { scenario: "In what year was the Employment Appeal Tribunal established?", lo: 1970, hi: 1980, verdict: "1975 — the EAT's president is a High Court Judge or Lord Justice of Appeal." }
+      { scenario: "Of the roughly 200,000 cases heard each year in the courts of England and Wales, only around 2,500 are reported. Roughly what percentage does that represent?", lo: 1, hi: 2, min: 0, max: 10, suffix: "%", verdict: "About 1.25% — only a small fraction of cases, usually those setting new precedent, are ever formally reported." },
+      { scenario: "How many days does a party have to lodge an appeal from an Employment Tribunal to the EAT?", lo: 38, hi: 46, min: 0, max: 100, suffix: " days", verdict: "42 days — and the grounds for appeal must be submitted together with the notice of appeal." },
+      { scenario: "In what year was the Employment Appeal Tribunal established?", lo: 1970, hi: 1980, min: 1960, max: 1990, suffix: "", verdict: "1975 — the EAT's president is a High Court Judge or Lord Justice of Appeal." }
     ]
   },
   L6: {
     type: "pickN", title: "Pick the Tribunal Facts", tag: "Pick the 3 true facts", icon: "🧑‍⚖️", color: "#C06B6B",
     blurb: "Select the three statements that correctly describe the Employment Tribunal system.",
+    resultNote: "No legal aid for representation, the tribunal's 1964 origins, and the EAT's limited power to disturb findings of fact are all genuine features of the system.",
     options: [
       { text: "Employment Tribunals form part of the ordinary civil court structure", correct: false },
       { text: "There is no legal aid available for representation at an Employment Tribunal", correct: true },
@@ -1080,10 +1082,20 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
     }
   };
 
+  // Picks a slider starting position that is never already within the correct
+  // band, so students always have to actually think before submitting.
+  const sliderSafeStart = (r) => {
+    const min = r.min ?? 0, max = r.max ?? 100;
+    let v = min;
+    if (v >= r.lo && v <= r.hi) v = max;
+    if (v >= r.lo && v <= r.hi) v = Math.round((min + max) / 2);
+    return v;
+  };
+
   // ── Generic interactive launcher + handlers ──
   const initPlayState = (cfg) => {
     switch (cfg.type) {
-      case "slider": return { round: 0, val: 50, submitted: false, hits: 0 };
+      case "slider": return { round: 0, val: sliderSafeStart(cfg.rounds[0]), submitted: false, hits: 0 };
       case "pickN": return { picks: [], submitted: false };
       case "truefalse": return { idx: 0, picked: null, correctCount: 0 };
       case "flip": return { idx: 0, guess: null, revealed: false, correctCount: 0 };
@@ -1152,7 +1164,10 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
     else { recordWrong(key); fireParticles("wrong", "#C06B6B"); }
     setPst(p => ({ ...p, submitted: true, hits: p.hits + (hit ? 1 : 0) }));
   };
-  const sliderNext = () => setPst(p => ({ ...p, round: p.round + 1, val: 50, submitted: false }));
+  const sliderNext = () => setPst(p => {
+    const nr = playCfg.rounds[p.round + 1];
+    return { ...p, round: p.round + 1, val: nr ? sliderSafeStart(nr) : 50, submitted: false };
+  });
 
   // pickN
   const togglePick = (i) => {
@@ -1499,7 +1514,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
 
           {/* How lessons work */}
           <Section icon="📖" color="#7B9E87" title="The Lessons">
-            <Step n="1" color="#7B9E87">Work through six lessons in order — each unlocks the next once completed, so the law builds up logically.</Step>
+            <Step n="1" color="#7B9E87">Work through {LESSONS.length} lessons in order — each unlocks the next once completed, so the material builds up logically.</Step>
             <Step n="2" color="#7B9E87">Every question opens with a <strong>real-world scenario</strong>. Read it, then choose the option that correctly applies the law.</Step>
             <Step n="3" color="#7B9E87">You have <strong>30 seconds</strong> per question. The bar turns amber then red as time runs low — answer before it reaches zero.</Step>
             <Step n="4" color="#7B9E87">After answering, you'll see a full <strong>explanation</strong> and a one-line <strong>revision note</strong> saved automatically to your notebook for review.</Step>
@@ -1843,20 +1858,20 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
                       <div style={{ fontSize: 10, letterSpacing: 2, color: ac, fontFamily: "'Crimson Text',serif", marginBottom: 10 }}>SCENARIO {pst.round + 1}</div>
                       <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 17, lineHeight: 1.6, color: "#C8C0B0" }}>{r.scenario}</p>
                     </div>
-                    <div style={{ textAlign: "center", marginBottom: 6, fontFamily: "'Crimson Text',serif", color: "#6A6060", fontSize: 13 }}>How much control does the employer have?</div>
-                    <div style={{ fontSize: 44, fontWeight: 700, textAlign: "center", color: ac, marginBottom: 4 }}>{pst.val}%</div>
-                    <input type="range" min="0" max="100" value={pst.val} disabled={pst.submitted}
+                    <div style={{ textAlign: "center", marginBottom: 6, fontFamily: "'Crimson Text',serif", color: "#6A6060", fontSize: 13 }}>Your estimate:</div>
+                    <div style={{ fontSize: 44, fontWeight: 700, textAlign: "center", color: ac, marginBottom: 4 }}>{pst.val}{r.suffix ?? "%"}</div>
+                    <input type="range" min={r.min ?? 0} max={r.max ?? 100} value={pst.val} disabled={pst.submitted}
                       onChange={e => setPst(p => ({ ...p, val: parseInt(e.target.value) }))}
                       style={{ width: "100%", accentColor: ac, marginBottom: 8, height: 6 }} />
                     <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "#5A5450", fontFamily: "'Crimson Text',serif", marginBottom: 20 }}>
-                      <span>None</span><span>Total</span>
+                      <span>{r.min ?? 0}{r.suffix ?? "%"}</span><span>{r.max ?? 100}{r.suffix ?? "%"}</span>
                     </div>
                     {!pst.submitted ? (
                       <button className="btn-primary" onClick={sliderSubmit} style={{ background: `linear-gradient(135deg,${ac},${ac}CC)` }}>Lock In My Estimate</button>
                     ) : (
                       <div style={{ animation: "scaleIn 0.4s ease both" }}>
                         <div style={{ background: hit ? "#7B9E8720" : "#C06B6B20", border: `1px solid ${hit ? "#7B9E87" : "#C06B6B"}44`, borderRadius: 14, padding: 16, marginBottom: 16 }}>
-                          <div style={{ fontWeight: 700, color: hit ? "#7B9E87" : "#C06B6B", marginBottom: 6 }}>{hit ? "✅ Spot on!" : `Close — the answer sat ${r.lo}–${r.hi}%`}</div>
+                          <div style={{ fontWeight: 700, color: hit ? "#7B9E87" : "#C06B6B", marginBottom: 6 }}>{hit ? "✅ Spot on!" : `Close — the answer sat ${r.lo}–${r.hi}${r.suffix ?? "%"}`}</div>
                           <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 15, lineHeight: 1.6, color: "#C8C0B0" }}>{r.verdict}</p>
                         </div>
                         <button className="btn-primary" onClick={sliderNext} style={{ background: `linear-gradient(135deg,${ac},${ac}CC)` }}>{pst.round + 1 < cfg.rounds.length ? "Next Scenario →" : "Finish →"}</button>
@@ -1870,7 +1885,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
               {cfg.type === "pickN" && (
                 <>
                   <div style={{ background: "#12111A", border: `1px solid ${ac}33`, borderRadius: 14, padding: 16, marginBottom: 18 }}>
-                    <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 17, lineHeight: 1.5, color: "#E8E0D0", fontWeight: 600 }}>Select the <strong>three</strong> limbs of the multiple test from <em>Ready Mixed Concrete</em>.</p>
+                    <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 17, lineHeight: 1.5, color: "#E8E0D0", fontWeight: 600 }}>{cfg.blurb}</p>
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 18 }}>
                     {cfg.options.map((o, i) => {
@@ -1894,7 +1909,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
                     <div style={{ animation: "scaleIn 0.4s ease both" }}>
                       <div style={{ background: pst.allRight ? "#7B9E8720" : "#C06B6B20", border: `1px solid ${pst.allRight ? "#7B9E87" : "#C06B6B"}44`, borderRadius: 14, padding: 16, marginBottom: 16 }}>
                         <div style={{ fontWeight: 700, color: pst.allRight ? "#7B9E87" : "#C06B6B", marginBottom: 6 }}>{pst.allRight ? "✅ All three correct!" : "Not quite — the correct three are highlighted in green"}</div>
-                        <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 15, lineHeight: 1.6, color: "#C8C0B0" }}>Personal service, control, and terms consistent with a contract of service — all three must be satisfied.</p>
+                        <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 15, lineHeight: 1.6, color: "#C8C0B0" }}>{cfg.resultNote}</p>
                       </div>
                       <button className="btn-primary" onClick={() => go("map")} style={{ background: `linear-gradient(135deg,${ac},${ac}CC)` }}>Finish →</button>
                     </div>
@@ -2235,7 +2250,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
             </div>
           ) : !caseRevealed ? (
             <div style={{ textAlign: "center", animation: "scaleIn 0.5s ease both" }}>
-              <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 15, color: "#C9A84C", marginBottom: 16 }}>All six fragments collected. Ready to solve it?</p>
+              <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 15, color: "#C9A84C", marginBottom: 16 }}>All {CLUES.length} fragments collected. Ready to solve it?</p>
               <button className="btn-primary" onClick={() => { setCaseRevealed(true); fireParticles("correct", "#C9A84C"); fireGavel(); }}>🔍 Reveal the Case</button>
             </div>
           ) : (
@@ -2368,7 +2383,7 @@ const clearProgress = () => {
 };
 
 // ─── MULTI-CHAPTER APP SHELL ─────────────────────────────────────────────────
-export default function App() {
+export default function EmploymentLawModule() {
   const [activeChapterId, setActiveChapterId] = useState(null);
   // progress: { [chapterId]: { best, lessonsDone, totalLessons, caseRevealed } }
   const [progress, setProgress] = useState({});
