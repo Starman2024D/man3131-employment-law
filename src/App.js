@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 /* ============================================================================
    MAN3131 EMPLOYMENT LAW — MULTI-CHAPTER APP
@@ -978,7 +978,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
   const [gavel, setGavel] = useState(false);
   const [flip, setFlip] = useState(false);
   const [trans, setTrans] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(30);
+  const [timeLeft, setTimeLeft] = useState(50);
   const [timerOn, setTimerOn] = useState(false);
   const [warn, setWarn] = useState(false);
   const timerRef = useRef(null);
@@ -1032,7 +1032,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
     if (timerOn && phase === "scenario" && selected === null) {
       timerRef.current = setInterval(() => {
         setTimeLeft(t => {
-          if (t <= 6) setWarn(true);
+          if (t <= 10) setWarn(true);
           if (t <= 1) { clearInterval(timerRef.current); setTimerOn(false); answer(-1); return 0; }
           return t - 1;
         });
@@ -1223,7 +1223,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
 
   const startLesson = (l) => {
     setLesson(l); setQIndex(0); setPhase("scenario"); setSelected(null); setIsCorrect(null);
-    setWarn(false); setTimeLeft(30);
+    setWarn(false); setTimeLeft(50);
     setReviewMode(doneLessons.includes(l.id)); // completed already → review only, no points
     go("quiz");
     setTimeout(() => setTimerOn(true), 700);
@@ -1273,7 +1273,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
         setFlip(true);
         setTimeout(() => {
           setQIndex(ni); setPhase("scenario"); setSelected(null); setIsCorrect(null);
-          setWarn(false); setTimeLeft(30); setFlip(false); setTimerOn(true);
+          setWarn(false); setTimeLeft(50); setFlip(false); setTimerOn(true);
         }, 400);
       } else {
         if (reviewMode) {
@@ -1516,7 +1516,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
           <Section icon="📖" color="#7B9E87" title="The Lessons">
             <Step n="1" color="#7B9E87">Work through {LESSONS.length} lessons in order — each unlocks the next once completed, so the material builds up logically.</Step>
             <Step n="2" color="#7B9E87">Every question opens with a <strong>real-world scenario</strong>. Read it, then choose the option that correctly applies the law.</Step>
-            <Step n="3" color="#7B9E87">You have <strong>30 seconds</strong> per question. The bar turns amber then red as time runs low — answer before it reaches zero.</Step>
+            <Step n="3" color="#7B9E87">You have <strong>50 seconds</strong> per question. The bar turns amber then red as time runs low — answer before it reaches zero.</Step>
             <Step n="4" color="#7B9E87">After answering, you'll see a full <strong>explanation</strong> and a one-line <strong>revision note</strong> saved automatically to your notebook for review.</Step>
           </Section>
 
@@ -1692,8 +1692,8 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
 
   // ── QUIZ ──
   if (screen === "quiz" && currentQ && lesson) {
-    const tColor = timeLeft > 15 ? accent : timeLeft > 8 ? "#E07B39" : "#C06B6B";
-    const tPct = (timeLeft / 30) * 100;
+    const tColor = timeLeft > 25 ? accent : timeLeft > 13 ? "#E07B39" : "#C06B6B";
+    const tPct = (timeLeft / 50) * 100;
     return (
       <div style={app}>
         <style>{styles}</style>
@@ -2383,7 +2383,7 @@ const clearProgress = () => {
 };
 
 // ─── MULTI-CHAPTER APP SHELL ─────────────────────────────────────────────────
-export default function EmploymentLawModule() {
+export default function App() {
   const [activeChapterId, setActiveChapterId] = useState(null);
   // progress: { [chapterId]: { best, lessonsDone, totalLessons, caseRevealed } }
   const [progress, setProgress] = useState({});
