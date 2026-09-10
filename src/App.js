@@ -1122,7 +1122,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
     if (cfg.type === "truefalse") return s.idx >= cfg.items.length;
     if (cfg.type === "flip") return s.idx >= cfg.cards.length;
     if (cfg.type === "match") return Object.keys(s.solved).length >= cfg.rights.length;
-    if (cfg.type === "pickN") return s.submitted;
+    if (cfg.type === "pickN") return false; // pickN has its own self-contained result screen (right/wrong breakdown + Finish button) — it must never fall through to the generic congratulatory screen, which would hide whether the answer was actually correct
     return false;
   };
 
