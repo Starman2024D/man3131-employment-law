@@ -842,11 +842,11 @@ const RT_INTERACTIVES = {
       { id: "report", label: "A Law Report Series", color: "#4A90B8" }
     ],
     rights: [
-      { text: "HL — House of Lords", status: "court" },
       { text: "EAT — Employment Appeal Tribunal", status: "tribunal" },
-      { text: "IRLR — Industrial Relations Law Reports", status: "report" },
       { text: "CA — Court of Appeal", status: "court" },
-      { text: "ET — Employment Tribunal", status: "tribunal" }
+      { text: "IRLR — Industrial Relations Law Reports", status: "report" },
+      { text: "ET — Employment Tribunal", status: "tribunal" },
+      { text: "HL — House of Lords", status: "court" }
     ]
   },
   L5: {
@@ -1299,6 +1299,8 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
   const styles = `
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
     * { box-sizing:border-box; margin:0; padding:0; }
+    button { outline:none; -webkit-tap-highlight-color:transparent; }
+    button:focus-visible { outline:2px solid #C9A84C99; outline-offset:2px; }
     body { background:#0A0A0F; overflow-x:hidden; }
     @keyframes fadeUp { from{opacity:0;transform:translateY(24px);} to{opacity:1;transform:translateY(0);} }
     @keyframes scaleIn { from{opacity:0;transform:scale(0.85);} to{opacity:1;transform:scale(1);} }
@@ -2450,6 +2452,8 @@ export default function App() {
   const shell = `
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
     * { box-sizing:border-box; margin:0; padding:0; }
+    button { outline:none; -webkit-tap-highlight-color:transparent; }
+    button:focus-visible { outline:2px solid #C9A84C99; outline-offset:2px; }
     body { background:#0A0A0F; overflow-x:hidden; }
     @keyframes fadeUp { from{opacity:0;transform:translateY(24px);} to{opacity:1;transform:translateY(0);} }
     @keyframes spin { from{transform:rotate(0);} to{transform:rotate(360deg);} }
