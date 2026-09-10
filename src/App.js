@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 /* ============================================================================
-   MAN3131 EMPLOYMENT LAW — MULTI-CHAPTER APP
+   CASE BY CASE — THE MAN3131 EMPLOYMENT LAW CHALLENGE
    ----------------------------------------------------------------------------
    HOW TO ADD A NEW CHAPTER (each week):
    1. Copy one of the chapter content blocks below (everything from
@@ -1440,8 +1440,11 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
             <span style={{ color: "#C9A84C55", fontSize: 13 }}>⚖</span>
             <div style={{ flex: 1, height: 1, background: "linear-gradient(270deg,transparent,#C9A84C33)" }} />
           </div>
-          <div style={{ fontFamily: "'Playfair Display',serif", fontSize: 15, fontWeight: 600, color: "#C9A84C", letterSpacing: 0.5, marginBottom: 4 }}>
-            MAN3131 Employment Law
+          <div style={{ fontFamily: "Georgia,'Times New Roman',serif", fontSize: 15, fontWeight: 600, color: "#C9A84C", letterSpacing: 0.5, marginBottom: 4 }}>
+            CASE BY CASE
+          </div>
+          <div style={{ fontFamily: "'Crimson Text',serif", fontSize: 12, color: "#9A9080", letterSpacing: 0.3, marginBottom: 10 }}>
+            The MAN3131 Employment Law Challenge
           </div>
           <div style={{ fontFamily: "'Crimson Text',serif", fontSize: 14, color: "#9A9080", marginBottom: 2 }}>
             Stephen Dale
@@ -1561,7 +1564,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
           <button className="btn-primary" onClick={() => go("map")} style={{ marginTop: 20 }}>Start Learning →</button>
 
           <p style={{ textAlign: "center", marginTop: 20, fontFamily: "'Crimson Text',serif", fontSize: 11, color: "#4A4440", letterSpacing: 1 }}>
-            © Copyright 2026 Stephen Dale · MAN3131 Employment Law
+            © Copyright 2026 Stephen Dale · Case by Case · MAN3131 Employment Law
           </p>
         </div>
       </div>
@@ -2489,7 +2492,9 @@ export default function App() {
             </div>
           </div>
           <div style={{ fontSize:11, letterSpacing:3, color:"#C9A84C99", fontFamily:"'Crimson Text',serif", marginBottom:8 }}>MAN3131 · EMPLOYMENT LAW</div>
-          <h1 style={{ fontSize:34, fontWeight:700, lineHeight:1.1, marginBottom:10 }}>The <span className="shimmer-text" style={{ fontStyle:"italic" }}>Module</span></h1>
+          <h1 style={{ fontSize:36, fontWeight:700, lineHeight:1.1, marginBottom:8, letterSpacing:1, fontFamily:"Georgia,'Times New Roman',serif" }}>CASE <span className="shimmer-text" style={{ fontStyle:"italic" }}>BY CASE</span> ⚖️</h1>
+          <div style={{ fontFamily:"'Crimson Text',serif", fontSize:15, color:"#C9A84C", letterSpacing:0.5, marginBottom:10 }}>The MAN3131 Employment Law Challenge</div>
+          <p style={{ fontFamily:"'Crimson Text',serif", fontSize:13, fontStyle:"italic", color:"#6A6060", marginBottom:16, letterSpacing:0.3 }}>Learn the law. Apply the law. Play the game.</p>
           <p style={{ fontFamily:"'Crimson Text',serif", fontSize:16, color:"#9A9080", lineHeight:1.6, marginBottom:18 }}>Choose a chapter to begin. A new chapter unlocks each week, and your progress is saved on this device.</p>
 
           {/* Course & author credit */}
@@ -2498,7 +2503,6 @@ export default function App() {
             <span style={{ color:"#C9A84C55", fontSize:13 }}>⚖</span>
             <div style={{ flex:1, height:1, background:"linear-gradient(270deg,transparent,#C9A84C33)" }} />
           </div>
-          <div style={{ fontFamily:"'Playfair Display',serif", fontSize:16, fontWeight:600, color:"#C9A84C", letterSpacing:0.5, marginBottom:4 }}>MAN3131 Employment Law</div>
           <div style={{ fontFamily:"'Crimson Text',serif", fontSize:15, color:"#9A9080", marginBottom:2 }}>Stephen Dale</div>
           <div style={{ fontFamily:"'Crimson Text',serif", fontSize:13, color:"#6A6060", letterSpacing:0.5 }}>Senior Lecturer in Law</div>
         </div>
