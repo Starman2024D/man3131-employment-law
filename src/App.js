@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 /* ============================================================================
-   CASE BY CASE — THE MAN3131 EMPLOYMENT LAW CHALLENGE
+   CASE BY CASE — THE MAN3131 EMPLOYMENT LAW CHALLENGE 01
    ----------------------------------------------------------------------------
    HOW TO ADD A NEW CHAPTER (each week):
    1. Copy one of the chapter content blocks below (everything from
