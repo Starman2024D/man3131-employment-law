@@ -742,7 +742,7 @@ const RT_LESSONS = [
     ]
   },
   {
-    id: "L6", title: "Employment Tribunals & the Employment Appeal Tribunal", icon: "🧑‍⚖️", color: "#C06B6B",
+    id: "L6", title: "Employment Tribunals & the Employment Appeal Tribunal", icon: "🧑‍⚖️", color: "#4FA8A0",
     intro: "Employment Tribunals sit outside the ordinary court structure, designed to be cheap, speedy and accessible. Understanding their composition and procedure — and the EAT above them — is essential.",
     questions: [
       {
@@ -812,7 +812,7 @@ const RT_SORT_CARDS = [
 
 // ─── Per-lesson interactive challenges ───────────────────────────────────────
 const RT_INTERACTIVES = {
-  L1: { type: "sort", title: "Sort the Source", tag: "Classify by category", icon: "📜", color: "#C9A84C", itemNoun: "source", blurb: "Classify eight legal sources as Primary Legislation, Secondary Legislation, or Case Law." },
+  L1: { type: "sort", title: "Sort the Source", tag: "Classify by category", icon: "🗂️", color: "#C9A84C", itemNoun: "source", blurb: "Classify eight legal sources as Primary Legislation, Secondary Legislation, or Case Law." },
   L2: {
     type: "truefalse", title: "Bill or Act?", tag: "True or false", icon: "📜", color: "#7B9E87",
     blurb: "Test your grip on how a Bill becomes an Act of Parliament.",
@@ -859,7 +859,7 @@ const RT_INTERACTIVES = {
     ]
   },
   L6: {
-    type: "pickN", title: "Pick the Tribunal Facts", tag: "Pick the 3 true facts", icon: "🧑‍⚖️", color: "#C06B6B",
+    type: "pickN", title: "Pick the Tribunal Facts", tag: "Pick the 3 true facts", icon: "📝", color: "#4FA8A0",
     blurb: "Select the three statements that correctly describe the Employment Tribunal system.",
     resultNote: "No legal aid for representation, the tribunal's 1964 origins, and the EAT's limited power to disturb findings of fact are all genuine features of the system.",
     options: [
