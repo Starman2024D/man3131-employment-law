@@ -151,7 +151,7 @@ const ES_LESSONS = [
         options: [
           "A 'worker' under limb (b), since she provides personal service but isn't a full employee",
           "Genuinely self-employed, because everyone who signs a written contract is in business on their own account",
-          "Employee",
+          "An employee working under a contract of service, given the control and personal service",
           "No status at all, since fixed hours alone cannot create an employment relationship"
         ],
         correct: 2,
@@ -164,7 +164,7 @@ const ES_LESSONS = [
         question: "Under the Employment Rights Act 1996, what status best fits Tom?",
         options: [
           "An employee under a contract of service, with full unfair dismissal and redundancy rights",
-          "'Worker' under limb (b) of s.230(3)",
+          "A 'worker' under limb (b) of s.230(3), providing personal service but not in business for himself",
           "Fully self-employed, working under a contract for services with no statutory protections",
           "An office holder, such as a company director or trustee, whose role exists independently of any contract"
         ],
@@ -177,12 +177,12 @@ const ES_LESSONS = [
         scenario: "Sarah runs her own plumbing business, sends invoices, works for many clients, can freely substitute another plumber, and bears her own financial risk.",
         question: "What is Sarah's status?",
         options: [
+          "Genuinely self-employed (independent contractor)",
           "An employee, because she does regular skilled work that the client relies upon",
           "A 'worker', since she still has to turn up and do a competent job for each client",
-          "An agency worker, supplied to clients through an intermediary that pays her wages",
-          "Genuinely self-employed (independent contractor)"
+          "An agency worker, supplied to clients through an intermediary that pays her wages"
         ],
-        correct: 3,
+        correct: 0,
         explanation: "Sarah is genuinely self-employed. She is in business on her own account: multiple clients, financial risk, the right to substitute, and her own equipment. She works under a contract FOR services and falls outside most employment protections, relying instead on her commercial contracts.",
         takeaway: "The genuinely self-employed work under a contract FOR services and are in business on their own account."
       }
@@ -246,7 +246,7 @@ const ES_LESSONS = [
         question: "What status did the court ultimately decide the drivers had?",
         options: [
           "Employees, because they wore company colours and drove for a single firm",
-          "Independent contractors (self-employed)",
+          "Independent contractors (self-employed), in business on their own account",
           "Workers, entitled to holiday pay but not to unfair dismissal protection",
           "Office holders appointed to a defined position within the company"
         ],
@@ -313,13 +313,13 @@ const ES_LESSONS = [
         scenario: "Autoclenz Ltd v Belcher (2011). Car valeters' written contracts called them self-employed, allowed substitution, and denied any obligation to provide work — none of which matched the reality of fixed hours under control.",
         question: "What key principle did the Supreme Court establish?",
         options: [
+          "That tribunals may disregard written terms which do not reflect the true agreement, focusing on the reality of the relationship",
           "That a signed written contract is always conclusive of the parties' true status",
           "That only HMRC, and not an employment tribunal, has the power to decide a person's status",
-          "That anyone who cleans or valets cars is, as a matter of law, a worker",
-          "That tribunals may disregard written terms which do not reflect the true agreement, focusing on the reality of the relationship"
+          "That anyone who cleans or valets cars is, as a matter of law, a worker"
         ],
-        correct: 3,
-        explanation: "Autoclenz established that, because of the inequality of bargaining power in employment, tribunals can look beyond the written contract to the parties' true agreement and actual practice. Unrealistic substitution and 'no obligation' clauses were disregarded; the valeters were workers.",
+        correct: 0,
+        explanation: "Autoclenz established that, because of the inequality of bargaining power in employment, tribunals can look beyond the written contract to the parties' true agreement and actual practice. Unrealistic substitution and 'no obligation' clauses were disregarded, and the valeters were held to be 'workers' entitled to the minimum wage and paid holiday (indeed, on the tribunal's findings, they were working under contracts of employment).",
         takeaway: "Autoclenz: the reality of the working relationship prevails over artificial written terms."
       },
       {
@@ -327,12 +327,12 @@ const ES_LESSONS = [
         scenario: "Uber BV v Aslam (2021). Uber argued drivers were self-employed and that it was merely a booking agent connecting drivers to passengers.",
         question: "What did the Supreme Court decide about the drivers?",
         options: [
-          "That they were self-employed contractors with no statutory employment rights",
           "That they were 'workers' entitled to the minimum wage and paid holiday, given the control Uber exercised",
+          "That they were self-employed contractors with no statutory employment rights",
           "That they were full employees with the right to claim ordinary unfair dismissal",
           "That their status could not be determined and was left to be agreed between the parties"
         ],
-        correct: 1,
+        correct: 0,
         explanation: "The Supreme Court held Uber drivers were 'workers'. Uber set the fares, dictated the terms, controlled performance through ratings, and restricted communication with passengers. Applying Autoclenz, the reality of subordination and control defeated the 'agent' label.",
         takeaway: "Uber v Aslam: tight control over fares and performance made drivers 'workers', not contractors."
       },
@@ -353,7 +353,7 @@ const ES_LESSONS = [
     ]
   },
   {
-    id: "L6", title: "Why Status Matters", icon: "⚖️", color: "#C06B6B",
+    id: "L6", title: "Why Status Matters", icon: "⚖️", color: "#4FA8A0",
     intro: "The final piece: knowing the status is only useful if you know which rights flow from it. Tie it all together.",
     questions: [
       {
@@ -361,12 +361,12 @@ const ES_LESSONS = [
         scenario: "A claimant wants to bring an ordinary unfair dismissal claim after two years' service.",
         question: "Which status must they normally establish?",
         options: [
+          "Employee status, working under a contract of employment",
           "'Worker' status under limb (b) of s.230(3) is enough on its own",
-          "Employee",
           "Self-employed contractor status, provided they have invoiced the same client for two years",
           "Any of the three statuses will do, as unfair dismissal protects everyone equally"
         ],
-        correct: 1,
+        correct: 0,
         explanation: "Ordinary unfair dismissal protection is generally reserved for employees, and usually requires two years' continuous service. Workers and the self-employed cannot bring ordinary unfair dismissal claims, which is why the employee/worker distinction is so heavily litigated.",
         takeaway: "Only employees (normally with 2 years' service) can claim ordinary unfair dismissal."
       },
@@ -411,16 +411,16 @@ const ES_BUCKETS = [
 const ES_SORT_CARDS = [
   { id: "s1", name: "Daniel", emoji: "🎧", desc: "Works set call-centre shifts to a fixed script, closely supervised, cannot send anyone in his place", answer: "employee" },
   { id: "s2", name: "Olivia", emoji: "🍰", desc: "Runs her own catering company, serves many clients, invoices for jobs, can send another chef", answer: "self" },
-  { id: "s3", name: "An Uber driver", emoji: "🚗", desc: "Fares and terms set by the app, rated on performance, must drive personally", answer: "worker" },
-  { id: "s4", name: "A Ready Mixed driver", emoji: "🚚", desc: "Owns his lorry, bears financial risk, free to delegate the driving", answer: "self" },
-  { id: "s5", name: "An Autoclenz valeter", emoji: "🧽", desc: "Fixed hours under control; the 'substitution' clause is a sham never used", answer: "worker" },
-  { id: "s6", name: "A salaried office manager", emoji: "🗂️", desc: "Permanent contract of service, integrated into the firm, fully directed", answer: "employee" },
-  { id: "s7", name: "A freelance designer", emoji: "🎨", desc: "Multiple clients, own equipment and software, sets her own rates", answer: "self" },
-  { id: "s8", name: "A casual tour guide", emoji: "🧭", desc: "Provides services personally when offered, but not in business on her own account", answer: "worker" }
+  { id: "s3", name: "Amir", emoji: "🚗", desc: "Drives for a ride-hailing app that fixes his fares, rates him, and deactivates low scorers; he chooses when to log on", answer: "worker" },
+  { id: "s4", name: "Ken", emoji: "🚚", desc: "Wears the firm's livery, but buys and runs his own lorry, bears the profit and loss, and may hire a relief driver", answer: "self" },
+  { id: "s5", name: "Jade", emoji: "🔧", desc: "Plumber in a firm's branded van and uniform; must do jobs herself — only another of the firm's plumbers can cover", answer: "worker" },
+  { id: "s6", name: "Marcus", emoji: "🗂️", desc: "Salaried office manager on a permanent contract, on the payroll, integrated into the firm and fully directed", answer: "employee" },
+  { id: "s7", name: "Freya", emoji: "🎨", desc: "Multiple clients, own equipment and software, sets her own rates", answer: "self" },
+  { id: "s8", name: "Lena", emoji: "🧭", desc: "Casual tour guide: accepts shifts when offered and must do them personally, but has no business of her own", answer: "worker" }
 ];
 
 const ES_INTERACTIVES = {
-  L1: { type: "sort", title: "Sort It Out", tag: "Classify workers", icon: "👥", color: "#C9A84C", itemNoun: "worker", blurb: "Drag eight real workers into employee, worker or self-employed." },
+  L1: { type: "sort", title: "Sort It Out", tag: "Classify workers", icon: "👥", color: "#C9A84C", itemNoun: "worker", blurb: "Classify eight working people as employee, worker or self-employed." },
   L2: {
     type: "slider", title: "Control Dial", tag: "Judge the control", icon: "🎛️", color: "#7B9E87",
     blurb: "Estimate how much control the employer has in each scenario.",
@@ -446,26 +446,26 @@ const ES_INTERACTIVES = {
   },
   L4: {
     type: "truefalse", title: "Spot Mutuality", tag: "True or false", icon: "🔗", color: "#8B6F9E",
-    blurb: "Does each arrangement show mutuality of obligation?",
+    blurb: "Test your grip on mutuality of obligation — the 'irreducible minimum'.",
     items: [
-      { text: "When not working, neither side owes the other anything (Carmichael).", answer: false, note: "No mutuality between engagements — which is why the Carmichael guides were not employees." },
-      { text: "The employer must offer work, and the individual must accept it.", answer: true, note: "This mutual exchange of obligations is the irreducible minimum of an employment contract." },
-      { text: "An ongoing weekly duty to provide and to perform work.", answer: true, note: "Continuing mutual obligations point toward an overarching contract of employment." },
-      { text: "A zero-hours deal with no obligation between shifts.", answer: false, note: "Often creates separate contracts per shift, but no continuous umbrella contract." }
+      { text: "In Carmichael, the 'casual as required' tour guides were held to be employees because they worked regularly.", answer: false, note: "False — between engagements neither side owed the other anything, so there was no mutuality and no contract of employment." },
+      { text: "Mutuality of obligation means the employer must offer work and the individual must accept it.", answer: true, note: "True — this mutual exchange of obligations is the irreducible minimum of an employment contract." },
+      { text: "A zero-hours deal with no obligations between shifts creates one continuous 'umbrella' contract of employment.", answer: false, note: "False — it may create a separate contract for each shift, but no continuous umbrella contract, which can break continuity of service." },
+      { text: "Without mutuality of obligation there can be no contract of employment at all.", answer: true, note: "True — control and personal service are not enough on their own; mutuality must also be present." }
     ]
   },
   L5: {
     type: "flip", title: "Label vs Reality", tag: "Flip to reveal", icon: "🔍", color: "#E07B39",
     blurb: "Guess the TRUE status behind each contractual label, then flip.",
     cards: [
-      { label: "'Self-employed' valeter (Autoclenz)", options: ["Worker", "Employee", "Self-employed"], correct: 0, reveal: "Worker — the sham 'self-employed' label was disregarded for the reality." },
+      { label: "'Self-employed' valeter (Autoclenz)", options: ["Not self-employed — protected as a worker", "Self-employed, as the contract said", "No status: the clause decides"], correct: 0, reveal: "Not self-employed — the sham label was disregarded. The valeters were 'workers' for minimum wage and holiday pay (the tribunal found they actually had contracts of employment)." },
       { label: "'Self-employed partner' (Uber)", options: ["Employee", "Self-employed", "Worker"], correct: 2, reveal: "Worker — control over fares and performance beat the 'agent' wording." },
       { label: "Owner-driver (Ready Mixed)", options: ["Employee", "Self-employed", "Worker"], correct: 1, reveal: "Self-employed — owned the lorry, bore risk, could delegate." },
       { label: "'Casual as required' guide (Carmichael)", options: ["Not an employee", "Employee", "Worker"], correct: 0, reveal: "Not an employee — there was no mutuality of obligation." }
     ]
   },
   L6: {
-    type: "match", title: "Match the Rights", tag: "Connect pairs", icon: "⚖️", color: "#C06B6B",
+    type: "match", title: "Match the Rights", tag: "Connect pairs", icon: "🧾", color: "#4FA8A0",
     blurb: "Tap a right, then tap the status it belongs to.",
     statuses: [
       { id: "employee", label: "Employee", color: "#C9A84C" },
@@ -922,7 +922,7 @@ const CHAPTERS = [
   {
     id: "employment-status",
     week: 2,
-    releaseDate: "2026-10-05",
+    releaseDate: "2026-01-01", // pulled forward so Week 02 is visible now, ahead of its real 5 Oct 2026 date — change back to "2026-10-05" if you want the gating to apply
     title: "Employment Status",
     subtitle: "Employee, worker, or self-employed? Master the tests that decide who gets which rights.",
     accent: "#C9A84C",
@@ -939,7 +939,7 @@ const CHAPTERS = [
       "Connect each status to its practical consequences, such as unfair dismissal, the minimum wage, and paid holiday."
     ],
     mysteryIntro: "Complete each lesson to collect a fragment. Assemble all six to uncover a landmark employment status case from the courts of England & Wales.",
-    mysteryWhyItMatters: "This is the long-running dispute over whether part-time football referees engaged by Professional Game Match Officials Ltd were employees for tax purposes. It turns on the two ideas you've met throughout this chapter — mutuality of obligation and control — and whether they can exist within each individual engagement. It is a leading modern authority on employment status.",
+    mysteryWhyItMatters: "This is the long-running dispute over whether part-time football referees engaged by Professional Game Match Officials Ltd were employees for tax purposes. It turns on the two ideas you've met throughout this chapter — mutuality of obligation and control — and whether they can exist within each individual engagement. The Supreme Court ([2024] UKSC 29) held that both could exist within a single match engagement and sent the case back. In this 2026 decision the First-tier Tribunal looked at the whole picture and held the referees were not employees: their obligations were narrow and short-lived, and the control exercised was regulatory rather than managerial.",
     completionBlurb: "You've mastered employment status — from the three categories to Uber v Aslam.",
     lessons: ES_LESSONS,
     buckets: ES_BUCKETS,
@@ -1876,7 +1876,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
                     ) : (
                       <div style={{ animation: "scaleIn 0.4s ease both" }}>
                         <div style={{ background: hit ? "#7B9E8720" : "#C06B6B20", border: `1px solid ${hit ? "#7B9E87" : "#C06B6B"}44`, borderRadius: 14, padding: 16, marginBottom: 16 }}>
-                          <div style={{ fontWeight: 700, color: hit ? "#7B9E87" : "#C06B6B", marginBottom: 6 }}>{hit ? "✅ Spot on!" : `Close — the answer sat ${r.lo}–${r.hi}${r.suffix ?? "%"}`}</div>
+                          <div style={{ fontWeight: 700, color: hit ? "#7B9E87" : "#C06B6B", marginBottom: 6 }}>{hit ? "✅ Spot on!" : `Not quite — the answer sat ${r.lo}–${r.hi}${r.suffix ?? "%"}`}</div>
                           <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 15, lineHeight: 1.6, color: "#C8C0B0" }}>{r.verdict}</p>
                         </div>
                         <button className="btn-primary" onClick={sliderNext} style={{ background: `linear-gradient(135deg,${ac},${ac}CC)` }}>{pst.round + 1 < cfg.rounds.length ? "Next Scenario →" : "Finish →"}</button>
@@ -2064,7 +2064,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
               fontFamily: "'Crimson Text',serif", fontSize: 15,
               color: heldCard ? "#C9A84C" : "#5A5450"
             }}>
-              {heldCard ? <>Now tap a category to place <strong>{heldCard.name}</strong> 👇</> : `Tap a ${sortMeta.itemNoun} to pick it up`}
+              {heldCard ? <>Now tap a category to place <strong>{heldCard.name}</strong> 👇</> : `Tap a ${sortMeta.itemNoun} to select it`}
             </div>
 
             {/* Pool of cards */}
