@@ -456,6 +456,7 @@ const ES_INTERACTIVES = {
   },
   L5: {
     type: "flip", title: "Label vs Reality", tag: "Flip to reveal", icon: "🔍", color: "#E07B39",
+    lead: "The contract says…", ask: "But what's the true status?", revealLabel: "REALITY",
     blurb: "Guess the TRUE status behind each contractual label, then flip.",
     cards: [
       { label: "'Self-employed' valeter (Autoclenz)", options: ["Not self-employed — protected as a worker", "Self-employed, as the contract said", "No status: the clause decides"], correct: 0, reveal: "Not self-employed — the sham label was disregarded. The valeters were 'workers' for minimum wage and holiday pay (the tribunal found they actually had contracts of employment)." },
@@ -825,6 +826,7 @@ const RT_INTERACTIVES = {
   },
   L3: {
     type: "flip", title: "Binding or Guidance?", tag: "Flip to reveal", icon: "📋", color: "#4A90B8",
+    lead: "Consider this source…", ask: "Is it legally binding, or only guidance?", revealLabel: "THE ANSWER",
     blurb: "Guess whether each source is legally binding or non-binding guidance, then flip to check.",
     cards: [
       { label: "The Working Time Regulations 1998 (an SI)", options: ["Non-binding guidance", "Neither — a consultation only", "Legally binding"], correct: 2, reveal: "Legally binding — secondary legislation made under an enabling Act carries the force of law." },
@@ -885,6 +887,397 @@ const RT_CLUES = [
   { fragment: "737", icon: "🧑‍⚖️", note: "The page number completing the citation. This case also happens to be a landmark employment law authority in its own right, on an employer's duty of care for workplace stress." }
 ];
 
+/* ============================================================================
+   CHAPTER: TERMS OF THE CONTRACT (WEEK 3)
+   Express terms, statutory terms, variation of the contract, how terms are
+   implied, common implied terms and universal implied terms (mutual trust
+   and confidence). Mystery case: Malik v BCCI [1998] AC 20 (deliberately NOT
+   named anywhere in the lessons, so it stays a surprise).
+   ============================================================================ */
+const CT_LESSONS = [
+  {
+    id: "L1", title: "Express Terms", icon: "✍️", color: "#C9A84C",
+    intro: "Start with what the parties actually agreed. Express terms are the ones spelled out, spoken or written, including those pulled in by reference from handbooks and collective agreements.",
+    questions: [
+      {
+        id: "ct1",
+        scenario: "Dani joins a logistics firm. Her signed contract sets her hours and pay, and adds that her enhanced sick pay is 'as set out in the Staff Handbook, which forms part of this contract'.",
+        question: "How should the enhanced sick pay provisions be treated?",
+        options: [
+          "As mere guidance, because staff handbooks can never create contractual rights, whatever the contract says",
+          "As statutory terms, because all sick pay arrangements ultimately originate from legislation",
+          "As express terms, because the contract itself incorporates the handbook provisions by reference",
+          "As implied terms, because they do not appear in the body of the signed document itself"
+        ],
+        correct: 2,
+        explanation: "Express terms are those the parties actually agreed, whether spoken, written or incorporated by reference to another document. Where the contract expressly says a handbook provision forms part of it, and the wording is apt to be contractual, it binds the employer (compare Keeley v Fosroc, where enhanced redundancy terms in a handbook were held to be contractual). Handbook provisions that are expressly 'non-contractual', or that are merely aspirational, are treated differently.",
+        takeaway: "Express terms include anything the parties agreed: orally, in writing, or by incorporating another document."
+      },
+      {
+        id: "ct2",
+        scenario: "Mia has worked at a café for six months. Nobody has ever given her a written statement of her employment particulars, and she assumes this means she has no proper contract.",
+        question: "What is the legal position?",
+        options: [
+          "Her contract still exists; the employer has breached s.1 ERA 1996, and a tribunal can determine the particulars",
+          "No contract exists until a written statement has been issued and signed by both sides to the agreement",
+          "The employer has committed a criminal offence, and Mia can claim damages for it from the civil courts as well as a tribunal",
+          "The statutory minimum terms apply instead, because a contract of employment fails without writing"
+        ],
+        correct: 0,
+        explanation: "A contract of employment need not be in writing; it can be oral, written, or a mixture. Under s.1 ERA 1996 the employer must give employees and workers a written statement of the main particulars on or before the first day of work (a day-one right since April 2020). If it does not, the individual can refer the matter to a tribunal (s.11), and where another employment claim succeeds the tribunal will normally award two to four weeks' pay (Employment Act 2002, s.38).",
+        takeaway: "A contract can be oral. The written statement is a statutory duty, not a condition for the contract to exist."
+      },
+      {
+        id: "ct3",
+        scenario: "Sam's written statement says his notice period is one month. The contract he signed says three months. He argues the statement shows what was really agreed.",
+        question: "What is the legal status of the s.1 written statement?",
+        options: [
+          "It is the contract itself, because s.1 ERA 1996 requires it to record every term that was agreed",
+          "It overrides the signed contract, because it is a document that the law requires the employer to issue, so it always prevails",
+          "It has no evidential value at all, because the employer prepares it alone, without the employee's input",
+          "Strong evidence of the terms, not the contract itself; the signed contract normally prevails in a conflict"
+        ],
+        correct: 3,
+        explanation: "A s.1 statement is the employer's unilateral record of the terms, so it is evidence of the contract, not the contract itself (Systems Floors v Daniel). Where the employee has signed a contract that says something different, the contract usually prevails. If the employee signs the statement as an agreed document, however, it can take on contractual force.",
+        takeaway: "The written statement is evidence of the contract, not the contract itself, unless the parties adopt it as the contract."
+      }
+    ]
+  },
+  {
+    id: "L2", title: "Statutory Terms", icon: "🛡️", color: "#7B9E87",
+    intro: "Some terms are not agreed at all. Parliament writes them into the contract, or sets a floor that no contract can go beneath.",
+    questions: [
+      {
+        id: "ct4",
+        scenario: "Hassan works five days a week. His signed contract grants 'three weeks' paid holiday per year', and he signed it willingly.",
+        question: "What is the effect of the three-week clause?",
+        options: [
+          "It is valid and binding, because he freely agreed to it by signing the contract in advance",
+          "It is ineffective below the statutory floor, so Hassan is entitled to 5.6 weeks' paid leave",
+          "It voids the entire contract, leaving him with no agreed terms of any kind between the parties",
+          "It stands for now, and he can claim more only if the employer later agrees to extend the leave"
+        ],
+        correct: 1,
+        explanation: "Workers have a statutory right to 5.6 weeks' paid annual leave (regs 13 and 13A, Working Time Regulations 1998), and any agreement purporting to exclude or limit those rights is void (reg 35). A contract can improve on the statutory floor but never undercut it, and only the offending term falls away.",
+        takeaway: "Statute sets a floor: contracts may add to statutory rights but cannot reduce them."
+      },
+      {
+        id: "ct5",
+        scenario: "Hira discovers that a male colleague doing work of equal value is paid more. Her contract says nothing about equal pay.",
+        question: "Why can Hira still rely on a contractual right to equal pay?",
+        options: [
+          "Equal pay is an implied term in fact, arising from custom and practice in most workplaces",
+          "Her employer's published pay scales are express terms, incorporated into her contract by reference to those scales",
+          "It is a common law implied term, created by judges over time to prevent unfair treatment at work",
+          "Section 66 Equality Act 2010 writes a sex equality clause into her contract, lifting the lower term"
+        ],
+        correct: 3,
+        explanation: "Section 66 EqA 2010 inserts a 'sex equality clause' into the contract of a woman or man who does equal work (like work, work rated as equivalent, or work of equal value) to a comparator of the opposite sex, so that any less favourable term is modified. It is the classic statutory term: the parties never agreed it, but it is in the contract anyway.",
+        takeaway: "A statutory term is written into the contract by Parliament, whether or not the parties agreed it."
+      },
+      {
+        id: "ct6",
+        scenario: "To win a job, Sofia signs a contract containing the clause: 'The employee waives all rights to bring any claim for unfair dismissal.'",
+        question: "What is the legal effect of the waiver?",
+        options: [
+          "It is void: statutory rights cannot be excluded by contract, save through a valid settlement agreement",
+          "It is valid, because the parties are entirely free to agree any terms they choose to include",
+          "It is valid, but only for the first two years of employment, after which it lapses automatically by law",
+          "It is valid only where the likely compensation would be below the statutory cap on awards"
+        ],
+        correct: 0,
+        explanation: "Section 203 ERA 1996 makes void any provision that purports to exclude or limit a statutory employment right or to prevent a tribunal claim. The exceptions are tightly policed: a settlement agreement (with independent legal advice and other conditions) or an ACAS-conciliated agreement can settle a particular complaint, but a blanket advance waiver in the contract itself cannot.",
+        takeaway: "You cannot contract out of statutory employment rights, except through a valid settlement."
+      }
+    ]
+  },
+  {
+    id: "L3", title: "Variation of the Contract", icon: "🔄", color: "#4A90B8",
+    intro: "Contracts are not set in stone, but an employer cannot rewrite them alone. Learn when a change is lawful, when it is a breach, and how the coming reform of 'fire and rehire' changes the picture.",
+    questions: [
+      {
+        id: "ct7",
+        scenario: "Priya's employer announces a 5% pay cut from next month. Priya does not agree, but she keeps coming to work and says nothing.",
+        question: "What is the legal position on the pay cut?",
+        options: [
+          "Priya has accepted the cut, because carrying on working without objection signals her agreement to the new rate",
+          "Priya has not agreed; the employer is in breach and she can still claim the shortfall (Rigby v Ferodo)",
+          "The cut is valid, because the employer gave her a full month's notice of the change in pay",
+          "Her only remedy is to resign, because the contract cannot be enforced while she is still working"
+        ],
+        correct: 1,
+        explanation: "A contract can normally be varied only by agreement. In Rigby v Ferodo the House of Lords held that an employee who carried on working after an imposed pay cut had not accepted it, and could recover the arrears. Where a change bites immediately, working on is not necessarily acceptance, although prolonged silence about a change with no immediate effect can sometimes be treated as acceptance by conduct.",
+        takeaway: "Unilateral variation is a breach; continuing to work does not by itself mean the employee agrees."
+      },
+      {
+        id: "ct8",
+        scenario: "Lena's contract says: 'The Company may require you to work at any of its UK sites on reasonable notice.' The company moves her from Reading to Leeds with one day's notice, ignoring her caring responsibilities.",
+        question: "How will a court approach the mobility clause?",
+        options: [
+          "The clause is void, because an employer can never reserve a right to vary the contract unilaterally",
+          "The clause gives unlimited discretion, so the move is lawful however it is carried out",
+          "The clause gives a real power to vary, but it must be exercised reasonably and in good faith",
+          "The clause is valid only if Lena gives her fresh consent each and every time it is used"
+        ],
+        correct: 2,
+        explanation: "Express flexibility clauses are a legitimate way of building change into the contract (Bateman v Asda), but they are read restrictively and need clear words (Wandsworth LBC v D'Silva). Any discretion must also be exercised rationally and in good faith, consistently with the implied duty of trust and confidence. Here the clause itself promised 'reasonable notice', and one day's notice is hard to defend.",
+        takeaway: "A flexibility clause lets an employer vary terms without fresh consent, but only reasonably and in good faith."
+      },
+      {
+        id: "ct9",
+        scenario: "A manufacturer tells its staff: 'Accept the new, lower-hours contract, or we will dismiss you and re-engage you on the new terms.' Some employees refuse. The Employment Rights Act 2025 restrictions on 'fire and rehire' are not yet in force.",
+        question: "What is the position today, before those restrictions take effect (expected January 2027)?",
+        options: [
+          "It can still be fair for 'some other substantial reason' if the process is fair, with a 25% uplift risk if the Code is ignored",
+          "It is already automatically unfair, because the Employment Rights Act 2025 received Royal Assent in December 2025",
+          "It is fair only if every affected employee has first agreed to the change in writing and been fully consulted",
+          "It is unlawful as a breach of contract, even where proper contractual notice of dismissal has been given to staff in good time"
+        ],
+        correct: 0,
+        explanation: "Dismissal and re-engagement imposes change without consent. Today, refusing new terms can amount to 'some other substantial reason' for dismissal (s.98(1)(b) ERA 1996) if the business reason is sound and the process fair, but employers must follow the statutory Code of Practice on Dismissal and Re-engagement (in force since 18 July 2024) or risk a compensation uplift of up to 25%. Once the 2025 Act provisions commence (expected 1 January 2027), dismissing someone for refusing a 'restricted variation', such as a cut in pay or hours, will be automatically unfair in most cases, with only a narrow financial-difficulty exception.",
+        takeaway: "Fire and rehire is still possible today, under the Code, but the Employment Rights Act 2025 will restrict it sharply."
+      }
+    ]
+  },
+  {
+    id: "L4", title: "How Terms Are Implied", icon: "💡", color: "#8B6F9E",
+    intro: "No contract can say everything. Where it is silent, courts can fill the gaps, but only in limited, carefully controlled ways: terms implied in fact, in law, and by custom.",
+    questions: [
+      {
+        id: "ct10",
+        scenario: "A contract says nothing about overtime. The employer argues that a term should be implied that staff must work reasonable overtime when asked, because that would only be 'reasonable' in the circumstances.",
+        question: "Is reasonableness enough to imply a term in fact?",
+        options: [
+          "Yes: courts will imply any term that a reasonable employer would want to have in the contract",
+          "Yes: provided the employer drafted the contract and the employee signed it without objection",
+          "No: a court may never imply anything into a contract that has been put in writing",
+          "No: the term must be necessary for business efficacy or so obvious it goes without saying"
+        ],
+        correct: 3,
+        explanation: "A term is implied in fact only where it is necessary to give the contract business efficacy (The Moorcock) or is so obvious that it goes without saying (the 'officious bystander' test). In Marks & Spencer v BNP Paribas the Supreme Court stressed that reasonableness alone is not enough, that the term must be capable of clear expression, and that it cannot contradict the express wording.",
+        takeaway: "Implication is about necessity and obviousness, not about what seems fair or reasonable."
+      },
+      {
+        id: "ct11",
+        scenario: "In one textile mill, workers have for generations had pay docked for badly made cloth. Everyone knows of the practice and it is applied consistently, but no contract mentions it.",
+        question: "On what basis might the deduction term be implied?",
+        options: [
+          "As a term implied in law, because it applies automatically to every single employment contract",
+          "Custom and practice, if it is certain, notorious and reasonable and does not contradict an express term",
+          "By statute, because the Employment Rights Act 1996 expressly authorises deductions for poor work or damaged goods",
+          "As an express term, because everyone is taken to have orally agreed it on their very first day"
+        ],
+        correct: 1,
+        explanation: "A term can be implied by custom if the practice is certain, notorious (generally known) and reasonable, and consistent with the express terms (compare Sagar v Ridehalgh, on deductions for bad workmanship in a weaving mill). Today the law on deductions is also constrained by s.13 ERA 1996, which requires authority in a statute, a relevant term of the contract, or the worker's prior written consent.",
+        takeaway: "Custom can supply a term if it is certain, notorious and reasonable, and does not contradict the express terms."
+      },
+      {
+        id: "ct12",
+        scenario: "Under its pension scheme, staff can buy extra pension years only within a fixed window. The employer knows this but never tells them, and nothing in the contract says it must.",
+        question: "On what basis can a court imply a duty to tell them?",
+        options: [
+          "A term implied in fact from the parties' own particular negotiations when the contract was made",
+          "A statutory term inserted into every employee's contract by the Pensions Act 2008 for exactly this purpose and no other",
+          "A term implied in law: necessary to the employment relationship, since only the employer knew of the right",
+          "An express term, created at the moment the employer announced the pension scheme to its staff"
+        ],
+        correct: 2,
+        explanation: "Terms implied in law are legal incidents of a class of contract (Liverpool CC v Irwin), tested by what is necessary for that type of relationship, not for the parties' own bargain. In Scally v Southern Health Board the House of Lords implied a duty to take reasonable steps to bring a valuable contractual right to employees' attention where they could not be expected to find out for themselves.",
+        takeaway: "Terms implied in law attach to the type of contract, not to what these particular parties intended."
+      }
+    ]
+  },
+  {
+    id: "L5", title: "Common Implied Terms", icon: "🧩", color: "#E07B39",
+    intro: "Over time the courts have settled a standard set of implied duties for each side. Together they fill in the everyday detail of working life.",
+    questions: [
+      {
+        id: "ct13",
+        scenario: "Ayesha, a retail assistant, spends her days off working for a rival shop. She uses no confidential information, but the rival is taking her employer's customers.",
+        question: "Which implied duty is she most clearly in breach of?",
+        options: [
+          "The duty of fidelity and good faith, which stops employees damaging the employer's business interests",
+          "The duty of obedience, which requires employees to follow lawful and reasonable orders given to them by their employer",
+          "The duty of care and skill, which requires employees to perform their work competently and carefully",
+          "The duty to adapt, which requires employees to accept new working methods and new technology"
+        ],
+        correct: 0,
+        explanation: "Employees owe a duty of fidelity (good faith): not to compete with the employer, misuse confidential information, or act in ways that damage its business. In Hivac v Park Royal Scientific Instruments, skilled assemblers who worked for a rival on their days off were restrained by injunction. After employment ends the duty narrows, and without an express restrictive covenant only trade secrets and information of equivalent confidentiality are protected (Faccenda Chicken v Fowler).",
+        takeaway: "The duty of fidelity bars employees from damaging their employer's business, even in their own time."
+      },
+      {
+        id: "ct14",
+        scenario: "Tom, a bricklayer, is injured when a scaffold his employer supplied collapses. The employer says it hired an independent firm to erect the scaffold, so it is not responsible. Nothing in the contract mentions safety.",
+        question: "Which implied duty is engaged, and can the employer delegate it?",
+        options: [
+          "The same duty exists, but it is discharged entirely by appointing a competent independent contractor to carry out the work",
+          "The employer's duty to take reasonable care for employees' safety, which is personal and non-delegable",
+          "No contractual duty exists; safety is governed only by the Health and Safety at Work etc. Act 1974",
+          "Only the duty of mutual trust and confidence applies, and it covers psychological harm alone"
+        ],
+        correct: 1,
+        explanation: "Every employer must take reasonable care for employees' safety, covering competent staff, adequate plant and equipment, a safe place of work and a safe system of work (Wilsons & Clyde Coal v English). The duty is personal and non-delegable: the employer stays responsible even if it entrusts performance to someone else (McDermid v Nash Dredging). It also extends to psychiatric harm from overwork, as in the Week 1 mystery case.",
+        takeaway: "The employer's duty of care for safety is personal; hiring contractors does not pass it on."
+      },
+      {
+        id: "ct15",
+        scenario: "Greg is a salaried accountant. For a month his employer pays him in full but gives him no work at all, and he complains that he has a right to be given work.",
+        question: "Is there an implied duty on the employer to provide work?",
+        options: [
+          "Yes: a right to work is implied into every contract of employment without any exception at all, whatever the job",
+          "Yes, but only once the employee has built up two years of qualifying continuous service",
+          "No, and the employer may stop paying wages for any period during which no work is given",
+          "Generally not: the employer need only pay wages, unless pay depends on work or skills would decay"
+        ],
+        correct: 3,
+        explanation: "The general rule (Collier v Sunday Referee Publishing) is that an employer who pays wages need not provide work: an employer who engages a cook does not have to eat her cooking. Exceptions arise where earnings depend on doing the work (commission, piece-work), where publicity or reputation matters (performers), or where lack of work would let specialist skills deteriorate (compare William Hill v Tucker). Express 'garden leave' clauses give employers a contractual right to withhold work while paying.",
+        takeaway: "An employer must pay wages, but generally need not provide work, subject to exceptions."
+      }
+    ]
+  },
+  {
+    id: "L6", title: "Universal Implied Terms", icon: "🤝", color: "#4FA8A0",
+    intro: "Some implied terms sit in every contract of employment, whatever the job and whatever the paperwork. The most powerful is the duty of mutual trust and confidence.",
+    questions: [
+      {
+        id: "ct16",
+        scenario: "For months, Rosa's manager belittles her in front of colleagues for no work-related reason. She resigns.",
+        question: "Which universal implied term is engaged, and how is it tested?",
+        options: [
+          "Fidelity and good faith, judged by whether the manager subjectively intended to cause her distress",
+          "Obedience to lawful orders, judged by whether Rosa followed every reasonable instruction she was given",
+          "Mutual trust and confidence: conduct without proper cause likely to seriously damage the relationship, judged objectively",
+          "Care for her safety, which requires proof of a diagnosed physical injury caused by the employer's conduct towards her"
+        ],
+        correct: 2,
+        explanation: "The duty of mutual trust and confidence is implied into every contract of employment: neither side may, without reasonable and proper cause, act in a manner calculated or likely to destroy or seriously damage the trust between them. It is judged objectively, by the effect on a reasonable employee, so intention is not required (Woods v WM Car Services; Courtaulds v Andrew). A serious breach is repudiatory and lets the employee resign and claim constructive dismissal.",
+        takeaway: "No employer may, without reasonable and proper cause, seriously damage the trust on which employment depends."
+      },
+      {
+        id: "ct17",
+        scenario: "Ahmed is dismissed in a humiliating way and develops a psychiatric illness. He sues for common law damages for the manner of his dismissal.",
+        question: "What is the legal position?",
+        options: [
+          "Damages are available in full, because the trust and confidence term applies right up to the point of termination",
+          "Damages for the manner of dismissal are excluded (the Johnson exclusion zone); his remedy is statutory unfair dismissal",
+          "Damages are available, but only if he has at least two years' service with the employer at the date of dismissal, however it was handled",
+          "Damages are available, but only if the employer acted deliberately with the aim of causing him some harm"
+        ],
+        correct: 1,
+        explanation: "In Johnson v Unisys the House of Lords held that the trust and confidence term cannot found common law damages for the manner of a dismissal itself, because Parliament has provided the unfair dismissal regime. In Eastwood v Magnox, however, the Lords confined that 'exclusion zone': losses flowing from the employer's conduct before dismissal, such as an unjustified suspension or a campaign of mistreatment, can be recovered.",
+        takeaway: "Damages for the manner of dismissal are barred, but damages for earlier breaches of trust and confidence are not."
+      },
+      {
+        id: "ct18",
+        scenario: "A serious breach of trust and confidence occurs on 1 March. Sana carries on working normally and resigns on 1 September, claiming constructive dismissal.",
+        question: "Is her claim likely to succeed?",
+        options: [
+          "Probably not: her long delay suggests she affirmed the contract and so lost the right to resign over that breach",
+          "Yes: constructive dismissal has no deadline, provided the tribunal claim is lodged within the time limit",
+          "Yes: a repudiatory breach can never be affirmed once it has taken place, whatever the employee does afterwards",
+          "No: constructive dismissal requires a breach of a statutory term and not merely a breach of a contractual one, however serious"
+        ],
+        correct: 0,
+        explanation: "Under Western Excavating v Sharp an employee may treat the contract as discharged by the employer's repudiatory breach, but must do so in response to the breach and without undue delay. Working on for a long time without protest can amount to affirmation, which waives the right to resign over that breach (a short delay while considering options is usually tolerated, and a later 'last straw' can revive the claim). The employee must also show the breach was a real reason for resigning.",
+        takeaway: "To claim constructive dismissal, resign promptly in response to the breach, or risk affirming the contract."
+      }
+    ]
+  }
+];
+
+const CT_BUCKETS = [
+  { id: "express", label: "Express Term", icon: "✍️", color: "#C9A84C", hint: "Actually agreed" },
+  { id: "statutory", label: "Statutory Term", icon: "🏛️", color: "#7B9E87", hint: "Written in by Parliament" },
+  { id: "implied", label: "Implied Term", icon: "💡", color: "#8B6F9E", hint: "Filled in by the courts" }
+];
+
+const CT_SORT_CARDS = [
+  { id: "c1", name: "Raj's side-job", emoji: "🤫", desc: "Raj secretly works for a competitor on his days off. No clause forbids it, but the law treats it as a breach of the employee's duty of good faith. Classify the duty he breached.", answer: "implied" },
+  { id: "c2", name: "Mo's minimum notice", emoji: "⏳", desc: "Mo's contract promises four weeks' notice, but after eight years' service the law guarantees him at least eight. Classify the eight-week entitlement.", answer: "statutory" },
+  { id: "c3", name: "The handbook rule", emoji: "📘", desc: "Sick pay provisions in a handbook which Dana's signed contract says 'forms part of this agreement'.", answer: "express" },
+  { id: "c4", name: "Trust and confidence", emoji: "🧱", desc: "No clause says so, but an employer must not, without reasonable and proper cause, act in a way likely to seriously damage the trust between the parties.", answer: "implied" },
+  { id: "c5", name: "Hira's equal pay", emoji: "⚖️", desc: "A sex equality clause (Equality Act 2010, s.66) is read into her contract, lifting a lower-paid term to match her male comparator's.", answer: "statutory" },
+  { id: "c6", name: "Lena's mobility clause", emoji: "🚚", desc: "Lena's signed contract says she may be moved between UK sites on reasonable notice.", answer: "express" },
+  { id: "c7", name: "Paid holiday", emoji: "🏖️", desc: "Every full-time worker gets 5.6 weeks' paid annual leave under the Working Time Regulations 1998, whatever the contract says.", answer: "statutory" },
+  { id: "c8", name: "Dani's hours", emoji: "🕘", desc: "The signed contract states: 'Your normal working hours are 9am to 5.30pm, Monday to Friday.'", answer: "express" }
+];
+
+const CT_INTERACTIVES = {
+  L1: { type: "sort", title: "Name That Term", tag: "Classify the term", icon: "🏷️", color: "#C9A84C", itemNoun: "term", blurb: "Classify eight terms as express, statutory or implied." },
+  L2: {
+    type: "slider", title: "Know the Numbers", tag: "Estimate the figure", icon: "🔢", color: "#7B9E87",
+    blurb: "Estimate three statutory figures that no contract can undercut.",
+    rounds: [
+      { scenario: "The minimum notice an employer must give a worker who has been continuously employed for eight years (s.86 ERA 1996).", lo: 7, hi: 9, min: 0, max: 16, suffix: " weeks", verdict: "Exactly eight weeks: one week for each complete year of service between two and twelve years, capped at twelve weeks." },
+      { scenario: "The longest average working week a worker can be required to work with no opt-out agreed (Working Time Regulations 1998, averaged over a 17-week reference period).", lo: 46, hi: 50, min: 20, max: 80, suffix: " hours", verdict: "48 hours on average. A worker may voluntarily opt out in writing, but an employer cannot force them to." },
+      { scenario: "The minimum paid annual leave for a full-time worker, which the employer may count bank holidays towards.", lo: 5, hi: 6, min: 0, max: 12, suffix: " weeks", verdict: "5.6 weeks (28 days for a five-day week): four weeks under reg 13 plus 1.6 weeks under reg 13A of the Working Time Regulations 1998." }
+    ]
+  },
+  L3: {
+    type: "truefalse", title: "Can They Change It?", tag: "True or false", icon: "❓", color: "#4A90B8",
+    blurb: "Test your grip on how, and whether, a contract can be varied.",
+    items: [
+      { text: "A clearly worded flexibility clause can let an employer change terms without fresh agreement, but the power must be exercised reasonably.", answer: true, note: "True. Clauses like these are valid (Bateman v Asda), but they are read restrictively and are subject to rationality and good faith." },
+      { text: "An employer can lawfully impose a pay cut simply by giving a month's notice, provided the employee keeps working.", answer: false, note: "False. Carrying on working does not by itself amount to consent. The employer is in breach and the employee can sue for the shortfall (Rigby v Ferodo)." },
+      { text: "If an employer imposes a worse term, resigning and claiming constructive dismissal is the employee's only option.", answer: false, note: "False. The employee can also work on and sue for breach, or negotiate. Resigning is one option, but it must be done promptly or the breach may be treated as affirmed." },
+      { text: "An employer must give written notice of a change to the main particulars at the earliest opportunity, and no later than one month after the change.", answer: true, note: "True (s.4 ERA 1996). The duty to notify records the change; it does not make an unagreed change valid." },
+      { text: "Once the Employment Rights Act 2025 fire-and-rehire provisions take effect (expected January 2027), dismissing someone for refusing a restricted variation such as a pay cut will be automatically unfair in most cases.", answer: true, note: "True, subject to a narrow exception for serious financial difficulty. Until then, such dismissals are tested under the ordinary 'some other substantial reason' route." }
+    ]
+  },
+  L4: {
+    type: "pickN", title: "Imply It?", tag: "Pick the 3 grounds", icon: "🎯", color: "#8B6F9E",
+    blurb: "Select the three grounds on which a court may imply a term in fact.",
+    resultNote: "A term is implied in fact where it is necessary for business efficacy, so obvious it goes without saying, or established by a certain, notorious and reasonable custom. Fairness or preference is never enough, and the term can never contradict the express wording.",
+    options: [
+      { text: "It would be fair or reasonable to include it", correct: false },
+      { text: "It is necessary to give the contract business efficacy", correct: true },
+      { text: "One side would have preferred it to be included", correct: false },
+      { text: "It is so obvious that it goes without saying", correct: true },
+      { text: "It contradicts what an express term says", correct: false },
+      { text: "It reflects a certain, notorious and reasonable custom", correct: true }
+    ],
+    need: 3
+  },
+  L5: {
+    type: "match", title: "Whose Duty?", tag: "Connect pairs", icon: "🔗", color: "#E07B39",
+    blurb: "Tap a duty, then tap whose duty it is.",
+    statuses: [
+      { id: "employer", label: "Employer", color: "#C9A84C" },
+      { id: "employee", label: "Employee", color: "#7B9E87" },
+      { id: "both", label: "Both parties", color: "#8B6F9E" }
+    ],
+    rights: [
+      { text: "Obey lawful and reasonable instructions", status: "employee" },
+      { text: "Take reasonable care for health and safety", status: "employer" },
+      { text: "Not to seriously damage mutual trust and confidence without reasonable and proper cause", status: "both" },
+      { text: "Use reasonable care and skill in doing the work", status: "employee" },
+      { text: "Indemnify against expenses properly incurred in the job", status: "employer" },
+      { text: "Act with fidelity and good faith towards the other's business interests", status: "employee" }
+    ]
+  },
+  L6: {
+    type: "flip", title: "Breach or Bar?", tag: "Flip to reveal", icon: "🃏", color: "#4FA8A0",
+    lead: "The situation…", ask: "What does the law say?", revealLabel: "THE LAW",
+    blurb: "Decide what the law says about each situation, then flip to check.",
+    cards: [
+      { label: "A manager publicly humiliates an employee for no good reason", options: ["No breach: managers may speak freely", "Breach of an express term only", "Breach of the implied term of trust and confidence"], correct: 2, reveal: "Breach of mutual trust and confidence. Conduct without reasonable and proper cause that is calculated or likely to seriously damage the relationship breaches the universal term, even with no express clause." },
+      { label: "An employer ignores a formal grievance for months", options: ["No breach: grievance handling is optional", "Breach of the implied term to give a reasonable opportunity to obtain redress of grievances", "Only a breach of the duty of fidelity"], correct: 1, reveal: "Breach: employers must give a reasonable opportunity to obtain redress of a grievance (WA Goold v McConnell), and ignoring one can also breach trust and confidence." },
+      { label: "Damages for psychiatric injury caused by the manner of a dismissal", options: ["Recoverable at common law in full", "Recoverable only with two years' service", "Not recoverable: the 'Johnson exclusion zone'"], correct: 2, reveal: "Not recoverable. Common law damages for the manner of dismissal are excluded (Johnson v Unisys); the remedy lies in the statutory unfair dismissal regime." },
+      { label: "An employer suspends an employee for months with no good reason, damaging her health", options: ["Damages for pre-dismissal conduct can be recovered", "No remedy unless she is later dismissed", "Only a statutory redundancy payment is available"], correct: 0, reveal: "Recoverable. Eastwood v Magnox confined the exclusion zone to the dismissal itself, so losses caused by earlier breaches of trust and confidence can be claimed." }
+    ]
+  }
+};
+
+const CT_CASE_ANSWER = "Malik v Bank of Credit and Commerce International SA [1998] AC 20";
+const CT_CLUES = [
+  { fragment: "Malik v", icon: "🧑‍💼", note: "The lead claimant was a senior employee of a bank that collapsed amid fraud. He is the first party named, not the defendant." },
+  { fragment: "Bank of Credit", icon: "🏦", note: "The defendant was an international bank. These are the opening words of its name." },
+  { fragment: "and Commerce", icon: "🌍", note: "The bank's name continues: its business was credit and commerce across the globe." },
+  { fragment: "International SA", icon: "🏢", note: "The name ends with its corporate form: a société anonyme, incorporated abroad but run largely from London." },
+  { fragment: "[1998]", icon: "📅", note: "The year of the law report. The House of Lords actually delivered its decision a little earlier, in 1997." },
+  { fragment: "AC 20", icon: "📚", note: "Appeal Cases, the law report series for the House of Lords, at page 20. The decision gave the implied term of mutual trust and confidence its classic modern formulation." }
+];
+
 /* ─────────── CHAPTER REGISTRY ───────────
    Each chapter bundles its content. Add new chapters here as you build them.
    `released: true` shows it on the home screen (per your setup: chapters appear
@@ -922,7 +1315,7 @@ const CHAPTERS = [
   {
     id: "employment-status",
     week: 2,
-    releaseDate: "2026-01-01", // pulled forward so Week 02 is visible now, ahead of its real 5 Oct 2026 date — change back to "2026-10-05" if you want the gating to apply
+    releaseDate: "2026-10-05",
     title: "Employment Status",
     subtitle: "Employee, worker, or self-employed? Master the tests that decide who gets which rights.",
     accent: "#C9A84C",
@@ -947,11 +1340,40 @@ const CHAPTERS = [
     interactives: ES_INTERACTIVES,
     clues: ES_CLUES,
     caseAnswer: ES_CASE_ANSWER
+  },
+  {
+    id: "contract-terms",
+    week: 3,
+    releaseDate: "2026-10-12", // add ?preview to the site address (e.g. yoursite.vercel.app/?preview) to see unreleased weeks early
+    title: "Terms of the Contract",
+    subtitle: "Week commencing 12 October 2026 — express, statutory and implied terms, and how a contract can be varied.",
+    accent: "#C9A84C",
+    badge: BADGE_IMG,
+    heroLine1: "Contract",
+    heroLine2: "Terms",
+    heroSubtitle: "Express, statutory and implied terms — and how a contract can be varied.",
+    tagline: "\"What the parties wrote is only the beginning of what the contract says.\"",
+    guideIntro: "Welcome to Terms of the Contract — your preparation for Lecture 03 and Seminar 03. This chapter covers express terms, statutory terms, variation of the contract, how terms are implied, the common implied terms of employer and employee, and the universal implied term of mutual trust and confidence. These lessons are designed to support and underpin your weekly reading, which in turn supports both the weekly lecture and seminar. Here's everything you need to know.",
+    objectives: [
+      "Distinguish express, statutory and implied terms, and explain how handbooks, collective agreements and the s.1 written statement relate to the contract.",
+      "Explain how statute sets a floor beneath the contract, through terms such as paid annual leave, minimum notice and the equality clause.",
+      "Apply the rules on variation, including flexibility clauses, unilateral change, dismissal and re-engagement, and the coming restrictions on fire and rehire.",
+      "Explain how terms are implied in fact, in law and by custom, and apply the common implied duties and the universal term of mutual trust and confidence."
+    ],
+    mysteryIntro: "Complete each lesson to collect a fragment. Assemble all six to reveal the House of Lords decision that gave the universal implied term of mutual trust and confidence its classic modern form.",
+    mysteryWhyItMatters: "The claimants were former employees of an international bank that collapsed in a worldwide fraud scandal. They argued that working for a corruptly run bank had damaged their prospects of finding new jobs. In 1997 the House of Lords confirmed and defined the implied term of mutual trust and confidence, and held that damages for that kind of harm to reputation and employment prospects could in principle be claimed. It is the foundation of the universal implied term you have just studied.",
+    completionBlurb: "You've covered express and statutory terms, variation, and the implied terms, from the everyday duties of each side to the universal duty of mutual trust and confidence.",
+    lessons: CT_LESSONS,
+    buckets: CT_BUCKETS,
+    sortCards: CT_SORT_CARDS,
+    interactives: CT_INTERACTIVES,
+    clues: CT_CLUES,
+    caseAnswer: CT_CASE_ANSWER
   }
-  // ,{ id: "unfair-dismissal", week: 3, title: "Unfair Dismissal", ... }  ← add next week here
+  // ,{ id: "...", week: 4, releaseDate: "2026-10-19", title: "...", ... }  ← add next week here
 ];
 
-function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
+function ChapterEngine({ chapter, moduleScore, restored, onProgress, onExit }) {
   const LESSONS = chapter.lessons;
   const BUCKETS = chapter.buckets;
   const SORT_CARDS = chapter.sortCards;
@@ -966,12 +1388,12 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
   const [phase, setPhase] = useState("scenario"); // scenario, answered, takeaway
   const [selected, setSelected] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(restored?.score || 0);
   const [streak, setStreak] = useState(0);
-  const [bestStreak, setBestStreak] = useState(0);
-  const [doneQ, setDoneQ] = useState([]);
-  const [doneLessons, setDoneLessons] = useState([]);
-  const [notebook, setNotebook] = useState([]);
+  const [bestStreak, setBestStreak] = useState(restored?.bestStreak || 0);
+  const [doneQ, setDoneQ] = useState(restored?.doneQ || []);
+  const [doneLessons, setDoneLessons] = useState(restored?.doneLessons || []);
+  const [notebook, setNotebook] = useState(restored?.notebook || []);
   const [particles, setParticles] = useState({ active: false, type: "correct", color: "#C9A84C" });
   const [xp, setXp] = useState({ visible: false, amount: 0 });
   const [banner, setBanner] = useState({ visible: false, count: 0 });
@@ -997,19 +1419,19 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
   // Anti-farming: track attempts and solved status per individual element.
   // Persists across leaving/re-entering a challenge; cleared only on chapter reset.
   // elemAttempts: key -> number of wrong attempts so far. elemSolved: key -> true.
-  const [elemAttempts, setElemAttempts] = useState({});
-  const [elemSolved, setElemSolved] = useState({});
+  const [elemAttempts, setElemAttempts] = useState(restored?.elemAttempts || {});
+  const [elemSolved, setElemSolved] = useState(restored?.elemSolved || {});
 
   // Anti-farming for lessons: how many times each question has been answered
   // correctly so far (persists across leaving/re-entering; cleared on chapter reset).
-  const [qSolveCount, setQSolveCount] = useState({});
+  const [qSolveCount, setQSolveCount] = useState(restored?.qSolveCount || {});
   const [lastAward, setLastAward] = useState(0); // points given for the current question
   const [reviewMode, setReviewMode] = useState(false); // true when re-entering a completed lesson
 
   // clue hunt state
   const [clueIdx, setClueIdx] = useState(0);     // clue shown on the reveal screen
-  const [allLessonsDone, setAllLessonsDone] = useState(false);
-  const [caseRevealed, setCaseRevealed] = useState(false);
+  const [allLessonsDone, setAllLessonsDone] = useState((restored?.doneLessons || []).length === LESSONS.length);
+  const [caseRevealed, setCaseRevealed] = useState(!!restored?.caseRevealed);
 
   const pct = Math.round((doneQ.length / TOTAL_Q) * 100);
 
@@ -1020,10 +1442,13 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
         score,
         lessonsDone: doneLessons.length,
         totalLessons: LESSONS.length,
-        caseRevealed
+        caseRevealed,
+        // Full in-chapter state, so lessons, clues and answered questions are
+        // still there when the student leaves the chapter and comes back.
+        saved: { score, bestStreak, doneQ, doneLessons, notebook, elemAttempts, elemSolved, qSolveCount, caseRevealed }
       });
     }
-  }, [score, doneLessons.length, caseRevealed]);
+  }, [score, bestStreak, doneQ, doneLessons, notebook, elemAttempts, elemSolved, qSolveCount, caseRevealed]);
 
   // Celebration fanfare when the chapter is completed
   useEffect(() => { if (screen === "complete") Sfx.fanfare(); }, [screen]);
@@ -1534,7 +1959,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
               <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10, alignItems: "flex-start" }}>
                 <span style={{ fontSize: 18, flexShrink: 0 }}>{cfg.icon}</span>
                 <div>
-                  <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 14, fontWeight: 600, color: "#E8E0D0" }}>{cfg.title}. </span>
+                  <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 14, fontWeight: 600, color: "#E8E0D0" }}>{/[?!.]$/.test(cfg.title) ? cfg.title : cfg.title + "."} </span>
                   <span style={{ fontFamily: "'Crimson Text',serif", fontSize: 14, color: "#8A8070" }}>{cfg.blurb}</span>
                 </div>
               </div>
@@ -1953,14 +2378,14 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
                 const card = cfg.cards[pst.idx];
                 return (
                   <>
-                    <div style={{ textAlign: "center", marginBottom: 14, fontFamily: "'Crimson Text',serif", color: "#6A6060", fontSize: 13 }}>The contract says…</div>
+                    <div style={{ textAlign: "center", marginBottom: 14, fontFamily: "'Crimson Text',serif", color: "#6A6060", fontSize: 13 }}>{cfg.lead || "Consider this…"}</div>
                     <div style={{ background: "linear-gradient(135deg,#1A1726,#12111A)", border: `1px solid ${ac}44`, borderRadius: 16, padding: "26px 20px", marginBottom: 20, textAlign: "center", position: "relative" }}>
                       <div style={{ position: "absolute", top: 10, right: 14, fontSize: 12, color: "#5A5450", fontFamily: "'Crimson Text',serif" }}>📄</div>
                       <p style={{ fontFamily: "'Playfair Display',serif", fontSize: 21, fontStyle: "italic", color: "#F0E8D8", lineHeight: 1.3 }}>{card.label}</p>
                     </div>
                     {!pst.revealed ? (
                       <>
-                        <div style={{ textAlign: "center", marginBottom: 12, fontFamily: "'Crimson Text',serif", color: "#9A9080", fontSize: 15 }}>But what's the <strong>true</strong> status?</div>
+                        <div style={{ textAlign: "center", marginBottom: 12, fontFamily: "'Crimson Text',serif", color: "#9A9080", fontSize: 15 }}>{cfg.ask || "What's the answer?"}</div>
                         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                           {card.options.map((o, i) => (
                             <button key={i} className="answer-btn" style={{ "--accent": ac }} onClick={() => flipGuess(i)}>{o}</button>
@@ -1970,7 +2395,7 @@ function ChapterEngine({ chapter, moduleScore, onProgress, onExit }) {
                     ) : (
                       <div style={{ animation: "dropIn 0.4s ease both" }}>
                         <div style={{ background: pst.guess === card.correct ? "#7B9E8720" : "#C06B6B20", border: `1px solid ${pst.guess === card.correct ? "#7B9E87" : "#C06B6B"}44`, borderRadius: 14, padding: 18, marginBottom: 16, textAlign: "center" }}>
-                          <div style={{ fontSize: 12, letterSpacing: 2, color: "#6A6060", fontFamily: "'Crimson Text',serif", marginBottom: 8 }}>REALITY</div>
+                          <div style={{ fontSize: 12, letterSpacing: 2, color: "#6A6060", fontFamily: "'Crimson Text',serif", marginBottom: 8 }}>{cfg.revealLabel || "THE ANSWER"}</div>
                           <div style={{ fontSize: 22, fontWeight: 700, color: pst.guess === card.correct ? "#7B9E87" : "#C9A84C", marginBottom: 10 }}>{card.options[card.correct]}</div>
                           <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 15, lineHeight: 1.6, color: "#C8C0B0" }}>{card.reveal}</p>
                           {pst.guess === card.correct && <div style={{ marginTop: 8, color: "#7B9E87", fontWeight: 700 }}>✓ Correct</div>}
@@ -2416,7 +2841,9 @@ export default function App() {
   // home screen automatically grows week by week — Week 1 shows only Week 1
   // until Week 2's release date arrives, then both appear, and so on.
   const today = new Date();
-  const releasedChapters = CHAPTERS.filter(c => !c.releaseDate || new Date(c.releaseDate) <= today);
+  let previewAll = false;
+  try { previewAll = new URLSearchParams(window.location.search).has("preview"); } catch (e) { previewAll = false; }
+  const releasedChapters = CHAPTERS.filter(c => previewAll || !c.releaseDate || new Date(c.releaseDate) <= today);
 
   const chaptersCompleted = releasedChapters.filter(c => {
     const p = progress[c.id];
@@ -2432,7 +2859,8 @@ export default function App() {
           best: Math.max(existing.best || 0, data.score || 0),
           lessonsDone: Math.max(existing.lessonsDone || 0, data.lessonsDone || 0),
           totalLessons: data.totalLessons || existing.totalLessons || 0,
-          caseRevealed: existing.caseRevealed || !!data.caseRevealed
+          caseRevealed: existing.caseRevealed || !!data.caseRevealed,
+          saved: data.saved || existing.saved
         }
       };
     });
@@ -2474,6 +2902,7 @@ export default function App() {
         key={active.id}
         chapter={active}
         moduleScore={moduleScore}
+        restored={progress[active.id]?.saved}
         onProgress={(data) => recordProgress(active.id, data)}
         onExit={exitChapter}
       />
