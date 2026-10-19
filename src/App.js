@@ -1794,7 +1794,7 @@ const CHAPTERS = [
   // ,{ id: "...", week: 5, releaseDate: "2026-10-26", title: "...", ... }  ← add next week here
 ];
 
-function ChapterEngine({ chapter, moduleScore, restored, onProgress, onExit }) {
+function ChapterEngine({ chapter, moduleScore, restored, caseSolved, onProgress, onExit }) {
   const LESSONS = chapter.lessons;
   const BUCKETS = chapter.buckets;
   const SORT_CARDS = chapter.sortCards;
@@ -1852,7 +1852,10 @@ function ChapterEngine({ chapter, moduleScore, restored, onProgress, onExit }) {
   // clue hunt state
   const [clueIdx, setClueIdx] = useState(0);     // clue shown on the reveal screen
   const [allLessonsDone, setAllLessonsDone] = useState((restored?.doneLessons || []).length === LESSONS.length);
-  const [caseRevealed, setCaseRevealed] = useState(!!restored?.caseRevealed);
+  // A revealed Mystery Case is kept for good: it is also remembered in the chapter's permanent record (caseSolved),
+  // so it survives a chapter restart or an older save in which the case was cleared.
+  const [caseRevealed, setCaseRevealed] = useState(!!restored?.caseRevealed || !!caseSolved);
+  const [confirmRestart, setConfirmRestart] = useState(false);
 
   const pct = Math.round((doneQ.length / TOTAL_Q) * 100);
 
@@ -2400,11 +2403,11 @@ function ChapterEngine({ chapter, moduleScore, restored, onProgress, onExit }) {
           <Section icon="❓" color="#8B6F9E" title="Frequently Asked Questions">
             <Faq q="How is the module organised?" a="The app holds a chapter for each week's topic. A new chapter unlocks automatically once its week begins — you'll only see the chapters for weeks that have started. Pick a chapter from the home screen to play it. Each chapter has its own score, and your best scores add together into a running module total shown on the home screen." />
             <Faq q="What are the ranks and sounds?" a="Your module total climbs a legal career ladder — from Law Fresher all the way up to Judge — with your current rank and progress to the next shown on the module home screen. Sound effects and vibration give instant feedback as you play; you can switch sound on or off from that same screen." />
-            <Faq q="What is the Mystery Case clue hunt?" a="Completing each lesson unlocks one fragment of a hidden answer. Collect all six and assemble them in the Case Files to reveal the key case or piece of legislation at the heart of this chapter — a fun way to tie the chapter's principles to a leading authority." />
+            <Faq q="What is the Mystery Case clue hunt?" a="Completing each lesson unlocks one fragment of a hidden answer. Collect all six and assemble them in the Case Files to reveal the key case or piece of legislation at the heart of this chapter — a fun way to tie the chapter's principles to a leading authority. Every case you reveal is kept in the My Mystery Cases list at the bottom of the module home screen, so you can come back to it at any time." />
             <Faq q="Do I have to play the lessons in order?" a="Yes — each lesson unlocks the next. This is deliberate, because the tests build on one another. The interactive challenges, however, can be played in any order." />
             <Faq q="What is the revision notebook?" a="Every question you answer saves a short, memorable takeaway. Open the notebook any time from the home screen or the lessons map to revisit the key points from your reading quickly." />
             <Faq q="What happens if the timer runs out?" a="The question is marked as attempted and you'll still see the explanation, but no points are awarded for that question and your streak resets." />
-            <Faq q="Can I replay a lesson or challenge?" a="Yes — you can replay anything as often as you like to practise. Once you've completed a lesson it reopens in review mode, where you can read back through every question and answer freely but no points are awarded. Challenge parts you've already solved also stop awarding points. Only restarting the whole chapter clears your scores and lets you earn full points again from scratch." />
+            <Faq q="Can I replay a lesson or challenge?" a="Yes — you can replay anything as often as you like to practise. Once you've completed a lesson it reopens in review mode, where you can read back through every question and answer freely but no points are awarded. Challenge parts you've already solved also stop awarding points. Only restarting the whole chapter (you will be asked to confirm) clears that chapter's scores and lets you earn full points again from scratch; your best score and any Mystery Case you have revealed are kept." />
             <Faq q="Will my progress be saved if I close the app?" a="Yes — your scores and progress are saved in your browser on the device you're using, so when you come back next week your module total and completed chapters are still there. It's saved only on your own device and shared with no one; you can wipe it any time with 'Reset my progress' on the home screen. Note that a different device or browser keeps its own separate total." />
             <Faq q="How do these lessons fit with my module?" a="They are designed to support and underpin your weekly reading, which in turn supports the weekly lecture and seminar. Use the game to engage actively with the core principles and authorities — but always work through the full reading and your lecture and seminar materials alongside it." />
           </Section>
@@ -2443,7 +2446,7 @@ function ChapterEngine({ chapter, moduleScore, restored, onProgress, onExit }) {
       <div className="screen-enter" style={{ padding: "24px 0 40px" }}>
         {/* Mystery Case clue-hunt banner */}
         {(() => {
-          const cluesGot = LESSONS.filter(l => doneLessons.includes(l.id)).length;
+          const cluesGot = caseRevealed ? CLUES.length : LESSONS.filter(l => doneLessons.includes(l.id)).length;
           return (
             <div style={{ padding: "0 18px", marginBottom: 22 }}>
               <div onClick={() => go("casefiles")} style={{
@@ -2462,7 +2465,7 @@ function ChapterEngine({ chapter, moduleScore, restored, onProgress, onExit }) {
                         <div key={i} style={{ flex: 1, height: 5, borderRadius: 3, background: i < cluesGot ? "#C9A84C" : "#2A2530", boxShadow: i < cluesGot ? "0 0 6px #C9A84C88" : "none", transition: "all 0.3s" }} />
                       ))}
                     </div>
-                    <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 12, color: "#8A8070", marginTop: 6 }}>{cluesGot}/{CLUES.length} clues collected · complete lessons to reveal a landmark case</p>
+                    <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 12, color: "#8A8070", marginTop: 6 }}>{caseRevealed ? `Case solved ✓ · tap to view the Mystery Case` : `${cluesGot}/${CLUES.length} clues collected · complete lessons to reveal a landmark case`}</p>
                   </div>
                 </div>
               </div>
@@ -3045,7 +3048,7 @@ function ChapterEngine({ chapter, moduleScore, restored, onProgress, onExit }) {
 
   // ── CASE FILES (collected clues + final reveal) ──
   if (screen === "casefiles") {
-    const unlocked = CLUES.map((_, i) => doneLessons.includes(LESSONS[i].id));
+    const unlocked = CLUES.map((_, i) => caseRevealed || doneLessons.includes(LESSONS[i].id));
     const unlockedCount = unlocked.filter(Boolean).length;
     const allUnlocked = unlockedCount === CLUES.length;
     return (
@@ -3195,7 +3198,17 @@ function ChapterEngine({ chapter, moduleScore, restored, onProgress, onExit }) {
           <div style={{ display: "flex", flexDirection: "column", gap: 12, animation: "fadeUp 0.8s 0.5s both" }}>
             <button className="btn-primary" onClick={() => go("casefiles")}>{caseRevealed ? "View the Mystery Case ⚖️" : "🔍 Reveal the Mystery Case"}</button>
             <button onClick={() => go("notebook")} style={{ background: "transparent", color: "#C9A84C", border: "1px solid #C9A84C33", borderRadius: 8, padding: 14, fontSize: 14, fontFamily: "'Crimson Text',serif", cursor: "pointer" }}>Review Revision Notebook</button>
-            <button onClick={() => { setScore(0); setStreak(0); setBestStreak(0); setDoneQ([]); setDoneLessons([]); setNotebook([]); setPlaced({}); setHeld(null); setSortDone(false); setPlayCfg(null); setPst({}); setCaseRevealed(false); setAllLessonsDone(false); setElemAttempts({}); setElemSolved({}); setQSolveCount({}); setLastAward(0); setReviewMode(false); go("home"); }} style={{ background: "transparent", color: "#C9A84C", border: "1px solid #C9A84C33", borderRadius: 8, padding: 14, fontSize: 14, fontFamily: "'Crimson Text',serif", cursor: "pointer" }}>Restart Chapter</button>
+            {!confirmRestart ? (
+              <button onClick={() => setConfirmRestart(true)} style={{ background: "transparent", color: "#C9A84C", border: "1px solid #C9A84C33", borderRadius: 8, padding: 14, fontSize: 14, fontFamily: "'Crimson Text',serif", cursor: "pointer" }}>Restart Chapter</button>
+            ) : (
+              <div style={{ background: "#C06B6B12", border: "1px solid #C06B6B33", borderRadius: 12, padding: 16, textAlign: "left" }}>
+                <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 14, color: "#D4A0A0", lineHeight: 1.5, marginBottom: 12 }}>Restart this chapter? This clears this chapter's score, clues and revision notes so you can play it again from scratch. Your best score and any Mystery Case you have already revealed are kept, and you can still view the case from the home screen.</p>
+                <div style={{ display: "flex", gap: 10 }}>
+                  <button onClick={() => { setScore(0); setStreak(0); setBestStreak(0); setDoneQ([]); setDoneLessons([]); setNotebook([]); setPlaced({}); setHeld(null); setSortDone(false); setPlayCfg(null); setPst({}); setAllLessonsDone(false); setElemAttempts({}); setElemSolved({}); setQSolveCount({}); setLastAward(0); setReviewMode(false); setConfirmRestart(false); go("home"); }} style={{ flex: 1, background: "#C06B6B22", border: "1px solid #C06B6B", borderRadius: 8, padding: "10px 0", color: "#D4A0A0", fontFamily: "'Crimson Text',serif", fontSize: 14, cursor: "pointer", fontWeight: 600 }}>Yes, restart</button>
+                  <button onClick={() => setConfirmRestart(false)} style={{ flex: 1, background: "transparent", border: "1px solid #2A2530", borderRadius: 8, padding: "10px 0", color: "#9A9080", fontFamily: "'Crimson Text',serif", fontSize: 14, cursor: "pointer" }}>Cancel</button>
+                </div>
+              </div>
+            )}
           </div>
           <p style={{ marginTop: 32, fontSize: 13, color: "#3A3430", fontFamily: "'Crimson Text',serif", fontStyle: "italic", animation: "fadeUp 0.8s 0.7s both" }}>{chapter.tagline}</p>
         </div>
@@ -3240,6 +3253,7 @@ export default function App() {
   const [progress, setProgress] = useState({});
   const [loaded, setLoaded] = useState(false);
   const [confirmReset, setConfirmReset] = useState(false);
+  const [openCase, setOpenCase] = useState(null);   // which chapter's Mystery Case is expanded on the home list
   const [muted, setMutedState] = useState(Sfx.isMuted());
 
   // Load saved progress once on mount
@@ -3287,6 +3301,16 @@ export default function App() {
     });
   };
 
+  // Reveal a chapter's Mystery Case straight from the home list (only offered once all of its clues are collected).
+  const revealCaseFromHome = (id) => {
+    setProgress(prev => {
+      const ex = prev[id];
+      if (!ex) return prev;
+      return { ...prev, [id]: { ...ex, caseRevealed: true, saved: { ...(ex.saved || {}), caseRevealed: true } } };
+    });
+    setOpenCase(id);
+  };
+
   const resetAll = () => {
     clearProgress();
     setProgress({});
@@ -3324,6 +3348,7 @@ export default function App() {
         chapter={active}
         moduleScore={moduleScore}
         restored={progress[active.id]?.saved}
+        caseSolved={!!progress[active.id]?.caseRevealed}
         onProgress={(data) => recordProgress(active.id, data)}
         onExit={exitChapter}
       />
@@ -3418,6 +3443,47 @@ export default function App() {
               </div>
             );
           })}
+        </div>
+
+        {/* My Mystery Cases — a permanent record of every case revealed, independent of chapter restarts */}
+        <div style={{ marginTop:28 }}>
+          <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
+            <span style={{ fontSize:18 }}>🗂️</span>
+            <h3 style={{ fontSize:18, fontWeight:700, color:"#F0E8D8" }}>My Mystery Cases</h3>
+          </div>
+          <p style={{ fontFamily:"'Crimson Text',serif", fontSize:13, color:"#7A7060", lineHeight:1.4, marginBottom:12 }}>Every case you reveal is kept here, so you can come back to it whenever you like.</p>
+          <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+            {releasedChapters.map((c) => {
+              const p = progress[c.id];
+              const revealed = !!(p && p.caseRevealed);
+              const ready = !revealed && !!(p && p.totalLessons > 0 && p.lessonsDone >= p.totalLessons);
+              const open = openCase === c.id;
+              return (
+                <div key={c.id} style={{ background: revealed ? "linear-gradient(135deg,#1A1726,#12111A)" : "#0F0E14", border:`1px solid ${revealed ? "#C9A84C55" : "#1E1C28"}`, borderRadius:14, padding:"14px 16px" }}>
+                  <div onClick={() => revealed && setOpenCase(open ? null : c.id)} style={{ display:"flex", alignItems:"center", gap:12, cursor: revealed ? "pointer" : "default" }}>
+                    <div style={{ width:38, height:38, borderRadius:10, background: revealed ? "#C9A84C22" : "#1A1820", border:`1px solid ${revealed ? "#C9A84C44" : "#2A2530"}`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:18, flexShrink:0 }}>{revealed ? "⚖️" : ready ? "🔍" : "🔒"}</div>
+                    <div style={{ flex:1, minWidth:0 }}>
+                      <div style={{ fontSize:10, letterSpacing:1.5, color: revealed ? "#C9A84C" : "#5A5450", fontFamily:"'Crimson Text',serif", marginBottom:2 }}>WEEK {c.week} · {c.title.toUpperCase()}</div>
+                      {revealed ? (
+                        <div style={{ fontFamily:"'Playfair Display',serif", fontSize:15, fontWeight:600, fontStyle:"italic", color:"#FFD700", lineHeight:1.3 }}>{c.caseAnswer}</div>
+                      ) : ready ? (
+                        <div style={{ fontFamily:"'Crimson Text',serif", fontSize:14, color:"#C9A84C" }}>All six clues collected — ready to reveal</div>
+                      ) : (
+                        <div style={{ fontFamily:"'Crimson Text',serif", fontSize:14, color:"#5A5450", fontStyle:"italic" }}>Complete the Week {c.week} lessons to collect the six clues</div>
+                      )}
+                    </div>
+                    {revealed && <span style={{ color:"#C9A84C88", fontSize:16 }}>{open ? "▴" : "▾"}</span>}
+                  </div>
+                  {ready && (
+                    <button onClick={() => revealCaseFromHome(c.id)} style={{ marginTop:12, width:"100%", background:"linear-gradient(135deg,#C9A84C,#A8833A)", color:"#0A0A0F", border:"none", borderRadius:8, padding:"11px 0", fontSize:14, fontFamily:"'Playfair Display',serif", fontWeight:700, cursor:"pointer" }}>🔍 Reveal the Case</button>
+                  )}
+                  {revealed && open && (
+                    <p style={{ fontFamily:"'Crimson Text',serif", fontSize:14.5, lineHeight:1.6, color:"#C8C0B0", marginTop:12, paddingTop:12, borderTop:"1px solid #2A2530" }}>{c.mysteryWhyItMatters}</p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* Reset progress */}
