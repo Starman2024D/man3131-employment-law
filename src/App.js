@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 /* ============================================================================
-   CASE BY CASE — THE MAN3131 EMPLOYMENT LAW CHALLENGES
+   CASE BY CASE — THE MAN3131 EMPLOYMENT LAW CHALLENGE
    ----------------------------------------------------------------------------
    HOW TO ADD A NEW CHAPTER (each week):
    1. Copy one of the chapter content blocks below (everything from
@@ -198,9 +198,9 @@ const ES_LESSONS = [
         question: "What did the original 'control test' focus on?",
         options: [
           "The degree to which the employer controls what work is done and how it is done",
-          "Whether the worker was paid weekly in cash rather than by monthly invoice",
-          "Whether the worker supplied their own tools and equipment for the job",
-          "The job title the parties had written into their agreement"
+          "Whether the worker was paid weekly in cash rather than by monthly invoice, as this showed how closely the pay was tied to the job",
+          "Whether the worker supplied their own tools and equipment for the job, since that showed who carried the business risk",
+          "The job title the parties had written into their agreement, since the label they chose decided the status"
         ],
         correct: 0,
         explanation: "The control test asked whether the employer could direct not only what was done but how it was done. High control pointed to a contract of service. It worked for simple, supervised labour but struggled with skilled professionals who control their own methods.",
@@ -211,10 +211,10 @@ const ES_LESSONS = [
         scenario: "A hospital engages a skilled surgeon. The hospital cannot realistically tell the surgeon how to perform an operation, yet the surgeon is clearly integrated into the hospital.",
         question: "Why did the control test alone become inadequate here?",
         options: [
-          "Because surgeons and other medical professionals are always classed as self-employed in law",
-          "Because hospitals are public bodies and therefore exempt from ordinary employment law tests",
+          "Because surgeons and other medical professionals are always classed as self-employed in law, whoever pays them and however the hospital is run",
+          "Because hospitals are public bodies and therefore exempt from ordinary employment law tests of any kind",
           "Because skilled professionals control their own methods, so 'control' fails to capture their integration into the organisation",
-          "Because control is only ever relevant to calculating a manual worker's hourly pay"
+          "Because control is only ever relevant to calculating a manual worker's hourly pay and not their legal status"
         ],
         correct: 2,
         explanation: "The control test broke down for skilled staff. A hospital cannot dictate how a surgeon operates, yet the surgeon is plainly part of the organisation. This pushed courts toward the 'integration' test and ultimately the multiple/economic-reality test.",
@@ -231,9 +231,9 @@ const ES_LESSONS = [
         scenario: "Ready Mixed Concrete (South East) Ltd v Minister of Pensions and National Insurance (1968). Drivers owned their lorries on hire-purchase, wore company colours, but bore financial risk and could delegate driving.",
         question: "What three conditions did MacKenna J say must be met for a contract of service?",
         options: [
-          "That the worker is paid a wage, physically turns up, and has signed a written document",
-          "That the employer provides the tools, a uniform, and a fixed place of work such as a desk",
-          "That the worker has only a single client and performs the work on a full-time basis",
+          "That the worker is paid a wage, physically turns up for work each day, and has signed a written document setting out the terms",
+          "That the employer provides the tools, a uniform, and a fixed place of work such as a desk, with all three of these always required before there can be a contract of service",
+          "That the worker has only a single client and performs the work on a full-time basis, with no right to take other work",
           "Personal service in exchange for a wage; sufficient control by the employer; and other terms consistent with a contract of service"
         ],
         correct: 3,
@@ -245,10 +245,10 @@ const ES_LESSONS = [
         scenario: "On the facts of Ready Mixed Concrete, the drivers owned their vehicles, took financial risk, and could appoint substitutes.",
         question: "What status did the court ultimately decide the drivers had?",
         options: [
-          "Employees, because they wore company colours and drove for a single firm",
+          "Employees, because they wore company colours, drove for a single firm and could be told when and where to deliver",
           "Independent contractors (self-employed), in business on their own account",
-          "Workers, entitled to holiday pay but not to unfair dismissal protection",
-          "Office holders appointed to a defined position within the company"
+          "Workers, entitled to holiday pay and the minimum wage but not to unfair dismissal protection",
+          "Office holders appointed to a defined position within the company, with duties set by the company's constitution"
         ],
         correct: 1,
         explanation: "The drivers were independent contractors. The ownership of the lorries, the financial risk they carried, and the ability to delegate were inconsistent with a contract of service. The third limb of the test was not satisfied, so they were in business on their own account.",
@@ -259,10 +259,10 @@ const ES_LESSONS = [
         scenario: "A contract contains a clause allowing the individual to send any substitute at any time, for any reason.",
         question: "How does a genuine, unfettered right of substitution affect employment status?",
         options: [
-          "It has no effect at all, because tribunals only ever look at hours worked and pay received",
-          "It automatically makes the individual an employee, since arranging cover shows commitment to the role",
+          "It has no effect at all, because tribunals only ever look at hours worked and pay received, never at who does the work",
+          "It automatically makes the individual an employee, since arranging cover shows commitment to the role and to the employer's business",
           "It is generally inconsistent with employee/worker status, because it negates the requirement of personal service",
-          "It is relevant only to the individual's tax position with HMRC and never to their employment rights"
+          "It is relevant only to the individual's tax position with HMRC and never to their employment rights, which turn on other factors"
         ],
         correct: 2,
         explanation: "Personal service is essential to both employee and worker status. A genuine, unfettered right to substitute negates personal service and usually indicates self-employment. But tribunals scrutinise whether the right is real or a sham — a substitution clause never used and not reflecting reality may be disregarded.",
@@ -279,9 +279,9 @@ const ES_LESSONS = [
         scenario: "Carmichael v National Power plc (1999). Tour guides were engaged on a 'casual as required' basis. When not working, neither side owed the other anything.",
         question: "Why were the guides held NOT to be employees?",
         options: [
-          "Because their rate of pay was too low to support a contract of employment",
-          "Because they wore their own clothes rather than a company uniform",
-          "Because tour guiding is a profession that the law always treats as self-employment",
+          "Because their rate of pay was too low to support a contract of employment, as it fell below what an employee would receive",
+          "Because they wore their own clothes rather than a company uniform, which showed they were not part of the business",
+          "Because tour guiding is a profession that the law always treats as self-employment, whatever the contractual arrangements say or how the guides are actually treated",
           "Because there was no mutuality of obligation — no duty on the employer to provide work nor on them to accept it between engagements"
         ],
         correct: 3,
@@ -293,10 +293,10 @@ const ES_LESSONS = [
         scenario: "A zero-hours worker only has a contract during each shift actually worked. Between shifts, there is no obligation either way.",
         question: "What does this typically create?",
         options: [
-          "A single permanent contract of employment that runs continuously for all time",
+          "A single permanent contract of employment that runs continuously for all time, covering both the shifts and the gaps between them",
           "Possibly a series of separate, individual contracts during each engagement, but no continuous 'umbrella' contract",
-          "No legal relationship of any kind, even during the shifts actually worked",
-          "Automatic and permanent 'worker' status that can never afterwards be lost"
+          "No legal relationship of any kind, even during the shifts actually worked, because nothing is promised in advance",
+          "Automatic and permanent 'worker' status that can never afterwards be lost, however the relationship later develops"
         ],
         correct: 1,
         explanation: "Casual and zero-hours arrangements often create individual contracts for each shift but no continuous 'umbrella' contract between assignments. This affects continuity of employment, which matters for rights like unfair dismissal that require qualifying service.",
@@ -314,9 +314,9 @@ const ES_LESSONS = [
         question: "What key principle did the Supreme Court establish?",
         options: [
           "That tribunals may disregard written terms which do not reflect the true agreement, focusing on the reality of the relationship",
-          "That a signed written contract is always conclusive of the parties' true status",
-          "That only HMRC, and not an employment tribunal, has the power to decide a person's status",
-          "That anyone who cleans or valets cars is, as a matter of law, a worker"
+          "That a signed written contract is always conclusive of the parties' true status, and a tribunal must accept the label chosen",
+          "That only HMRC, and not an employment tribunal, has the power to decide a person's status for the purposes of employment rights, which the tribunal must simply accept",
+          "That anyone who cleans or valets cars is, as a matter of law, a worker, regardless of the terms on which they are engaged"
         ],
         correct: 0,
         explanation: "Autoclenz established that, because of the inequality of bargaining power in employment, tribunals can look beyond the written contract to the parties' true agreement and actual practice. Unrealistic substitution and 'no obligation' clauses were disregarded, and the valeters were held to be 'workers' entitled to the minimum wage and paid holiday (indeed, on the tribunal's findings, they were working under contracts of employment).",
@@ -328,9 +328,9 @@ const ES_LESSONS = [
         question: "What did the Supreme Court decide about the drivers?",
         options: [
           "That they were 'workers' entitled to the minimum wage and paid holiday, given the control Uber exercised",
-          "That they were self-employed contractors with no statutory employment rights",
-          "That they were full employees with the right to claim ordinary unfair dismissal",
-          "That their status could not be determined and was left to be agreed between the parties"
+          "That they were self-employed contractors with no statutory employment rights, because Uber was only a booking platform",
+          "That they were full employees with the right to claim ordinary unfair dismissal, redundancy pay and statutory sick pay",
+          "That their status could not be determined by the courts and was left to be agreed between Uber and the drivers themselves"
         ],
         correct: 0,
         explanation: "The Supreme Court held Uber drivers were 'workers'. Uber set the fares, dictated the terms, controlled performance through ratings, and restricted communication with passengers. Applying Autoclenz, the reality of subordination and control defeated the 'agent' label.",
@@ -341,10 +341,10 @@ const ES_LESSONS = [
         scenario: "In Uber, the drivers argued they should be paid from the moment they logged into the app, not just when carrying a passenger.",
         question: "When did the Supreme Court say the drivers' 'working time' began?",
         options: [
-          "Only during the periods when a passenger was physically being carried in the car",
-          "Only once a driver had completed a set minimum number of trips that day",
+          "Only during the periods when a passenger was physically being carried in the car, with waiting time excluded from working time",
+          "Only once a driver had completed a set minimum number of trips that day, so that earlier waiting time did not count at all",
           "Whenever the driver was logged into the app, within their territory, and ready and willing to accept trips",
-          "Only on journeys that had been pre-booked in advance rather than hailed on demand"
+          "Only on journeys that had been pre-booked in advance rather than hailed on demand, since those were the only guaranteed trips"
         ],
         correct: 2,
         explanation: "Working time included any period when a driver was logged in, in the relevant area, and ready and willing to accept trips — not merely the time spent driving passengers. This significantly expanded the drivers' entitlement to the minimum wage and holiday pay.",
@@ -367,7 +367,7 @@ const ES_LESSONS = [
           "Any of the three statuses will do, as unfair dismissal protects everyone equally"
         ],
         correct: 0,
-        explanation: "Ordinary unfair dismissal protection is generally reserved for employees, and usually requires two years' continuous service. Workers and the self-employed cannot bring ordinary unfair dismissal claims, which is why the employee/worker distinction is so heavily litigated.",
+        explanation: "Ordinary unfair dismissal protection is generally reserved for employees, and usually requires two years' continuous service (a period the Employment Rights Act 2025 is expected to cut to six months from 1 January 2027). Workers and the self-employed cannot bring ordinary unfair dismissal claims, which is why the employee/worker distinction is so heavily litigated.",
         takeaway: "Only employees (normally with 2 years' service) can claim ordinary unfair dismissal."
       },
       {
@@ -389,9 +389,9 @@ const ES_LESSONS = [
         scenario: "You are advising a business that wants certainty about whether its contractors are truly self-employed.",
         question: "What is the single most important practical lesson from the case law?",
         options: [
-          "Simply state 'self-employed' clearly and prominently in the written contract",
-          "Pay the individuals through an agency, which removes all liability from the business",
-          "Treat status as purely a matter for HMRC that has no bearing on employment rights",
+          "Simply state 'self-employed' clearly and prominently in the written contract, and have the individual sign to confirm they agree",
+          "Pay the individuals through an agency or intermediary, which removes all employment liability from the business that uses them",
+          "Treat status as purely a matter for HMRC, which has no bearing on employment rights and so can safely be left to the tax advisers and accountants to resolve",
           "The label in the contract is not decisive — tribunals examine the reality: personal service, control, mutuality, and financial risk"
         ],
         correct: 3,
@@ -526,9 +526,9 @@ const RT_LESSONS = [
         question: "Which area of civil law is most central to the relationship between worker and employer?",
         options: [
           "The law of Contract — the binding agreement to provide work in return for pay",
-          "Property law",
-          "Criminal law",
-          "Company law"
+          "Property law, because the employer owns the premises and equipment that the employee uses to do the work",
+          "Criminal law, because the state enforces the terms on which the work is carried out",
+          "Company law, because the employer is almost always incorporated as a separate legal entity"
         ],
         correct: 0,
         explanation: "The essential feature of a contract is a binding agreement, which comes into being when an employee agrees to provide work for an employer in return for pay. The law of Contract is central to the relationship between worker and employer, sitting alongside the law of Tort (such as an employer's duty of care in negligence) as the two most important civil laws in this area.",
@@ -559,10 +559,10 @@ const RT_LESSONS = [
         scenario: "A government department wants to test the water before drafting a new employment law reform, inviting interested parties to respond to its proposals.",
         question: "What is this consultation document most likely to be?",
         options: [
-          "An Act of Parliament",
+          "An Act of Parliament, which sets out the final law after both Houses have debated the proposals",
           "A Green Paper, issued to give interested parties the opportunity to respond to proposals",
-          "A Statutory Instrument",
-          "A neutral citation"
+          "A Statutory Instrument, made by a minister under powers delegated by an enabling Act",
+          "A neutral citation, being the unique number given to a reported judgment"
         ],
         correct: 1,
         explanation: "A Green Paper is issued by a government department or regulatory body to give interested parties the opportunity to submit a response to proposals. This differs from a White Paper, which is a statement of government policy where the issues are generally not open for discussion. Both come before a Bill is even drafted.",
@@ -574,9 +574,9 @@ const RT_LESSONS = [
         question: "What is this final step called, and who must give it?",
         options: [
           "Royal Assent — the Crown must give assent for a Bill to pass into law",
-          "Committee Stage — approved by a Standing Committee",
-          "Second Reading — approved by the House of Commons only",
-          "Report Stage — approved by the Prime Minister"
+          "Committee Stage — the Bill is examined line by line and approved by a Standing Committee of MPs",
+          "Second Reading — the general principles are debated and approved by the House of Commons alone",
+          "Report Stage — the amended Bill is formally approved by the Prime Minister before it is printed"
         ],
         correct: 0,
         explanation: "When a Bill has been agreed between the Houses, it is submitted for Royal Assent. The Crown must give assent to a Bill for it to pass into law. After Royal Assent, the Bill becomes an Act and is printed and made available to the public.",
@@ -587,10 +587,10 @@ const RT_LESSONS = [
         scenario: "The Employment Rights Act 2025 received Royal Assent on one date, yet many of its provisions — such as day-one paternity leave and the Statutory Sick Pay reform — did not take effect until 6 April 2026, with further provisions still to follow in 2027.",
         question: "What does this staggered timeline illustrate about how an Act comes into force?",
         options: [
-          "It shows the Act was defective and had to be repeatedly amended",
-          "Acts always come into force in full on the date of Royal Assent, so this should not happen",
+          "It shows the Act was defective and had to be repeatedly amended by later legislation before any of its provisions could take legal effect at all",
+          "Acts always come into force in full on the date of Royal Assent, so a staggered timeline like this should never happen in practice and suggests the dates quoted for the Employment Rights Act 2025 must be mistaken or misreported",
           "Some Acts are brought into force immediately, others on an 'appointed day', and some by separately published Regulations or Commencement Orders — often a combination for different sections",
-          "It shows Parliament made a drafting error"
+          "It shows Parliament made a drafting error which the courts must now correct, section by section, as each provision comes before them over several years"
         ],
         correct: 2,
         explanation: "Some Acts are brought into force immediately, others at a date known as the 'appointed day', and some by way of separately published Regulations or Commencement Orders — a combination of all three for different sections of the same Act is not uncommon. The Employment Rights Act 2025 is a good live example: Royal Assent was just the start, with different provisions commencing on different dates well into 2027.",
@@ -607,10 +607,10 @@ const RT_LESSONS = [
         scenario: "The Working Time Regulations 1998 fill in detailed rules under an 'enabling Act', without needing a full new Act of Parliament of their own.",
         question: "What type of legislation is this, and how is it typically cited?",
         options: [
-          "Primary legislation, cited as a chapter number",
+          "Primary legislation, cited by its chapter number in the year it received Royal Assent, like any other Act",
           "A Statutory Instrument (SI), typically cited in the form SI year/number — e.g. SI 1998/1833",
-          "A Green Paper, cited by consultation reference",
-          "Case law, cited using neutral citation"
+          "A Green Paper, cited by the consultation reference given to it by the government department that issued it",
+          "Case law, cited using a neutral citation made up of the year, the court identifier and a running number"
         ],
         correct: 1,
         explanation: "Most secondary legislation takes the form of Statutory Instruments (SIs), which are shorter than Acts because they generally relate to a specific part of an Act known as the 'enabling Act'. SIs are allocated a running number each year and cited in the form SI year/number — so the Working Time Regulations 1998 may be cited as SI 1998/1833.",
@@ -621,9 +621,9 @@ const RT_LESSONS = [
         scenario: "A particularly important draft Statutory Instrument requires the consent of both Houses of Parliament, with the draft briefly debated in each House before it can take effect.",
         question: "Which parliamentary procedure does this describe?",
         options: [
-          "Negative resolution",
-          "Simple laying",
-          "No parliamentary process at all",
+          "Negative resolution — the instrument takes effect unless either House votes to annul it within the set period",
+          "Simple laying — the instrument is placed before Parliament for information, with no vote needed in either House",
+          "No parliamentary process at all, because SIs are made by ministers and never need to be seen by Parliament",
           "Affirmative resolution — used for only the most important SIs, typically under 10% each year"
         ],
         correct: 3,
@@ -632,16 +632,16 @@ const RT_LESSONS = [
       },
       {
         id: "rt9",
-        scenario: "An employment tribunal is deciding a disciplinary dismissal case. Neither party's contract mentions it, yet the tribunal takes account of whether the employer followed the ACAS 'Code of Practice on discipline and grievance procedures'.",
+        scenario: "An employment tribunal is deciding a disciplinary dismissal case. Neither party's contract mentions it, yet the tribunal takes account of whether the employer followed the ACAS 'Code of Practice on disciplinary and grievance procedures'.",
         question: "What is the legal status of a Code of Practice like this one?",
         options: [
           "It generally sets out non-legally-binding guidance on good practice, though some Codes carry statutory weight and may be used in court or tribunal",
-          "It is a Statutory Instrument in all but name",
-          "It is legally binding in exactly the same way as an Act of Parliament",
-          "It has no relevance to a tribunal's decision whatsoever"
+          "It is a Statutory Instrument in all but name, made by a minister under an enabling Act and laid before Parliament for approval before it can be applied",
+          "It is legally binding in exactly the same way as an Act of Parliament, and a breach is automatically a criminal offence",
+          "It has no relevance to a tribunal's decision whatsoever, and a tribunal is forbidden from even referring to it"
         ],
         correct: 0,
-        explanation: "Codes of Practice generally set out guidance and good practice on a particular matter and are not, in themselves, legally binding. However, some Codes of Practice do carry statutory weight and may be used in court or tribunal — the ACAS Code of Practice on discipline and grievance procedures is the classic example, regularly taken into account by tribunals even though it does not itself create legal obligations.",
+        explanation: "Codes of Practice generally set out guidance and good practice on a particular matter and are not, in themselves, legally binding. However, some Codes of Practice do carry statutory weight and may be used in court or tribunal — the ACAS Code of Practice on disciplinary and grievance procedures is the classic example, regularly taken into account by tribunals even though it does not itself create legal obligations.",
         takeaway: "Codes of Practice are generally non-binding guidance, but some — like the ACAS Code — carry statutory weight and influence tribunal decisions."
       }
     ]
@@ -655,10 +655,10 @@ const RT_LESSONS = [
         scenario: "Of the roughly 200,000 cases heard each year in the courts of England and Wales, only a small fraction are ever formally reported.",
         question: "What kind of case is most likely to be selected for reporting?",
         options: [
-          "Any case involving a well-known company",
+          "Any case involving a well-known company, because the media interest in it makes the decision important to the public",
           "Cases which set a new precedent — decisions which change the interpretation of the law — particularly from higher courts",
-          "Only cases decided in the Magistrates' Court",
-          "Every case is reported automatically"
+          "Only cases decided in the Magistrates' Court, since these are the courts that deal with the largest number of disputes",
+          "Every case is reported automatically, so that a full record of each judgment is available to the public in the law reports"
         ],
         correct: 1,
         explanation: "Case law is made up of official judgments, reported cases and unreported cases. Of the roughly 200,000 cases heard each year in the courts of England and Wales, only around 2,500 are reported. Important cases — and certainly ones which set new precedent — are usually reported, and the higher the court, the more likely a case is to be reported.",
@@ -666,27 +666,27 @@ const RT_LESSONS = [
       },
       {
         id: "rt11",
-        scenario: "Since January 2001, judgments from the Court of Appeal and all divisions of the High Court are given a unique reference such as [2002] EWCA Civ 7, which is not tied to any commercial series of law reports.",
+        scenario: "Since 2001, judgments from the senior courts, such as the Court of Appeal and (from 2002) the High Court, are given a unique reference such as [2002] EWCA Civ 7, which is not tied to any commercial series of law reports.",
         question: "What is this citation system called?",
         options: [
-          "Statutory citation",
-          "Reported citation",
-          "Unofficial citation",
+          "Statutory citation — the system used to identify Acts and Statutory Instruments by year and number",
+          "Reported citation — the system tied to a particular commercial series of law reports, such as the Industrial Relations Law Reports",
+          "Unofficial citation — a shorthand label devised by commentators and used only in textbooks and journal articles",
           "Neutral citation — a unique sequential number plus a court identifier, independent of any law report series"
         ],
         correct: 3,
-        explanation: "As of January 2001, judgments from the Court of Appeal and the High Court have used 'Neutral Citation' — a unique reference made up of a sequential number for that year plus an identifier for the deciding court (e.g. EWCA Civ for the Court of Appeal, Civil Division), independent of any commercial law report series such as the All England Law Reports.",
-        takeaway: "Neutral citation (e.g. [2002] EWCA Civ 7) gives every judgment from 2001 onward a unique reference, regardless of whether it is ever commercially reported."
+        explanation: "From 2001 the senior courts began using 'Neutral Citation' (the Court of Appeal first, with the High Court following in 2002) — a unique reference made up of a sequential number for that year plus an identifier for the deciding court (e.g. EWCA Civ for the Court of Appeal, Civil Division), independent of any commercial law report series such as the All England Law Reports.",
+        takeaway: "Neutral citation (e.g. [2002] EWCA Civ 7) gives judgments of the senior courts a unique reference, regardless of whether they are ever commercially reported."
       },
       {
         id: "rt12",
         scenario: "You are reading a case reported as Walker v Northumberland County Council [1995] 1 All ER 737. A colleague mentions the same case can also be found reported under a different series.",
         question: "What does it mean that the same case has more than one valid citation?",
         options: [
-          "It means the case was heard twice by two different courts",
-          "It means one of the citations must be wrong",
+          "It means the case was heard twice by two different courts, each of which gave its own separate citation to its own decision on the dispute",
+          "It means one of the citations must be wrong, because every case can only ever have a single valid citation and any others are simply errors",
           "A single case can be reported in more than one commercial series of law reports, each with its own citation to the same underlying judgment",
-          "It means the case has no binding authority"
+          "It means the case has no binding authority, since the competing citations make it unclear which of the law reports is authoritative for the court"
         ],
         correct: 2,
         explanation: "The same case is often reported in more than one series — for example, Walker v Northumberland County Council appears as [1995] 1 All ER 737 in the All England Law Reports, and is also reported in the Industrial Relations Law Reports. Each citation points to the same judgment, just located within a different commercially-produced series compiled by different editors.",
@@ -703,10 +703,10 @@ const RT_LESSONS = [
         scenario: "An employee is bringing a personal injury claim against her employer for a workplace accident caused by the employer's breach of duty.",
         question: "Which courts have jurisdiction to hear this kind of claim?",
         options: [
-          "Only the Supreme Court",
+          "Only the Supreme Court, because it is the only court able to deal with claims about a breach of a contract of employment",
           "The High Court and the County Court, with the appropriate court depending on the amount being claimed",
-          "Only the Employment Tribunal",
-          "Only the Magistrates' Court"
+          "Only the Employment Tribunal, because it has exclusive jurisdiction over every claim arising from employment",
+          "Only the Magistrates' Court, because that court deals with all disputes between private individuals"
         ],
         correct: 1,
         explanation: "The High Court and the County Court have jurisdiction to hear cases of personal injury where an employee is bringing an action against the employer for breach of a duty owed to them, such as negligence. The appropriate court depends on the value of the claim being made.",
@@ -718,9 +718,9 @@ const RT_LESSONS = [
         question: "Which courts handle this kind of criminal prosecution?",
         options: [
           "The Magistrates' Court and the Crown Court",
-          "The Employment Tribunal only",
-          "Only the Supreme Court",
-          "The County Court"
+          "The Employment Tribunal only, because it hears every dispute that arises between an employer and a worker",
+          "Only the Supreme Court, because criminal prosecutions are always heard at the highest level in the first instance",
+          "The County Court, which hears most civil claims in England and Wales"
         ],
         correct: 0,
         explanation: "The Magistrates' Court and the Crown Court hear criminal prosecutions, including those brought under the Health and Safety at Work Act 1974 — reflecting the criminal-law dimension of employment law discussed earlier in this chapter.",
@@ -731,13 +731,13 @@ const RT_LESSONS = [
         scenario: "A party wants to appeal a decision of the Employment Appeal Tribunal (EAT) with leave to do so.",
         question: "Where does an appeal from the EAT go, and is there any further right of appeal?",
         options: [
-          "Straight to the Supreme Court, with no further appeal possible",
-          "Back to the original Employment Tribunal for a full rehearing",
-          "To the Court of Appeal (Civil Division) on a question of law or fact, with a further appeal with leave to the Supreme Court",
-          "Nowhere — decisions of the EAT are always final"
+          "Straight to the Supreme Court, with no further appeal possible, because the EAT is a superior court of record",
+          "Back to the original Employment Tribunal for a full rehearing of the facts before a differently constituted panel",
+          "To the Court of Appeal (Civil Division) on a point of law, with a further appeal with leave to the Supreme Court",
+          "Nowhere — decisions of the EAT are always final, and the parties can only ask the EAT to review its own decision"
         ],
         correct: 2,
-        explanation: "Appeal with leave from the EAT is to the Court of Appeal (Civil Division), on a question of law or fact. A further appeal with leave then lies to the Supreme Court — the same ultimate route as for the ordinary civil courts.",
+        explanation: "Appeal with leave from the EAT is to the Court of Appeal (Civil Division), and — as with the EAT itself — only on a point of law. A further appeal with leave then lies to the Supreme Court — the same ultimate route as for the ordinary civil courts.",
         takeaway: "From the EAT, an appeal with leave goes to the Court of Appeal, and — with further leave — ultimately to the Supreme Court."
       }
     ]
@@ -751,24 +751,24 @@ const RT_LESSONS = [
         scenario: "A straightforward employment dispute is listed for a full hearing before an Employment Tribunal.",
         question: "How is an Employment Tribunal traditionally composed, and how has this changed in more recent practice?",
         options: [
-          "Always a single judge, with no lay involvement, and this has never changed",
-          "A jury of twelve members of the public, unchanged since 1964",
-          "Two Employment Judges sitting together, with no lay members at all",
-          "Traditionally up to three members — a legally qualified Employment Judge plus two lay members, one representing employees' interests and one employers' — though a 2024 practice direction now makes a judge sitting alone the default unless the interests of justice require a panel"
+          "Always a single judge with no lay members at all, unchanged since tribunals were created in the 1960s as a cheap and informal alternative to the courts",
+          "A jury of twelve members of the public who decide the facts, with a judge directing them on the law, unchanged since the 1960s",
+          "Two Employment Judges sitting together with no lay members, with a third judge joining only when the decision is appealed to the EAT",
+          "Traditionally a judge plus two lay members (one for employees, one for employers); since 2024 a judge sitting alone is the default in many claims"
         ],
         correct: 3,
-        explanation: "An Employment Tribunal was traditionally composed of up to three members: a legally qualified Employment Judge (usually a barrister, solicitor or advocate), alongside two lay members — one selected from a panel representing employees' organisations and one from a panel representing employers' organisations. More recent practice, following a 2024 practice direction, makes a single Employment Judge sitting alone the default, with a panel used only where the interests of justice require it.",
-        takeaway: "Employment Tribunals were traditionally a three-person panel (judge plus two lay members); a judge sitting alone is now the default under current practice."
+        explanation: "An Employment Tribunal was traditionally composed of up to three members: a legally qualified Employment Judge (usually a barrister, solicitor or advocate), alongside two lay members — one selected from a panel representing employees' organisations and one from a panel representing employers' organisations. More recent practice, following changes made in 2024, makes a single Employment Judge sitting alone the default in many claims, including unfair dismissal, with a panel used only where the interests of justice or the type of claim require it.",
+        takeaway: "Employment Tribunals were traditionally a three-person panel (judge plus two lay members); a judge sitting alone is now the default in many claims."
       },
       {
         id: "rt17",
         scenario: "An individual represents themselves at an Employment Tribunal hearing, while the employer instructs a solicitor.",
         question: "Why does this kind of imbalance often arise in tribunal proceedings?",
         options: [
-          "Because there is no legal aid available for representation at an Employment Tribunal, meaning employers tend to be legally represented more often than employees",
-          "Because tribunals require all employees to have legal representation",
-          "Because employees are legally barred from having a representative",
-          "Because tribunals only ever hear cases where both sides are unrepresented"
+          "Because there is no legal aid for tribunal representation, so employers tend to be represented more often than employees",
+          "Because tribunals require all employees to have legal representation, which employers cannot afford to provide for them, so they appear alone",
+          "Because employees are legally barred from having a representative, although employers are permitted to instruct a solicitor or barrister",
+          "Because tribunals only ever hear cases where both sides are unrepresented, so the imbalance described here cannot in fact arise"
         ],
         correct: 0,
         explanation: "There is no legal aid available for representation at an Employment Tribunal, and in practice this means employers tend to be legally represented more often than employees. This is despite the fact that costs are not normally awarded against either party unless they have acted unreasonably in bringing or conducting the case.",
@@ -779,9 +779,9 @@ const RT_LESSONS = [
         scenario: "A party wants to appeal an Employment Tribunal decision to the Employment Appeal Tribunal (EAT), which was established in 1975.",
         question: "What is the time limit for lodging that appeal, and on what basis can the EAT hear it?",
         options: [
-          "6 months, and on any point the appellant disagrees with",
+          "6 months, and on any point the appellant disagrees with, whether of law, fact or procedure, once the tribunal has sent out its full written reasons",
           "42 days, and grounds for appeal must be submitted with the notice — heard on a question of law or a mixed question of law and fact",
-          "No time limit at all, on a point of law or fact",
+          "No time limit at all, so long as the appeal is on a point of law or fact and the EAT gives leave for it to be heard late",
           "7 days, and only on a point of law"
         ],
         correct: 1,
@@ -803,7 +803,7 @@ const RT_BUCKETS = [
 const RT_SORT_CARDS = [
   { id: "r6", name: "Walker v Northumberland County Council [1995] 1 All ER 737", emoji: "⚖️", desc: "A High Court decision establishing an employer's duty of care for workplace stress", answer: "caselaw" },
   { id: "r1", name: "Employment Rights Act 2025", emoji: "📜", desc: "Introduced day-one paternity leave and reformed Statutory Sick Pay from 2026", answer: "primary" },
-  { id: "r4", name: "ACAS Code of Practice on Discipline and Grievance", emoji: "🤝", desc: "Sets out recommended good practice for handling workplace disciplinary issues", answer: "secondary" },
+  { id: "r4", name: "ACAS Code of Practice on Disciplinary and Grievance Procedures", emoji: "🤝", desc: "Sets out recommended good practice for handling workplace disciplinary issues", answer: "secondary" },
   { id: "r7", name: "Smith v Smith [2002] EWCA Civ 7", emoji: "🔖", desc: "A Court of Appeal decision identified only by a sequential court reference", answer: "caselaw" },
   { id: "r3", name: "Working Time Regulations 1998 (SI 1998/1833)", emoji: "🔢", desc: "Sets out detailed rules that businesses must follow for staff working hours", answer: "secondary" },
   { id: "r2", name: "Health and Safety at Work Act 1974", emoji: "🦺", desc: "Creates criminal law duties on employers to protect staff", answer: "primary" },
@@ -830,7 +830,7 @@ const RT_INTERACTIVES = {
     blurb: "Guess whether each source is legally binding or non-binding guidance, then flip to check.",
     cards: [
       { label: "The Working Time Regulations 1998 (an SI)", options: ["Non-binding guidance", "Neither — a consultation only", "Legally binding"], correct: 2, reveal: "Legally binding — secondary legislation made under an enabling Act carries the force of law." },
-      { label: "The ACAS Code of Practice on discipline and grievance", options: ["Legally binding in the same way as an Act", "Non-binding guidance, though it can carry statutory weight in tribunal", "Has no relevance to a tribunal at all"], correct: 1, reveal: "Non-binding guidance — but tribunals do take account of it, giving it real practical weight despite not being law itself." },
+      { label: "The ACAS Code of Practice on disciplinary and grievance procedures", options: ["Legally binding in the same way as an Act", "Non-binding guidance, though it can carry statutory weight in tribunal", "Has no relevance to a tribunal at all"], correct: 1, reveal: "Non-binding guidance — but tribunals do take account of it, giving it real practical weight despite not being law itself." },
       { label: "A Statutory Instrument passed by affirmative resolution", options: ["Legally binding", "Non-binding guidance", "Binding only in Scotland"], correct: 0, reveal: "Legally binding — like all SIs, once made it has the force of law, regardless of which parliamentary procedure it passed through." },
       { label: "A Green Paper consultation document", options: ["Legally binding immediately", "Non-binding — it precedes any legislation and simply invites responses", "Only binding on the civil service"], correct: 1, reveal: "Non-binding — a Green Paper is a pre-legislative consultation tool, not law of any kind." }
     ]
@@ -1031,7 +1031,7 @@ const CT_LESSONS = [
           "It can still be fair for 'some other substantial reason' if the process is fair, with a 25% uplift risk if the Code is ignored",
           "It is already automatically unfair, because the Employment Rights Act 2025 received Royal Assent in December 2025",
           "It is fair only if every affected employee has first agreed to the change in writing and been fully consulted",
-          "It is unlawful as a breach of contract, even where proper contractual notice of dismissal has been given to staff in good time"
+          "It is unlawful as a breach of contract, even where proper contractual notice of dismissal has been given to the affected staff in good time"
         ],
         correct: 0,
         explanation: "Dismissal and re-engagement imposes change without consent. Today, refusing new terms can amount to 'some other substantial reason' for dismissal (s.98(1)(b) ERA 1996) if the business reason is sound and the process fair, but employers must follow the statutory Code of Practice on Dismissal and Re-engagement (in force since 18 July 2024) or risk a compensation uplift of up to 25%. Once the 2025 Act provisions commence (expected 1 January 2027), dismissing someone for refusing a 'restricted variation', such as a cut in pay or hours, will be automatically unfair in most cases, with only a narrow financial-difficulty exception.",
@@ -1147,7 +1147,7 @@ const CT_LESSONS = [
           "Fidelity and good faith, judged by whether the manager subjectively intended to cause her distress",
           "Obedience to lawful orders, judged by whether Rosa followed every reasonable instruction she was given",
           "Mutual trust and confidence: conduct without proper cause likely to seriously damage the relationship, judged objectively",
-          "Care for her safety, which requires proof of a diagnosed physical injury caused by the employer's conduct towards her"
+          "Care for her safety, which requires proof of a diagnosed physical injury caused directly by the employer's conduct towards her at work"
         ],
         correct: 2,
         explanation: "The duty of mutual trust and confidence is implied into every contract of employment: neither side may, without reasonable and proper cause, act in a manner calculated or likely to destroy or seriously damage the trust between them. It is judged objectively, by the effect on a reasonable employee, so intention is not required (Woods v WM Car Services; Courtaulds v Andrew). A serious breach is repudiatory and lets the employee resign and claim constructive dismissal.",
@@ -1278,6 +1278,398 @@ const CT_CLUES = [
   { fragment: "AC 20", icon: "📚", note: "Appeal Cases, the law report series for the House of Lords, at page 20. The decision gave the implied term of mutual trust and confidence its classic modern formulation." }
 ];
 
+/* ============================================================================
+   CHAPTER: HEALTH AND SAFETY, AND RESTRAINT OF TRADE (WEEK 4)
+   HSWA 1974, the employer's common law duty of care, enforcement and civil
+   liability, then restraint of trade: legitimate interests, reasonableness,
+   severance, garden leave, confidentiality and non-compete reform.
+   Mystery case: Coppage v Safetynet Security Ltd [2013] EWCA Civ 1176 (deliberately NOT
+   named anywhere in the lessons, so it stays a surprise).
+   ============================================================================ */
+const HS_LESSONS = [
+  {
+    id: "L1", title: "The 1974 Act", icon: "🦺", color: "#C9A84C",
+    intro: "The Health and Safety at Work etc. Act 1974 is the backbone of workplace safety law. It is a criminal statute, enforced mainly by the Health and Safety Executive, and it sits beside the civil claims you will meet in the next lesson.",
+    questions: [
+      {
+        id: "hs1",
+        scenario: "Brightside Joinery has a bandsaw that carries a very small risk of a minor graze. The only way to remove that risk entirely would be to replace the whole machine at a cost of £400,000, which would threaten the firm's survival. An inspector says the firm has not 'ensured' its employees' safety.",
+        question: "How does s.2(1) HSWA 1974 measure what the employer must do?",
+        options: [
+          "It requires absolute safety, so any injury at all shows that the employer has breached the duty, whatever the cost of preventing it",
+          "It requires what is reasonably practicable: the risk is weighed against the money, time and trouble needed to remove it",
+          "It requires only the precautions listed in an Approved Code of Practice, and nothing further can ever be expected of the employer",
+          "It requires action only once an employee has actually been injured and has made a formal complaint to the employer"
+        ],
+        correct: 1,
+        explanation: "Section 2(1) requires every employer to ensure, so far as is reasonably practicable, the health, safety and welfare at work of its employees. In Edwards v National Coal Board [1949] Asquith LJ explained that this means weighing the quantum of risk against the sacrifice, in money, time or trouble, needed to avert it, so precautions grossly out of proportion to a small risk are not required. Under s.40 the burden is on the defendant to prove that it was not reasonably practicable to do more.",
+        takeaway: "The duty is to do what is reasonably practicable, and the employer carries the burden of proving that more could not be done."
+      },
+      {
+        id: "hs2",
+        scenario: "Orchard Pharma hires an independent contractor to clean a chemical storage tank. One of the contractor's employees is overcome by fumes because Orchard never told the contractor about residual vapour in the tank. Orchard says he was not its employee, so no duty under the Act was owed to him.",
+        question: "Can Orchard be prosecuted under the Act?",
+        options: [
+          "No: the duties in the Act are owed only to an employer's own employees under s.2, so a contractor's staff fall outside its protection",
+          "No: once work is delegated by contract, responsibility for the safety of the contractor's own staff passes wholly to the contractor and its insurers",
+          "Yes, but only if the injured man later brings a successful civil claim in negligence against Orchard",
+          "Yes: s.3(1) protects non-employees affected by the undertaking, and engaging contractors can form part of that undertaking"
+        ],
+        correct: 3,
+        explanation: "Section 3(1) protects people who are not in the employer's employment but who may be affected by its undertaking. In R v Associated Octel Co Ltd [1996] the House of Lords held that the 'conduct of the undertaking' includes work done by independent contractors where it forms part of the employer's business. A prosecution does not depend on any civil claim, and the offence is committed by exposing people to a risk, so actual injury is not required (R v Board of Trustees of the Science Museum [1993]).",
+        takeaway: "Section 3 extends the employer's duty to contractors, visitors and the public who may be affected by its undertaking."
+      },
+      {
+        id: "hs3",
+        scenario: "Greenlane Architects employs twelve staff. The managing partner says there is no need for any safety paperwork because 'nothing has ever gone wrong' and everyone uses common sense.",
+        question: "What do HSWA 1974 and the Management of Health and Safety at Work Regulations 1999 require of the firm?",
+        options: [
+          "A suitable and sufficient risk assessment (recorded, as it has five or more employees) and a written safety policy",
+          "Nothing in writing, because paperwork duties apply only to businesses that handle heavy machinery or hazardous substances",
+          "A risk assessment, but only after an employee has been injured, so that the HSE can see how the accident might have been avoided",
+          "A written safety policy, but no risk assessment at all, because assessing risk is only a matter of good practice for employers, not law"
+        ],
+        correct: 0,
+        explanation: "Regulation 3 of the 1999 Regulations requires every employer to make a suitable and sufficient assessment of the risks to its employees and to others affected by its work, and, where it employs five or more people, to record the significant findings. Section 2(3) HSWA separately requires employers of five or more to prepare a written statement of their general safety policy, and the arrangements for carrying it out, and to bring it to employees' notice. A recorded assessment is also the employer's best evidence of what was 'reasonably practicable'.",
+        takeaway: "Every employer must assess risk; with five or more employees, the policy and the significant findings must be written down."
+      }
+    ]
+  },
+  {
+    id: "L2", title: "The Duty of Care", icon: "🛡️", color: "#7B9E87",
+    intro: "Alongside the statutory scheme sits the employer's common law duty of care, owed in negligence and as an implied term of the contract. It is owed to each employee individually and, unlike most contractual duties, it cannot simply be handed off to someone else.",
+    questions: [
+      {
+        id: "hs4",
+        scenario: "Tidewater Marine employs a deckhand, Joe, on a tug under the command of a competent captain. Tidewater leaves the day-to-day working system to the captain, who carelessly orders a procedure that injures Joe. Tidewater says it chose a competent captain and did everything it could.",
+        question: "Is Tidewater liable to Joe?",
+        options: [
+          "No: an employer who has appointed a competent delegate has discharged its duty and is not liable for that person's later mistakes",
+          "No: only the captain is personally liable, because an employer cannot control how its employees apply a safe system of work in practice day to day",
+          "Yes: the duty to provide a safe system of work is non-delegable, so Tidewater is answerable for the captain's failure",
+          "Yes, but only if Joe can prove that Tidewater knew about the dangerous order beforehand and chose to let it go ahead"
+        ],
+        correct: 2,
+        explanation: "In Wilsons & Clyde Coal Co v English [1938] the House of Lords described the employer's personal duty as covering competent staff, adequate plant and equipment, a safe place of work, and a safe system of work with effective supervision. In McDermid v Nash Dredging [1987] the employer was held liable when its captain negligently operated the system, because the duty is non-delegable: the employer remains responsible whoever it appoints to carry it out. Knowledge of the specific failure is not required.",
+        takeaway: "The duty of care is personal and non-delegable: delegating the task does not delegate the responsibility."
+      },
+      {
+        id: "hs5",
+        scenario: "Hal has sight in only one eye, and his employer knows it. He is given no goggles when hammering rusted bolts, because the employer does not give goggles to workers with two good eyes, for whom the risk is small. A chip of metal blinds his good eye.",
+        question: "How should a court approach the employer's duty?",
+        options: [
+          "The duty is owed to Hal individually, so the employer must allow for his known vulnerability and the far graver harm he risks",
+          "The duty is judged by the standard practice for the typical worker, so the employer is safe if it treated Hal like everyone else",
+          "The employer is liable only if the HSE had already issued an improvement notice about the lack of goggles, which would have put it on notice",
+          "The employer is liable only if Hal expressly asked for goggles and the employer unreasonably refused his request"
+        ],
+        correct: 0,
+        explanation: "In Paris v Stepney Borough Council [1951] the House of Lords held that the likelihood and the gravity of harm are assessed in light of what the employer knows about the particular employee, so a known vulnerability can require precautions that others do not need. The standard is still reasonableness, balanced against practicability: in Latimer v AEC [1953] an employer who spread sawdust on a flooded, slippery floor was not required to close the factory.",
+        takeaway: "The duty is owed to the individual: known vulnerabilities raise the level of care required."
+      },
+      {
+        id: "hs6",
+        scenario: "Nadia, a social worker, tells her manager twice that her caseload is unmanageable and that she is exhausted. The manager replies that everyone is stretched and does nothing. Nadia later suffers a psychiatric illness from overwork and sues.",
+        question: "When is an employer liable for psychiatric injury caused by work-related stress?",
+        options: [
+          "Never, because stress is an ordinary incident of employment and the courts have refused to recognise psychiatric injury caused by work",
+          "Always, once a psychiatric illness has been diagnosed, whatever the employer knew or could have foreseen about the risk to her",
+          "Only where the employee proves that the employer deliberately set out to cause her illness by overloading her with work",
+          "When harm to her was reasonably foreseeable, as it was after her warnings, and the employer took no reasonable steps"
+        ],
+        correct: 3,
+        explanation: "No occupation is inherently dangerous to mental health. The question is whether psychiatric injury to this employee was reasonably foreseeable, judged by what the employer knew or ought to have known, including signs of vulnerability and the demands of the job. In Hatton v Sutherland [2002] the Court of Appeal set out practical propositions, and the House of Lords in Barber v Somerset County Council [2004] treated them as helpful guidance and found the employer in breach for ignoring clear warning signs.",
+        takeaway: "Liability for work-related psychiatric injury turns on foreseeability, and clear warning signs make harm foreseeable."
+      }
+    ]
+  },
+  {
+    id: "L3", title: "Enforcement and Protection", icon: "🚨", color: "#4A90B8",
+    intro: "Who enforces the rules, who can sue, and what protects the worker who raises a concern? This lesson links the criminal regime to civil claims and to employment rights.",
+    questions: [
+      {
+        id: "hs7",
+        scenario: "Dev, an electrician, is injured because his employer breached a specific regulation on maintaining work equipment. The breach happened in 2025. He wants to sue purely for breach of statutory duty, without having to prove that the employer was negligent.",
+        question: "What is the position on civil liability?",
+        options: [
+          "Any breach of a health and safety regulation automatically gives him a civil claim for damages, whether or not the employer was at fault",
+          "A breach of regulations is not actionable in itself unless they say so, so Dev must prove the employer was negligent",
+          "He has no civil claim of any kind, because only the HSE can enforce health and safety law and only through criminal prosecution",
+          "He may sue for breach of statutory duty, but only after the HSE has first obtained a criminal conviction for the same breach"
+        ],
+        correct: 1,
+        explanation: "Section 47(1)(a) HSWA has always provided that breach of the general duties in the Act gives no civil right of action. Until 1 October 2013, breach of health and safety regulations was actionable as breach of statutory duty unless the regulations said otherwise. Section 69 of the Enterprise and Regulatory Reform Act 2013 reversed that default, so such a breach is not actionable unless the regulations provide for it. Claims now rest on negligence or the implied duty of care, with the regulations usually serving as evidence of the standard expected.",
+        takeaway: "The 1974 Act and, since 2013, most regulations carry criminal rather than civil liability; civil claims run through negligence."
+      },
+      {
+        id: "hs8",
+        scenario: "A fabrication firm is convicted after a worker loses a hand to a machine whose guard was missing. The firm's operations director had been told of the missing guard six months earlier and had decided to wait until the next budget to fix it.",
+        question: "Could the director be personally liable under the Act?",
+        options: [
+          "No: the company is a separate legal person, so only the company itself can be convicted, and its directors answer only to the shareholders",
+          "No: directors are liable only under company law, and the 1974 Act applies only to people who personally operate the machinery",
+          "Yes: s.37 makes a director guilty where the company's offence was committed with his consent or connivance or due to his neglect",
+          "Yes, but only if the director personally installed or removed the guard and so directly caused the accident to happen"
+        ],
+        correct: 2,
+        explanation: "Section 37 HSWA extends liability to directors, managers, secretaries and similar officers where the company's offence was committed with their consent or connivance, or was attributable to their neglect. For most s.33 offences the maximum penalty on indictment is an unlimited fine and up to two years' imprisonment. Where a death results from a gross breach of a relevant duty of care, the Corporate Manslaughter and Corporate Homicide Act 2007 creates a separate offence for the organisation, while individuals can still face gross negligence manslaughter.",
+        takeaway: "Safety offences can attach to individual directors and managers as well as to the company."
+      },
+      {
+        id: "hs9",
+        scenario: "Priya, a warehouse operative with four months' service, complains in writing that forklift trucks are being driven with faulty brakes. Her manager marks her down in her review and a week later dismisses her, citing her 'attitude'.",
+        question: "What protection does Priya have under the Employment Rights Act 1996?",
+        options: [
+          "None, because ordinary unfair dismissal needs two years' service, which she lacks, and no exception to that rule applies here",
+          "Only a claim for wrongful dismissal in contract, which would normally be limited to damages for her notice period and nothing further",
+          "Protection only if she had first reported the concern to the HSE, since complaints made internally are not covered",
+          "A claim for automatically unfair dismissal under s.100 and for detriment under s.44, with no minimum service needed"
+        ],
+        correct: 3,
+        explanation: "Section 44 ERA 1996 protects employees from detriment, and s.100 makes a dismissal automatically unfair, where the reason is that the employee carried out safety duties, raised harmful or potentially harmful circumstances by reasonable means where there is no safety representative or committee, or left or refused to return to a place of serious and imminent danger. Because the dismissal is automatically unfair, no qualifying period applies (s.108(3)). Internal complaints are protected; the HSE need not be involved.",
+        takeaway: "Raising genuine safety concerns is protected from day one: detriment is unlawful and dismissal is automatically unfair."
+      }
+    ]
+  },
+  {
+    id: "L4", title: "Restraint of Trade", icon: "⛓️", color: "#8B6F9E",
+    intro: "From safety to competition. A covenant that stops a former employee earning a living in their trade runs against public policy, so the law starts from suspicion and asks the employer to justify it.",
+    questions: [
+      {
+        id: "hs10",
+        scenario: "Imran, a senior accountant, signed a contract promising that for twelve months after leaving he would not work for any competitor within 50 miles. He has now left, and the firm has written to his new employer claiming that the covenant is binding because he signed it and was paid for the promise.",
+        question: "What is the starting point at common law?",
+        options: [
+          "The covenant is prima facie void, and enforceable only if it protects a legitimate interest and is no wider than reasonable",
+          "It is valid because he signed it for consideration, and he must prove that it is unreasonable if he wants to avoid it",
+          "It is void in every case, because the law never allows an employer to limit where a former employee may go to work after leaving",
+          "It is valid so long as it lasts no more than twelve months, which is the legal maximum for any restraint on a former employee"
+        ],
+        correct: 0,
+        explanation: "Restraints on a person's freedom to trade are prima facie void as contrary to public policy. They are enforceable only if they are reasonable in the interests of the parties, meaning they protect a legitimate interest of the employer and go no further than necessary, and reasonable in the interests of the public (Nordenfelt v Maxim Nordenfelt Guns & Ammunition Co Ltd [1894] AC 535). At present there is no statutory maximum duration for a post-employment restraint; reasonableness is decided case by case.",
+        takeaway: "Covenants in restraint of trade are presumed void unless the employer can justify them."
+      },
+      {
+        id: "hs11",
+        scenario: "Ravi joins a firm as a trainee analyst and receives expensive training. He picks up the firm's general techniques and market know-how but never handles client files or confidential models. His contract bars him from joining any rival for a year after he leaves.",
+        question: "What can an employer legitimately protect by a covenant?",
+        options: [
+          "Any competition at all, because an employer is entitled to be protected from rivals who benefit from its investment in training",
+          "The money it spent on his training, so that rivals cannot gain from that investment by hiring him once he has left the firm",
+          "An asset inherent in its business, such as client connection or confidential information, but not general skill and know-how",
+          "Its general market position, so that rivals cannot hire experienced staff who hold specialist knowledge of the industry and its customers"
+        ],
+        correct: 2,
+        explanation: "In Office Angels Ltd v Rainer-Thomas [1991] IRLR 214, Slade LJ said the employer must point to some advantage or asset inherent in the business which can be regarded as, in a sense, its property, and which it would be unjust to let the employee appropriate for himself, even though he helped to create it. Customer connection is the classic example, and client information such as contact details and investment history can also qualify, akin to a trade secret (Ashcourt Rowan Financial Planning Ltd v Hall [2013] EWHC 1185 (QB)). A wish to avoid competition, or to recoup the cost of training, is not enough on its own.",
+        takeaway: "Only an asset inherent in the business, such as client connection or confidential information, justifies a covenant; general skill belongs to the employee."
+      },
+      {
+        id: "hs12",
+        scenario: "Dev, a financial adviser, sells his small advice firm to a larger group for a substantial price and then joins the group as an employee. His employment contract contains a six-month non-compete. The group says the price it paid for his business justifies the covenant.",
+        question: "How will a court treat the employment covenant?",
+        options: [
+          "As a sale of business covenant, because the group paid for his goodwill, so the more relaxed test for sellers will apply to it",
+          "It must be justified in its own right by interests arising from the employment; the earlier sale does not justify it",
+          "As automatically void, because a covenant given by someone who is both seller and employee can never be enforced by the buyer",
+          "As enforceable without scrutiny, because he negotiated the sale price with legal advice and the court will not interfere"
+        ],
+        correct: 1,
+        explanation: "Covenants given on the sale of a business are more readily enforced than those given by employees, because the buyer has paid for the goodwill (Nordenfelt itself arose from the sale of a business). But the doctrine still applies to employment, where bargaining power is usually unequal and a livelihood is at stake. In Ashcourt Rowan Financial Planning Ltd v Hall the adviser had sold his firm and then joined the buyer's group, yet the court held that the sale agreement did not justify the later employment covenants, which had to be justified by the employer's interests in the employment itself.",
+        takeaway: "Employment covenants must be justified by the employment itself; a sale of the employee's business does not do that work."
+      }
+    ]
+  },
+  {
+    id: "L5", title: "Drafting Covenants", icon: "✂️", color: "#E07B39",
+    intro: "A covenant has to be reasonable in scope, duration and geography, and judged at the date the contract was made. Compare covenants that fail with one that succeeds, and see what separates them.",
+    questions: [
+      {
+        id: "hs13",
+        scenario: "Mara and Jon work at one branch of a recruitment agency and deal with only a small fraction of its many clients. Their contracts bar them for six months from dealing with any client of the agency, and from working for any agency within a wide area around its branches. They leave to start a rival.",
+        question: "How will a court probably treat these covenants?",
+        options: [
+          "As valid, because six months is short and the agency is entitled to protect all of its clients from competition",
+          "As valid, because an employee who has signed a covenant cannot later complain that it protects more than the employer needs",
+          "As valid in full, because a court will simply narrow any over-wide client and area restriction to a reasonable size and enforce that",
+          "As too wide: they reach well beyond the clients and area connected with the work Mara and Jon actually did"
+        ],
+        correct: 3,
+        explanation: "In Office Angels Ltd v Rainer-Thomas [1991] IRLR 214 the Court of Appeal held covenants given by agency staff unreasonable. The client restriction extended to all the agency's clients although the employees had dealt with only a small number, and the area restriction covered most of the City of London, which had no functional correspondence with where their clients were. Slade LJ added that a covenant is not justified if a less far-reaching one, such as a ban on soliciting or dealing with clients the employee had dealt with, would give adequate protection.",
+        takeaway: "A covenant must be tied to the clients and area connected with the employee's own work, and go no further than adequate protection requires."
+      },
+      {
+        id: "hs14",
+        scenario: "Ben, a financial adviser, is bound by a six-month covenant not to work in any capacity, directly or indirectly, for any business that competes with his employer, including in management, compliance or training roles. He joins a rival as its compliance officer. His employer also has a client non-solicitation covenant in his contract.",
+        question: "How will a court probably treat the non-compete?",
+        options: [
+          "As unenforceable: it reaches roles unconnected with his work, and non-solicitation protects his clients adequately",
+          "As enforceable, because a six-month non-compete is short and an employer may always restrain a competitor from hiring its staff",
+          "As enforceable, because a non-compete is the only way an employer can police misuse of confidential client information in practice",
+          "As void automatically, because the law forbids every non-compete, however narrowly it is drafted and whatever interest it protects"
+        ],
+        correct: 0,
+        explanation: "In Ashcourt Rowan Financial Planning Ltd v Hall [2013] EWHC 1185 (QB) Andrew Smith J held that a six-month non-compete given by a financial adviser was an unreasonable restraint of trade, because its wording caught indirect involvement in a competitor, including management, compliance, training and research roles, which went beyond what was reasonably necessary. A non-compete may be justified where confidential information is hard to police, but courts scrutinise it with particular care and ask whether a narrower restraint, such as a non-solicitation covenant, would be enough (compare Office Angels).",
+        takeaway: "A non-compete is closely scrutinised: where a narrower non-solicitation covenant would protect the employer, the wider restraint is not justified."
+      },
+      {
+        id: "hs15",
+        scenario: "Leo, a business development director at a security firm, is bound for six months after leaving not to approach any customer of the firm from his period of employment, in order to win business the firm could have done. He resigns, sets up a rival, and wins five of the firm's customers. He argues that the covenant is too wide because it covers all customers, not just recent ones.",
+        question: "Is the covenant enforceable?",
+        options: [
+          "No: a covenant is unreasonable unless it is limited to the customers he dealt with in his last six or twelve months",
+          "No: non-solicitation covenants are treated less favourably than non-competes, because they also restrict the customers' own freedom",
+          "Probably yes: it lasts only six months, he was the firm's key contact, and its customer base was stable",
+          "Yes, but only if the firm can show that every customer on its list was still a current customer on the day he resigned"
+        ],
+        correct: 2,
+        explanation: "Reasonableness is judged at the date of the contract, on realistic facts rather than remote hypotheticals. In upholding a covenant like this one, the Court of Appeal stressed that six months is a short period, that the employee was the 'face' of the business in contact with all its customers, that the customer base was stable, and that a proviso confined the covenant to business the employer could realistically have undertaken. Non-solicitation covenants are generally viewed more favourably than non-competes. Compare Office Angels, where the covenant covered clients the employees had never dealt with.",
+        takeaway: "A short non-solicitation covenant covering all customers can be reasonable for a key employee with a stable customer base; the role and the business matter."
+      }
+    ]
+  },
+  {
+    id: "L6", title: "Garden Leave and Reform", icon: "🔐", color: "#4FA8A0",
+    intro: "The parties' own labels do not decide enforceability, and garden leave interacts with the restraints that follow it. Then there is the question of reform: the Government now plans to legislate on non-competes.",
+    questions: [
+      {
+        id: "hs16",
+        scenario: "Aisha's contract says that any period of garden leave will be deducted from her six-month post-termination restraints. She serves her notice working as normal, because her employer never uses its right to send her home. She joins a rival the day her notice ends and says the restraints have already run.",
+        question: "Has any of her six-month restraint period already been used up by garden leave?",
+        options: [
+          "Yes: her notice period counts as garden leave automatically, because the contract allowed her employer to impose it",
+          "No: she was never actually put on garden leave, so no period falls to be deducted from the restraints",
+          "Yes: any notice period served counts towards post-termination restraints by operation of law, whatever the contract says",
+          "No: garden leave can never be deducted from a restraint, because the two protections serve different purposes and cannot be linked"
+        ],
+        correct: 1,
+        explanation: "Garden leave means the employer requires the employee to stay away from work, usually while employment and pay continue, and contracts often deduct that period from the restraints that follow. In Ashcourt Rowan Financial Planning Ltd v Hall the contract treated a 'garden leave period' as any time when the employer could exercise its powers, but the adviser had not in fact been put on garden leave, because the employer never exercised them, so the deduction clause gave him no help.",
+        takeaway: "A garden leave deduction applies only if garden leave was actually imposed."
+      },
+      {
+        id: "hs17",
+        scenario: "Tom's contract includes a clause in which he 'acknowledges that the restrictions are fair and reasonable and necessary to protect the company's legitimate interests'. When the company later tries to enforce a wide non-compete, it says he cannot argue otherwise.",
+        question: "What weight does the acknowledgement carry?",
+        options: [
+          "Little: enforceability is a matter of public policy, so the court decides reasonableness for itself whatever the parties say",
+          "It is decisive: a restraint that the employee has acknowledged to be fair and reasonable cannot afterwards be challenged by him",
+          "It is decisive if he took legal advice before signing, because informed consent removes any public policy objection to the restraint altogether",
+          "It carries no weight at all, because the court may never look at a document that an employee signed as part of his job"
+        ],
+        correct: 0,
+        explanation: "The doctrine of restraint of trade rests on public policy (Nordenfelt), so the parties cannot settle the question by agreement. In Ashcourt Rowan Financial Planning Ltd v Hall the court said that contractual statements that covenants are fair and reasonable carry little weight. The court asks, as at the date of the contract and in its realistic context, whether the restraint was reasonably necessary to protect the employer's legitimate interests.",
+        takeaway: "An employee's acknowledgement that a covenant is reasonable carries little weight; the court decides."
+      },
+      {
+        id: "hs18",
+        scenario: "A start-up founder reads that the Government has announced plans to limit non-compete clauses. She tells her team that non-competes 'are already capped at three months by law', so staff can ignore any longer restriction in their contracts.",
+        question: "Is she right that non-competes are already capped by law at three months?",
+        options: [
+          "Yes: Parliament passed a three-month cap in 2023, and every longer post-employment non-compete has been void since that time",
+          "Yes: the Employment Rights Act 2025 capped all post-employment restraints at three months from the start of 2026",
+          "No: the common law already bans non-competes outright, so staff may ignore every one of them however it is drafted",
+          "No: legislation is only promised so far, with no Bill or cap in force, so reasonableness is still tested case by case"
+        ],
+        correct: 3,
+        explanation: "At the time of writing English law sets no statutory maximum duration for non-competes. A three-month cap was proposed by the previous Government in 2023 but never enacted. The present Government published a working paper on options in November 2025 (including a ban, a cap, a salary threshold, or a combination), and on 9 October 2026 announced that it intends to legislate, with more detail expected around the Budget on 28 October. Until Parliament acts, covenants are tested under the common law doctrine you have just studied.",
+        takeaway: "Reform of non-competes is promised but not enacted; for now the common law reasonableness test applies."
+      }
+    ]
+  }
+];
+
+const HS_BUCKETS = [
+  { id: "s2", label: "Section 2", icon: "👷", color: "#C9A84C", hint: "Employer to its employees" },
+  { id: "s3", label: "Section 3", icon: "🚸", color: "#4A90B8", hint: "Employer to non-employees" },
+  { id: "s7", label: "Section 7", icon: "🧑‍🔧", color: "#7B9E87", hint: "The employee's own duty" }
+];
+
+const HS_SORT_CARDS = [
+  { id: "c1", name: "The unguarded saw", emoji: "🪚", desc: "A joinery firm leaves a bandsaw unguarded and a machinist loses a finger. Which section did the firm breach?", answer: "s2" },
+  { id: "c2", name: "Pedestrians below", emoji: "🚶", desc: "A building firm's scaffold drops debris onto passers-by on the pavement outside the site.", answer: "s3" },
+  { id: "c3", name: "No harness", emoji: "🧗", desc: "Rory ignores repeated instructions to wear the safety harness his employer has supplied.", answer: "s7" },
+  { id: "c4", name: "Day-one induction", emoji: "📋", desc: "A distribution firm puts new starters on forklift trucks with no training, instruction or supervision.", answer: "s2" },
+  { id: "c5", name: "The contractor's cleaner", emoji: "🧪", desc: "A plant owner fails to warn an outside contractor's employee about toxic residue left in a tank.", answer: "s3" },
+  { id: "c6", name: "Blocked fire exit", emoji: "🚪", desc: "Sasha stacks boxes across a fire exit despite her training, putting her colleagues at risk.", answer: "s7" },
+  { id: "c7", name: "The lone worker", emoji: "📍", desc: "A care provider has no procedure for checking on staff who work alone at night.", answer: "s2" },
+  { id: "c8", name: "The drill refusal", emoji: "🔔", desc: "Anna refuses to cooperate with the fire drill and safety inspection arranged by her employer.", answer: "s7" }
+];
+
+const HS_INTERACTIVES = {
+  L1: { type: "sort", title: "Which Section?", tag: "Sort duties", icon: "🏷️", color: "#C9A84C", itemNoun: "situation", blurb: "Classify eight situations under section 2, 3 or 7 of the 1974 Act." },
+  L2: {
+    type: "flip", title: "Liable or Not?", tag: "Flip to reveal", icon: "🃏", color: "#7B9E87",
+    lead: "The situation…", ask: "Is the employer liable?", revealLabel: "THE RULING",
+    blurb: "Decide whether the employer is liable, then flip to check.",
+    cards: [
+      { label: "An employer knows a worker has only one good eye and issues no goggles for a risky task", options: ["Not liable: others were not given goggles either", "Liable: the duty is owed to the individual, taking known vulnerability into account", "Not liable: the risk was no greater for him than for anyone else"], correct: 1, reveal: "Liable. The duty is owed to the particular employee, and a known vulnerability raises the care required (Paris v Stepney Borough Council)." },
+      { label: "A factory floor floods and becomes slippery. The employer spreads sawdust but cannot clear every patch, and a worker slips", options: ["Liable: any slip proves the employer breached the duty", "Liable: s.2 HSWA gives an automatic civil claim", "Not liable: it took reasonable precautions short of closing the factory"], correct: 2, reveal: "Not liable. The employer weighed the risk against the cost and took reasonable steps; it was not required to shut down the factory (Latimer v AEC)." },
+      { label: "An employer hands responsibility for a safe working system to an independent contractor, who is careless", options: ["Liable: the duty is non-delegable", "Not liable: it has passed the duty on to the contractor", "Not liable unless it knew of the particular carelessness"], correct: 0, reveal: "Liable. The employer's duty cannot be delegated; it remains answerable for how the system is run (Wilsons & Clyde Coal v English; McDermid v Nash Dredging)." },
+      { label: "A manager ignores an employee's repeated warnings that her workload is making her ill", options: ["Not liable: stress is an ordinary part of working life", "Liable only if the manager intended to cause her illness", "Liable if harm was reasonably foreseeable and no reasonable steps were taken"], correct: 2, reveal: "Potentially liable. Clear warnings make psychiatric harm reasonably foreseeable, and ignoring them is a breach (Hatton v Sutherland; Barber v Somerset CC)." }
+    ]
+  },
+  L3: {
+    type: "slider", title: "Know the Numbers", tag: "Estimate", icon: "🔢", color: "#4A90B8",
+    blurb: "Estimate three figures that every employer needs to know.",
+    rounds: [
+      { scenario: "The minimum level of employers' liability insurance cover an employer must hold, in £ million.", lo: 4, hi: 6, min: 0, max: 20, suffix: " million", verdict: "At least £5 million. Employers can be fined £2,500 for every day they are without proper cover." },
+      { scenario: "The number of employees at which an employer must write down its health and safety policy and record its risk assessment findings.", lo: 4, hi: 6, min: 0, max: 20, suffix: " employees", verdict: "Five or more employees. Below that the duties still apply, but the paperwork need not be in writing." },
+      { scenario: "An accident leaves a worker unable to do their normal work for more than how many consecutive days before it must be reported to the HSE under RIDDOR 2013?", lo: 6, hi: 8, min: 0, max: 21, suffix: " days", verdict: "More than seven consecutive days (not counting the day of the accident). The report must be made within 15 days." }
+    ]
+  },
+  L4: {
+    type: "truefalse", title: "Void or Valid?", tag: "True or false", icon: "❓", color: "#8B6F9E",
+    blurb: "Test your grip on the basic rules of restraint of trade.",
+    items: [
+      { text: "A post-employment covenant is enforceable simply because the employee signed it and was paid for the promise.", answer: false, note: "False. Covenants in restraint of trade are prima facie void and survive only if they protect a legitimate interest and are reasonable (Nordenfelt)." },
+      { text: "An employer can use a covenant to protect any advantage it enjoys, including simply being free from competition.", answer: false, note: "False. The employer must point to an asset inherent in its business that can be regarded as its property, such as client connection or confidential information (Office Angels v Rainer-Thomas)." },
+      { text: "Covenants given on the sale of a business are more readily enforced than covenants given by employees.", answer: true, note: "True. The buyer has paid for the goodwill, whereas an employee has weaker bargaining power and a livelihood at stake. A sale does not justify a later employment covenant (Ashcourt Rowan v Hall)." },
+      { text: "English law sets a fixed maximum period of six months for any post-employment non-compete.", answer: false, note: "False. There is currently no statutory maximum. Reasonableness is tested case by case, although reform has been announced." },
+      { text: "Non-solicitation covenants are generally viewed more favourably by the courts than non-competes.", answer: true, note: "True. Non-solicitation covenants protect customer connection with less restriction on the employee's livelihood, and a non-compete is scrutinised with particular care (Ashcourt Rowan v Hall)." }
+    ]
+  },
+  L5: {
+    type: "pickN", title: "Reasonable?", tag: "Pick the 3", icon: "🎯", color: "#E07B39",
+    blurb: "Select the three conditions a restraint must meet to be enforceable.",
+    resultNote: "A restraint must protect a legitimate proprietary interest, go no further than reasonably necessary in scope, duration and area, and not be contrary to the public interest. Signature alone is not enough, no fixed maximum period applies, and the employer does not have to pay for the restricted period.",
+    options: [
+      { text: "It protects a legitimate proprietary interest of the employer", correct: true },
+      { text: "The employee signed it freely", correct: false },
+      { text: "It goes no further than reasonably necessary in scope, duration and area", correct: true },
+      { text: "The employer pays the employee during the restricted period", correct: false },
+      { text: "It is not contrary to the public interest", correct: true },
+      { text: "It lasts no longer than six months", correct: false }
+    ],
+    need: 3
+  },
+  L6: {
+    type: "match", title: "Which Covenant?", tag: "Connect pairs", icon: "🔗", color: "#4FA8A0",
+    blurb: "Tap a description, then tap the restraint it describes.",
+    statuses: [
+      { id: "noncompete", label: "Non-compete", color: "#E07B39" },
+      { id: "nonsolicit", label: "Non-solicitation", color: "#7B9E87" },
+      { id: "garden", label: "Garden leave", color: "#C9A84C" }
+    ],
+    rights: [
+      { text: "Bars the employee from working for a competitor at all, in any capacity, for a set period", status: "noncompete" },
+      { text: "Bars the employee from approaching the employer's customers to win their business", status: "nonsolicit" },
+      { text: "The employee stays employed and paid but is kept away from work", status: "garden" },
+      { text: "Scrutinised most closely, with the court asking whether a narrower restraint would do", status: "noncompete" },
+      { text: "Generally treated more favourably, and more likely to be upheld if short and tied to the employee's role", status: "nonsolicit" },
+      { text: "Its period is often deducted from the restraints that follow, but only if it is actually imposed", status: "garden" }
+    ]
+  }
+};
+
+const HS_CASE_ANSWER = "Coppage v Safetynet Security Ltd [2013] EWCA Civ 1176";
+const HS_CLUES = [
+  { fragment: "Coppage v", icon: "👔", note: "The lead appellant was the business development director of a Birmingham company. After resigning he was found to be the directing mind of a new rival business." },
+  { fragment: "Safetynet", icon: "🛡️", note: "The first word of the respondent's name. It is the security company that lost five customers to its former director's new firm." },
+  { fragment: "Security Ltd", icon: "🏢", note: "The name ends with the nature of the business and its company form. The respondent was a limited company." },
+  { fragment: "[2013]", icon: "📅", note: "The year of the decision. The Court of Appeal gave judgment in October 2013, upholding a first-instance award of £50,000 damages." },
+  { fragment: "EWCA Civ", icon: "🏛️", note: "The court code in the neutral citation: the Court of Appeal of England and Wales, Civil Division." },
+  { fragment: "1176", icon: "🔢", note: "The case number among that year's Civil Division judgments. The court held that a six-month non-solicitation covenant covering all of the employer's customers was reasonable." }
+];
+
 /* ─────────── CHAPTER REGISTRY ───────────
    Each chapter bundles its content. Add new chapters here as you build them.
    `released: true` shows it on the home screen (per your setup: chapters appear
@@ -1317,7 +1709,7 @@ const CHAPTERS = [
     week: 2,
     releaseDate: "2026-10-05",
     title: "Employment Status",
-    subtitle: "Employee, worker, or self-employed? Master the tests that decide who gets which rights.",
+    subtitle: "Week commencing 5 October 2026 — employee, worker, or self-employed? Master the tests that decide who gets which rights.",
     accent: "#C9A84C",
     badge: BADGE_IMG,
     heroLine1: "Employment",
@@ -1369,8 +1761,37 @@ const CHAPTERS = [
     interactives: CT_INTERACTIVES,
     clues: CT_CLUES,
     caseAnswer: CT_CASE_ANSWER
+  },
+  {
+    id: "health-safety-restraint",
+    week: 4,
+    releaseDate: "2026-10-19", // add ?preview to the site address (e.g. yoursite.vercel.app/?preview) to see unreleased weeks early
+    title: "Health and Safety, and Restraint of Trade",
+    subtitle: "Week commencing 19 October 2026 — health and safety law, the employer's duty of care, and restrictive covenants.",
+    accent: "#C9A84C",
+    badge: BADGE_IMG,
+    heroLine1: "Health & Safety &",
+    heroLine2: "Restraint of Trade",
+    heroSubtitle: "Health and safety law, the employer's duty of care, and the limits on post-employment restraints.",
+    tagline: "\"An employer must keep its people safe, and may protect its business only so far as the law allows.\"",
+    guideIntro: "Welcome to Health and Safety, and Restraint of Trade — your preparation for Lecture 04 and Seminar 04. This chapter covers the Health and Safety at Work etc. Act 1974 and its regulations, the employer's common law duty of care, enforcement and civil liability, and then the doctrine of restraint of trade: legitimate interests, reasonableness, non-compete and non-solicitation covenants, garden leave and the planned reform of non-competes. These lessons are designed to support and underpin your weekly reading, which in turn supports both the weekly lecture and seminar. Here's everything you need to know.",
+    objectives: [
+      "Explain the main duties in the Health and Safety at Work etc. Act 1974 (ss.2, 3 and 7), the 'reasonably practicable' standard, and the risk assessment and policy requirements.",
+      "Apply the employer's common law duty of care, including its personal and non-delegable nature and the test for psychiatric injury caused by work.",
+      "Explain how health and safety law is enforced and how civil liability works, including director liability and the protection against detriment and dismissal for raising safety concerns.",
+      "Apply the doctrine of restraint of trade: legitimate interests, reasonableness of scope, the different treatment of non-competes and non-solicitation covenants, garden leave, and the state of non-compete reform."
+    ],
+    mysteryIntro: "Complete each lesson to collect a fragment. Assemble all six to reveal the Court of Appeal decision that upheld a short non-solicitation covenant covering all of an employer's customers.",
+    mysteryWhyItMatters: "The business development director of a Birmingham security company resigned and set up a rival business, which won five of his former employer's customers. His contract barred him for six months from approaching any customer of the firm from his period of employment, to win business the firm could have done. In 2013 the Court of Appeal held that the covenant was a reasonable restraint and upheld the award of £50,000 damages. Six months was a short period, he was the face of the business in contact with all its customers, the customer base was stable, and a proviso confined the covenant to realistic business. It is a leading illustration of why non-solicitation covenants are treated more favourably than non-competes.",
+    completionBlurb: "You've covered the safety statutes and the employer's duty of care, how they are enforced, and restraint of trade from legitimate interests to non-competes, non-solicitation, garden leave and reform.",
+    lessons: HS_LESSONS,
+    buckets: HS_BUCKETS,
+    sortCards: HS_SORT_CARDS,
+    interactives: HS_INTERACTIVES,
+    clues: HS_CLUES,
+    caseAnswer: HS_CASE_ANSWER
   }
-  // ,{ id: "...", week: 4, releaseDate: "2026-10-19", title: "...", ... }  ← add next week here
+  // ,{ id: "...", week: 5, releaseDate: "2026-10-26", title: "...", ... }  ← add next week here
 ];
 
 function ChapterEngine({ chapter, moduleScore, restored, onProgress, onExit }) {
@@ -1968,7 +2389,7 @@ function ChapterEngine({ chapter, moduleScore, restored, onProgress, onExit }) {
 
           {/* Scoring */}
           <Section icon="⚡" color="#E07B39" title="Scoring & Streaks">
-            <div style={{ display: "flex", gap: 10, marginBottom: 8 }}><span style={{ color: "#C9A84C" }}>•</span><span style={{ fontFamily: "'Crimson Text',serif", fontSize: 14, lineHeight: 1.5, color: "#9A9080" }}>In the lessons, your first correct answer to a question earns <strong>100 points</strong> (more on a streak). If you replay a question you've already answered, the points <strong>halve each time</strong> (100 → 50 → 25 → 0) with no streak bonus, so there's nothing to gain by repeating questions.</span></div>
+            <div style={{ display: "flex", gap: 10, marginBottom: 8 }}><span style={{ color: "#C9A84C" }}>•</span><span style={{ fontFamily: "'Crimson Text',serif", fontSize: 14, lineHeight: 1.5, color: "#9A9080" }}>In the lessons, a correct answer earns <strong>100 points</strong> (120 on a 2× streak, 150 on a 3× streak or better). Each question can score <strong>only once</strong>: a wrong answer or a timeout earns nothing, and replaying a question you've already answered earns <strong>0 points</strong>, so there's nothing to gain by repeating questions.</span></div>
             <div style={{ display: "flex", gap: 10, marginBottom: 8 }}><span style={{ color: "#C9A84C" }}>•</span><span style={{ fontFamily: "'Crimson Text',serif", fontSize: 14, lineHeight: 1.5, color: "#9A9080" }}>Answer several in a row to build a <strong>streak</strong> — 2× gives 120 points, 3× or more gives 150.</span></div>
             <div style={{ display: "flex", gap: 10, marginBottom: 8 }}><span style={{ color: "#C9A84C" }}>•</span><span style={{ fontFamily: "'Crimson Text',serif", fontSize: 14, lineHeight: 1.5, color: "#9A9080" }}>One wrong answer resets your streak, so accuracy and consistency both matter.</span></div>
             <div style={{ display: "flex", gap: 10, marginBottom: 8 }}><span style={{ color: "#C9A84C" }}>•</span><span style={{ fontFamily: "'Crimson Text',serif", fontSize: 14, lineHeight: 1.5, color: "#9A9080" }}>In the interactive challenges, each part is worth full points <strong>first time</strong>. Get it wrong and the points <strong>halve on each further try</strong> (e.g. 50 → 25 → 12 → 0), so it pays to think before you answer.</span></div>
