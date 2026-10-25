@@ -1570,7 +1570,7 @@ const HS_LESSONS = [
           "No: legislation is only promised so far, with no Bill or cap in force, so reasonableness is still tested case by case"
         ],
         correct: 3,
-        explanation: "At the time of writing English law sets no statutory maximum duration for non-competes. A three-month cap was proposed by the previous Government in 2023 but never enacted. The present Government published a working paper on options in November 2025 (including a ban, a cap, a salary threshold, or a combination), and on 9 October 2026 announced that it intends to legislate, with more detail expected around the Budget on 28 October. Until Parliament acts, covenants are tested under the common law doctrine you have just studied.",
+        explanation: "At the time of writing English law sets no statutory maximum duration for non-competes. A three-month cap was proposed by the previous Government in 2023 but never enacted. The present Government published a working paper on options in November 2025 (including a ban, a cap, a salary threshold, or a combination), and on 9 October 2026 announced that it intends to legislate, with more detail possibly to follow around the Budget on 28 October. Until Parliament acts, covenants are tested under the common law doctrine you have just studied.",
         takeaway: "Reform of non-competes is promised but not enacted; for now the common law reasonableness test applies."
       }
     ]
@@ -1669,6 +1669,399 @@ const HS_CLUES = [
   { fragment: "EWCA Civ", icon: "🏛️", note: "The court code in the neutral citation: the Court of Appeal of England and Wales, Civil Division." },
   { fragment: "1176", icon: "🔢", note: "The case number among that year's Civil Division judgments. The court held that a six-month non-solicitation covenant covering all of the employer's customers was reasonable." }
 ];
+
+/* ============================================================================
+   CHAPTER: VICARIOUS LIABILITY IN THE WORKPLACE (WEEK 5)
+   What vicarious liability is, employees v independent contractors, relationships
+   akin to employment, the course of employment, the close connection test for
+   deliberate wrongs, and employer liability for workplace harassment.
+   Mystery case: Majrowski v Guy's and St Thomas's NHS Trust [2006] UKHL 34 (deliberately NOT
+   named anywhere in the lessons, so it stays a surprise).
+   ============================================================================ */
+const VL_LESSONS = [
+  {
+    id: "L1", title: "The Basics", icon: "⚖️", color: "#C9A84C",
+    intro: "Vicarious liability makes one person legally answerable for a tort committed by another, even though the first person has done nothing wrong. In the workplace it is the main route by which employees injured by colleagues, and customers harmed by staff, are compensated. Three questions run through every case: was there a tort, was the relationship close enough, and was the wrong sufficiently connected to that relationship?",
+    questions: [
+      {
+        id: "vl1",
+        scenario: "Redline Logistics trains its forklift drivers thoroughly and audits its safety systems every year. One driver, Kofi, carelessly reverses into a visiting customer and breaks her leg while doing his job. Redline argues that it cannot be liable because it was not at fault itself.",
+        question: "Why is Redline's argument likely to fail?",
+        options: [
+          "Redline escapes liability unless the customer can show that it was careless in selecting, training or supervising Kofi, since the law asks whether the employer itself was at fault",
+          "Redline is liable only if Kofi cannot be sued, because the claimant must exhaust her claim against the individual employee before she can turn to the employer",
+          "Vicarious liability is not fault-based: Kofi's tort was committed in the course of his employment, and that alone makes Redline answerable for it, whatever care it took itself",
+          "Redline is liable only if it had been warned about Kofi's driving before the accident, because the employer's liability depends on what it knew about him"
+        ],
+        correct: 2,
+        explanation: "Vicarious liability is a form of strict liability: the employer answers for the tort of another without any fault of its own. It arises where the wrongdoer committed a tort, the relationship between wrongdoer and defendant is one of employment (or something akin to it), and the tort was committed in the course of that employment or is closely connected with it. An employer's care in recruiting, training and supervising is relevant to its own direct liability in negligence, which you met in Week 4, but it is no defence to vicarious liability.",
+        takeaway: "Vicarious liability is no-fault: the employer answers for the employee's tort without having been at fault itself."
+      },
+      {
+        id: "vl2",
+        scenario: "Mina, a care worker, carelessly drops a patient from a hoist and breaks his hip. The patient's solicitor is deciding whom to sue. Mina has some savings. Her employer, Oakfield Care, is solvent and insured.",
+        question: "Against whom may the patient bring a claim?",
+        options: [
+          "Either or both: Mina remains personally liable for her own tort, and Oakfield is also answerable for it vicariously because she was its employee",
+          "Oakfield only, because vicarious liability replaces the employee's own liability, so that Mina drops out of the picture once the employer is answerable",
+          "Mina first, with Oakfield added only if the court finds that Mina cannot pay, because the employer's liability is a secondary and last-resort remedy",
+          "Oakfield only, and only if it had expressly told Mina to use the hoist in the way that she did, since otherwise her act was her own"
+        ],
+        correct: 0,
+        explanation: "Vicarious liability adds a second defendant; it does not remove the first. The employee who commits the tort is personally liable, and employer and employee are jointly and severally liable for the same damage. In practice the claimant sues the employer because it is solvent and insured. In principle the employer can recover a contribution from the employee, and in Lister v Romford Ice and Cold Storage Co Ltd [1957] AC 555 the House of Lords held that an employer could recover from a negligent employee, although in practice insurers do not pursue employees.",
+        takeaway: "The employee stays personally liable; vicarious liability gives the claimant an additional, usually better-funded, defendant."
+      },
+      {
+        id: "vl3",
+        scenario: "At a trade fair, Dan, an exhibitor's employee, demonstrates a hot-glue gun. A visitor is injured, but the judge finds that Dan acted entirely reasonably and committed no tort. The visitor argues that the exhibitor should be liable anyway, because it benefits from the demonstration and is better able to pay than she is.",
+        question: "What is the position on vicarious liability?",
+        options: [
+          "The exhibitor is liable, because it profits from the enterprise in which the injury occurred and benefit to the employer is enough to engage the doctrine",
+          "The exhibitor is liable, because its greater means make it fair for it to compensate anyone who is injured in the course of its activities",
+          "The exhibitor is liable if the visitor shows that the demonstration was carried out on its premises, because the doctrine does not require any wrongdoing",
+          "None arises: the liability is derivative, so it needs a tort by the employee, and the judge has found as a fact that Dan committed no tort at all"
+        ],
+        correct: 3,
+        explanation: "Vicarious liability is secondary or derivative: the employer is answerable for the employee's tort, so there must first be a tort (negligence, assault, harassment under statute and so on). The policy reasons usually given for the doctrine, such as the employer's ability to insure and the fact that it profits from the enterprise and creates the risks that come with it, explain why the law imposes it, but they cannot create liability where the basic requirements are missing (Various Claimants v Barclays Bank plc [2020] UKSC 13).",
+        takeaway: "No tort by the wrongdoer, no vicarious liability: the policy reasons explain the doctrine but cannot replace its requirements."
+      }
+    ]
+  },
+  {
+    id: "L2", title: "Employees and Contractors", icon: "🧾", color: "#7B9E87",
+    intro: "The first stage in every case is the relationship. An employer is vicariously liable for its employees, but generally not for genuinely independent contractors. The Supreme Court's decision in Barclays shows that the line still matters, and that it turns on whether the person is really in business on their own account.",
+    questions: [
+      {
+        id: "vl4",
+        scenario: "Greenfield Estates engages Tariq, a self-employed tree surgeon, to fell a dead oak. Tariq brings his own chainsaws and van, sets his own hours, invoices each job, carries his own public liability insurance and works for other clients. A branch that he carelessly drops damages a neighbour's greenhouse.",
+        question: "Is Greenfield vicariously liable for Tariq's negligence?",
+        options: [
+          "Yes: a business that pays someone to carry out work on its behalf is vicariously liable for the way in which that work is done, whatever the arrangement",
+          "Probably not: Tariq is in business on his own account, so he is an independent contractor rather than someone in a position akin to that of an employee",
+          "Yes: Greenfield chose Tariq and benefited from his work, and that benefit alone makes the relationship close enough to employment to justify liability",
+          "No: vicarious liability can arise only where there is a written contract of employment, whatever the true facts of the working relationship may be"
+        ],
+        correct: 1,
+        explanation: "Vicarious liability attaches to employees and to relationships akin to employment, but not generally to genuinely independent contractors. The classic indicators of a contract of employment are personal service, control and terms consistent with employment (Ready Mixed Concrete (South East) Ltd v Minister of Pensions and National Insurance [1968] 2 QB 497). A person is in business on their own account if they use their own equipment, take financial risk, set their own hours, work for several clients and carry their own insurance. Labels do not decide the matter: the court looks at the reality. A principal may still owe its own direct duty, for example if it was careless in choosing the contractor, but that is a different basis of liability.",
+        takeaway: "Employees and relationships akin to employment qualify; a genuinely independent contractor in business on their own account does not."
+      },
+      {
+        id: "vl5",
+        scenario: "A bank required its job applicants to be medically examined by Dr Bates, a doctor in private practice. He was paid a fee for each report, carried his own insurance and was free to decline the work. Many people later alleged that he had sexually assaulted them during examinations. The High Court ([2017] EWHC 1929 (QB)) and the Court of Appeal ([2018] EWCA Civ 1670) held the bank vicariously liable.",
+        question: "What did the Supreme Court decide in Various Claimants v Barclays Bank plc [2020] UKSC 13?",
+        options: [
+          "The bank was liable, because it chose the doctor and the examinations were a requirement of its own business, so it created the risk of the abuse",
+          "The bank was liable, because a business is always responsible for harm done to its own staff and applicants by anyone whom it engages to work for it",
+          "The bank was not liable only because the abuse was a criminal act, since an employer can never be vicariously liable for crimes committed by those who work for it",
+          "The bank was not liable: Dr Bates carried on his own medical practice, and he was not in a position comparable to that of an employee of the bank itself"
+        ],
+        correct: 3,
+        explanation: "The Supreme Court (Lord Reed) reversed the two lower courts. The question is whether the individual is carrying on business on his own account, or is in a position comparable to an employee. Dr Bates ran his own medical practice, was paid per report, was free to accept or refuse work, carried his own insurance, and was not under the bank's control as to how he examined people. It is not enough that a contractor's work forms part of, and benefits, the business of the person who engages him. The Christian Brothers factors, which you will meet in the next lesson, help only where the relationship is not obviously one of independent business. That the abuse was criminal did not decide the case; the issue was the nature of the relationship.",
+        takeaway: "The key question is whether the individual is in business on their own account; the bank's use of the doctor did not make him its employee."
+      },
+      {
+        id: "vl6",
+        scenario: "BuildRight Ltd, a main contractor, borrows a labourer, Seth, from a labour supplier, QuickStaff Ltd, which pays his wages. For the whole job Seth works under BuildRight's site manager, using BuildRight's equipment. He carelessly punctures a water main and floods the client's premises. QuickStaff says BuildRight controlled him; BuildRight says QuickStaff employs him.",
+        question: "Who may be vicariously liable?",
+        options: [
+          "Potentially both: Seth may be so much part of the organisation of each that it is fair and just to hold both of them answerable to the client",
+          "Only QuickStaff, because the contract of employment is with it and the law allows just one employer to be vicariously liable for any one worker",
+          "Only BuildRight, because whoever has day-to-day control of the work automatically becomes the sole employer for the purposes of vicarious liability",
+          "Neither, because a worker supplied through an agency is treated as an independent contractor in relation to both the agency and its client"
+        ],
+        correct: 0,
+        explanation: "In Viasystems (Tyneside) Ltd v Thermal Transfer (Northern) Ltd [2005] EWCA Civ 1151 the Court of Appeal accepted that two defendants can both be vicariously liable for the same negligent act (dual vicarious liability). The question is whether the wrongdoer was so much a part of the work, business or organisation of both that it is fair and just to hold both liable. Control over the negligent act is an important factor, but the general employer is not automatically displaced. The Supreme Court accepted the principle of dual vicarious liability in the Christian Brothers case.",
+        takeaway: "More than one organisation can be vicariously liable for the same worker, where the worker is part of both."
+      }
+    ]
+  },
+  {
+    id: "L3", title: "Akin to Employment", icon: "🤝", color: "#4A90B8",
+    intro: "Many people who work for an organisation are not its employees: members of religious orders, prisoners, foster carers. The Supreme Court has accepted that vicarious liability can extend to relationships that are 'akin to employment'. Lord Phillips set out five considerations in the Christian Brothers case, and Lord Reed refined the approach in Cox and Barclays.",
+    questions: [
+      {
+        id: "vl7",
+        scenario: "A religious Institute supplies lay brothers to teach at a residential school that is managed by a separate body. The brothers have no contract with the Institute, but they are bound by a vow of obedience, are directed by their superiors and hand over their earnings. Several brothers sexually abuse boys at the school. The claimants sue the Institute as well as the school managers.",
+        question: "May the Institute be vicariously liable even though the brothers were not its employees?",
+        options: [
+          "No: vicarious liability needs a contract of employment, and without one the Institute owed the boys only the duties of an ordinary charity",
+          "No: the abuse was committed for the brothers' own gratification, which means that it could never be connected with their work as teachers",
+          "Yes: a relationship akin to employment can be enough, and this one had the features that make liability fair, just and reasonable here",
+          "Yes, but only if the brothers had been paid wages directly by the Institute under a written agreement that was in force at the time"
+        ],
+        correct: 2,
+        explanation: "In the Christian Brothers case (Catholic Child Welfare Society v Various Claimants [2012] UKSC 56, [2012] 3 WLR 1319) the Supreme Court held the Institute vicariously liable. Lord Phillips identified five considerations that make it fair, just and reasonable to impose liability on the defendant: (i) it is better placed to compensate, being more likely to have means and insurance; (ii) the tort is committed as a result of activity undertaken on its behalf; (iii) the tortfeasor's activity is part of its business activities; (iv) it created the risk of the tort by putting the tortfeasor in that position; and (v) the tortfeasor is under its control. Not all need be present.",
+        takeaway: "Vicarious liability can reach relationships akin to employment, tested by Lord Phillips's five considerations."
+      },
+      {
+        id: "vl8",
+        scenario: "Ms Cox manages the kitchen of a prison. Prisoners work in the kitchen for a small weekly payment as part of the prison's daily running. One prisoner negligently drops a sack of rice onto Ms Cox's back and injures her. The prisoner is not an employee and there is no contract. The Ministry of Justice, which runs the prison, says that it cannot be liable.",
+        question: "Is the Ministry vicariously liable?",
+        options: [
+          "No: a prisoner works under the compulsion of a sentence and is paid only a token sum, so he cannot be in a relationship akin to employment",
+          "Yes: the prisoner's work was integral to running the prison and was done for its benefit, and the prison created the risk by assigning it",
+          "No: the prisoner had no contract of any kind, and the Ministry had never agreed to be answerable for what the prisoners did in the kitchen",
+          "Yes, but only if Ms Cox can prove that the prison officers supervising the kitchen were themselves careless in the way that they did so"
+        ],
+        correct: 1,
+        explanation: "In Cox v Ministry of Justice [2016] UKSC 10 Lord Reed held that the relationship was akin to employment: the prisoner carried on activities as an integral part of the prison's business and for its benefit, and the prison had assigned him that work, so it created the risk of his negligence. The benefit need not be commercial profit, the tortfeasor's own interest in the work (here, rehabilitation) does not matter, and there need be no contract or voluntary choice. Of Lord Phillips's five considerations, the defendant's ability to compensate carries little weight on its own, and control matters less than it once did.",
+        takeaway: "If the work is integral to the defendant's activities and done for its benefit, a relationship akin to employment can exist without a contract."
+      },
+      {
+        id: "vl9",
+        scenario: "A local authority places a child with foster carers as part of its statutory child-care service. The carers are not paid as employees, but the authority recruits, trains, supervises and monitors them and decides which children they look after. A foster carer sexually abuses the child in the carer's own home.",
+        question: "Can the local authority be vicariously liable for the abuse?",
+        options: [
+          "Yes: the carers' work was part of the authority's own child-care service, so their relationship with it was in effect akin to employment",
+          "No: foster carers raise children in their own homes as a family, so their role cannot be part of any enterprise carried on by the authority",
+          "No: deliberate sexual abuse is so far removed from anything an employer authorises that vicarious liability for it cannot be possible",
+          "Yes, but only if the carers were also paid a salary and given a formal contract of employment by the authority before the placement began"
+        ],
+        correct: 0,
+        explanation: "In Armes v Nottinghamshire County Council [2017] UKSC 60 the Supreme Court held the authority vicariously liable. Foster carers were not running an independent business: they cared for children as part of the authority's statutory child-care service, under its supervision and subject to its rules, so the relationship was akin to employment. That the abuse took place in the carer's own home did not prevent the sufficient connection, because the authority had entrusted the child's care to the carer. The case shows how far relationships akin to employment now reach.",
+        takeaway: "Where people carry out an organisation's activities as part of its service, and not as a business of their own, the relationship can be akin to employment."
+      }
+    ]
+  },
+  {
+    id: "L4", title: "The Course of Employment", icon: "🕑", color: "#8B6F9E",
+    intro: "Once the relationship is established, the wrong must be connected with the job. For negligent acts the traditional test, from Salmond, asks whether the act was authorised, or was an unauthorised way of doing something authorised. Employers cannot escape by pointing to a prohibition on how a job is done, but they are not liable when an employee goes off on a frolic of their own.",
+    questions: [
+      {
+        id: "vl10",
+        scenario: "Hamid delivers petrol to a garage by tanker. While the fuel is being pumped he lights a cigarette and throws down the match. The vapour ignites and the garage is destroyed. His employer says that smoking at the pump was strictly forbidden and had nothing to do with delivering fuel.",
+        question: "Is the employer vicariously liable for Hamid's negligence?",
+        options: [
+          "No: any act that the employer has expressly forbidden is automatically outside the course of employment, whatever its connection with the work",
+          "No: lighting a cigarette was a personal act unconnected with delivering petrol, so Hamid was acting only on his own account when the fire started",
+          "Yes, but only if the employer had previously tolerated smoking by its drivers while they were working or had never warned them about it",
+          "Yes: Hamid was doing the very job he was employed to do, delivering fuel, and he did that job at the time in a careless and forbidden way"
+        ],
+        correct: 3,
+        explanation: "In Century Insurance Co Ltd v Northern Ireland Road Transport Board [1942] AC 509 a tanker driver's carelessness in lighting a cigarette while discharging petrol led to an explosion. The House of Lords held the employer liable: the driver was doing the task he was employed to do, and his negligence was a careless way of doing it. On the traditional Salmond approach, an employer is liable for acts that it authorised and for unauthorised ways of doing authorised acts. Carelessness, even in breach of the employer's rules, does not take an act outside the course of employment.",
+        takeaway: "Negligence in the course of doing the job is within the course of employment, even if the way it was done was forbidden."
+      },
+      {
+        id: "vl11",
+        scenario: "A dairy forbids its milkmen to let children ride on the milk float or help with deliveries, and displays notices to that effect. Barry, a milkman, nonetheless asks a 13-year-old boy to help him deliver, to speed up his round. The boy is injured when Barry drives negligently.",
+        question: "Is the dairy vicariously liable to the boy?",
+        options: [
+          "No: Barry was acting against express orders, so he was acting outside the course of employment and the dairy is not responsible for what he did",
+          "Yes: the ban limited how Barry did his job, not what his job was, and the boy was helping with the dairy's business and not for any purpose of his own",
+          "No: the boy was a volunteer who had no connection with the dairy, so the dairy owed him no responsibility for Barry's carelessness in driving the float",
+          "Yes, but only because the dairy failed to enforce its own rules, which means that its liability rests on its negligent supervision of Barry"
+        ],
+        correct: 1,
+        explanation: "In Rose v Plenty [1976] 1 WLR 141 the Court of Appeal (Lord Denning MR and Scarman LJ, Lawton LJ dissenting) held the dairy liable. A prohibition that merely limits the way in which the employee does the job does not take the act outside the course of employment; a prohibition that limits the scope of the job does. The boy was helping to deliver milk, which furthered the dairy's business. Compare Limpus v London General Omnibus Co (1862) 1 H & C 526, where a bus driver who deliberately obstructed a rival's bus, contrary to his employer's orders, was still held to be acting in the course of employment.",
+        takeaway: "A prohibition on how to do the job does not remove the act from the course of employment; a prohibition on what the job is can."
+      },
+      {
+        id: "vl12",
+        scenario: "Four demolition workers on a remote site decide, without permission, to take their employer's van to a café seven miles away for a cup of tea. Through the negligent driving of one of them, a colleague is injured in the van on the way back.",
+        question: "Is the employer vicariously liable for the driver's negligence?",
+        options: [
+          "Yes: the van belonged to the employer and the workers were still on the clock, so any accident was bound to be connected with the job they were doing",
+          "Yes: an employer is liable for the careless driving of any employee who is using its vehicle, whatever the purpose of the journey on which he is engaged",
+          "No: the trip was a frolic of their own, made for personal purposes, and not a careless or unauthorised way of doing their work for their employer",
+          "No: the employer can never be vicariously liable for road accidents at all, since only the driver and his motor insurer are responsible for them"
+        ],
+        correct: 2,
+        explanation: "In Hilton v Thomas Burton (Rhodes) Ltd [1961] 1 WLR 705 workers who drove several miles to a café on a purely personal errand, away from their work and without permission, were held to be on a frolic of their own. The employer was not liable for the accident. The law distinguishes a mere detour or an improper way of doing the job, for which the employer remains liable, from a substantial departure for the employee's own purposes (Joel v Morison (1834)). Owning the vehicle is not enough.",
+        takeaway: "An employee on a frolic of their own is outside the course of employment; a mere detour is not."
+      }
+    ]
+  },
+  {
+    id: "L5", title: "The Close Connection Test", icon: "🔗", color: "#E07B39",
+    intro: "For deliberate wrongs such as assaults the old test struggled: how can an assault be an unauthorised way of doing a job? In Lister v Hesley Hall Ltd [2001] UKHL 22 the House of Lords replaced it with a test of closeness. Was the wrong so closely connected with what the employee was employed to do that it is fair and just to hold the employer liable? Mohamud and Morrison show the test at work.",
+    questions: [
+      {
+        id: "vl13",
+        scenario: "A school employs a warden to run a boarding house for pupils. Over some years the warden sexually abuses several of the boys in his care. The school argues that sexual abuse is the opposite of what it employed him to do, so that it was outside his employment and the school cannot be liable.",
+        question: "Is the school vicariously liable for the warden's abuse?",
+        options: [
+          "Yes: the school had entrusted the boys' care to him, and the abuse was so closely connected with that work that liability is fair and just",
+          "No: deliberate sexual abuse can never be an unauthorised way of doing an authorised act, so it must lie outside the course of employment",
+          "No: the school is liable only if it knew of the abuse and failed to act, since otherwise it would be answering for a crime that it did not commit",
+          "Yes: an employer is liable for every wrong that its employees commit on its premises, however unconnected with their work the wrong may be"
+        ],
+        correct: 0,
+        explanation: "In Lister v Hesley Hall Ltd [2001] UKHL 22, [2002] 1 AC 215, the House of Lords held the school liable. Lord Steyn reformulated the question: were the warden's torts so closely connected with his employment that it would be fair and just to hold the employer vicariously liable? The school had undertaken the care of the boys and entrusted that care to the warden, and the abuse was bound up with the way he performed that role. The House rejected the narrow Salmond analysis for deliberate wrongs and disapproved the earlier decision of the Court of Appeal in Trotman v North Yorkshire County Council [1999] LGR 584.",
+        takeaway: "For deliberate wrongs the question is whether the wrong was so closely connected with the employment that liability is fair and just."
+      },
+      {
+        id: "vl14",
+        scenario: "Khan works behind the kiosk at a petrol station, where his job is to serve customers and deal with their requests. A customer asks whether he can print some documents from a memory stick. Khan replies with a torrent of foul and racist abuse, orders the customer never to come back, follows him onto the forecourt and attacks him. The employer says that it was a personal act of aggression unrelated to serving customers.",
+        question: "How does a court decide whether the employer is liable?",
+        options: [
+          "It asks only whether the employer authorised the attack, and since it had given no instruction to use force against customers there is no liability",
+          "It asks only whether the attack happened on the employer's premises during working hours, so that the employer is liable for any assault occurring there",
+          "It asks whether Khan was motivated by a wish to benefit his employer, and his racist abuse shows that he was not, so there can be no liability",
+          "It asks what job was entrusted to Khan, and whether the attack was so closely connected with it that liability is right; on these facts it plainly was"
+        ],
+        correct: 3,
+        explanation: "In Mohamud v WM Morrison Supermarkets plc [2016] UKSC 11 Lord Toulson set out two questions. First, what functions or field of activities had been entrusted by the employer to the employee, that is, what was the nature of his job, viewed broadly? Second, was there a sufficient connection between the position in which he was employed and his wrongful conduct to make it right for the employer to be held liable? The abuse and the attack were an unbroken sequence of events: Khan was dealing with a customer, and his conduct, though a gross abuse of his position, was in connection with it. His motive was not decisive.",
+        takeaway: "Ask what the employee's job was, viewed broadly, and whether the wrong was sufficiently connected with it to make the employer liable."
+      },
+      {
+        id: "vl15",
+        scenario: "Neil, a senior IT auditor, is disciplined by his employer and resents it. Some months later the employer gives him payroll data on nearly 100,000 staff, so that he can pass it to its external auditors. He sends it to them, but he also posts a copy on the internet, to damage his employer. The employer is not itself at fault in any way. The claimants are staff whose details were published.",
+        question: "Is the employer vicariously liable for Neil's disclosure?",
+        options: [
+          "Yes: it was part of his job to handle the payroll data, and the fact that the job gave him the opportunity to commit the wrong is enough in itself",
+          "No: he was pursuing a personal vendetta, not furthering the employer's business, so the wrong was not sufficiently closely connected with his job",
+          "Yes: Mohamud shows that liability follows whenever the wrong is close in time and place to the employee's job, whatever the reason for it",
+          "No: an employer can never be vicariously liable for a breach of data protection law or any other statutory duty committed by an employee"
+        ],
+        correct: 1,
+        explanation: "In WM Morrison Supermarkets plc v Various Claimants [2020] UKSC 12 the Supreme Court reversed the lower courts. Neil's disclosure was not an act done in furtherance of the employer's business; he was pursuing a personal vendetta designed to harm it. That his employment gave him the opportunity to commit the wrong was not enough. In Mohamud, by contrast, the employee was dealing with a customer when he acted. The Court also held that the Data Protection Act 1998 did not exclude vicarious liability for an employee's breach, so a statutory wrong can be vicarious, but here the connection was missing.",
+        takeaway: "An employee who is pursuing a personal vendetta against the employer, and not its business, is outside the close connection test."
+      }
+    ]
+  },
+  {
+    id: "L6", title: "Harassment and Social Events", icon: "🛡️", color: "#4FA8A0",
+    intro: "Workplace harassment is where vicarious liability meets statute. The common law doctrine applies to statutory torts, and the Equality Act 2010 has its own rule in section 109, with its own defence. The Employment Rights Act 2025 is about to change the position on the duty to prevent sexual harassment and on harassment by third parties.",
+    questions: [
+      {
+        id: "vl16",
+        scenario: "Nina, a hospital ward clerk, is repeatedly belittled in front of colleagues by her line manager, who also isolates her, sets impossible targets and threatens discipline. The employer's own investigation upholds her complaint. Nina has left, and the manager has little money. She sues the employer, not the manager, under the Protection from Harassment Act 1997.",
+        question: "Can the employer be vicariously liable under the 1997 Act?",
+        options: [
+          "No: vicarious liability applies only to torts at common law, so that a statutory wrong can be pursued only against the individual harasser",
+          "No: the 1997 Act is aimed at stalkers and cannot apply to conduct between colleagues in the course of an ordinary workplace relationship",
+          "Yes: vicarious liability can apply to a statutory tort unless the statute excludes it, and nothing in the 1997 Act excludes it in this situation",
+          "Yes, but only if the employer's board had approved or tolerated the manager's conduct before Nina complained, since otherwise the act is his alone"
+        ],
+        correct: 2,
+        explanation: "In a leading decision in 2006 the House of Lords held that an employer can be vicariously liable for harassment by an employee under the Protection from Harassment Act 1997, because the doctrine applies to statutory wrongs unless Parliament has excluded it, and nothing in the Act did. The claimant must show a course of conduct (at least two occasions, s.7(3)) amounting to harassment, which means conduct that is oppressive and unacceptable and not merely unattractive or unreasonable, and the employee's conduct must be closely connected with the employment. Damages can include anxiety and financial loss (s.3(2)).",
+        takeaway: "An employer can be vicariously liable for harassment by a manager under the 1997 Act, without proof of its own fault."
+      },
+      {
+        id: "vl17",
+        scenario: "Anya, aged 17, is a trainee at a factory. For months her workmates subject her to racial taunts and violent initiation pranks. Her employer says that the workmates' conduct was criminal and nothing to do with what they were employed to do, so it was outside the course of employment. The employer had no equal opportunities policy and had given no training.",
+        question: "Is the employer liable under the Equality Act 2010?",
+        options: [
+          "No: the narrow common law test applies in discrimination cases, so that deliberate and criminal horseplay can never fall within the course of employment",
+          "No: s.109 applies only where a manager carries out the discriminatory act, and not where it is committed by ordinary colleagues of the person harassed",
+          "Yes: liability under s.109 is absolute, so even an employer that had taken every reasonable step to prevent the harassment would still be liable",
+          "Yes: s.109 treats acts in the course of employment as the employer's too, read broadly, and it cannot show that it took any reasonable steps beforehand"
+        ],
+        correct: 3,
+        explanation: "Section 109(1) Equality Act 2010 treats anything done by an employee in the course of employment as also done by the employer, whether or not the employer knew of it or approved (s.109(3)). In Jones v Tower Boot Co Ltd [1997] ICR 254 the Court of Appeal held that 'in the course of employment' has its ordinary everyday meaning in discrimination law, not the narrower common law tests, so deliberate racial harassment by workmates was covered. Section 109(4) gives the employer a defence if it took all reasonable steps to prevent the employee from doing the thing or anything of that description; policies must be implemented and training kept up to date (Allay (UK) Ltd v Gehlen). The Employment Rights Act 2025 is due to strengthen this from 30 October 2026, with an 'all reasonable steps' duty to prevent sexual harassment and employer liability for third-party harassment unless all reasonable steps were taken.",
+        takeaway: "In discrimination law the employer answers for workplace harassment broadly, unless it proves it took all reasonable steps."
+      },
+      {
+        id: "vl18",
+        scenario: "After a firm's Christmas party, staff and the managing director move to a hotel for an impromptu drinking session. In the bar the managing director lectures an employee about the business and about who is in charge. When the employee challenges him, he punches him, causing a serious brain injury. The employer says that this was a social event after working hours.",
+        question: "Is the employer vicariously liable for the assault?",
+        options: [
+          "Yes: the court treated the work talk and the assault as one continuous sequence, in which the managing director was asserting his authority as boss",
+          "No: a social event after working hours is outside the course of employment by definition, so a wrong committed there cannot engage the employer's liability",
+          "No: an employer is never liable for an assault by one of its directors on another employee, because the director is the company's mind and not an employee",
+          "Yes: an employer is automatically liable for everything that its managing director does at any time, because he is the alter ego of the company"
+        ],
+        correct: 0,
+        explanation: "In Bellman v Northampton Recruitment Ltd [2018] EWCA Civ 2214 the Court of Appeal held the employer liable. The managing director had used the informal gathering to talk about work and to assert his authority as the boss, and the assault arose out of that exercise of authority; the discussion and the assault formed one continuous sequence. The location, the hour and the social setting did not stop the close connection. Contrast Morrison, where the employee was pursuing a personal vendetta and not exercising any part of his job.",
+        takeaway: "A social setting does not by itself take a wrong outside the close connection test, if the wrong arises from the exercise of the employee's role."
+      }
+    ]
+  }
+];
+
+const VL_BUCKETS = [
+  { id: "emp", label: "Employee", icon: "👔", color: "#C9A84C", hint: "Contract of employment" },
+  { id: "akin", label: "Akin to employment", icon: "🤝", color: "#4A90B8", hint: "No contract, but close enough" },
+  { id: "own", label: "Own business", icon: "🧰", color: "#7B9E87", hint: "Independent, no vicarious liability" }
+];
+
+const VL_SORT_CARDS = [
+  { id: "c1", name: "The warehouse picker", emoji: "📦", desc: "Works fixed shifts for a distributor on PAYE under a written contract, using its equipment and following its instructions.", answer: "emp" },
+  { id: "c2", name: "The prison kitchen worker", emoji: "🍚", desc: "A prisoner paid a small wage to work in the prison kitchen as part of the prison's daily running.", answer: "akin" },
+  { id: "c3", name: "The tree surgeon", emoji: "🌳", desc: "Brings his own chainsaws and van, sets his own hours, invoices each job, holds his own insurance and works for many clients.", answer: "own" },
+  { id: "c4", name: "The medical examiner", emoji: "🩺", desc: "A doctor with her own practice and insurance, paid a fee per report to examine a bank's job applicants.", answer: "own" },
+  { id: "c5", name: "The foster carer", emoji: "🏠", desc: "Recruited, trained and supervised by a local authority to look after a child it has placed, as part of its child-care service.", answer: "akin" },
+  { id: "c6", name: "The teaching brother", emoji: "📖", desc: "A member of a religious institute, supplied to teach at a school, bound by obedience to the institute and handing over his earnings.", answer: "akin" },
+  { id: "c7", name: "The payroll clerk", emoji: "🧾", desc: "A salaried member of a finance team whose hours and tasks are set by her manager.", answer: "emp" },
+  { id: "c8", name: "The freelance designer", emoji: "🎨", desc: "Works from home on her own computer, bills several clients per project, and decides how and when to do the work.", answer: "own" }
+];
+
+const VL_INTERACTIVES = {
+  L1: {
+    type: "truefalse", title: "Fault or No Fault?", tag: "True or false", icon: "❓", color: "#C9A84C",
+    blurb: "Test your grip on the basics of vicarious liability.",
+    items: [
+      { text: "An employer can avoid vicarious liability by proving that it recruited, trained and supervised the employee carefully.", answer: false, note: "False. Vicarious liability does not depend on fault by the employer. Careful recruitment and training are relevant to its own direct liability in negligence, not to this." },
+      { text: "The employee who committed the tort remains personally liable alongside the employer.", answer: true, note: "True. The claimant may sue either or both. The employer can in principle recover a contribution from the employee, although in practice insurers do not pursue employees (Lister v Romford Ice)." },
+      { text: "Vicarious liability needs a tort by the wrongdoer; if no tort was committed, the employer cannot be vicariously liable.", answer: true, note: "True. The liability is derivative: the employer answers for the employee's tort, so there has to be one." },
+      { text: "Vicarious liability applies only to negligence, and never to deliberate wrongs such as assault or abuse.", answer: false, note: "False. Since Lister v Hesley Hall an employer can be liable for deliberate wrongs that are sufficiently closely connected with the employment." },
+      { text: "An employer can be vicariously liable for a statutory tort, such as harassment under the Protection from Harassment Act 1997.", answer: true, note: "True. The doctrine applies to statutory wrongs unless Parliament has excluded it, and the 1997 Act does not do so." }
+    ]
+  },
+  L2: {
+    type: "flip", title: "Employee or Contractor?", tag: "Flip to reveal", icon: "🃏", color: "#7B9E87",
+    lead: "The worker…", ask: "Is the business vicariously liable?", revealLabel: "THE RULING",
+    blurb: "Decide whether the business is vicariously liable, then flip to check.",
+    cards: [
+      { label: "A shop's permanent assistant, employed on PAYE, carelessly leaves a spill and a customer slips", options: ["Yes: she is an employee acting in the course of her employment", "No: shop assistants are personally liable for their own carelessness", "No: the shop is liable only if it knew about the spill"], correct: 0, reveal: "Yes. An employee's careless performance of the job is within the course of employment, and the employer's own fault is not required." },
+      { label: "A bank pays a self-employed doctor a fee per report to examine job applicants. He runs his own practice and carries his own insurance", options: ["Yes: the bank chose him and benefits from his reports", "No: he is in business on his own account (Barclays [2020])", "Yes: any doctor whom an employer engages is its agent"], correct: 1, reveal: "No. In Various Claimants v Barclays Bank plc [2020] UKSC 13 the Supreme Court held that the doctor carried on his own business, so the bank was not vicariously liable." },
+      { label: "A prisoner paid a small wage works in the prison kitchen and negligently injures the catering manager", options: ["No: prisoners are not employees and have no contract of employment", "Yes, but only if the prison officers were also negligent", "Yes: the relationship is akin to employment (Cox)"], correct: 2, reveal: "Yes. In Cox v Ministry of Justice [2016] UKSC 10 the prisoner's work was integral to the prison and done for its benefit, so the relationship was akin to employment." },
+      { label: "A labour supplier's worker, supervised daily by the client's site manager, damages the client's property", options: ["Both may be liable: dual vicarious liability (Viasystems)", "Only the supplier can be liable", "Neither: an agency worker is an independent contractor"], correct: 0, reveal: "Both may be liable. The question is whether the worker was so much part of the organisation of each that it is fair and just to hold both answerable (Viasystems v Thermal Transfer [2005])." }
+    ]
+  },
+  L3: { type: "sort", title: "Where Does the Line Fall?", tag: "Sort workers", icon: "🏷️", color: "#4A90B8", itemNoun: "worker", blurb: "Classify eight workers as employees, akin to employees, or in business on their own account." },
+  L4: {
+    type: "pickN", title: "In the Course of Employment?", tag: "Pick the 3", icon: "🎯", color: "#8B6F9E",
+    blurb: "Select the three statements that are correct.",
+    resultNote: "An unauthorised or careless way of doing an authorised task can still be within the course of employment, and a prohibition that only limits how the job is done does not change that (Limpus; Rose v Plenty). A substantial detour for the employee's own purposes is a frolic outside it (Hilton). The employer's orders and ownership of a vehicle are not decisive.",
+    options: [
+      { text: "Doing an authorised task in an unauthorised or careless way can still be in the course of employment", correct: true },
+      { text: "Anything the employer has expressly forbidden is automatically outside the course of employment", correct: false },
+      { text: "A negligent act is in the course of employment only if the employer ordered it", correct: false },
+      { text: "A prohibition that limits how a job is done does not necessarily take the act outside employment", correct: true },
+      { text: "An employee is always in the course of employment while using the employer's vehicle", correct: false },
+      { text: "A substantial detour for the employee's own purposes may be a frolic outside the course of employment", correct: true }
+    ],
+    need: 3
+  },
+  L5: {
+    type: "match", title: "Which Case?", tag: "Connect pairs", icon: "🔗", color: "#E07B39",
+    blurb: "Tap a description, then tap the case it describes.",
+    statuses: [
+      { id: "lister", label: "Lister", color: "#C9A84C" },
+      { id: "mohamud", label: "Mohamud", color: "#4A90B8" },
+      { id: "morrison", label: "Morrison", color: "#E07B39" }
+    ],
+    rights: [
+      { text: "A warden entrusted with the care of boys at a boarding house abused them, and the House of Lords adopted the 'close connection' test", status: "lister" },
+      { text: "A kiosk attendant abused a customer and then attacked him on the forecourt, which the court saw as an unbroken sequence", status: "mohamud" },
+      { text: "An IT auditor posted colleagues' payroll data online to harm his employer, and the employer was held not liable", status: "morrison" },
+      { text: "Lord Toulson's two questions: the field of activities entrusted to the employee, and whether it is right that the employer be liable", status: "mohamud" },
+      { text: "The employer was liable because the care of vulnerable pupils had been entrusted to the employee who abused them", status: "lister" },
+      { text: "The employee was pursuing a personal vendetta, so merely having the opportunity to commit the wrong was not enough", status: "morrison" }
+    ]
+  },
+  L6: {
+    type: "slider", title: "Know the Numbers", tag: "Estimate", icon: "🔢", color: "#4FA8A0",
+    blurb: "Estimate three figures from this week's law.",
+    rounds: [
+      { scenario: "How many considerations did Lord Phillips list in the Christian Brothers case as making it fair, just and reasonable to impose vicarious liability?", lo: 4, hi: 6, min: 0, max: 10, suffix: " considerations", verdict: "Five: the defendant's means and insurance, activity on its behalf, part of its business, risk created by it, and control. Not all need be present, and Lord Reed said in Cox that some carry little weight on their own." },
+      { scenario: "Approximately how many employees' payroll details did the IT auditor publish online in the Morrison case, in thousands?", lo: 90, hi: 110, min: 0, max: 200, suffix: " thousand", verdict: "Nearly 100,000. The scale of the harm to staff did not change the legal question, which was whether the wrong was closely connected with his job. The Supreme Court held that it was not." },
+      { scenario: "By up to what percentage can a tribunal increase compensation in a successful harassment claim where the employer breached its duty to take reasonable steps to prevent sexual harassment?", lo: 24, hi: 26, min: 0, max: 100, suffix: "%", verdict: "Up to 25%, where the employer has failed to take reasonable steps (since October 2024). From 30 October 2026 the Employment Rights Act 2025 is due to raise the duty to all reasonable steps and to make employers liable for third-party harassment unless they took them." }
+    ]
+  }
+};
+
+const VL_CASE_ANSWER = "Majrowski v Guy's and St Thomas's NHS Trust [2006] UKHL 34";
+const VL_CLUES = [
+  { fragment: "Majrowski v", icon: "🧑‍💼", note: "The claimant gave his name to the case. He worked as a clinical auditor co-ordinator and complained that his departmental manager had bullied him." },
+  { fragment: "Guy's and", icon: "🏥", note: "The first part of the respondent's name: a famous London hospital that was combined with another into a single NHS trust." },
+  { fragment: "St Thomas's", icon: "🏛️", note: "The second hospital in the respondent's name. Together with the first it makes up the trust that employed the claimant." },
+  { fragment: "NHS Trust", icon: "⚕️", note: "The end of the respondent's name: the public body that employed the claimant, and that he sued instead of the manager." },
+  { fragment: "[2006]", icon: "📅", note: "The year of the decision, handed down by the House of Lords before the Supreme Court replaced it in 2009." },
+  { fragment: "UKHL 34", icon: "🔢", note: "The court code and number in the neutral citation: the United Kingdom House of Lords, number 34 of that year. The House held that an employer can be vicariously liable under the Protection from Harassment Act 1997." }
+];
+
 
 /* ─────────── CHAPTER REGISTRY ───────────
    Each chapter bundles its content. Add new chapters here as you build them.
@@ -1790,8 +2183,37 @@ const CHAPTERS = [
     interactives: HS_INTERACTIVES,
     clues: HS_CLUES,
     caseAnswer: HS_CASE_ANSWER
+  },
+  {
+    id: "vicarious-liability",
+    week: 5,
+    releaseDate: "2026-10-26", // add ?preview to the site address (e.g. yoursite.vercel.app/?preview) to see unreleased weeks early
+    title: "Vicarious Liability in the Workplace",
+    subtitle: "Week commencing 26 October 2026 — when an employer is answerable for the wrongs of its workers.",
+    accent: "#C9A84C",
+    badge: BADGE_IMG,
+    heroLine1: "Vicarious Liability",
+    heroLine2: "in the Workplace",
+    heroSubtitle: "When an employer answers for the wrongs of its workers: who counts, the course of employment, the close connection test and workplace harassment.",
+    tagline: "\"An employer who creates the risk must answer for the harm.\"",
+    guideIntro: "Welcome to Vicarious Liability in the Workplace — your preparation for Lecture 05 and Seminar 05. This chapter covers when an employer is legally answerable for torts committed by its workers: who counts (employees, independent contractors and relationships akin to employment), the course of employment and the 'close connection' test for deliberate wrongs, and liability for workplace harassment under the Protection from Harassment Act 1997 and the Equality Act 2010. These lessons are designed to support and underpin your weekly reading, which in turn supports both the weekly lecture and seminar. Here's everything you need to know.",
+    objectives: [
+      "Explain what vicarious liability is, why the law imposes it, and its three requirements: a tort, a qualifying relationship, and a sufficient connection between the two.",
+      "Distinguish employees, independent contractors and relationships akin to employment, applying Barclays, the Christian Brothers case, Cox and Armes.",
+      "Apply the course of employment test for careless acts and the Lister close connection test for deliberate wrongs, including Mohamud, Morrison and Bellman.",
+      "Explain employer liability for workplace harassment under the Protection from Harassment Act 1997 and section 109 of the Equality Act 2010, including the 'all reasonable steps' defence and the changes due from 30 October 2026."
+    ],
+    mysteryIntro: "Complete each lesson to collect a fragment. Assemble all six to reveal the House of Lords decision which held that an employer can be vicariously liable for harassment by a manager under a statute.",
+    mysteryWhyItMatters: "The claimant was a clinical auditor co-ordinator at a London hospital trust. He alleged that his departmental manager criticised him in front of colleagues, isolated him, set unrealistic targets and threatened disciplinary action, and that this reflected homophobia. The trust's own investigation found that harassment had occurred, but by the time he sued he had left, and he sued the trust rather than the manager. In 2006 the House of Lords held that an employer can be vicariously liable for harassment committed by an employee in the course of employment under the Protection from Harassment Act 1997, because vicarious liability applies to statutory wrongs unless the statute excludes it. It is the leading authority on harassment claims against employers outside the discrimination legislation.",
+    completionBlurb: "You've covered what vicarious liability is, who counts as an employee or something akin to one, the course of employment and the close connection test, and the employer's liability for workplace harassment.",
+    lessons: VL_LESSONS,
+    buckets: VL_BUCKETS,
+    sortCards: VL_SORT_CARDS,
+    interactives: VL_INTERACTIVES,
+    clues: VL_CLUES,
+    caseAnswer: VL_CASE_ANSWER
   }
-  // ,{ id: "...", week: 5, releaseDate: "2026-10-26", title: "...", ... }  ← add next week here
+  // ,{ id: "...", week: 6, releaseDate: "2026-11-02", title: "...", ... }  ← add next week here
 ];
 
 function ChapterEngine({ chapter, moduleScore, restored, caseSolved, onProgress, onExit }) {
@@ -2106,7 +2528,12 @@ function ChapterEngine({ chapter, moduleScore, restored, caseSolved, onProgress,
       setLastAward(bonus);
       // Lock this question immediately so leaving now (before "next") can't re-score it.
       setDoneQ(prev => prev.includes(currentQ.id) ? prev : [...prev, currentQ.id]);
-    } else { setStreak(0); fireParticles("wrong", "#C06B6B"); setLastAward(0); }
+    } else {
+      setStreak(0); fireParticles("wrong", "#C06B6B"); setLastAward(0);
+      // One attempt per question: lock a wrong answer (or a timeout) straight away, exactly as a correct answer is
+      // locked, so leaving the question or reloading the page before pressing "Next" cannot buy a second try.
+      setDoneQ(prev => prev.includes(currentQ.id) ? prev : [...prev, currentQ.id]);
+    }
   };
 
   const next = () => {
@@ -2392,7 +2819,7 @@ function ChapterEngine({ chapter, moduleScore, restored, caseSolved, onProgress,
 
           {/* Scoring */}
           <Section icon="⚡" color="#E07B39" title="Scoring & Streaks">
-            <div style={{ display: "flex", gap: 10, marginBottom: 8 }}><span style={{ color: "#C9A84C" }}>•</span><span style={{ fontFamily: "'Crimson Text',serif", fontSize: 14, lineHeight: 1.5, color: "#9A9080" }}>In the lessons, a correct answer earns <strong>100 points</strong> (120 on a 2× streak, 150 on a 3× streak or better). Each question can score <strong>only once</strong>: a wrong answer or a timeout earns nothing, and replaying a question you've already answered earns <strong>0 points</strong>, so there's nothing to gain by repeating questions.</span></div>
+            <div style={{ display: "flex", gap: 10, marginBottom: 8 }}><span style={{ color: "#C9A84C" }}>•</span><span style={{ fontFamily: "'Crimson Text',serif", fontSize: 14, lineHeight: 1.5, color: "#9A9080" }}>In the lessons, a correct answer earns <strong>100 points</strong> (120 on a 2× streak, 150 on a 3× streak or better). Each question can score <strong>only once</strong>: a wrong answer or a timeout earns nothing, and replaying a question you've already answered earns <strong>0 points</strong>, so there's nothing to gain by repeating questions. Each question gets <strong>one attempt</strong>: leaving the question or reloading the page after you've answered does not give you a second try.</span></div>
             <div style={{ display: "flex", gap: 10, marginBottom: 8 }}><span style={{ color: "#C9A84C" }}>•</span><span style={{ fontFamily: "'Crimson Text',serif", fontSize: 14, lineHeight: 1.5, color: "#9A9080" }}>Answer several in a row to build a <strong>streak</strong> — 2× gives 120 points, 3× or more gives 150.</span></div>
             <div style={{ display: "flex", gap: 10, marginBottom: 8 }}><span style={{ color: "#C9A84C" }}>•</span><span style={{ fontFamily: "'Crimson Text',serif", fontSize: 14, lineHeight: 1.5, color: "#9A9080" }}>One wrong answer resets your streak, so accuracy and consistency both matter.</span></div>
             <div style={{ display: "flex", gap: 10, marginBottom: 8 }}><span style={{ color: "#C9A84C" }}>•</span><span style={{ fontFamily: "'Crimson Text',serif", fontSize: 14, lineHeight: 1.5, color: "#9A9080" }}>In the interactive challenges, each part is worth full points <strong>first time</strong>. Get it wrong and the points <strong>halve on each further try</strong> (e.g. 50 → 25 → 12 → 0), so it pays to think before you answer.</span></div>
@@ -2406,7 +2833,7 @@ function ChapterEngine({ chapter, moduleScore, restored, caseSolved, onProgress,
             <Faq q="What is the Mystery Case clue hunt?" a="Completing each lesson unlocks one fragment of a hidden answer. Collect all six and assemble them in the Case Files to reveal the key case or piece of legislation at the heart of this chapter — a fun way to tie the chapter's principles to a leading authority. Every case you reveal is kept in the My Mystery Cases list at the bottom of the module home screen, so you can come back to it at any time." />
             <Faq q="Do I have to play the lessons in order?" a="Yes — each lesson unlocks the next. This is deliberate, because the tests build on one another. The interactive challenges, however, can be played in any order." />
             <Faq q="What is the revision notebook?" a="Every question you answer saves a short, memorable takeaway. Open the notebook any time from the home screen or the lessons map to revisit the key points from your reading quickly." />
-            <Faq q="What happens if the timer runs out?" a="The question is marked as attempted and you'll still see the explanation, but no points are awarded for that question and your streak resets." />
+            <Faq q="What happens if the timer runs out?" a="The question is marked as attempted and you'll still see the explanation, but no points are awarded for that question and your streak resets. You do not get a second try, even if you leave the question and come back." />
             <Faq q="Can I replay a lesson or challenge?" a="Yes — you can replay anything as often as you like to practise. Once you've completed a lesson it reopens in review mode, where you can read back through every question and answer freely but no points are awarded. Challenge parts you've already solved also stop awarding points. Only restarting the whole chapter (you will be asked to confirm) clears that chapter's scores and lets you earn full points again from scratch; your best score and any Mystery Case you have revealed are kept." />
             <Faq q="Will my progress be saved if I close the app?" a="Yes — your scores and progress are saved in your browser on the device you're using, so when you come back next week your module total and completed chapters are still there. It's saved only on your own device and shared with no one; you can wipe it any time with 'Reset my progress' on the home screen. Note that a different device or browser keeps its own separate total." />
             <Faq q="How do these lessons fit with my module?" a="They are designed to support and underpin your weekly reading, which in turn supports the weekly lecture and seminar. Use the game to engage actively with the core principles and authorities — but always work through the full reading and your lecture and seminar materials alongside it." />
