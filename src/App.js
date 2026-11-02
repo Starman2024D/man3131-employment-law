@@ -1570,7 +1570,7 @@ const HS_LESSONS = [
           "No: legislation is only promised so far, with no Bill or cap in force, so reasonableness is still tested case by case"
         ],
         correct: 3,
-        explanation: "At the time of writing English law sets no statutory maximum duration for non-competes. A three-month cap was proposed by the previous Government in 2023 but never enacted. The present Government published a working paper on options in November 2025 (including a ban, a cap, a salary threshold, or a combination), and on 9 October 2026 announced that it intends to legislate, with more detail possibly to follow around the Budget on 28 October. Until Parliament acts, covenants are tested under the common law doctrine you have just studied.",
+        explanation: "At the time of writing English law sets no statutory maximum duration for non-competes. A three-month cap was proposed by the previous Government in 2023 but never enacted. The present Government published a working paper on options in November 2025 (including a ban, a cap, a salary threshold, or a combination), and on 9 October 2026 announced that it intends to legislate, a commitment repeated in the Budget on 28 October, although the detail of any restriction has yet to be published. Until Parliament acts, covenants are tested under the common law doctrine you have just studied.",
         takeaway: "Reform of non-competes is promised but not enacted; for now the common law reasonableness test applies."
       }
     ]
@@ -1921,7 +1921,7 @@ const VL_LESSONS = [
   },
   {
     id: "L6", title: "Harassment and Social Events", icon: "🛡️", color: "#4FA8A0",
-    intro: "Workplace harassment is where vicarious liability meets statute. The common law doctrine applies to statutory torts, and the Equality Act 2010 has its own rule in section 109, with its own defence. The Employment Rights Act 2025 is about to change the position on the duty to prevent sexual harassment and on harassment by third parties.",
+    intro: "Workplace harassment is where vicarious liability meets statute. The common law doctrine applies to statutory torts, and the Equality Act 2010 has its own rule in section 109, with its own defence. Since 30 October 2026 the Employment Rights Act 2025 has changed the position on the duty to prevent sexual harassment and on harassment by third parties.",
     questions: [
       {
         id: "vl16",
@@ -1948,7 +1948,7 @@ const VL_LESSONS = [
           "Yes: s.109 treats acts in the course of employment as the employer's too, read broadly, and it cannot show that it took any reasonable steps beforehand"
         ],
         correct: 3,
-        explanation: "Section 109(1) Equality Act 2010 treats anything done by an employee in the course of employment as also done by the employer, whether or not the employer knew of it or approved (s.109(3)). In Jones v Tower Boot Co Ltd [1997] ICR 254 the Court of Appeal held that 'in the course of employment' has its ordinary everyday meaning in discrimination law, not the narrower common law tests, so deliberate racial harassment by workmates was covered. Section 109(4) gives the employer a defence if it took all reasonable steps to prevent the employee from doing the thing or anything of that description; policies must be implemented and training kept up to date (Allay (UK) Ltd v Gehlen). The Employment Rights Act 2025 is due to strengthen this from 30 October 2026, with an 'all reasonable steps' duty to prevent sexual harassment and employer liability for third-party harassment unless all reasonable steps were taken.",
+        explanation: "Section 109(1) Equality Act 2010 treats anything done by an employee in the course of employment as also done by the employer, whether or not the employer knew of it or approved (s.109(3)). In Jones v Tower Boot Co Ltd [1997] ICR 254 the Court of Appeal held that 'in the course of employment' has its ordinary everyday meaning in discrimination law, not the narrower common law tests, so deliberate racial harassment by workmates was covered. Section 109(4) gives the employer a defence if it took all reasonable steps to prevent the employee from doing the thing or anything of that description; policies must be implemented and training kept up to date (Allay (UK) Ltd v Gehlen). The Employment Rights Act 2025 strengthened this from 30 October 2026, with an 'all reasonable steps' duty to prevent sexual harassment and employer liability for third-party harassment unless all reasonable steps were taken.",
         takeaway: "In discrimination law the employer answers for workplace harassment broadly, unless it proves it took all reasonable steps."
       },
       {
@@ -2047,7 +2047,7 @@ const VL_INTERACTIVES = {
     rounds: [
       { scenario: "How many considerations did Lord Phillips list in the Christian Brothers case as making it fair, just and reasonable to impose vicarious liability?", lo: 4, hi: 6, min: 0, max: 10, suffix: " considerations", verdict: "Five: the defendant's means and insurance, activity on its behalf, part of its business, risk created by it, and control. Not all need be present, and Lord Reed said in Cox that some carry little weight on their own." },
       { scenario: "Approximately how many employees' payroll details did the IT auditor publish online in the Morrison case, in thousands?", lo: 90, hi: 110, min: 0, max: 200, suffix: " thousand", verdict: "Nearly 100,000. The scale of the harm to staff did not change the legal question, which was whether the wrong was closely connected with his job. The Supreme Court held that it was not." },
-      { scenario: "By up to what percentage can a tribunal increase compensation in a successful harassment claim where the employer breached its duty to take reasonable steps to prevent sexual harassment?", lo: 24, hi: 26, min: 0, max: 100, suffix: "%", verdict: "Up to 25%, where the employer has failed to take reasonable steps (since October 2024). From 30 October 2026 the Employment Rights Act 2025 is due to raise the duty to all reasonable steps and to make employers liable for third-party harassment unless they took them." }
+      { scenario: "By up to what percentage can a tribunal increase compensation in a successful harassment claim where the employer breached its duty to take reasonable steps to prevent sexual harassment?", lo: 24, hi: 26, min: 0, max: 100, suffix: "%", verdict: "Up to 25%, where the employer has failed to take reasonable steps (since October 2024). Since 30 October 2026 the Employment Rights Act 2025 has raised the duty to all reasonable steps and made employers liable for third-party harassment unless they took them." }
     ]
   }
 };
@@ -2060,6 +2060,400 @@ const VL_CLUES = [
   { fragment: "NHS Trust", icon: "⚕️", note: "The end of the respondent's name: the public body that employed the claimant, and that he sued instead of the manager." },
   { fragment: "[2006]", icon: "📅", note: "The year of the decision, handed down by the House of Lords before the Supreme Court replaced it in 2009." },
   { fragment: "UKHL 34", icon: "🔢", note: "The court code and number in the neutral citation: the United Kingdom House of Lords, number 34 of that year. The House held that an employer can be vicariously liable under the Protection from Harassment Act 1997." }
+];
+
+
+/* ============================================================================
+   CHAPTER: EQUALITY WITHIN THE WORKPLACE (WEEK 6)
+   Equality Act 2010: protected characteristics, direct discrimination (Jeremiah,
+   Smith v Safeway), association and perception (Coleman), indirect discrimination
+   (Essop), harassment and victimisation (Rayment, Veitch), remedies (Vento),
+   time limits and the burden of proof.
+   Mystery case: James v Eastleigh Borough Council [1990] 2 AC 751 (deliberately NOT
+   named anywhere in the lessons, so it stays a surprise).
+   ============================================================================ */
+const EQ_LESSONS = [
+  {
+    id: "L1", title: "The Equality Act 2010", icon: "⚖️", color: "#C9A84C",
+    intro: "The Equality Act 2010 replaced a patchwork of earlier statutes, including the Sex Discrimination Act 1975, the Race Relations Act 1976 and the Disability Discrimination Act 1995, with a single Act. It protects people from discrimination because of nine protected characteristics. For the workplace, the key provisions are in Part 5. There is no qualifying period of service, and the protection reaches job applicants and many workers who are not employees.",
+    questions: [
+      {
+        id: "eq1",
+        scenario: "Imran drives for a courier firm under a contract that labels him 'self-employed' but requires him to do the work personally. He tells the manager that he is beginning to live as a man, having been registered female at birth. The firm stops offering him shifts and says that, as a self-employed contractor with only six months' service, he cannot bring a discrimination claim.",
+        question: "Can Imran bring a claim under the Equality Act 2010?",
+        options: [
+          "No: the Act protects employees only, and a claimant needs at least two years of continuous service before any discrimination claim can be brought in the tribunal",
+          "No: gender reassignment is protected only for people who have completed a medical process, so he must wait until his transition has been finished before he is covered",
+          "Yes: the Act's protection covers anyone working under a contract to do the work personally, and a discrimination claim needs no minimum period of service",
+          "No: the duty not to discriminate applies to decisions about dismissal and pay, and does not reach a decision to stop offering someone future shifts"
+        ],
+        correct: 2,
+        explanation: "For Part 5 (work), section 83 defines 'employment' as employment under a contract of employment, a contract of apprenticeship or a contract personally to do work. That reaches many workers and 'self-employed' people who must do the work themselves, not only employees. There is no qualifying period for a discrimination claim, unlike ordinary unfair dismissal. Gender reassignment (s.7) protects a person who is proposing to undergo, is undergoing or has undergone a process of reassigning sex, and no medical treatment is needed. Withdrawing work is a detriment under section 39(2)(d).",
+        takeaway: "The Act's idea of 'employment' is wider than employees, and a discrimination claim needs no minimum period of service."
+      },
+      {
+        id: "eq2",
+        scenario: "Hallam Foods dismisses a long-serving packer, Lee, a week after he tells colleagues that he has never been married and does not intend to marry. Lee thinks that he lost his job because he is single, and argues that marital status is a protected characteristic under the Equality Act 2010.",
+        question: "Is Lee's dismissal for being single covered by the protected characteristic of marriage and civil partnership?",
+        options: [
+          "No: the characteristic protects only people who are married or in a civil partnership, so being single is not itself a protected characteristic under the Act",
+          "Yes: marital status in every form is protected, so single, divorced and cohabiting people are all covered when they are treated worse because of that marital status",
+          "Yes: the characteristic extends to single people, but only where the employer is shown to have acted out of hostility towards unmarried staff in particular",
+          "No: the characteristic is protected against indirect discrimination only, and Lee is alleging direct discrimination, which this characteristic never covers"
+        ],
+        correct: 0,
+        explanation: "Section 8 gives the characteristic of marriage and civil partnership only to a person who is married or a civil partner. Single, divorced or cohabiting people do not have it, so being unmarried is not a protected characteristic (a dismissal for that reason might still be unfair, or linked to another characteristic such as sex or religion, depending on the real reason). The characteristic is also narrower than the others: in employment it is protected against direct and indirect discrimination, but not against harassment.",
+        takeaway: "Marriage and civil partnership protects only those who are married or civil partners; being single is not a protected characteristic."
+      },
+      {
+        id: "eq3",
+        scenario: "Nadia tells her employer, a design studio, that she is pregnant. Two weeks later it removes her from a major client account, saying that she will 'be too tired'. A colleague advises her that she must first find a man in a comparable medical situation, because every discrimination claim depends on a comparison.",
+        question: "What must Nadia show to succeed in a claim for pregnancy discrimination?",
+        options: [
+          "That a hypothetical man with a comparable medical condition would have been treated better, since a comparison is at the heart of every discrimination claim",
+          "That the studio intended to penalise her for being pregnant, because the statute requires proof of a discriminatory motive on the part of the employer",
+          "That she has worked there for at least one year, because pregnancy protection depends on a qualifying period of continuous service with the employer",
+          "That she was treated unfavourably because of her pregnancy; the Act protects pregnancy and maternity without a comparator, so no comparison is needed"
+        ],
+        correct: 3,
+        explanation: "Section 18 prohibits unfavourable treatment because of pregnancy, an illness suffered as a result of it, or maternity leave, during the protected period. It does not use the 'less favourable' comparator model of section 13, so no actual or hypothetical comparator is needed (there is no male equivalent of pregnancy). The employer's intention or good motive is irrelevant: the question is whether the pregnancy was a reason for the treatment. There is no qualifying period of service.",
+        takeaway: "Pregnancy and maternity discrimination needs unfavourable treatment because of the pregnancy, not a comparator."
+      }
+    ]
+  },
+  {
+    id: "L2", title: "Direct Discrimination", icon: "🎯", color: "#4A90B8",
+    intro: "Direct discrimination is the central wrong in the Act: treating someone less favourably because of a protected characteristic (section 13). It generally cannot be justified, and the employer's motive does not matter. Two cases show how claims are shaped: what counts as a detriment (Ministry of Defence v Jeremiah) and how a dress code is tested (Smith v Safeway).",
+    questions: [
+      {
+        id: "eq4",
+        scenario: "Cobalt Events wants to promote Aisha, its best account manager, to lead its Gulf-region team. The director says: 'Our clients there prefer dealing with men. I mean no offence to Aisha, and I admire her work.' Cobalt promotes a less experienced man instead.",
+        question: "How does the Equality Act 2010 treat Cobalt's decision?",
+        options: [
+          "It is lawful if Cobalt shows that serving its clients' preferences is a legitimate business aim and that promoting a man was a proportionate way of meeting it",
+          "It is direct sex discrimination: Aisha was treated less favourably because of her sex, and neither good intentions nor client preference is a defence",
+          "It is not discrimination because the director bore no hostility towards women and openly admired Aisha, so no discriminatory motive can be shown",
+          "It is direct discrimination only if Aisha can show that every woman at Cobalt has been refused promotion, so that a pattern of treatment is established"
+        ],
+        correct: 1,
+        explanation: "Section 13(1) asks whether A treats B less favourably than A treats or would treat others because of a protected characteristic. Hostility is not required: the question is the reason for the treatment, often put as whether B would have been treated the same but for her sex. Benign motives and customer preference do not matter. Direct discrimination cannot be justified, with two main exceptions: direct age discrimination (section 13(2)) can be shown to be a proportionate means of achieving a legitimate aim, and there are narrow occupational requirements in Schedule 9. A single act is enough; no pattern is needed.",
+        takeaway: "Motive and customer preference are irrelevant to direct discrimination, and (age aside) it cannot be justified."
+      },
+      {
+        id: "eq5",
+        scenario: "At a munitions factory, a rota of examiners includes seven men and four women. The employer requires only the men to take their turn on overtime in a hot, dirty workshop, although that work is paid at a higher rate. One of the men, Mr Rudd, complains of sex discrimination. The employer replies that nobody can be disadvantaged by being paid more.",
+        question: "Has Mr Rudd been subjected to a 'detriment'?",
+        options: [
+          "No: he cannot be disadvantaged where the work attracts a higher rate of pay, because a detriment is limited to financial loss or loss of contractual benefits",
+          "No: a detriment exists only if the employee proves personal distress, or that the employer meant to cause him harm by requiring him to do the work",
+          "Yes, but only if the tribunal also finds that the workshop was dangerous enough to put the employer in breach of its health and safety duties",
+          "Yes: a detriment means being put at a disadvantage, and a reasonable worker may regard being singled out for dirty work as one, even if it is better paid"
+        ],
+        correct: 3,
+        explanation: "Section 39(2)(d) makes it unlawful to subject an employee to 'any other detriment'. In Ministry of Defence v Jeremiah [1980] QB 87, decided under the Sex Discrimination Act 1975, the Court of Appeal held that men at a Royal Ordnance Factory who, unlike women, were required to work in the dirty 'colour-bursting' shop had suffered a detriment. Brandon LJ said that the words mean 'putting under a disadvantage', and Brightman LJ that a detriment exists if a reasonable worker would or might take the view that the treatment was to his detriment. Loss of money, distress and bad intent are not required, and extra pay does not by itself remove a detriment.",
+        takeaway: "A detriment is being put at a disadvantage in the eyes of a reasonable worker, and extra pay does not automatically cancel it."
+      },
+      {
+        id: "eq6",
+        scenario: "A supermarket's dress code says that men's hair must not touch the collar, while women may have long hair if it is tied back. Mr Okafor, a deli assistant, is dismissed for refusing to cut his shoulder-length ponytail. He argues that a woman with exactly the same hairstyle would not have been dismissed.",
+        question: "How did the Court of Appeal approach a dress code of this kind in Smith v Safeway plc [1996] ICR 868?",
+        options: [
+          "It asked whether the code set a conventional standard of appearance for each sex and applied it evenly; it did, so there was no less favourable treatment",
+          "It held that any dress rule that is not identical word for word for men and women is automatically direct sex discrimination, whatever standards lie behind it",
+          "It held the dismissal lawful only because the store proved that the hair rule was a proportionate means of achieving a legitimate aim such as food hygiene",
+          "It held that sex discrimination law can never apply to dress codes, because rules about appearance fall outside the employment relationship altogether"
+        ],
+        correct: 0,
+        explanation: "In Smith v Safeway plc (Court of Appeal, [1996] ICR 868) the court held that an employer which enforces a dress code setting a conventional standard of appearance for each sex, and applies that standard even-handedly, does not treat a man less favourably because of his sex merely because the particular rules differ. The test was not whether a woman with the same hairstyle would have been dismissed. The reasoning has attracted criticism, and it does not make every gendered rule lawful: the standards should be evenly applied and impose no greater burden on one sex. Direct discrimination cannot be justified, so justification was not the route.",
+        takeaway: "An evenly applied dress code that sets equivalent conventional standards for each sex was held not to be direct discrimination."
+      }
+    ]
+  },
+  {
+    id: "L3", title: "Association and Perception", icon: "🤝", color: "#7B9E87",
+    intro: "Direct discrimination does not require the victim to have the protected characteristic. Section 13 asks only whether the treatment is because of a protected characteristic, so it can cover treatment because of someone the victim is connected with, or because the employer wrongly believes the victim has the characteristic. Coleman v Attridge Law is the leading case on association.",
+    questions: [
+      {
+        id: "eq7",
+        scenario: "Hana, a legal secretary, is the main carer of her young son, whose serious respiratory condition is a disability. She is not disabled herself. Her employer refuses her the flexible hours that it gives to colleagues, remarks on her time off to look after her son, and calls her 'lazy'. She resigns.",
+        question: "Can Hana claim direct disability discrimination, even though she is not disabled?",
+        options: [
+          "No: only a disabled person can claim disability discrimination, and a carer's only remedy lies in the employer's duty to make reasonable adjustments",
+          "No: association claims exist only for race and religion, and for every other characteristic the claimant must personally have the characteristic",
+          "Yes: the question is whether she was treated worse because of disability, and that need not be her own, so protection by association applies",
+          "Yes, but only if her son also works for the same employer, since the association must be between two people employed by the same business"
+        ],
+        correct: 2,
+        explanation: "In Coleman v Attridge Law (Case C-303/06, 2008) the CJEU held that the Equal Treatment Framework Directive protects against direct disability discrimination and harassment suffered by an employee who is not herself disabled but is treated less favourably because of her child's disability, for which she was the primary carer. Ms Coleman alleged that she was refused flexible working that colleagues enjoyed and was called 'lazy' when she needed time off. Section 13(1) of the Equality Act 2010 reflects this by asking whether the treatment is 'because of a protected characteristic', not 'because of the claimant's protected characteristic'.",
+        takeaway: "Section 13 protects anyone treated worse because of a protected characteristic, including a carer treated worse because of someone else's disability."
+      },
+      {
+        id: "eq8",
+        scenario: "Rav, a heterosexual warehouse operative, is excluded from team events and denied overtime after his manager decides, wrongly, that he is gay. Rav does not mind being thought gay, but he is angry about the way he is now treated.",
+        question: "Is Rav protected against direct discrimination because of sexual orientation?",
+        options: [
+          "No: only people who actually have the protected characteristic can complain, so his claim fails as soon as he accepts that he is heterosexual",
+          "Yes: the treatment is because of sexual orientation as the manager perceived it, so a mistaken perception is enough whatever Rav's real orientation is",
+          "No: sexual orientation is protected against indirect discrimination only, so he must identify a rule applied to all staff that disadvantages gay people",
+          "Yes, but only if he can prove that the manager's belief rested on evidence, such as something that Rav himself said or did at work"
+        ],
+        correct: 1,
+        explanation: "Section 13 asks whether A treats B less favourably 'because of a protected characteristic'. It does not require the characteristic to be B's, so the Act covers treatment because of a characteristic that B is wrongly perceived to have, as well as one that belongs to a person B is associated with. The employer's belief need not be accurate, and what matters is the reason for the treatment: here, the manager's view of Rav's sexual orientation. The EHRC's Employment Code gives perception as a recognised form of direct discrimination.",
+        takeaway: "Direct discrimination covers treatment based on a perceived characteristic, even if the perception is mistaken."
+      },
+      {
+        id: "eq9",
+        scenario: "Tom is not disabled, but he cares for his wife, who is. He asks his employer for a later start each morning so that he can help her with her medication, and he says the employer has a statutory duty to make reasonable adjustments for him. The employer refuses.",
+        question: "Is Tom likely to succeed with a failure-to-make-adjustments claim?",
+        options: [
+          "No: the adjustments duty is owed to disabled people only, so Tom would need to show less favourable treatment because of his wife's disability",
+          "Yes: protection by association extends to every form of disability discrimination, so a carer is owed the same adjustments duty as a disabled employee",
+          "Yes: the duty to make reasonable adjustments arises whenever an employee has caring responsibilities, because the Act treats carers as a protected group",
+          "No: protection by association is restricted to harassment and cannot support any claim of direct discrimination against the employer"
+        ],
+        correct: 0,
+        explanation: "The duty in sections 20 and 21 is owed to a 'disabled person', so it does not arise for Tom, who is not disabled. The Coleman line of authority gives carers protection against direct discrimination and harassment 'because of' another person's disability, which needs less favourable treatment because of that disability, not simply a refusal of a request. A carer's request for flexibility may instead engage the statutory right to request flexible working or, for some employees, other leave rights, but not the adjustments duty.",
+        takeaway: "Association protects against direct discrimination and harassment; the adjustments duty is owed only to disabled people."
+      }
+    ]
+  },
+  {
+    id: "L4", title: "Indirect Discrimination", icon: "🧩", color: "#8B6F9E",
+    intro: "Indirect discrimination catches rules that look neutral but bite harder on people who share a protected characteristic. Under section 19 the claimant identifies a provision, criterion or practice (PCP) and shows disadvantage for the group and for herself; the employer may then try to show that the PCP is a proportionate means of achieving a legitimate aim. Unlike direct discrimination, indirect discrimination can be justified.",
+    questions: [
+      {
+        id: "eq10",
+        scenario: "Kestrel Insurance introduces a rule that all team leaders must work full time, on site, five days a week. It adopts the rule in good faith to improve cohesion, with no particular group in mind. Several women team leaders with childcare duties cannot comply, and one of them, Joy, is moved back to a lower role.",
+        question: "Once Joy identifies the full-time rule, what must she establish to make out indirect sex discrimination?",
+        options: [
+          "That Kestrel intended the rule to disadvantage women, because indirect discrimination is simply a concealed form of deliberate sex discrimination",
+          "That every woman employed by Kestrel is disadvantaged by the rule, as the statute requires the disadvantage to affect the whole of the protected group",
+          "That the rule cannot be justified in any circumstances, because a rule that disadvantages women is unlawful whatever reasons the employer gives for it",
+          "That the rule puts, or would put, women at a particular disadvantage compared with men and puts her at that disadvantage; the intention is irrelevant"
+        ],
+        correct: 3,
+        explanation: "Section 19 requires: (1) a provision, criterion or practice applied (or that would be applied) to everyone; (2) that puts, or would put, persons who share B's protected characteristic at a particular disadvantage compared with persons who do not share it; (3) that puts, or would put, B at that disadvantage; and (4) that A cannot show to be a proportionate means of achieving a legitimate aim. The employer's intention is irrelevant, and the group disadvantage does not have to affect every member of the group. Indirect discrimination does not apply to pregnancy and maternity, which have their own provision.",
+        takeaway: "Indirect discrimination needs a neutral PCP, group disadvantage and personal disadvantage; intention is irrelevant."
+      },
+      {
+        id: "eq11",
+        scenario: "A civil service department requires staff to pass a computer-based skills test before promotion. Statistics show that older staff and staff from minority ethnic groups pass at much lower rates. Some who failed cannot say why they did, and the department argues that the claimants must prove exactly why the test disadvantages their groups.",
+        question: "What did the Supreme Court decide on this point in Essop v Home Office [2017] UKSC 27?",
+        options: [
+          "That the claimants must prove the reason for the group disadvantage, and without an explanation for the failure rate the tribunal cannot find any particular disadvantage",
+          "That the claimants need not prove why the PCP disadvantages their group; showing that it does, and that they suffer it too, is enough to make out the claim",
+          "That the claimants must show that every member of the group fails the test, because group disadvantage means that no member of the group can pass it",
+          "That the claimants need no statistics, because the Act presumes that any test applied to everyone puts minority groups at a particular disadvantage"
+        ],
+        correct: 1,
+        explanation: "In Essop v Home Office (UK Border Agency) [2017] UKSC 27 (heard with Naeem v Secretary of State for Justice) Lady Hale held that a claimant does not have to establish the reason why a PCP puts the group at a particular disadvantage. It is enough that it does, for example as shown by statistics, and that the claimant is put at the same disadvantage. Nor must every member of the group be disadvantaged. The reason for the disadvantage is relevant, if at all, to the employer's justification, not to the claimant's case.",
+        takeaway: "Claimants must show group and personal disadvantage, but not the reason for the disadvantage."
+      },
+      {
+        id: "eq12",
+        scenario: "Greystone Clinic requires every receptionist to work two Saturdays a month so that the clinic stays open. Ines, a part-time mother, cannot do so. The clinic has plenty of volunteers and bank staff who could cover the shifts at no extra cost. The tribunal accepts that the rule puts women at a particular disadvantage.",
+        question: "How will the tribunal approach the clinic's justification defence?",
+        options: [
+          "The clinic succeeds if it shows any rational business reason for the rule, because the tribunal may not second-guess how an employer organises its work",
+          "The clinic must prove that the rule was the only conceivable way to keep the clinic open, so that the existence of any alternative at all defeats the defence",
+          "It will ask whether the aim is legitimate and the rule proportionate, weighing the discriminatory effect against the need and any less discriminatory option",
+          "The clinic succeeds if it shows that it applied the rule consistently to every receptionist, since equal application of a rule is itself a complete defence"
+        ],
+        correct: 2,
+        explanation: "Under section 19(2)(d) the employer bears the burden of showing that the PCP is 'a proportionate means of achieving a legitimate aim'. The aim must be a real, legitimate business need. Proportionality is judged objectively by the tribunal: is the measure appropriate and reasonably necessary to achieve the aim, and could a less discriminatory measure achieve it? Here the cheap, available alternatives weigh heavily against the clinic. Applying a rule evenly is no answer, because indirect discrimination is concerned with rules that are applied to everyone.",
+        takeaway: "Justification is an objective proportionality test on the employer: legitimate aim, appropriate and reasonably necessary means."
+      }
+    ]
+  },
+  {
+    id: "L5", title: "Harassment and Victimisation", icon: "🛡️", color: "#E07B39",
+    intro: "Section 26 prohibits harassment related to a relevant protected characteristic, and section 27 prohibits victimisation of people who bring or support complaints. Neither needs a comparator. Harassment that is not linked to a protected characteristic may still be actionable under the Protection from Harassment Act 1997, as Rayment shows. Veitch shows that victimisation protection stands on its own.",
+    questions: [
+      {
+        id: "eq13",
+        scenario: "A senior manager at an engineering firm regularly shares sexually explicit images in the team chat 'as a joke', aimed at nobody in particular. Fatima, a team member, finds the images degrading and distressing, though some colleagues laugh. The manager says that he never meant to offend anyone.",
+        question: "Is the manager's conduct capable of being harassment under section 26 of the Equality Act 2010?",
+        options: [
+          "Yes: unwanted conduct related to sex that creates a degrading or offensive environment can be harassment, and the manager's intention is irrelevant",
+          "No: harassment requires proof that the manager meant to violate her dignity, and an intention to joke is a complete answer to the claim against him personally",
+          "No: the conduct must be aimed at Fatima personally, so material that is shared with the whole team cannot amount to harassment of her at all",
+          "Yes, but only if a male colleague who saw the same images would also have been offended, because harassment depends on a comparator"
+        ],
+        correct: 0,
+        explanation: "Section 26(1) defines harassment as unwanted conduct related to a relevant protected characteristic that has the purpose or effect of violating B's dignity, or creating an intimidating, hostile, degrading, humiliating or offensive environment for B. Sexual harassment (s.26(2)) is unwanted conduct of a sexual nature with the same purpose or effect. Intention is therefore not required, and no comparator is needed. In deciding whether the conduct had that effect, the tribunal considers B's perception, the other circumstances, and whether it is reasonable for the conduct to have that effect (s.26(4)). Conduct need not be directed at the claimant.",
+        takeaway: "Harassment turns on purpose or effect, judged by the claimant's perception and what is reasonable; intention and a comparator are not required."
+      },
+      {
+        id: "eq14",
+        scenario: "Dee works for the Ministry of Defence. Over many months, senior colleagues treat her with hostility, and pornographic pictures are put up in a room that only she uses. The Ministry knew about the behaviour and did not stop it. Dee brings a damages claim in the High Court under the Protection from Harassment Act 1997.",
+        question: "How did the High Court deal with a claim of this kind in Rayment v Ministry of Defence [2010] EWHC 218 (QB)?",
+        options: [
+          "It struck out the claim, holding that harassment at work can be pursued only under the discrimination legislation in the Employment Tribunal",
+          "It upheld the claim after holding that a single incident, however serious, is enough, because the 1997 Act does not require any course of conduct",
+          "It upheld the claim only against the individual officers, holding that the Ministry could not be liable for what its own staff did to a colleague",
+          "It upheld the claim: the conduct was oppressive and unacceptable harassment, and the Ministry, which knew of it and did not stop it, was liable"
+        ],
+        correct: 3,
+        explanation: "In Rayment v Ministry of Defence [2010] EWHC 218 (QB) (Nicola Davies J, 18 February 2010) the High Court upheld a woman's claim under the Protection from Harassment Act 1997. She had suffered hostile treatment from senior officers, including pornographic pictures placed in a room used only by her, and the Ministry knew of the conduct and did not control or stop it. The 1997 Act requires a course of conduct (at least two occasions) that amounts to harassment, being oppressive and unacceptable. Unlike section 26, it does not need a link to a protected characteristic, and, as you saw in Week 5, an employer can be vicariously liable under it.",
+        takeaway: "The 1997 Act is an alternative route for workplace harassment: it needs a course of conduct but no protected characteristic."
+      },
+      {
+        id: "eq15",
+        scenario: "Ray brings a disability discrimination claim against his employer and is dismissed soon afterwards. The tribunal finds that Ray was not disabled and dismisses the discrimination claim. The employer then argues that his victimisation claim must fail too, because he has no disability.",
+        question: "How does the reasoning in Veitch v Red Sky Group Ltd [2010] NICA 39 affect the employer's argument?",
+        options: [
+          "The argument succeeds: victimisation depends on the claimant having the protected characteristic, so a finding that he was not disabled ends the matter",
+          "The argument fails: victimisation turns on the protected act, not on having the characteristic, so the victimisation claim must still be decided here",
+          "The argument succeeds unless Ray appeals the finding, because he cannot rely on a protected act that depends on a claim that he has already lost",
+          "The argument fails because any dismissal that follows a tribunal claim is presumed to be victimisation, leaving the employer to disprove it"
+        ],
+        correct: 1,
+        explanation: "Victimisation (section 27) occurs where A subjects B to a detriment because B has done a protected act (bringing proceedings, giving evidence or information, doing anything else in connection with the Act, or alleging a contravention), or because A believes B has done or may do so. In Veitch v Red Sky Group Ltd [2010] NICA 39, a Northern Ireland Court of Appeal decision under the Disability Discrimination Act 1995, the claimant's failure to prove that he was disabled did not defeat his victimisation claim, which was sent back to the tribunal. The same principle applies to section 27: it protects anyone who does a protected act, whatever their own characteristics.",
+        takeaway: "Victimisation protects the protected act, not the characteristic: losing the discrimination claim does not by itself defeat the victimisation claim."
+      }
+    ]
+  },
+  {
+    id: "L6", title: "Remedies, Time Limits and Proof", icon: "💷", color: "#4FA8A0",
+    intro: "A successful claim can attract compensation for financial loss and injury to feelings, with no statutory cap on the award. Vento v Chief Constable of West Yorkshire Police set the bands for injury to feelings, which Presidential Guidance now uprates each April. Time limits are short and strict, and the burden of proof has a special two-stage shape.",
+    questions: [
+      {
+        id: "eq16",
+        scenario: "A tribunal upholds a nurse's claim that her supervisor subjected her to a year-long campaign of racist abuse, which left her unable to work and in need of counselling. She presented her claim in May 2026. The tribunal must decide how much to award for injury to feelings.",
+        question: "Where does a lengthy campaign of discriminatory harassment normally fall within the Vento bands, and what is the award for?",
+        options: [
+          "In the lower band, which is reserved for the most serious cases of long-running harassment, while the upper band applies to a single isolated remark",
+          "In the upper band, but the figure is meant to punish the employer and deter others, so a tribunal can exceed the band by any amount it thinks fit",
+          "In the upper band (£37,700 to £62,900 for claims from 6 April 2026), and the award is there to compensate the claimant, not to punish her employer",
+          "In the middle band, because a tribunal may place an award in the upper band only if the claimant has also suffered a diagnosed psychiatric injury"
+        ],
+        correct: 2,
+        explanation: "In Vento v Chief Constable of West Yorkshire Police [2002] EWCA Civ 1871 the claimant, a probationer constable, had been treated in an unwarranted, aggressive and demoralising manner and was dismissed. The Court of Appeal reduced the awards (to £18,000 for injury to feelings and £5,000 for aggravated damages, with £9,000 for psychiatric injury) and set three bands: lower for less serious cases such as an isolated incident, middle for serious cases, and upper for the most serious, such as a lengthy campaign of harassment. Awards are compensation, not punishment. For claims presented on or after 6 April 2026 the bands are £1,300 to £12,600, £12,600 to £37,700 and £37,700 to £62,900, with exceptional cases above that.",
+        takeaway: "Injury to feelings is banded by seriousness, a lengthy campaign belongs in the upper band, and the award compensates rather than punishes."
+      },
+      {
+        id: "eq17",
+        scenario: "On 16 November 2026 an employer dismisses Sam, a bus driver, and Sam believes that the real reason was his religion. He has heard that the tribunal time limit is three months, and he is unsure whether ACAS early conciliation makes any difference.",
+        question: "What is the position on time limits for Sam's Equality Act claim?",
+        options: [
+          "It is three months from the dismissal, because the extension to six months applies only to unfair dismissal claims and not to claims under the Equality Act",
+          "It is six months, but only if he first lodges an internal grievance, because the clock does not start until the employer's appeal process has ended",
+          "It is three months from the dismissal, because the longer six-month period applies only to acts that took place before 1 October 2026",
+          "Six months, as the act was after 1 October 2026; early conciliation comes first and pauses the clock, and time can be extended if just and equitable"
+        ],
+        correct: 3,
+        explanation: "Section 123 Equality Act 2010 sets the primary time limit for a discrimination claim in the Employment Tribunal. The Employment Rights Act 2025 extends the general tribunal time limit from three to six months for acts on or after 1 October 2026; earlier acts keep the old limit. Early conciliation through ACAS is compulsory before the claim and stops the clock while it runs. A claimant who is out of time may still persuade the tribunal that it is just and equitable to extend time, and conduct extending over a period is treated as done at the end of it (s.123(3)).",
+        takeaway: "For acts on or after 1 October 2026 the primary tribunal limit is six months, with ACAS early conciliation first and a just and equitable extension."
+      },
+      {
+        id: "eq18",
+        scenario: "Dev, a British Asian candidate for a promotion, proves that he was better qualified than the white candidate who was appointed, that the panel scored him lower on criteria that it never explained, and that it kept no interview notes. He has no direct evidence of why the panel decided as it did, and the employer offers no explanation.",
+        question: "How does the burden of proof under section 136 of the Equality Act 2010 work here?",
+        options: [
+          "Dev has proved facts from which discrimination could be inferred, so the burden passes to the employer to prove it did not discriminate against him",
+          "Dev carries the burden throughout, so the claim fails unless he produces direct evidence such as an admission by the panel of a discriminatory motive",
+          "The burden shifts as soon as Dev alleges discrimination, so the claim succeeds unless the employer can disprove the allegation made against it",
+          "The burden shifts only if Dev proves that the panel's process fell below the standard of a reasonable employer, which is what the section asks"
+        ],
+        correct: 0,
+        explanation: "Section 136 provides that if there are facts from which the tribunal could decide, in the absence of any other explanation, that A contravened the Act, it must hold that the contravention occurred unless A shows that it did not. This gives a two-stage test. First the claimant must prove facts that, absent explanation, could amount to discrimination (a difference in status and in treatment is not enough alone). Then the burden passes to the employer to prove that the treatment was in no sense because of the protected characteristic. Direct evidence is rare, so tribunals draw inferences from matters such as missing records and unexplained decisions.",
+        takeaway: "The burden of proof shifts to the employer once the claimant proves facts from which discrimination could be inferred."
+      }
+    ]
+  }
+];
+
+const EQ_BUCKETS = [
+  { id: "dir", label: "Direct", icon: "🎯", color: "#C9A84C", hint: "Section 13: because of a characteristic" },
+  { id: "ind", label: "Indirect", icon: "🧩", color: "#4A90B8", hint: "Section 19: a neutral rule that disadvantages a group" },
+  { id: "har", label: "Harassment or victimisation", icon: "🛡️", color: "#E07B39", hint: "Sections 26 and 27" }
+];
+
+const EQ_SORT_CARDS = [
+  { id: "c1", name: "The shortlist", emoji: "📄", desc: "A firm refuses to shortlist a Muslim applicant because of her faith, though her CV is the strongest.", answer: "dir" },
+  { id: "c2", name: "The Saturday rota", emoji: "📅", desc: "A retailer requires every member of staff to work every Saturday, which Jewish staff who keep the Sabbath cannot do.", answer: "ind" },
+  { id: "c3", name: "The sexist banter", emoji: "💬", desc: "A manager's running jokes about women make a female engineer feel humiliated in front of her team.", answer: "har" },
+  { id: "c4", name: "The height rule", emoji: "📏", desc: "A haulage firm requires all drivers to be at least 1.80 m tall, which far fewer women meet.", answer: "ind" },
+  { id: "c5", name: "The deaf candidate", emoji: "👂", desc: "An employer rejects a deaf candidate, saying that customers would be uncomfortable dealing with him.", answer: "dir" },
+  { id: "c6", name: "The witness", emoji: "🗣️", desc: "After Priya gives evidence in a colleague's race discrimination claim, she is moved to the night shift.", answer: "har" },
+  { id: "c7", name: "The lifting test", emoji: "🏋️", desc: "A warehouse requires all staff, in every job, to be able to lift 25 kg, which fewer women can do.", answer: "ind" },
+  { id: "c8", name: "The accent mockery", emoji: "🎤", desc: "A supervisor repeatedly mocks a worker's accent and country of origin in front of colleagues.", answer: "har" }
+];
+
+const EQ_INTERACTIVES = {
+  L1: {
+    type: "truefalse", title: "Who and What Is Protected?", tag: "True or false", icon: "❓", color: "#C9A84C",
+    blurb: "Test your grasp of the Act's scope.",
+    items: [
+      { text: "The Equality Act 2010 protects nine characteristics, including age, race, and religion or belief.", answer: true, note: "True. The nine are age, disability, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, sex and sexual orientation (section 4)." },
+      { text: "A person who is single has the protected characteristic of marriage and civil partnership.", answer: false, note: "False. Section 8 protects only people who are married or in a civil partnership." },
+      { text: "A discrimination claim normally needs two years of continuous service.", answer: false, note: "False. There is no qualifying period for a discrimination claim, unlike ordinary unfair dismissal." },
+      { text: "Part 5 of the Act can protect some workers who are not employees, such as those contracting to do the work personally.", answer: true, note: "True. Section 83 defines employment to include a contract personally to do work, and applicants are covered too." },
+      { text: "Compensation for injury to feelings is limited by a statutory cap in the Equality Act.", answer: false, note: "False. There is no statutory cap on compensation for discrimination. The Vento bands are guidance on the level of award, not a statutory limit." }
+    ]
+  },
+  L2: {
+    type: "flip", title: "Is It Direct Discrimination?", tag: "Flip to reveal", icon: "⚖️", color: "#4A90B8",
+    lead: "The employer…", ask: "What is the legal position?", revealLabel: "THE RULING",
+    blurb: "Decide the legal position on each scenario, then flip to check.",
+    cards: [
+      { label: "Withdraws a job offer after learning that the candidate has a same-sex partner, saying some clients may object", options: ["Direct sexual orientation discrimination: clients' views are no defence", "Lawful if the employer can justify the decision on commercial grounds", "Unlawful only if the employer has a written policy against employing gay staff"], correct: 0, reveal: "Direct discrimination because of sexual orientation. The test is the reason for the treatment, and clients' attitudes cannot justify it. Direct discrimination (other than age) cannot be justified." },
+      { label: "Dismisses a 66-year-old night porter, saying it wants a younger team", options: ["Unlawful, because direct discrimination can never be justified", "Age is the exception: it can be justified if proportionate to a legitimate aim", "Lawful, because employers may always dismiss employees over 65"], correct: 1, reveal: "Direct age discrimination can be justified under section 13(2), but a bare preference for a younger team is not a legitimate aim, so the employer would struggle." },
+      { label: "Makes only the men on a rota work overtime in a dirty workshop, at a higher rate of pay", options: ["No detriment: higher pay cancels any disadvantage", "Lawful, because the rota existed before the Act", "A detriment: the men are put at a disadvantage (Jeremiah)"], correct: 2, reveal: "A detriment. In Ministry of Defence v Jeremiah [1980] QB 87 the Court of Appeal held that being put under a disadvantage is enough, and extra pay does not automatically cancel it." },
+      { label: "Treats Priya worse because it wrongly believes that she is Muslim", options: ["Direct discrimination on grounds of religion or belief, by perception", "No claim: Priya is not in fact Muslim", "Only indirect discrimination can arise from a mistaken belief"], correct: 0, reveal: "Direct discrimination. Section 13 asks whether the treatment is because of a protected characteristic, and that includes one that is wrongly perceived." }
+    ]
+  },
+  L3: {
+    type: "pickN", title: "Whose Characteristic Is It?", tag: "Pick the 3", icon: "🎯", color: "#7B9E87",
+    blurb: "Select the three statements that are correct.",
+    resultNote: "Section 13 asks whether the treatment is because of a protected characteristic, not whose characteristic it is. That captures association (Coleman) and perception. The duty to make reasonable adjustments, though, runs only to disabled people.",
+    options: [
+      { text: "Section 13 can protect a person treated worse because of a disability that belongs to someone they care for", correct: true },
+      { text: "A claimant must always have the protected characteristic herself to bring a claim of direct discrimination", correct: false },
+      { text: "A manager's mistaken belief that a worker is gay can still ground a claim of direct discrimination", correct: true },
+      { text: "The duty to make reasonable adjustments is owed to carers of disabled people on the same basis as disabled employees", correct: false },
+      { text: "Coleman v Attridge Law concerned an employee who was not disabled but was the primary carer of a disabled child", correct: true },
+      { text: "Association claims are confined to disability and cannot arise for race or religion", correct: false }
+    ],
+    need: 3
+  },
+  L4: { type: "sort", title: "Which Kind of Discrimination?", tag: "Sort scenarios", icon: "🏷️", color: "#8B6F9E", itemNoun: "scenario", blurb: "Classify eight workplace scenarios as direct, indirect, or harassment or victimisation." },
+  L5: {
+    type: "match", title: "Which Route?", tag: "Connect pairs", icon: "🔗", color: "#E07B39",
+    blurb: "Tap a description, then tap the provision it describes.",
+    statuses: [
+      { id: "s26", label: "Section 26 EqA", color: "#C9A84C" },
+      { id: "s27", label: "Section 27 EqA", color: "#4A90B8" },
+      { id: "pha", label: "Protection from Harassment Act 1997", color: "#E07B39" }
+    ],
+    rights: [
+      { text: "Unwanted conduct related to a protected characteristic that creates a hostile, degrading or offensive environment", status: "s26" },
+      { text: "A detriment because the worker gave evidence in a colleague's discrimination claim", status: "s27" },
+      { text: "Needs a course of conduct on at least two occasions that is oppressive and unacceptable, but no protected characteristic", status: "pha" },
+      { text: "Protection that survived the claimant's failure to prove that he was disabled (Veitch)", status: "s27" },
+      { text: "The route used in the High Court in Rayment, where pornographic pictures were put up in the claimant's room", status: "pha" },
+      { text: "Covers sexual harassment, and less favourable treatment because a worker rejected or submitted to it", status: "s26" }
+    ]
+  },
+  L6: {
+    type: "slider", title: "Know the Numbers", tag: "Estimate", icon: "🔢", color: "#4FA8A0",
+    blurb: "Estimate three figures from this week's law.",
+    rounds: [
+      { scenario: "How many protected characteristics does section 4 of the Equality Act 2010 list?", lo: 9, hi: 9, min: 0, max: 15, suffix: " characteristics", verdict: "Nine: age, disability, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, sex and sexual orientation." },
+      { scenario: "For an act on or after 1 October 2026, how many months does a claimant normally have to start an Employment Tribunal discrimination claim (before any extension)?", lo: 6, hi: 6, min: 0, max: 12, suffix: " months", verdict: "Six months. The Employment Rights Act 2025 extended the general limit from three months, for acts on or after 1 October 2026. Early conciliation pauses the clock, and the tribunal can extend time where it is just and equitable." },
+      { scenario: "Where does the upper Vento band start, in thousands of pounds, for claims presented on or after 6 April 2026?", lo: 37, hi: 38, min: 0, max: 100, suffix: " thousand pounds", verdict: "£37,700. The upper band runs from £37,700 to £62,900 and is for the most serious cases, such as a lengthy campaign of discriminatory harassment. Exceptional cases can go higher." }
+    ]
+  }
+};
+
+const EQ_CASE_ANSWER = "James v Eastleigh Borough Council [1990] 2 AC 751";
+const EQ_CLUES = [
+  { fragment: "James v", icon: "🧑", note: "The claimant gave his name to the case. A man, he complained that he had to pay for something that his wife received free." },
+  { fragment: "Eastleigh", icon: "🏊", note: "The first part of the respondent's name: a Hampshire town, whose local authority ran the leisure facility at the centre of the dispute." },
+  { fragment: "Borough", icon: "🏘️", note: "The second word of the respondent's name: the kind of local authority that was sued." },
+  { fragment: "Council", icon: "🏛️", note: "The last word of the respondent's name: the public body whose policy was challenged as sex discrimination." },
+  { fragment: "[1990]", icon: "📅", note: "The year of the decision, handed down by the House of Lords." },
+  { fragment: "2 AC 751", icon: "🔢", note: "Volume 2 of the Appeal Cases for that year, starting at page 751. By a majority of three to two, the House of Lords held that the council's policy was direct sex discrimination." }
 ];
 
 
@@ -2201,7 +2595,7 @@ const CHAPTERS = [
       "Explain what vicarious liability is, why the law imposes it, and its three requirements: a tort, a qualifying relationship, and a sufficient connection between the two.",
       "Distinguish employees, independent contractors and relationships akin to employment, applying Barclays, the Christian Brothers case, Cox and Armes.",
       "Apply the course of employment test for careless acts and the Lister close connection test for deliberate wrongs, including Mohamud, Morrison and Bellman.",
-      "Explain employer liability for workplace harassment under the Protection from Harassment Act 1997 and section 109 of the Equality Act 2010, including the 'all reasonable steps' defence and the changes due from 30 October 2026."
+      "Explain employer liability for workplace harassment under the Protection from Harassment Act 1997 and section 109 of the Equality Act 2010, including the 'all reasonable steps' defence and the changes that took effect on 30 October 2026."
     ],
     mysteryIntro: "Complete each lesson to collect a fragment. Assemble all six to reveal the House of Lords decision which held that an employer can be vicariously liable for harassment by a manager under a statute.",
     mysteryWhyItMatters: "The claimant was a clinical auditor co-ordinator at a London hospital trust. He alleged that his departmental manager criticised him in front of colleagues, isolated him, set unrealistic targets and threatened disciplinary action, and that this reflected homophobia. The trust's own investigation found that harassment had occurred, but by the time he sued he had left, and he sued the trust rather than the manager. In 2006 the House of Lords held that an employer can be vicariously liable for harassment committed by an employee in the course of employment under the Protection from Harassment Act 1997, because vicarious liability applies to statutory wrongs unless the statute excludes it. It is the leading authority on harassment claims against employers outside the discrimination legislation.",
@@ -2212,8 +2606,37 @@ const CHAPTERS = [
     interactives: VL_INTERACTIVES,
     clues: VL_CLUES,
     caseAnswer: VL_CASE_ANSWER
+  },
+  {
+    id: "equality-workplace",
+    week: 6,
+    releaseDate: "2026-11-02", // add ?preview to the site address (e.g. yoursite.vercel.app/?preview) to see unreleased weeks early
+    title: "Equality Within the Workplace",
+    subtitle: "Week commencing 2 November 2026 — the Equality Act 2010: protected characteristics, discrimination, harassment and remedies.",
+    accent: "#C9A84C",
+    badge: BADGE_IMG,
+    heroLine1: "Equality Within",
+    heroLine2: "the Workplace",
+    heroSubtitle: "The Equality Act 2010 at work: protected characteristics, direct and indirect discrimination, association, harassment, victimisation and remedies.",
+    tagline: "\"Judge people by their merits, not their characteristics.\"",
+    guideIntro: "Welcome to Equality Within the Workplace — your preparation for Lecture 06 and Seminar 06. This chapter introduces the Equality Act 2010: the protected characteristics and who is protected at work, direct discrimination (Jeremiah, Smith v Safeway), discrimination by association and perception (Coleman v Attridge Law), indirect discrimination, harassment and victimisation (Rayment, Veitch), and remedies, including the Vento bands for injury to feelings, time limits and the burden of proof. These lessons are designed to support and underpin your weekly reading, which in turn supports both the weekly lecture and seminar. Here's everything you need to know.",
+    objectives: [
+      "Identify the nine protected characteristics in the Equality Act 2010, who is protected at work, and the main forms of prohibited conduct.",
+      "Apply direct discrimination under section 13, including detriment (Jeremiah), dress codes (Smith v Safeway), and discrimination by association and perception (Coleman).",
+      "Apply indirect discrimination under section 19, including group disadvantage (Essop) and justification as a proportionate means of achieving a legitimate aim.",
+      "Explain harassment and victimisation (Rayment, Veitch), and the remedies, time limits and burden of proof in a discrimination claim, including the Vento bands."
+    ],
+    mysteryIntro: "Complete each lesson to collect a fragment. Assemble all six to reveal the House of Lords decision that gave the classic 'but for' test for direct discrimination and confirmed that the employer's motive is irrelevant.",
+    mysteryWhyItMatters: "A local council allowed people of 'pensionable age' to use its swimming pool free of charge. Pensionable age was then 60 for women and 65 for men, so a woman could swim free from 60 while a man of the same age had to pay until he was 65. A man in that position, whose wife was swimming free, complained of sex discrimination under the Sex Discrimination Act 1975. By a majority of three to two the House of Lords held that the policy was direct sex discrimination. Lord Goff asked whether the claimant would have received the same treatment but for his sex, and the council's benign motive made no difference. The 'but for' test and the irrelevance of motive still shape direct discrimination under section 13 of the Equality Act 2010.",
+    completionBlurb: "You've covered the protected characteristics and prohibited conduct in the Equality Act 2010, direct discrimination, association and perception, indirect discrimination, harassment and victimisation, and remedies.",
+    lessons: EQ_LESSONS,
+    buckets: EQ_BUCKETS,
+    sortCards: EQ_SORT_CARDS,
+    interactives: EQ_INTERACTIVES,
+    clues: EQ_CLUES,
+    caseAnswer: EQ_CASE_ANSWER
   }
-  // ,{ id: "...", week: 6, releaseDate: "2026-11-02", title: "...", ... }  ← add next week here
+  // ,{ id: "...", week: 7, releaseDate: "2026-11-09", title: "...", ... }  ← add next week here
 ];
 
 function ChapterEngine({ chapter, moduleScore, restored, caseSolved, onProgress, onExit }) {
@@ -3152,7 +3575,7 @@ function ChapterEngine({ chapter, moduleScore, restored, caseSolved, onProgress,
                     ) : (
                       <div style={{ animation: "scaleIn 0.4s ease both" }}>
                         <div style={{ background: hit ? "#7B9E8720" : "#C06B6B20", border: `1px solid ${hit ? "#7B9E87" : "#C06B6B"}44`, borderRadius: 14, padding: 16, marginBottom: 16 }}>
-                          <div style={{ fontWeight: 700, color: hit ? "#7B9E87" : "#C06B6B", marginBottom: 6 }}>{hit ? "✅ Spot on!" : `Not quite — the answer sat ${r.lo}–${r.hi}${r.suffix ?? "%"}`}</div>
+                          <div style={{ fontWeight: 700, color: hit ? "#7B9E87" : "#C06B6B", marginBottom: 6 }}>{hit ? "✅ Spot on!" : `Not quite — the answer sat ${r.lo === r.hi ? r.lo : `${r.lo}–${r.hi}`}${r.suffix ?? "%"}`}</div>
                           <p style={{ fontFamily: "'Crimson Text',serif", fontSize: 15, lineHeight: 1.6, color: "#C8C0B0" }}>{r.verdict}</p>
                         </div>
                         <button className="btn-primary" onClick={sliderNext} style={{ background: `linear-gradient(135deg,${ac},${ac}CC)` }}>{pst.round + 1 < cfg.rounds.length ? "Next Scenario →" : "Finish →"}</button>
