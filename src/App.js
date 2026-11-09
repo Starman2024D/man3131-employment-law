@@ -177,7 +177,7 @@ const ES_LESSONS = [
         scenario: "Sarah runs her own plumbing business, sends invoices, works for many clients, can freely substitute another plumber, and bears her own financial risk.",
         question: "What is Sarah's status?",
         options: [
-          "Genuinely self-employed (independent contractor)",
+          "Genuinely self-employed (independent contractor in business on her own account)",
           "An employee, because she does regular skilled work that the client relies upon",
           "A 'worker', since she still has to turn up and do a competent job for each client",
           "An agency worker, supplied to clients through an intermediary that pays her wages"
@@ -197,7 +197,7 @@ const ES_LESSONS = [
         scenario: "An early 20th-century court asks whether a master could tell the servant not just WHAT to do, but HOW to do it.",
         question: "What did the original 'control test' focus on?",
         options: [
-          "The degree to which the employer controls what work is done and how it is done",
+          "The degree to which the employer controls what work is done and also how, when and where it is done, as the mark of a servant",
           "Whether the worker was paid weekly in cash rather than by monthly invoice, as this showed how closely the pay was tied to the job",
           "Whether the worker supplied their own tools and equipment for the job, since that showed who carried the business risk",
           "The job title the parties had written into their agreement, since the label they chose decided the status"
@@ -246,7 +246,7 @@ const ES_LESSONS = [
         question: "What status did the court ultimately decide the drivers had?",
         options: [
           "Employees, because they wore company colours, drove for a single firm and could be told when and where to deliver",
-          "Independent contractors (self-employed), in business on their own account",
+          "Independent contractors (self-employed), in business on their own account rather than as employees",
           "Workers, entitled to holiday pay and the minimum wage but not to unfair dismissal protection",
           "Office holders appointed to a defined position within the company, with duties set by the company's constitution"
         ],
@@ -261,7 +261,7 @@ const ES_LESSONS = [
         options: [
           "It has no effect at all, because tribunals only ever look at hours worked and pay received, never at who does the work",
           "It automatically makes the individual an employee, since arranging cover shows commitment to the role and to the employer's business",
-          "It is generally inconsistent with employee/worker status, because it negates the requirement of personal service",
+          "It is generally inconsistent with employee/worker status, because it negates the essential requirement of personal service",
           "It is relevant only to the individual's tax position with HMRC and never to their employment rights, which turn on other factors"
         ],
         correct: 2,
@@ -294,7 +294,7 @@ const ES_LESSONS = [
         question: "What does this typically create?",
         options: [
           "A single permanent contract of employment that runs continuously for all time, covering both the shifts and the gaps between them",
-          "Possibly a series of separate, individual contracts during each engagement, but no continuous 'umbrella' contract",
+          "Possibly a series of separate, individual contracts during each engagement, but no continuous 'umbrella' contract at all",
           "No legal relationship of any kind, even during the shifts actually worked, because nothing is promised in advance",
           "Automatic and permanent 'worker' status that can never afterwards be lost, however the relationship later develops"
         ],
@@ -327,7 +327,7 @@ const ES_LESSONS = [
         scenario: "Uber BV v Aslam (2021). Uber argued drivers were self-employed and that it was merely a booking agent connecting drivers to passengers.",
         question: "What did the Supreme Court decide about the drivers?",
         options: [
-          "That they were 'workers' entitled to the minimum wage and paid holiday, given the control Uber exercised",
+          "That they were 'workers' entitled to the minimum wage and paid holiday, given the control that Uber exercised over them",
           "That they were self-employed contractors with no statutory employment rights, because Uber was only a booking platform",
           "That they were full employees with the right to claim ordinary unfair dismissal, redundancy pay and statutory sick pay",
           "That their status could not be determined by the courts and was left to be agreed between Uber and the drivers themselves"
@@ -342,8 +342,8 @@ const ES_LESSONS = [
         question: "When did the Supreme Court say the drivers' 'working time' began?",
         options: [
           "Only during the periods when a passenger was physically being carried in the car, with waiting time excluded from working time",
-          "Only once a driver had completed a set minimum number of trips that day, so that earlier waiting time did not count at all",
-          "Whenever the driver was logged into the app, within their territory, and ready and willing to accept trips",
+          "Only once a driver had completed a set minimum number of trips that day, so earlier waiting time did not count at all",
+          "Whenever the driver was logged into the Uber app, within their territory, and ready and willing to accept trips on demand",
           "Only on journeys that had been pre-booked in advance rather than hailed on demand, since those were the only guaranteed trips"
         ],
         correct: 2,
@@ -361,7 +361,7 @@ const ES_LESSONS = [
         scenario: "A claimant wants to bring an ordinary unfair dismissal claim after two years' service.",
         question: "Which status must they normally establish?",
         options: [
-          "Employee status, working under a contract of employment",
+          "Employee status, working under a contract of employment, so that unfair dismissal applies",
           "'Worker' status under limb (b) of s.230(3) is enough on its own",
           "Self-employed contractor status, provided they have invoiced the same client for two years",
           "Any of the three statuses will do, as unfair dismissal protects everyone equally"
@@ -525,7 +525,7 @@ const RT_LESSONS = [
         scenario: "A dispute arises over whether an employee properly agreed to provide work in exchange for pay, and what was actually promised.",
         question: "Which area of civil law is most central to the relationship between worker and employer?",
         options: [
-          "The law of Contract — the binding agreement to provide work in return for pay",
+          "The law of Contract — the legally binding agreement under which work is provided in return for pay",
           "Property law, because the employer owns the premises and equipment that the employee uses to do the work",
           "Criminal law, because the state enforces the terms on which the work is carried out",
           "Company law, because the employer is almost always incorporated as a separate legal entity"
@@ -573,8 +573,8 @@ const RT_LESSONS = [
         scenario: "After passing through both Houses of Parliament and being agreed between them, a Bill reaches its final formal step before becoming law.",
         question: "What is this final step called, and who must give it?",
         options: [
-          "Royal Assent — the Crown must give assent for a Bill to pass into law",
-          "Committee Stage — the Bill is examined line by line and approved by a Standing Committee of MPs",
+          "Royal Assent — the Crown must give its assent before a Bill can pass into law as an Act",
+          "Committee Stage — a Standing Committee of MPs examines the Bill line by line",
           "Second Reading — the general principles are debated and approved by the House of Commons alone",
           "Report Stage — the amended Bill is formally approved by the Prime Minister before it is printed"
         ],
@@ -607,8 +607,8 @@ const RT_LESSONS = [
         scenario: "The Working Time Regulations 1998 fill in detailed rules under an 'enabling Act', without needing a full new Act of Parliament of their own.",
         question: "What type of legislation is this, and how is it typically cited?",
         options: [
-          "Primary legislation, cited by its chapter number in the year it received Royal Assent, like any other Act",
-          "A Statutory Instrument (SI), typically cited in the form SI year/number — e.g. SI 1998/1833",
+          "Primary legislation, cited by its chapter number in the year of Royal Assent, like any Act",
+          "A Statutory Instrument (SI), typically cited as SI year/number — e.g. SI 1998/1833, delegated legislation",
           "A Green Paper, cited by the consultation reference given to it by the government department that issued it",
           "Case law, cited using a neutral citation made up of the year, the court identifier and a running number"
         ],
@@ -623,8 +623,8 @@ const RT_LESSONS = [
         options: [
           "Negative resolution — the instrument takes effect unless either House votes to annul it within the set period",
           "Simple laying — the instrument is placed before Parliament for information, with no vote needed in either House",
-          "No parliamentary process at all, because SIs are made by ministers and never need to be seen by Parliament",
-          "Affirmative resolution — used for only the most important SIs, typically under 10% each year"
+          "No parliamentary process, because SIs are made by ministers and never need to be seen by Parliament",
+          "Affirmative resolution — used for only the most important SIs, typically under 10% of those made each year"
         ],
         correct: 3,
         explanation: "Affirmative resolution requires the consent of both Houses of Parliament in most cases, with the draft SI briefly debated in each House. This procedure is reserved for the most important SIs — typically fewer than 10% each year. Most SIs instead proceed by negative resolution (effective immediately, but revocable within a set period), simple laying, or no parliamentary process at all.",
@@ -680,16 +680,16 @@ const RT_LESSONS = [
       },
       {
         id: "rt12",
-        scenario: "You are reading a case reported as Walker v Northumberland County Council [1995] 1 All ER 737. A colleague mentions the same case can also be found reported under a different series.",
+        scenario: "You are reading a case reported as Ready Mixed Concrete (South East) Ltd v Minister of Pensions and National Insurance [1968] 2 QB 497. A colleague mentions the same case can also be found reported under a different series.",
         question: "What does it mean that the same case has more than one valid citation?",
         options: [
           "It means the case was heard twice by two different courts, each of which gave its own separate citation to its own decision on the dispute",
           "It means one of the citations must be wrong, because every case can only ever have a single valid citation and any others are simply errors",
-          "A single case can be reported in more than one commercial series of law reports, each with its own citation to the same underlying judgment",
+          "A single case can be reported in more than one commercial series of law reports, each with its own distinct citation to one underlying judgment",
           "It means the case has no binding authority, since the competing citations make it unclear which of the law reports is authoritative for the court"
         ],
         correct: 2,
-        explanation: "The same case is often reported in more than one series — for example, Walker v Northumberland County Council appears as [1995] 1 All ER 737 in the All England Law Reports, and is also reported in the Industrial Relations Law Reports. Each citation points to the same judgment, just located within a different commercially-produced series compiled by different editors.",
+        explanation: "The same case is often reported in more than one series — for example, Ready Mixed Concrete (South East) Ltd v Minister of Pensions and National Insurance appears as [1968] 2 QB 497 in the Queen's Bench Reports, and is also reported as [1968] 1 All ER 433 in the All England Law Reports. Each citation points to the same judgment, just located within a different commercially-produced series compiled by different editors.",
         takeaway: "The same judgment can carry several valid citations, one for each law report series that chose to report it."
       }
     ]
@@ -717,7 +717,7 @@ const RT_LESSONS = [
         scenario: "An employer is prosecuted for breaching duties under the Health and Safety at Work Act 1974.",
         question: "Which courts handle this kind of criminal prosecution?",
         options: [
-          "The Magistrates' Court and the Crown Court",
+          "The Magistrates' Court for less serious offences, and the Crown Court for more serious offences",
           "The Employment Tribunal only, because it hears every dispute that arises between an employer and a worker",
           "Only the Supreme Court, because criminal prosecutions are always heard at the highest level in the first instance",
           "The County Court, which hears most civil claims in England and Wales"
@@ -734,7 +734,7 @@ const RT_LESSONS = [
           "Straight to the Supreme Court, with no further appeal possible, because the EAT is a superior court of record",
           "Back to the original Employment Tribunal for a full rehearing of the facts before a differently constituted panel",
           "To the Court of Appeal (Civil Division) on a point of law, with a further appeal with leave to the Supreme Court",
-          "Nowhere — decisions of the EAT are always final, and the parties can only ask the EAT to review its own decision"
+          "Nowhere — EAT decisions are always final, and the parties can only ask the EAT to review its own decision"
         ],
         correct: 2,
         explanation: "Appeal with leave from the EAT is to the Court of Appeal (Civil Division), and — as with the EAT itself — only on a point of law. A further appeal with leave then lies to the Supreme Court — the same ultimate route as for the ordinary civil courts.",
@@ -765,7 +765,7 @@ const RT_LESSONS = [
         scenario: "An individual represents themselves at an Employment Tribunal hearing, while the employer instructs a solicitor.",
         question: "Why does this kind of imbalance often arise in tribunal proceedings?",
         options: [
-          "Because there is no legal aid for tribunal representation, so employers tend to be represented more often than employees",
+          "Because there is no legal aid for tribunal representation, so employers tend to be legally represented far more often than employees",
           "Because tribunals require all employees to have legal representation, which employers cannot afford to provide for them, so they appear alone",
           "Because employees are legally barred from having a representative, although employers are permitted to instruct a solicitor or barrister",
           "Because tribunals only ever hear cases where both sides are unrepresented, so the imbalance described here cannot in fact arise"
@@ -801,7 +801,7 @@ const RT_BUCKETS = [
   { id: "caselaw", label: "Case Law", icon: "📚", color: "#8B6F9E", hint: "Judgments & precedent" }
 ];
 const RT_SORT_CARDS = [
-  { id: "r6", name: "Walker v Northumberland County Council [1995] 1 All ER 737", emoji: "⚖️", desc: "A High Court decision establishing an employer's duty of care for workplace stress", answer: "caselaw" },
+  { id: "r6", name: "Ready Mixed Concrete v Minister of Pensions [1968] 2 QB 497", emoji: "⚖️", desc: "A High Court decision on whether lorry drivers were employees or independent contractors", answer: "caselaw" },
   { id: "r1", name: "Employment Rights Act 2025", emoji: "📜", desc: "Introduced day-one paternity leave and reformed Statutory Sick Pay from 2026", answer: "primary" },
   { id: "r4", name: "ACAS Code of Practice on Disciplinary and Grievance Procedures", emoji: "🤝", desc: "Sets out recommended good practice for handling workplace disciplinary issues", answer: "secondary" },
   { id: "r7", name: "Smith v Smith [2002] EWCA Civ 7", emoji: "🔖", desc: "A Court of Appeal decision identified only by a sequential court reference", answer: "caselaw" },
@@ -1324,7 +1324,7 @@ const HS_LESSONS = [
         scenario: "Greenlane Architects employs twelve staff. The managing partner says there is no need for any safety paperwork because 'nothing has ever gone wrong' and everyone uses common sense.",
         question: "What do HSWA 1974 and the Management of Health and Safety at Work Regulations 1999 require of the firm?",
         options: [
-          "A suitable and sufficient risk assessment (recorded, as it has five or more employees) and a written safety policy",
+          "A suitable and sufficient risk assessment (recorded, as it has five or more employees) and a written health and safety policy",
           "Nothing in writing, because paperwork duties apply only to businesses that handle heavy machinery or hazardous substances",
           "A risk assessment, but only after an employee has been injured, so that the HSE can see how the accident might have been avoided",
           "A written safety policy, but no risk assessment at all, because assessing risk is only a matter of good practice for employers, not law"
@@ -1375,7 +1375,7 @@ const HS_LESSONS = [
           "Never, because stress is an ordinary incident of employment and the courts have refused to recognise psychiatric injury caused by work",
           "Always, once a psychiatric illness has been diagnosed, whatever the employer knew or could have foreseen about the risk to her",
           "Only where the employee proves that the employer deliberately set out to cause her illness by overloading her with work",
-          "When harm to her was reasonably foreseeable, as it was after her warnings, and the employer took no reasonable steps"
+          "When harm to her was reasonably foreseeable, as it was after her warnings, and the employer took no reasonable steps to help"
         ],
         correct: 3,
         explanation: "No occupation is inherently dangerous to mental health. The question is whether psychiatric injury to this employee was reasonably foreseeable, judged by what the employer knew or ought to have known, including signs of vulnerability and the demands of the job. In Hatton v Sutherland [2002] the Court of Appeal set out practical propositions, and the House of Lords in Barber v Somerset County Council [2004] treated them as helpful guidance and found the employer in breach for ignoring clear warning signs.",
@@ -1393,7 +1393,7 @@ const HS_LESSONS = [
         question: "What is the position on civil liability?",
         options: [
           "Any breach of a health and safety regulation automatically gives him a civil claim for damages, whether or not the employer was at fault",
-          "A breach of regulations is not actionable in itself unless they say so, so Dev must prove the employer was negligent",
+          "A breach of regulations is not actionable in itself unless they expressly say so, so Dev must prove the employer was negligent",
           "He has no civil claim of any kind, because only the HSE can enforce health and safety law and only through criminal prosecution",
           "He may sue for breach of statutory duty, but only after the HSE has first obtained a criminal conviction for the same breach"
         ],
@@ -1469,7 +1469,7 @@ const HS_LESSONS = [
         question: "How will a court treat the employment covenant?",
         options: [
           "As a sale of business covenant, because the group paid for his goodwill, so the more relaxed test for sellers will apply to it",
-          "It must be justified in its own right by interests arising from the employment; the earlier sale does not justify it",
+          "It must be justified in its own right by legitimate interests arising from the employment, not simply by the earlier sale",
           "As automatically void, because a covenant given by someone who is both seller and employee can never be enforced by the buyer",
           "As enforceable without scrutiny, because he negotiated the sale price with legal advice and the court will not interfere"
         ],
@@ -1491,7 +1491,7 @@ const HS_LESSONS = [
           "As valid, because six months is short and the agency is entitled to protect all of its clients from competition",
           "As valid, because an employee who has signed a covenant cannot later complain that it protects more than the employer needs",
           "As valid in full, because a court will simply narrow any over-wide client and area restriction to a reasonable size and enforce that",
-          "As too wide: they reach well beyond the clients and area connected with the work Mara and Jon actually did"
+          "As too wide: they reach well beyond the clients and area connected with the work Mara and Jon actually did for the agency"
         ],
         correct: 3,
         explanation: "In Office Angels Ltd v Rainer-Thomas [1991] IRLR 214 the Court of Appeal held covenants given by agency staff unreasonable. The client restriction extended to all the agency's clients although the employees had dealt with only a small number, and the area restriction covered most of the City of London, which had no functional correspondence with where their clients were. Slade LJ added that a covenant is not justified if a less far-reaching one, such as a ban on soliciting or dealing with clients the employee had dealt with, would give adequate protection.",
@@ -1502,7 +1502,7 @@ const HS_LESSONS = [
         scenario: "Ben, a financial adviser, is bound by a six-month covenant not to work in any capacity, directly or indirectly, for any business that competes with his employer, including in management, compliance or training roles. He joins a rival as its compliance officer. His employer also has a client non-solicitation covenant in his contract.",
         question: "How will a court probably treat the non-compete?",
         options: [
-          "As unenforceable: it reaches roles unconnected with his work, and non-solicitation protects his clients adequately",
+          "As unenforceable: it reaches roles unconnected with his work, and a non-solicitation covenant protects his own clients adequately",
           "As enforceable, because a six-month non-compete is short and an employer may always restrain a competitor from hiring its staff",
           "As enforceable, because a non-compete is the only way an employer can police misuse of confidential client information in practice",
           "As void automatically, because the law forbids every non-compete, however narrowly it is drafted and whatever interest it protects"
@@ -1518,7 +1518,7 @@ const HS_LESSONS = [
         options: [
           "No: a covenant is unreasonable unless it is limited to the customers he dealt with in his last six or twelve months",
           "No: non-solicitation covenants are treated less favourably than non-competes, because they also restrict the customers' own freedom",
-          "Probably yes: it lasts only six months, he was the firm's key contact, and its customer base was stable",
+          "Probably yes: it lasts only six months, he was the firm's key contact for those customers, and its customer base was stable",
           "Yes, but only if the firm can show that every customer on its list was still a current customer on the day he resigned"
         ],
         correct: 2,
@@ -1537,7 +1537,7 @@ const HS_LESSONS = [
         question: "Has any of her six-month restraint period already been used up by garden leave?",
         options: [
           "Yes: her notice period counts as garden leave automatically, because the contract allowed her employer to impose it",
-          "No: she was never actually put on garden leave, so no period falls to be deducted from the restraints",
+          "No: she was never actually put on garden leave by the firm, so no period falls to be deducted from her six-month restraints",
           "Yes: any notice period served counts towards post-termination restraints by operation of law, whatever the contract says",
           "No: garden leave can never be deducted from a restraint, because the two protections serve different purposes and cannot be linked"
         ],
@@ -1883,7 +1883,7 @@ const VL_LESSONS = [
           "Yes: the school had entrusted the boys' care to him, and the abuse was so closely connected with that work that liability is fair and just",
           "No: deliberate sexual abuse can never be an unauthorised way of doing an authorised act, so it must lie outside the course of employment",
           "No: the school is liable only if it knew of the abuse and failed to act, since otherwise it would be answering for a crime that it did not commit",
-          "Yes: an employer is liable for every wrong that its employees commit on its premises, however unconnected with their work the wrong may be"
+          "Yes: an employer is liable for every wrong that its employees commit on its premises, however unconnected with their work the wrong is"
         ],
         correct: 0,
         explanation: "In Lister v Hesley Hall Ltd [2001] UKHL 22, [2002] 1 AC 215, the House of Lords held the school liable. Lord Steyn reformulated the question: were the warden's torts so closely connected with his employment that it would be fair and just to hold the employer vicariously liable? The school had undertaken the care of the boys and entrusted that care to the warden, and the abuse was bound up with the way he performed that role. The House rejected the narrow Salmond analysis for deliberate wrongs and disapproved the earlier decision of the Court of Appeal in Trotman v North Yorkshire County Council [1999] LGR 584.",
