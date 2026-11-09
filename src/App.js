@@ -1256,7 +1256,7 @@ const CT_INTERACTIVES = {
     ]
   },
   L6: {
-    type: "flip", title: "Breach or Bar?", tag: "Flip to reveal", icon: "🃏", color: "#4FA8A0",
+    type: "flip", title: "Breach or Bar?", tag: "Flip to reveal", icon: "📑", color: "#4FA8A0",
     lead: "The situation…", ask: "What does the law say?", revealLabel: "THE LAW",
     blurb: "Decide what the law says about each situation, then flip to check.",
     cards: [
@@ -1597,7 +1597,7 @@ const HS_SORT_CARDS = [
 const HS_INTERACTIVES = {
   L1: { type: "sort", title: "Which Section?", tag: "Sort duties", icon: "🏷️", color: "#C9A84C", itemNoun: "situation", blurb: "Classify eight situations under section 2, 3 or 7 of the 1974 Act." },
   L2: {
-    type: "flip", title: "Liable or Not?", tag: "Flip to reveal", icon: "🃏", color: "#7B9E87",
+    type: "flip", title: "Liable or Not?", tag: "Flip to reveal", icon: "🦺", color: "#7B9E87",
     lead: "The situation…", ask: "Is the employer liable?", revealLabel: "THE RULING",
     blurb: "Decide whether the employer is liable, then flip to check.",
     cards: [
@@ -1999,7 +1999,7 @@ const VL_INTERACTIVES = {
     ]
   },
   L2: {
-    type: "flip", title: "Employee or Contractor?", tag: "Flip to reveal", icon: "🃏", color: "#7B9E87",
+    type: "flip", title: "Employee or Contractor?", tag: "Flip to reveal", icon: "👔", color: "#7B9E87",
     lead: "The worker…", ask: "Is the business vicariously liable?", revealLabel: "THE RULING",
     blurb: "Decide whether the business is vicariously liable, then flip to check.",
     cards: [
@@ -2457,6 +2457,392 @@ const EQ_CLUES = [
 ];
 
 
+/* ─────────── WEEK 7: EQUALITY, MATERNITY AND EQUAL PAY ─────────── */
+const MP_LESSONS = [
+  {
+    id: "L1", title: "Maternity Leave and Pay", icon: "🍼", color: "#C9A84C",
+    intro: "Employees are entitled to up to 52 weeks of statutory maternity leave: 26 weeks of ordinary maternity leave followed by 26 weeks of additional maternity leave. It is a day-one right, and the employee must tell the employer by the end of the 15th week before the expected week of childbirth. Pay is a separate question. Statutory Maternity Pay (SMP) lasts for up to 39 weeks and depends on 26 weeks' continuous service and a minimum level of earnings. Those who do not qualify may claim Maternity Allowance instead. Parents who share leave can also receive Statutory Shared Parental Pay, at the same rate. Paternity leave and adoption leave sit alongside these rights, and the Employment Rights Act 2025 made paternity leave a day-one right from April 2026.",
+    questions: [
+      {
+        id: "mp1",
+        scenario: "Aisha has worked as a dental hygienist for three years. She takes the full 52 weeks of statutory maternity leave. While she is away the practice reorganises, but her old post still exists and is vacant. On her return the manager says that Aisha will do a different role at the same pay, because after additional maternity leave the practice may decide where she works.",
+        question: "What is Aisha entitled to on her return?",
+        options: [
+          "Any suitable job at the same pay, because after additional maternity leave the employer has a free choice about which job the employee returns to",
+          "Only a job on the same grade, because the right to return to the same job lasts for ordinary maternity leave alone and ends when additional leave begins",
+          "Her old job, because it still exists and so returning to it is reasonably practicable; a suitable alternative is allowed only where that is not so",
+          "No particular job, because her contract was suspended during the leave and she must re-apply for a post whenever she chooses to come back"
+        ],
+        correct: 2,
+        explanation: "Maternity leave is 26 weeks of ordinary leave plus 26 weeks of additional leave (Maternity and Parental Leave etc. Regulations 1999). After ordinary leave alone the employee returns to the job she had before. After additional leave the right is to the same job as well, unless it is not reasonably practicable, in which case the employer must offer a suitable and appropriate alternative on terms and conditions no less favourable (regulation 18). Where the old post still exists, returning to it is practicable, so the employer cannot simply prefer a different arrangement. If the post has been made redundant, a different rule applies: the employee has priority for any suitable alternative vacancy.",
+        takeaway: "A woman returns to her old job after maternity leave; an alternative is allowed only where that is not reasonably practicable."
+      },
+      {
+        id: "mp2",
+        scenario: "Zainab started as a receptionist ten weeks ago and is expecting a baby in 26 weeks' time. She earns £250 a week. She asks her employer what she is entitled to, and a colleague tells her that she must wait until she has 26 weeks' service before she can claim any maternity rights at all.",
+        question: "Which statement about Zainab's position is correct?",
+        options: [
+          "She can take up to 52 weeks of leave from day one, but she will not qualify for SMP; she may be able to claim Maternity Allowance instead",
+          "She has no right to maternity leave until she has completed 26 weeks of service, so she cannot take any statutory leave if the baby arrives earlier",
+          "She is entitled to SMP at 90% of her pay for 39 weeks, because SMP depends only on her being pregnant and employed when she gives notice",
+          "She can take 26 weeks of ordinary leave only, as additional maternity leave is reserved for employees who have two years of continuous service"
+        ],
+        correct: 0,
+        explanation: "The right to statutory maternity leave belongs to every employee from the first day of employment. SMP is different. The employee needs 26 weeks' continuous service by the end of the qualifying week (the 15th week before the expected week of childbirth), average weekly earnings at or above the lower earnings limit (£129 a week for 2026/27), and must give notice and evidence (the MATB1 certificate). Zainab will have about 21 weeks' service by her qualifying week, so she misses SMP. She may instead qualify for Maternity Allowance, paid for up to 39 weeks at the same flat rate or 90% of average earnings if that is lower, which has its own work-history test.",
+        takeaway: "Maternity leave is a day-one right, but SMP needs 26 weeks' service; Maternity Allowance may fill the gap."
+      },
+      {
+        id: "mp3",
+        scenario: "Tom started at a haulage firm a week ago. His partner is due to give birth next month, and he asks about paternity leave and pay. His colleague Chloe, who has worked there for three years, has been matched with a child by an adoption agency and asks about adoption leave.",
+        question: "What is the legal position for Tom and Chloe?",
+        options: [
+          "Tom must complete 26 weeks of service before he can take any paternity leave, and Chloe's adoption leave is limited to 26 weeks of ordinary leave",
+          "Tom may take up to four weeks of paternity leave in a single block, and Chloe is entitled to adoption leave only after twelve months of service",
+          "Tom is entitled to paternity leave and full pay at once, but Chloe has no statutory right, since adoption leave is a benefit that employers may choose to offer",
+          "Tom can take paternity leave from day one, though statutory paternity pay still needs 26 weeks' service; Chloe can take up to 52 weeks of adoption leave"
+        ],
+        correct: 3,
+        explanation: "The Employment Rights Act 2025 made paternity leave (one or two consecutive weeks) and unpaid parental leave day-one rights from 6 April 2026. Statutory paternity pay is paid at the flat rate (or 90% of earnings if lower) and still needs 26 weeks' service. Adoption is covered by its own statutory scheme: up to 52 weeks of adoption leave for the main adopter, available from the first day of employment, with statutory adoption pay for up to 39 weeks for those with 26 weeks' service. The two rights are separate from maternity leave. Parents who share leave after a birth or adoption may also receive Statutory Shared Parental Pay (ShPP), for up to 37 weeks, at £194.32 a week for 2026/27 or 90% of average weekly earnings if that is lower.",
+        takeaway: "Paternity and adoption leave are day-one rights, but statutory pay for them still depends on 26 weeks' service."
+      }
+    ]
+  },
+  {
+    id: "L2", title: "Pregnancy and Maternity Discrimination", icon: "🤰", color: "#4A90B8",
+    intro: "Section 18 of the Equality Act 2010 makes it unlawful to treat a woman unfavourably during the protected period because of her pregnancy, an illness suffering as a result of it, compulsory maternity leave, or her use of ordinary or additional maternity leave. The protected period begins when the pregnancy begins and ends when the woman returns to work or, if she has no right to maternity leave, two weeks after the pregnancy ends. No comparator is needed, and indirect discrimination does not apply to this characteristic. The European Court of Justice added an early layer in Handels- og Kontorfunktionærernes Forbund i Danmark (acting for Høj Pedersen) v Fællesforeningen for Danmarks Brugsforeninger (acting for Kvickly Skive) (Case C-66/96, [1999] IRLR 55), known as Pedersen, which distinguished pregnancy-related illness from precautionary absences. Since April 2024 pregnant employees have also had priority for suitable alternative vacancies in a redundancy.",
+    questions: [
+      {
+        id: "mp4",
+        scenario: "Mia tells HR that she is off with severe sickness caused by her pregnancy, and is absent for six days. Her employer's policy gives a written warning to anyone who reaches five days of absence in a year. HR adds Mia's six days to her total and issues a warning, noting that the policy is applied to every employee in exactly the same way.",
+        question: "Is the warning likely to be unlawful?",
+        options: [
+          "No: section 18 requires Mia to show that a man with a comparable sickness record would have been treated better, and the policy treats everyone alike",
+          "Yes: it is unfavourable treatment because of pregnancy-related illness under section 18, and applying the policy equally to everyone is no answer",
+          "No: a neutral absence policy applied to all staff in the same way can never be discrimination under the Equality Act, whatever the reason for the absence",
+          "Yes, but only if the warning was issued during maternity leave, because section 18 protects that period alone"
+        ],
+        correct: 1,
+        explanation: "Section 18(2) covers unfavourable treatment because of the pregnancy or because of an illness suffered as a result of it. Absence caused by pregnancy-related illness must not be counted towards a sickness trigger. The claim is not a comparison with other employees, so the fact that a rule is applied equally does not help the employer: the reason for the warning is the pregnancy-related absence. The protected period starts when the pregnancy begins, not when leave starts.",
+        takeaway: "Absence caused by pregnancy-related illness cannot be counted against a woman, and equal application of a policy is no defence."
+      },
+      {
+        id: "mp5",
+        scenario: "Karin, who is pregnant, is fit for work and has no illness. Her employer decides, without asking her doctor and without considering any change to her duties or hours, that she must stay at home until her maternity leave starts 'for her own protection'. It pays her reduced pay while she is at home.",
+        question: "What does the reasoning in Handels- og Kontorfunktionærernes Forbund i Danmark (acting for Høj Pedersen) v Fællesforeningen for Danmarks Brugsforeninger (acting for Kvickly Skive) (Case C-66/96, [1999] IRLR 55), known as Pedersen, suggest about this decision?",
+        options: [
+          "It is lawful, because Karin does no work while she is at home and the employer is entitled to pay only for work actually done",
+          "It is lawful, because the employer acted to protect her health, and a benevolent motive is a complete answer to a claim of pregnancy discrimination",
+          "It is lawful provided that the reduced pay is not less than what she would receive as statutory maternity pay for the same period of time",
+          "Paying less is discriminatory: she is fit for work and was sent home without any attempt to adapt her conditions, so she should be on full pay"
+        ],
+        correct: 3,
+        explanation: "In Handels- og Kontorfunktionærernes Forbund i Danmark (acting for Høj Pedersen) v Fællesforeningen for Danmarks Brugsforeninger (acting for Kvickly Skive) (Case C-66/96, [1999] IRLR 55), known as Pedersen, the European Court of Justice drew a line. If a pregnant woman is unfit for work because of a pregnancy-related illness, treating her worse than a sick man in terms of pay is discriminatory. If she stays away for routine pregnancy inconveniences or on precautionary advice without being unfit, national rules on reduced pay are not discriminatory. But an employer who itself decides to send home a woman who is fit for work, without first checking whether her conditions or hours could be adapted, must keep her on full pay. In domestic law, the Employment Rights Act 1996 (ss.66 to 68) gives similar protection where a health and safety risk cannot be removed: suitable alternative work, or paid suspension.",
+        takeaway: "An employer cannot send a pregnant worker who is fit for work home on reduced pay without first trying to adapt her work."
+      },
+      {
+        id: "mp6",
+        scenario: "Hannah is 20 weeks pregnant and has told her employer in writing. Her department is closing and her job is redundant. The employer has a suitable vacancy in another team and plans to fill it by interviewing everyone at risk, Hannah included, and appointing the best candidate.",
+        question: "What does the law require the employer to do about the vacancy?",
+        options: [
+          "Offer Hannah the suitable vacancy ahead of the other staff at risk, since her priority applies from when she notified the pregnancy",
+          "No priority yet: it applies only once she is on maternity leave, so Hannah competes for the vacancy like everyone else",
+          "Consider her alongside the other staff at risk and then appoint the best candidate on merit, since priority is a matter of the employer's own policy",
+          "Offer her the vacancy only if she has two years of service, as priority status is available only to employees who can bring an unfair dismissal claim"
+        ],
+        correct: 0,
+        explanation: "Under regulation 10 of the Maternity and Parental Leave etc. Regulations 1999, as extended from 6 April 2024, an employee whose role is redundant and who is pregnant, or on or recently back from family leave (up to 18 months from the birth), must be offered a suitable alternative vacancy in priority to other employees at risk. The protection starts when the employee notifies the employer of the pregnancy in writing. A competitive process does not satisfy the duty, and a dismissal where the duty is breached is automatically unfair. No qualifying service is needed.",
+        takeaway: "Since April 2024, a pregnant employee at risk of redundancy has priority for a suitable vacancy from the time she notifies the pregnancy."
+      }
+    ]
+  },
+  {
+    id: "L3", title: "Pregnancy Protection in the European Court", icon: "🏛️", color: "#7B9E87",
+    intro: "Three decisions of the European Court of Justice show how far the protection reaches. Tele Danmark A/S v Handels- og Kontorfunktionærernes Forbund i Danmark (C-109/00) concerned the dismissal of a woman on a fixed-term contract. Land Brandenburg v Sass (C-284/02, [2005] IRLR 147) concerned the effect of maternity leave on time counted towards promotion. Sarkatzis Herrero v Instituto Madrileño de la Salud (C-294/04, [2006] IRLR 296) concerned a successful job candidate who was on maternity leave when her post began. The principles they set out shaped the pregnancy and maternity protection that is now found in section 18 of the Equality Act 2010.",
+    questions: [
+      {
+        id: "mp7",
+        scenario: "Lena is hired for a six-month fixed-term contract in a call centre. She is already pregnant but has not told the employer, and she will be on maternity leave for most of the contract. When she mentions the pregnancy in her second month, she is dismissed. The employer says that it would not have hired her if it had known.",
+        question: "How would the European Court of Justice's reasoning in Tele Danmark A/S v Handels- og Kontorfunktionærernes Forbund i Danmark (HK) (Case C-109/00, 4 October 2001) treat the dismissal?",
+        options: [
+          "Lawful: she concealed a fact that was crucial to the contract, so the employer may dismiss her for that dishonesty rather than for the pregnancy itself",
+          "Lawful: a fixed-term contract that cannot be performed for most of its length may be ended once the employee is unable to work for that period",
+          "Direct sex discrimination: dismissal because of pregnancy is unlawful even on a fixed-term contract and even though she did not disclose it when hired",
+          "Unlawful only if the contract was for an indefinite term, because fixed-term employees take the risk that they will not be available to work"
+        ],
+        correct: 2,
+        explanation: "In Tele Danmark A/S v Handels- og Kontorfunktionærernes Forbund i Danmark (HK) (Case C-109/00, 4 October 2001) the Court held that a dismissal because of pregnancy is direct sex discrimination, and that the employer's financial loss does not justify it. It made no difference that the contract was for a fixed term, that the woman would be absent for much of it, or that she had not told the employer of the pregnancy when she was hired. The same idea is found in section 18 of the Equality Act 2010: the question is whether the pregnancy was the reason for the treatment.",
+        takeaway: "Dismissing a woman because of pregnancy is unlawful whatever the contract's length or when she told the employer."
+      },
+      {
+        id: "mp8",
+        scenario: "Under a public-sector collective agreement a worker moves up the pay scale after 15 years of qualifying service. Dr Weiss takes 20 weeks of maternity leave. The agreement counts only the first eight weeks of any maternity leave towards the 15 years, saying that the rest is not 'service' because no work was done.",
+        question: "What would the reasoning in Land Brandenburg v Sass (Case C-284/02, [2005] IRLR 147) say about the agreement?",
+        options: [
+          "The agreement is valid: it counts the minimum period, and no duty exists to count leave beyond that since no work was done",
+          "The agreement is precluded: the whole maternity leave must count towards the qualifying period, as leave does not interrupt employment",
+          "The agreement is valid: promotion rules are a matter for collective bargaining, and the equal treatment rules do not reach collective agreements",
+          "The agreement is invalid only if no men have ever taken unpaid leave of a comparable length, which Dr Weiss must prove with a male comparator"
+        ],
+        correct: 1,
+        explanation: "In Land Brandenburg v Sass (C-284/02, [2005] IRLR 147) a collective agreement counted only eight weeks of a 20-week maternity leave towards the 15-year qualifying period for promotion. The Court held that the Equal Treatment Directive precluded a collective agreement from excluding any maternity leave period from the qualifying period, since the employment relationship continues during maternity leave. Collective agreements are not outside the equal treatment rules, and no male comparator is needed.",
+        takeaway: "Maternity leave counts towards qualifying periods for promotion, and a collective agreement cannot exclude it."
+      },
+      {
+        id: "mp9",
+        scenario: "María is on a temporary contract and passes a competition for a permanent post. She is on maternity leave when the post is due to start. The employer lets her start when her leave ends but counts her seniority in the new post only from her actual start date, which puts her behind colleagues who passed alongside her and started on time.",
+        question: "What would the reasoning in Sarkatzis Herrero v Instituto Madrileño de la Salud (Imsalud) (Case C-294/04, [2006] IRLR 296), known as Herrero, say about the employer's treatment of her seniority?",
+        options: [
+          "Contrary to the Equal Treatment Directive: she must not be worse off than the other successful candidates, so her leave should count",
+          "It is lawful: her new employment had not yet begun, so no maternity protection applies and seniority can run from the day she actually starts",
+          "It is lawful: she lost nothing that she was owed, since she received the permanent job and keeps it with the same pay as the others",
+          "It is unlawful only if the employer failed to give her at least a month's notice of the date on which the new post was to begin"
+        ],
+        correct: 0,
+        explanation: "In Sarkatzis Herrero v Instituto Madrileño de la Salud (C-294/04, 16 February 2006, [2006] IRLR 296) the Court held that the Pregnant Workers and Parental Leave Directives did not apply, because the new post was a new employment relationship. But the Equal Treatment Directive (76/207) precluded national rules that left a woman on maternity leave with worse rights than the other successful candidates: the start of her career could not be deferred to the end of her leave without counting that period for seniority. It was for the national court to confirm that she was disadvantaged in practice.",
+        takeaway: "A woman on maternity leave must not be put in a worse position than other successful candidates, and her leave must count for seniority."
+      }
+    ]
+  },
+  {
+    id: "L4", title: "Equal Pay: Like Work and Rated Equivalent", icon: "⚖️", color: "#8B6F9E",
+    intro: "Equal pay is dealt with in Chapter 3 of Part 5 of the Equality Act 2010. A claimant compares her terms with those of a real comparator of the opposite sex who does equal work for the same employer. Work is equal if it is like work (the same or broadly similar, with differences not of practical importance, as in British Leyland (UK) Ltd v Powell [1978] IRLR 57), rated as equivalent under a job evaluation study (Springboard Sunderland Trust v Robson [1992] ICR 554), or of equal value. If the claimant succeeds, a sex equality clause (section 66) modifies her terms, unless the employer proves a material factor defence.",
+    questions: [
+      {
+        id: "mp10",
+        scenario: "Kim and Dan are care assistants at the same residential home, with the same job description. Dan is paid £1.20 an hour more. Kim shows that Dan covers a heavier lifting rota about once a month and sometimes works nights while Kim works days. The home says that these differences mean that they do not do 'like work'.",
+        question: "Do Kim and Dan do 'like work'?",
+        options: [
+          "No: any difference in duties between the two jobs, however occasional, takes them outside the like work category and defeats the claim entirely",
+          "No: Kim must show that her duties are identical to Dan's in every respect, including the times at which the work is done",
+          "Yes, automatically: the shared job description decides the matter, and the tribunal may not look at what each person actually does",
+          "Probably yes: the jobs are broadly similar, and occasional differences or differences in when the work is done are not of practical importance"
+        ],
+        correct: 3,
+        explanation: "Section 65(2) asks whether the work is the same or broadly similar and whether any differences are of practical importance in relation to the terms of the work. The tribunal looks at the frequency with which differences occur in practice as well as their nature and extent, and at what the two people actually do rather than at job titles. Occasional extra duties and differences in the hours worked are normally disregarded. 'Like work' is the category associated with British Leyland (UK) Ltd v Powell [1978] IRLR 57.",
+        takeaway: "Like work means the same or broadly similar work; trivial or occasional differences are disregarded."
+      },
+      {
+        id: "mp11",
+        scenario: "A hospital's job evaluation scheme scores Gina's job at 412 points and Tom's at 430. The scheme then converts the points into pay grades, and both jobs fall into Grade 6. Gina is paid less than Tom. The hospital says that the 18-point difference shows that the jobs are not rated as equivalent.",
+        question: "Are the jobs 'rated as equivalent'?",
+        options: [
+          "No: the scores differ, and work is rated as equivalent only if a job evaluation study gives the two jobs exactly the same number of points in total",
+          "Yes: the whole scheme counts, including the conversion of points into grades, so the jobs can be rated as equivalent despite different scores",
+          "No: a job evaluation study can never establish this category, and Gina must prove equal value through an independent expert instead",
+          "Yes, but only if Gina first shows that the hospital designed its scheme to disadvantage women when it assigned points to the two jobs"
+        ],
+        correct: 1,
+        explanation: "In Springboard Sunderland Trust v Robson [1992] ICR 554 the EAT held that the job evaluation scheme should be looked at as a whole, including how points are converted into grades. Mrs Robson's job scored fewer points than her comparator's, but the scheme placed them in the same grade, so the work was rated as equivalent. Today the rule is in section 65 of the Equality Act 2010. A study that is itself discriminatory on grounds of sex does not count, but the claimant does not have to prove that to succeed.",
+        takeaway: "Under a job evaluation scheme, jobs in the same grade can be rated as equivalent even if their points differ."
+      },
+      {
+        id: "mp12",
+        scenario: "At the tribunal, Rita proves that she and a male comparator do like work and that he is paid £3,000 a year more. The employer says that it never intended to pay women less and has no discriminatory policy, so the claim should fail.",
+        question: "What is the effect of Rita proving her case?",
+        options: [
+          "Rita must also prove a discriminatory intention behind the pay gap before the tribunal can alter any term of her contract",
+          "The tribunal may only recommend a pay rise, because a sex equality clause has no power to change the terms of her contract or to award arrears",
+          "Her terms are modified by the sex equality clause so that they are no less favourable, unless the employer proves a material factor defence",
+          "The claim fails unless the gap exceeds the 5% threshold that the Act sets for pay differences between women and men in equal pay claims"
+        ],
+        correct: 2,
+        explanation: "Under section 66 of the Equality Act 2010, if a term of A's contract is less favourable than a term of B's, a sex equality clause is read into A's contract so that the term is modified to be no less favourable. This operates without proof of any intention to discriminate. The employer's route out is section 69, the material factor defence, on which the employer carries the burden. The Act sets no minimum percentage for a pay gap.",
+        takeaway: "If equal work is proved, the contract is modified automatically; intention is irrelevant and the employer must prove a defence."
+      }
+    ]
+  },
+  {
+    id: "L5", title: "Equal Value and Comparators", icon: "🔎", color: "#E07B39",
+    intro: "Where the jobs differ in nature, a claimant can argue that her work is of equal value to her comparator's, judged by the demands made on her under such headings as effort, skill and decision-making. In Pickstone v Freemans plc [1989] AC 66 the House of Lords allowed such a claim even though a man was doing like work at the same pay. The comparator must be an actual person of the opposite sex, and under section 79 must be employed by the same employer (or an associated employer) at the same establishment or at a different one where common terms apply. The 'common terms' test is applied as a broad comparison rather than a line-by-line one, and the Supreme Court has confirmed that claimants at one establishment can compare themselves with a better-paid group at another.",
+    questions: [
+      {
+        id: "mp13",
+        scenario: "Ms Okoro is a warehouse operative, paid the same as a male operative who does like work. Male checkers in the same warehouse do a different job and are paid more. She brings an equal value claim, comparing herself with the checkers. The employer argues that the claim must fail, because an equally paid man is doing her job.",
+        question: "Can Ms Okoro's equal value claim proceed?",
+        options: [
+          "Yes: the presence of a man on like work at the same pay does not defeat an equal value claim against a better-paid comparator (Pickstone)",
+          "No: an equally paid man doing the same work shows that the employer treats women and men alike, so no equal value claim can be made",
+          "No: an equal value claim is available only where no man at all is doing the same or similar work as the woman who is making the claim",
+          "Yes, but only if the employer agrees to a job evaluation study of the two jobs, since equal value cannot be claimed without that agreement"
+        ],
+        correct: 0,
+        explanation: "In Pickstone v Freemans plc [1989] AC 66 women warehouse operatives were paid the same as a man doing like work, but less than male warehouse checkers. The Court of Appeal ruled for the employer, but the House of Lords reversed, reading domestic law purposively to give effect to the EU requirement of equal pay for work of equal value. The woman's claim could proceed against the better-paid men. Under today's Equality Act 2010 the three categories of equal work are alternatives.",
+        takeaway: "An equally paid man on like work does not stop a woman from claiming equal value against better-paid men."
+      },
+      {
+        id: "mp14",
+        scenario: "Library assistants, mostly women, at a county council's branch libraries claim that their work is of equal value to that of highways depot workers, mostly men, who work at the council's depots on higher pay. The council argues that the depot workers cannot be comparators, because they work at different establishments on different terms.",
+        question: "Can the depot workers be comparators for the library assistants?",
+        options: [
+          "No: the comparator must work at the same establishment as the claimant, whatever the terms of employment at the other site",
+          "No: the terms at the depots differ in detail from those at the libraries, so a strict line-by-line comparison of the two sets of terms fails and the claim cannot proceed",
+          "Yes, automatically: any two groups employed by the same council are in the same employment, so common terms never need to be shown",
+          "Yes, if the depot workers would be on broadly similar terms were they employed at the libraries; the test is a broad comparison, not a line-by-line one"
+        ],
+        correct: 3,
+        explanation: "Under section 79 of the Equality Act 2010 a comparator may work at a different establishment of the same employer if 'common terms' apply: would the comparators, if they were employed at the claimant's establishment, be on broadly similar terms to those they have at their own? The Supreme Court has held that this is a broad comparison, not a line-by-line one, and that the hypothetical need not be one that could realistically happen. If common terms are shown, the comparator is valid. Whether the work is of equal value, and whether the employer has a defence, are separate questions that are decided at later stages.",
+        takeaway: "Comparators at another establishment are valid if they would have broadly similar terms at the claimant's; this does not decide equal value."
+      },
+      {
+        id: "mp15",
+        scenario: "Nasreen is a nursery manager. She believes that the demands of her job are equal to those of a male warehouse manager at the same company. The jobs are completely different in nature, and the company has no job evaluation scheme.",
+        question: "Can Nasreen bring an equal pay claim?",
+        options: [
+          "No: equal pay claims are available only where the jobs are the same or broadly similar, or have been rated as equivalent by the employer's own scheme",
+          "Yes: she can claim equal value, which asks whether the demands on her, by reference to effort, skill and decision-making, equal those on him",
+          "Yes, but only by comparing herself with a hypothetical male manager, because no actual comparator can be found in a different job",
+          "No: she can bring a claim only after the company has carried out and published an equal pay audit covering both of the jobs"
+        ],
+        correct: 1,
+        explanation: "Under section 65 of the Equality Act 2010 work is equal if it is like work, rated as equivalent, or of equal value. The equal value route covers work that is neither like nor rated as equivalent, but is nevertheless equal in terms of the demands made on the worker, by reference to factors such as effort, skill and decision-making. The comparator must be an actual person of the opposite sex, not a hypothetical one, and an audit is not a condition of the claim.",
+        takeaway: "Equal value lets a woman compare very different jobs, using a real comparator and the demands of the work."
+      }
+    ]
+  },
+  {
+    id: "L6", title: "Defences, Experts and Audits", icon: "📋", color: "#4FA8A0",
+    intro: "An employer resists an equal pay claim by proving the material factor defence in section 69 of the Equality Act 2010. Equal value claims often turn on the report of an independent expert: the tribunal may require a report from a member of the panel of independent experts, which Acas designates, and Acas appoints the expert when the tribunal asks. The expert's duty is to the tribunal, the report covers both parties' positions, and the parties must cooperate and disclose all relevant information. Where an employer loses an equal pay claim, the Equality Act 2010 (Equal Pay Audits) Regulations 2014 require the tribunal to order an equal pay audit unless an exemption applies.",
+    questions: [
+      {
+        id: "mp16",
+        scenario: "A bakery pays its night-shift staff, mostly men, £2 an hour more than its day staff, mostly women, who claim equal pay for work of equal value. The employer says that the premium compensates for the burden of working unsocial night hours.",
+        question: "What must the employer show to succeed under section 69?",
+        options: [
+          "That it did not intend to treat women less favourably than men, because the defence turns on the employer's own intention and not on the practical effect of the pay on women",
+          "Nothing, because the claimants must prove that the night premium is not a real reason, as the law presumes that an employer's stated reason is genuine",
+          "That the difference is because of a genuine material factor; and as it puts women at a particular disadvantage, that it is a proportionate means of a legitimate aim",
+          "Nothing more than that the factor relates to working hours, because any difference connected with the time of work is automatically a defence"
+        ],
+        correct: 2,
+        explanation: "Section 69 of the Equality Act 2010 provides that the sex equality clause has no effect if the responsible person shows that the difference is because of a material factor, reliance on which does not involve treating the claimant less favourably because of her sex than the employer treats the comparator and, if the factor puts people of the claimant's sex at a particular disadvantage, is a proportionate means of achieving a legitimate aim. The burden of proof is on the employer. A night premium for genuinely unsocial hours can qualify, but the employer must prove it and must justify it where the premium disadvantages women.",
+        takeaway: "The employer must prove a genuine material factor that is not sex-tainted and, where women are disadvantaged, is proportionate."
+      },
+      {
+        id: "mp17",
+        scenario: "In an equal value claim the tribunal decides that it needs independent expertise. The claimant's solicitor wants to appoint her own expert to argue the claimant's case, and the employer's solicitor wants to choose the expert instead.",
+        question: "How does the tribunal deal with expert evidence in an equal value claim?",
+        options: [
+          "Each side instructs its own expert to argue its case, and the tribunal must prefer the report of whichever expert has the better qualifications and experience",
+          "The claimant chooses any practitioner she wishes and pays the fees, and the employer may comment on the report but cannot challenge its method",
+          "The tribunal must adopt the expert's conclusion, since it cannot decide the equal value question itself once an expert report has been received",
+          "It may require a report from an expert on the Acas panel; the expert's duty is to the tribunal, and both sides must cooperate and fully disclose"
+        ],
+        correct: 3,
+        explanation: "Under section 131 of the Equality Act 2010 the tribunal may require a member of the panel of independent experts to prepare a report on whether the work is of equal value, and it must not decide the question without that report if one has been required. The panel consists of people designated by Acas, and Acas appoints the expert when the tribunal asks; HM Courts and Tribunals Service pays the fees. The expert's duty is to the tribunal, not to either party, and compares both parties' jobs. The tribunal still decides the question, and parties can challenge the expert at the hearing. The parties must cooperate and disclose the information that the expert needs, in line with the tribunal's case management orders.",
+        takeaway: "The tribunal, not the parties, brings in an independent expert whose duty is to the tribunal; the parties must cooperate fully."
+      },
+      {
+        id: "mp18",
+        scenario: "An employer with 400 staff loses an equal pay claim at the tribunal. It has not carried out an equal pay audit in the last three years. It asks the tribunal whether it must carry out an audit.",
+        question: "What do the Equal Pay Audits Regulations 2014 require?",
+        options: [
+          "The tribunal must order an equal pay audit unless an exemption applies, and the employer must publish it on its website for at least three years",
+          "Nothing, because audits are required only of employers with 250 or more staff as part of the annual gender pay gap reporting under other rules",
+          "The tribunal may order an audit only if the claimant asks for one, and the employer need not publish the results of any audit that is carried out",
+          "The tribunal must order an audit, which the employer reports in confidence to the tribunal alone, with no duty to inform the staff involved"
+        ],
+        correct: 0,
+        explanation: "Under the Equality Act 2010 (Equal Pay Audits) Regulations 2014 (SI 2014/2559), in force since 1 October 2014, a tribunal must order an equal pay audit when an employer loses an equal pay or pay-related sex discrimination claim, unless an exemption applies (for example, an audit in the previous three years, a one-off breach, where it is already clear what action is needed, a new business, or fewer than 10 employees). The audit identifies pay differences between women and men, the reasons for them and a plan to address any unjustified gaps. The employer must publish it on its website for at least three years and inform the staff covered. Failure can lead to a penalty of £5,000. This is not a general duty to audit pay. The annual gender pay gap reporting duty for larger employers is a separate regime.",
+        takeaway: "A tribunal must order a published equal pay audit when an employer loses an equal pay claim, unless an exemption applies."
+      }
+    ]
+  }
+];
+
+const MP_BUCKETS = [
+  { id: "like", label: "Like work", icon: "🟰", color: "#C9A84C", hint: "Same or broadly similar work" },
+  { id: "rated", label: "Rated as equivalent", icon: "📊", color: "#4A90B8", hint: "A job evaluation study puts the jobs on a par" },
+  { id: "value", label: "Equal value", icon: "⚖️", color: "#E07B39", hint: "Different jobs, equal demands" }
+];
+
+const MP_SORT_CARDS = [
+  { id: "c1", name: "The checkout supervisors", emoji: "🛒", desc: "A woman and a man supervise checkouts in the same store with the same duties, but he works the early shift and she works the late shift.", answer: "like" },
+  { id: "c2", name: "The grading scheme", emoji: "🗂️", desc: "A council's job evaluation scheme places a female teaching assistant's post and a male groundskeeper's post in the same pay grade.", answer: "rated" },
+  { id: "c3", name: "The nursery manager", emoji: "🧸", desc: "A female nursery manager says that her job makes demands equal to those of a male warehouse manager, and no job evaluation exists.", answer: "value" },
+  { id: "c4", name: "The salon stylists", emoji: "✂️", desc: "A female and a male stylist in one salon do broadly the same cuts and colours, but he sometimes helps with deliveries once a month.", answer: "like" },
+  { id: "c5", name: "The 18-point gap", emoji: "🔢", desc: "A hospital scheme scores a female care assistant 18 points below a male porter, but converts both scores into the same pay grade.", answer: "rated" },
+  { id: "c6", name: "The expert's comparison", emoji: "🧪", desc: "An independent expert is asked to compare a female school administrator's job with a male refuse driver's, judged by effort, skill and decision-making.", answer: "value" },
+  { id: "c7", name: "The care assistants", emoji: "🏡", desc: "Two care assistants, a man and a woman, share one job description, and the only difference is that he sometimes works nights.", answer: "like" },
+  { id: "c8", name: "The points total", emoji: "🧮", desc: "A bank's job evaluation study gives a female analyst's post and a male trader's post the same points total for the demands they make.", answer: "rated" }
+];
+
+const MP_INTERACTIVES = {
+  L1: {
+    type: "slider", title: "Count the Weeks", tag: "Estimate", icon: "🔢", color: "#C9A84C",
+    blurb: "Estimate three figures from this week's maternity law.",
+    rounds: [
+      { scenario: "How many weeks of statutory maternity leave in total can an employee take (ordinary plus additional maternity leave)?", lo: 52, hi: 52, min: 0, max: 78, suffix: " weeks", verdict: "52 weeks: 26 weeks of ordinary maternity leave followed by 26 weeks of additional maternity leave. It is a day-one right for employees." },
+      { scenario: "For how many weeks can Statutory Maternity Pay be paid?", lo: 39, hi: 39, min: 0, max: 52, suffix: " weeks", verdict: "39 weeks. The last 13 weeks of the 52-week leave period are unpaid under the statutory scheme, although some employers offer contractual enhancements." },
+      { scenario: "For how many weeks is SMP paid at 90% of average weekly earnings, before dropping to the flat rate (or 90% if lower)?", lo: 6, hi: 6, min: 0, max: 20, suffix: " weeks", verdict: "Six weeks at 90% of average weekly earnings. For the remaining 33 weeks SMP is the lower of the flat rate (£194.32 a week for 2026/27) and 90% of average weekly earnings." }
+    ]
+  },
+  L2: {
+    type: "truefalse", title: "Protected or Not?", tag: "True or false", icon: "❓", color: "#4A90B8",
+    blurb: "Test your grasp of section 18 and the pregnancy cases.",
+    items: [
+      { text: "A pregnant woman bringing a section 18 claim must show how a man in a comparable position would have been treated.", answer: false, note: "False. Section 18 protects against unfavourable treatment because of pregnancy and maternity without a comparator." },
+      { text: "Absence caused by an illness arising from pregnancy cannot be counted against the woman during the protected period.", answer: true, note: "True. Section 18(2) covers unfavourable treatment because of an illness suffered as a result of the pregnancy." },
+      { text: "Under Pedersen, an employer may send home a pregnant woman who is fit for work, on reduced pay, without first looking at adapting her conditions.", answer: false, note: "False. Where the employer itself sends home a woman who is fit for work, she should be on full pay; reduced pay is not allowed." },
+      { text: "Indirect discrimination under section 19 is available for the protected characteristic of pregnancy and maternity.", answer: false, note: "False. Section 19 does not apply to pregnancy and maternity, which is protected by section 18 instead." },
+      { text: "A pregnant employee whose job is redundant has priority for a suitable alternative vacancy from when she notifies the pregnancy.", answer: true, note: "True. Since 6 April 2024 the priority has applied from the point of written notification of the pregnancy, and continues for up to 18 months after the birth." }
+    ]
+  },
+  L3: {
+    type: "flip", title: "What Did the Court Rule?", tag: "Flip to reveal", icon: "📜", color: "#7B9E87",
+    lead: "The employer…", ask: "What is the legal position?", revealLabel: "THE RULING",
+    blurb: "Decide the legal position on each scenario, then flip to check.",
+    cards: [
+      { label: "Dismisses a woman on a six-month contract because she revealed that she was pregnant when she was hired", options: ["Direct sex discrimination: the dismissal is because of pregnancy", "Lawful, since she should have disclosed the pregnancy when applying", "Lawful, since a fixed-term contract cannot be fully performed"], correct: 0, reveal: "Direct sex discrimination (Tele Danmark, C-109/00). The employer's financial loss, the fixed term and the failure to disclose make no difference." },
+      { label: "Excludes most of a woman's maternity leave from the service that counts towards promotion under a collective agreement", options: ["Lawful, because no work was done during the leave", "Precluded: the whole maternity leave must count towards the qualifying period", "Lawful for any leave above the legal minimum"], correct: 1, reveal: "Precluded (Land Brandenburg v Sass, C-284/02). Maternity leave must not interrupt the employment relationship for the purpose of qualifying periods." },
+      { label: "Counts seniority for a successful job candidate only from when she starts after her maternity leave, putting her behind the others", options: ["Lawful, because the new job had not begun and no maternity rights applied", "Lawful, because she was given the permanent job in the end", "Contrary to equal treatment law: the leave must count for seniority"], correct: 2, reveal: "Contrary to the Equal Treatment Directive (Herrero, C-294/04). She must not be worse off than the other successful candidates." },
+      { label: "Sends a pregnant worker who is fit for work home for the rest of her pregnancy on reduced pay, without considering adapting her duties", options: ["Discriminatory: she should be paid in full", "Lawful, because she does no work while at home", "Lawful, because the employer is acting to protect her"], correct: 0, reveal: "Discriminatory (Pedersen, C-66/96). An employer who sends home a woman who is fit for work, without first adapting her conditions, should pay in full." }
+    ]
+  },
+  L4: { type: "sort", title: "Which Kind of Equal Work?", tag: "Sort scenarios", icon: "🏷️", color: "#8B6F9E", itemNoun: "scenario", blurb: "Classify eight comparisons as like work, work rated as equivalent, or equal value." },
+  L5: {
+    type: "pickN", title: "Pick the Sound Claims", tag: "Pick the 3", icon: "🎯", color: "#E07B39",
+    blurb: "Select the three statements that are correct.",
+    resultNote: "An equal pay claimant needs a real comparator of the opposite sex. Pickstone shows that equal value can be claimed even when a man on like work is paid the same, and a comparator at another establishment of the same employer can be valid where common terms apply, judged by a broad comparison. No discriminatory intention has to be proved.",
+    options: [
+      { text: "An equal pay claimant needs an actual comparator of the opposite sex; a hypothetical comparator is not enough", correct: true },
+      { text: "A woman paid the same as a man on like work can still claim equal value against better-paid men (Pickstone)", correct: true },
+      { text: "A comparator at another establishment of the same employer can be valid where common terms apply, judged by a broad comparison", correct: true },
+      { text: "A comparator at another establishment is valid only if every term of his contract matches the claimant's, line by line", correct: false },
+      { text: "An equal pay claimant must prove that the employer intended to pay her less because she is a woman", correct: false },
+      { text: "A comparator must work at the same site as the claimant, whatever terms apply at the other site", correct: false }
+    ],
+    need: 3
+  },
+  L6: {
+    type: "match", title: "Who Does What?", tag: "Connect pairs", icon: "🔗", color: "#4FA8A0",
+    blurb: "Tap a description, then tap the body or person it describes.",
+    statuses: [
+      { id: "tri", label: "Employment Tribunal", color: "#C9A84C" },
+      { id: "acas", label: "Acas", color: "#4A90B8" },
+      { id: "exp", label: "Independent expert", color: "#E07B39" }
+    ],
+    rights: [
+      { text: "Decides whether the work is of equal value and is not bound simply to accept the expert's report", status: "tri" },
+      { text: "Designates the panel of independent experts and appoints one when the tribunal asks", status: "acas" },
+      { text: "Prepares a report on the equal value question that goes to the tribunal and to both parties", status: "exp" },
+      { text: "Must order an equal pay audit when an employer loses an equal pay claim, unless an exemption applies", status: "tri" },
+      { text: "Owes a duty to the tribunal, not to the party that may favour the expert's view", status: "exp" },
+      { text: "Chooses a suitable person from its panel on the basis of availability, location and experience", status: "acas" }
+    ]
+  }
+};
+
+const MP_CASE_ANSWER = "Asda Stores Ltd v Brierley [2021] UKSC 10";
+const MP_CLUES = [
+  { fragment: "Asda", icon: "🛒", note: "The first word of the appellant's name: a supermarket chain, and the employer whose pay practices were challenged." },
+  { fragment: "Stores Ltd", icon: "🏬", note: "The rest of the employer's name: the company that ran the supermarkets, and the distribution depots whose staff were used as comparators." },
+  { fragment: "v", icon: "⚖️", note: "The usual 'versus'. The employer was the appellant in the final appeal, which is why its name comes first." },
+  { fragment: "Brierley", icon: "👩", note: "The name of the lead claimant among the thousands of mostly female store workers who brought the claims." },
+  { fragment: "[2021]", icon: "📅", note: "The year of the decision, handed down by the UK Supreme Court on 26 March." },
+  { fragment: "UKSC 10", icon: "🔢", note: "The neutral citation: the tenth judgment of the Supreme Court that year. Lady Arden gave the only judgment and dismissed the employer's appeal." }
+];
+
+
 /* ─────────── CHAPTER REGISTRY ───────────
    Each chapter bundles its content. Add new chapters here as you build them.
    `released: true` shows it on the home screen (per your setup: chapters appear
@@ -2635,8 +3021,37 @@ const CHAPTERS = [
     interactives: EQ_INTERACTIVES,
     clues: EQ_CLUES,
     caseAnswer: EQ_CASE_ANSWER
+  },
+  {
+    id: "maternity-equal-pay",
+    week: 7,
+    releaseDate: "2026-11-09", // add ?preview to the site address (e.g. yoursite.vercel.app/?preview) to see unreleased weeks early
+    title: "Equality, Maternity and Equal Pay",
+    subtitle: "Week commencing 9 November 2026 — maternity rights and pay, pregnancy and maternity discrimination, and equal pay under the Equality Act 2010.",
+    accent: "#C9A84C",
+    badge: BADGE_IMG,
+    heroLine1: "Equality, Maternity",
+    heroLine2: "and Equal Pay",
+    heroSubtitle: "Maternity, paternity and adoption rights, pregnancy and maternity discrimination, the European Court cases, and equal pay: like work, rated as equivalent and equal value.",
+    tagline: "\"Equal work, equal pay, and no price for pregnancy.\"",
+    guideIntro: "Welcome to Equality, Maternity and Equal Pay — your preparation for Lecture 07 and Seminar 07. This chapter covers maternity leave and pay, including ordinary and additional maternity leave, Statutory Maternity Pay, paternity and adoption leave; pregnancy and maternity discrimination under the Equality Act 2010 and Pedersen; the European Court decisions in Tele Danmark, Sass and Herrero; and the equal pay provisions, including like work (British Leyland v Powell), work rated as equivalent (Springboard v Robson), equal value and comparators (Pickstone), the material factor defence, independent experts and equal pay audits. These lessons are designed to support and underpin your weekly reading, which in turn supports both the weekly lecture and seminar. Here's everything you need to know.",
+    objectives: [
+      "Explain ordinary and additional maternity leave, the right to return, and Statutory Maternity Pay, Maternity Allowance, paternity and adoption leave.",
+      "Apply pregnancy and maternity discrimination under section 18 of the Equality Act 2010, including Pedersen and the redundancy priority for pregnant employees.",
+      "Explain the European Court decisions in Tele Danmark, Land Brandenburg v Sass and Herrero on dismissal, promotion and seniority.",
+      "Apply the equal pay rules: like work, work rated as equivalent and equal value, comparators, the material factor defence, independent experts and equal pay audits."
+    ],
+    mysteryIntro: "Complete each lesson to collect a fragment. Assemble all six to reveal the Supreme Court decision in which supermarket store staff, mostly women, were allowed to compare their pay with depot staff, mostly men, who worked at different sites.",
+    mysteryWhyItMatters: "The claimants worked in supermarket stores, in roles done mainly by women. They argued that their work was of equal value to that of mainly male colleagues in the company's distribution depots, who were paid more, and they brought equal pay claims in the Employment Tribunal. The employer argued that the depot staff could not be their comparators, because they worked at different establishments on different terms. The question for the Supreme Court was whether the two groups were in the 'same employment' under section 79 of the Equality Act 2010, which turns on whether 'common terms' would apply if the depot staff were employed at the stores. In 2021 Lady Arden, giving the only judgment, held that this is a broad comparison rather than a line-by-line one, that the hypothetical need not be realistic, and dismissed the employer's appeal. The decision did not decide that the claims succeed: whether the work is of equal value, and whether the employer has a defence, are separate stages. It is the leading authority on comparators at different establishments.",
+    completionBlurb: "You've covered maternity leave and pay, pregnancy and maternity discrimination, the European Court decisions, the equal pay categories, comparators and equal value, and the defences, experts and audits.",
+    lessons: MP_LESSONS,
+    buckets: MP_BUCKETS,
+    sortCards: MP_SORT_CARDS,
+    interactives: MP_INTERACTIVES,
+    clues: MP_CLUES,
+    caseAnswer: MP_CASE_ANSWER
   }
-  // ,{ id: "...", week: 7, releaseDate: "2026-11-09", title: "...", ... }  ← add next week here
+  // ,{ id: "...", week: 8, releaseDate: "2026-11-16", title: "...", ... }  ← add next week here
 ];
 
 function ChapterEngine({ chapter, moduleScore, restored, caseSolved, onProgress, onExit }) {
@@ -3327,7 +3742,7 @@ function ChapterEngine({ chapter, moduleScore, restored, caseSolved, onProgress,
         <div style={{ padding: "0 18px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
             <h2 style={{ fontSize: 22, fontWeight: 700 }}>Interactive <span style={{ color: "#C9A84C", fontStyle: "italic" }}>Challenges</span></h2>
-            <span style={{ fontSize: 10, letterSpacing: 1.5, color: "#C9A84C", fontFamily: "'Crimson Text',serif", background: "#C9A84C18", border: "1px solid #C9A84C33", borderRadius: 20, padding: "3px 9px" }}>⚡ NEW</span>
+            <span style={{ fontSize: 10, letterSpacing: 1.5, color: "#C9A84C", fontFamily: "'Crimson Text',serif", background: "#C9A84C18", border: "1px solid #C9A84C33", borderRadius: 20, padding: "3px 9px" }}>⚖️ NEW</span>
           </div>
           <p style={{ fontFamily: "'Crimson Text',serif", color: "#5A5450", fontSize: 14, marginBottom: 14 }}>A different mini-game for every section. Swipe through →</p>
         </div>
