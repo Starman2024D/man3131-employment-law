@@ -2843,6 +2843,391 @@ const MP_CLUES = [
 ];
 
 
+/* ─────────── WEEK 8: DISCIPLINARY PROCEDURES AND TERMINATION OF THE CONTRACT ─────────── */
+const DT_LESSONS = [
+  {
+    id: "L1", title: "Fair Reasons for Dismissal", icon: "📋", color: "#C9A84C",
+    intro: "To defend an unfair dismissal claim, the employer must show the reason for the dismissal and that it was one of the potentially fair reasons in section 98 of the Employment Rights Act 1996: capability or qualifications, conduct, redundancy, contravention of a statutory duty or restriction, or some other substantial reason. If it does, the tribunal then asks, under section 98(4), whether the employer acted reasonably in treating that reason as sufficient to dismiss, in accordance with equity and the substantial merits of the case. The test is whether dismissal fell within the band of reasonable responses open to a reasonable employer (Iceland Frozen Foods Ltd v Jones [1983] ICR 17), not whether the tribunal would have dismissed. In misconduct cases the Burchell test asks whether the employer genuinely believed in the misconduct, on reasonable grounds, after a reasonable investigation (British Home Stores Ltd v Burchell [1978] IRLR 379). An employee needs two years' continuous service to claim ordinary unfair dismissal; that falls to six months on 1 January 2027.",
+    questions: [
+      {
+        id: "dt1",
+        scenario: "£800 of stock goes missing from a warehouse. The manager believes that Raj, a stock controller who holds a key, took it. Nobody checks the CCTV, interviews the other key holders, or puts the allegation to Raj before he is dismissed for conduct.",
+        question: "How is a tribunal likely to view the dismissal?",
+        options: [
+          "Fair: a genuine belief in his guilt is enough, and the tribunal cannot look at whether the investigation was thorough",
+          "Unfair: conduct is a potentially fair reason, but that belief lacked reasonable grounds and a reasonable investigation",
+          "Fair: conduct is a potentially fair reason, so once the employer has shown that reason nothing further needs to be proved",
+          "Unfair only if Raj proves to the tribunal that he did not take the stock, because the burden of proving innocence is his"
+        ],
+        correct: 1,
+        explanation: "Section 98 of the Employment Rights Act 1996 asks two questions. First, did the employer show a potentially fair reason? Here it was conduct. Second, did it act reasonably in treating that reason as sufficient to dismiss (section 98(4))? In misconduct cases the tribunal applies the Burchell test: did the employer genuinely believe that the employee was guilty, on reasonable grounds, after as much investigation as was reasonable (British Home Stores Ltd v Burchell [1978] IRLR 379)? The employer does not have to prove guilt, and the tribunal does not decide whether Raj really took the stock. But the investigation itself must fall within the band of reasonable responses (Sainsbury's Supermarkets Ltd v Hitt [2003] ICR 111), and checking the CCTV and hearing Raj's side are obvious steps. The burden of showing the reason for dismissal lies on the employer, not on the employee.",
+        takeaway: "A fair reason is only the first step: the employer must also have reasonable grounds and a reasonable investigation."
+      },
+      {
+        id: "dt2",
+        scenario: "Priya, a sales executive, misses her targets for six months. Her manager explains the standard she must meet, arranges training and mentoring, and sets a review date. Priya still falls short, is invited to a meeting to give her explanation, and is then dismissed with notice.",
+        question: "Which potentially fair reason applies, and how is a tribunal likely to see the dismissal?",
+        options: [
+          "Conduct: missing targets is misconduct, so no warning was needed and a fair reason alone makes the dismissal fair without any process",
+          "Capability, but dismissal will be unfair whatever the process, since poor performance can only be dealt with under a contractual performance clause",
+          "Some other substantial reason, because capability covers only physical or mental ill-health and never skill, aptitude or poor performance at work",
+          "Capability: she was told the standard, trained and given time to improve, so dismissal is likely to fall within the band of reasonable responses"
+        ],
+        correct: 3,
+        explanation: "Section 98(3) defines capability as assessed by reference to skill, aptitude, health or any other physical or mental quality, so poor performance falls under capability. (Qualifications means an academic, technical or professional qualification relevant to the job.) The employer must still act reasonably under section 98(4): it should explain the standard, warn the employee, offer support and allow reasonable time to improve, and hear the employee's explanation. Priya's employer did each of these, so a dismissal is likely to fall within the band of reasonable responses (Iceland Frozen Foods Ltd v Jones [1983] ICR 17). Treating poor performance as misconduct, or skipping the warning stages, would make a finding of unfairness much more likely.",
+        takeaway: "Poor performance is a capability reason, and dismissal is fair only after a fair process of warning, support and time to improve."
+      },
+      {
+        id: "dt3",
+        scenario: "Ben, a care assistant, is told by the Home Office that his permission to work in the UK has expired. His employer cannot lawfully keep him in the job. It gives him a chance to produce evidence that his right to work has been renewed, and then dismisses him.",
+        question: "Which potentially fair reason is the employer relying on?",
+        options: [
+          "Contravention of a statutory restriction: keeping him in his job would break the law, though the employer must still act reasonably",
+          "Redundancy, because the job disappears once he cannot work, and the reason is made out by showing that the job no longer exists",
+          "Capability, because a lack of permission to work is a lack of skill or aptitude, so a performance procedure would have to be followed first",
+          "Conduct, because overstaying a visa is misconduct on his part, so the employer needs no reason connected with legal restrictions on work"
+        ],
+        correct: 0,
+        explanation: "Section 98(2)(d) makes it potentially fair to dismiss because the employee could not continue to work in the position he held without a contravention, by him or by the employer, of a duty or restriction imposed by or under an enactment. Employing someone who has no right to work exposes the employer to penalties and, if it knows, to a criminal offence, so the reason is statutory illegality. It is not capability or conduct, and the job continues to exist, so it is not redundancy. As with every potentially fair reason, the employer must also act reasonably under section 98(4). Giving Ben the chance to show that his right to work was renewed, and considering whether any other lawful job existed, helps to show that it did.",
+        takeaway: "A dismissal required by law can be a potentially fair reason, but the employer must still act reasonably."
+      }
+    ]
+  },
+  {
+    id: "L2", title: "Why Procedures Matter", icon: "📑", color: "#4A90B8",
+    intro: "A fair reason is not enough: the way the employer deals with the employee also has to be fair. A procedure gives the employee a chance to answer the allegation, protects the employer from acting on a hasty or biased view, promotes consistent treatment, and produces the evidence the employer needs if a claim follows. The Acas Code of Practice on Disciplinary and Grievance Procedures (2015) is not law, but tribunals must take it into account. Under section 207A of the Trade Union and Labour Relations (Consolidation) Act 1992 a tribunal may increase or reduce an award by up to 25% if a party has unreasonably failed to follow it. In Polkey v A E Dayton Services Ltd [1987] UKHL 8 the House of Lords held that an employer who dismisses without following a fair procedure will normally act unreasonably, even if following it would have made no difference, unless it could reasonably conclude that the procedure would be utterly useless. The point goes instead to compensation. The Code does not apply to redundancy dismissals or to the non-renewal of fixed-term contracts.",
+    questions: [
+      {
+        id: "dt4",
+        scenario: "Maya is dismissed for persistent lateness, with no warning and no meeting. At the tribunal her employer shows that she was late more than forty times, had been told informally to improve, and would certainly have been dismissed after a proper procedure.",
+        question: "How does the House of Lords' reasoning in Polkey v A E Dayton Services Ltd [1987] UKHL 8 affect her claim?",
+        options: [
+          "The claim fails, because showing that a fair procedure would have made no difference makes the dismissal fair",
+          "The dismissal is unfair and she recovers full compensation, as a tribunal may never ask what would have happened with a fair procedure",
+          "Likely unfair for want of procedure, but compensation can be reduced, even to nil, if she would have been dismissed anyway",
+          "The dismissal is fair, because that decision concerns only redundancy dismissals and conduct cases turn on the employer's reason alone"
+        ],
+        correct: 2,
+        explanation: "Before Polkey, some tribunals held that a procedural failure did not make a dismissal unfair if the result would have been the same (the 'no difference' rule in British Labour Pump Co Ltd v Byrne [1979] ICR 347). The House of Lords rejected that approach. An employer who dismisses without following a fair procedure will normally act unreasonably under section 98(4), unless it could reasonably conclude that the procedure would be utterly useless. The 'no difference' argument goes to remedy instead: the tribunal can reduce the compensatory award, even to nil, to reflect the chance that a fair procedure would have led to dismissal anyway (a 'Polkey reduction'). The principle applies to conduct and capability dismissals as well as to redundancy.",
+        takeaway: "Skipping a fair procedure makes a dismissal unfair; showing that the result would not have changed goes only to compensation."
+      },
+      {
+        id: "dt5",
+        scenario: "A tribunal finds that Jade was unfairly dismissed for misconduct. Her employer gave her no written notice of the allegations, refused her request to bring a colleague to the meeting, and offered no appeal, ignoring the Acas Code with no good reason.",
+        question: "What can the tribunal do about the employer's failure to follow the Acas Code?",
+        options: [
+          "Raise her award by up to 25% if it considers that just and equitable in all the circumstances, as the failure was unreasonable",
+          "Increase her award by up to 50%, because an unreasonable failure to follow the Code counts as a serious breach of Jade's contract",
+          "Nothing at all: the Code is guidance without legal effect, so a tribunal cannot change an award because the employer ignored it",
+          "Reduce her award by up to 25%, because only an employee's own failure to follow the Code can lead to a change in compensation"
+        ],
+        correct: 0,
+        explanation: "The Acas Code of Practice on Disciplinary and Grievance Procedures (2015) is not law, and breaching it is not itself unlawful, but tribunals must take it into account. Under section 207A of the Trade Union and Labour Relations (Consolidation) Act 1992, if an employer unreasonably fails to follow the Code in a case within its scope, the tribunal may increase an award by up to 25% if it considers that just and equitable in all the circumstances. The adjustment works both ways: an employee's unreasonable failure to follow the Code, for example by refusing to attend a meeting or to appeal, can reduce an award by up to 25%. The Code does not apply to redundancy dismissals or to the non-renewal of fixed-term contracts.",
+        takeaway: "Ignoring the Acas Code can raise an award by up to 25%, and an employee's own unreasonable failure can reduce it."
+      },
+      {
+        id: "dt6",
+        scenario: "Sam and Ola are both seen taking home company stationery worth about £20. The handbook says only that theft 'may lead to dismissal'. Sam is dismissed. Ola, a friend of the manager, receives a verbal warning. Nobody explains why they were treated differently.",
+        question: "What risk does the lack of clear rules and consistent treatment create for the employer?",
+        options: [
+          "None, because an employer is free to decide each case on its own facts and a tribunal cannot compare how different employees were treated",
+          "An automatic finding of unfair dismissal, because the law requires an employer to treat every employee in exactly the same way in all circumstances",
+          "A finding of discrimination, because unequal treatment of two employees is unlawful even where no protected characteristic is involved at all",
+          "It may find that dismissing Sam was outside the band of reasonable responses, as like cases were treated differently without a good reason"
+        ],
+        correct: 3,
+        explanation: "Clear rules and consistent sanctions help an employer to show that it acted reasonably. Inconsistent treatment can make a dismissal unfair, but only where the cases are truly comparable and the employer cannot explain the difference (Hadjioannou v Coral Casinos Ltd [1981] IRLR 352). Treating Ola more leniently for no good reason weakens the employer's argument that dismissing Sam was within the band of reasonable responses. The result is not automatic: employers may distinguish cases on genuine differences such as seniority, the level of dishonesty or the employee's record. And unequal treatment is not discrimination unless it is connected to a protected characteristic.",
+        takeaway: "Clear rules and consistent treatment protect the employer; unexplained leniency to one employee can make dismissing another unfair."
+      }
+    ]
+  },
+  {
+    id: "L3", title: "Building Good Procedures", icon: "🛠️", color: "#7B9E87",
+    intro: "A good disciplinary procedure is written, known to staff and applied consistently. The Acas Code sets out the key steps. The employer establishes the facts promptly through a reasonable investigation, ideally by a different person from the one who decides. It tells the employee in writing what is alleged, with the evidence, and invites them to a meeting at which they can put their case and call witnesses. The employee may be accompanied by a trade union representative or a colleague (section 10 of the Employment Relations Act 1999). The employer decides the outcome and confirms it in writing, and offers an appeal heard impartially, ideally by someone not previously involved. A first act of misconduct normally leads to a written warning, with a final written warning before dismissal. Gross misconduct may justify dismissal, but the Code says that a fair process should still be followed. An effective grievance procedure is similar: the employee raises the grievance in writing with a manager who is not its subject, the employer holds a meeting without unreasonable delay, gives a written decision and offers an appeal. Informal resolution and mediation can help, and a failure to deal with a grievance can also support a claim of constructive dismissal.",
+    questions: [
+      {
+        id: "dt7",
+        scenario: "Hana is invited to a disciplinary meeting by a note saying only 'we need to talk about your conduct on Friday'. She asks to bring a colleague, but is told that only managers may attend. The manager who investigated the allegation will also chair the meeting and decide the outcome.",
+        question: "Which parts of the Acas Code does the employer's approach ignore?",
+        options: [
+          "None of them: the Code lets the employer give the details orally, choose who may attend, and have one manager investigate, hear and decide",
+          "Written allegation and evidence, a union or colleague companion, and where practicable a different investigator and decision-maker",
+          "Only the written notice, because a companion may be a trade union representative but never another colleague of the worker",
+          "Only the companion rule, since the Code requires the investigator to be the manager who hears the case and decides the outcome"
+        ],
+        correct: 1,
+        explanation: "The Code says that the employer should notify the employee in writing of the alleged misconduct, with enough information and evidence to prepare a response, and of the right to be accompanied. Under section 10 of the Employment Relations Act 1999 a worker who reasonably asks to be accompanied at a disciplinary or grievance hearing is entitled to a trade union representative or a colleague, and the employer cannot restrict the companion to managers. The Code also says that, where practicable, different people should carry out the investigation and the disciplinary hearing, so that the decision-maker is not already committed to a view. Refusing a companion can lead to compensation of up to two weeks' pay (section 11 of the 1999 Act), and Code breaches may also lead to a 25% uplift in a successful claim.",
+        takeaway: "A fair hearing means written allegations, a companion of the worker's choice and, where practicable, a decision-maker who did not investigate."
+      },
+      {
+        id: "dt8",
+        scenario: "Joe, a bar worker with a clean record, is filmed taking cash from the till. His contract lists theft as gross misconduct. The manager dismisses him on the spot without hearing from him, saying that 'the footage speaks for itself'.",
+        question: "What does a good procedure require, even for alleged gross misconduct?",
+        options: [
+          "Nothing more, because the Code allows summary dismissal without a meeting where the evidence is as clear as video footage of the act",
+          "Two warnings first, because dismissal is allowed only after a first and a final written warning, whatever the offence involved",
+          "A fair process: tell Joe the allegation, hear his response at a meeting, then decide and offer an appeal, however clear the footage",
+          "Only an appeal afterwards, since there is no right to be heard before the decision where the allegation is one of theft"
+        ],
+        correct: 2,
+        explanation: "Gross misconduct may justify dismissal without notice, but the Acas Code states that a fair disciplinary process should always be followed before dismissing for gross misconduct. The employee should know the allegation and the evidence, have a chance to explain, have the right to be accompanied, and be able to appeal. Hearing Joe might reveal an explanation that the footage does not show. An employer that skips the process risks a finding of unfair dismissal, an argument about compensation, and an uplift for breaching the Code. Warnings are the usual route for first or less serious misconduct, but they are not required before dismissing for gross misconduct.",
+        takeaway: "Even for gross misconduct, the employer must follow a fair process before dismissing."
+      },
+      {
+        id: "dt9",
+        scenario: "Lena emails HR to complain that her manager gives her the worst shifts and ignores her requests. HR replies that it will 'look into it', then does nothing for four months. Lena asks what an effective grievance procedure should have involved.",
+        question: "What should an effective grievance procedure involve?",
+        options: [
+          "Only an informal word with her manager, since a grievance may never be put in writing or taken to a formal meeting under the Code",
+          "A written decision within seven days, because the Code lays down a fixed timescale for each stage of a grievance procedure",
+          "A hearing by the manager she complains about, since the Code requires a grievance to be heard by the line manager concerned",
+          "A written complaint, a meeting without unreasonable delay, a written decision and a right of appeal, with a companion allowed"
+        ],
+        correct: 3,
+        explanation: "The Acas Code says that an employee should raise a grievance formally and in writing with a manager who is not the subject of it. The employer should arrange a meeting without unreasonable delay, allow a companion where the grievance concerns a duty the employer owes the worker, give a decision in writing and offer an appeal. The Code does not set fixed time limits: it requires action 'without unreasonable delay'. Informal resolution is encouraged first, and mediation can help. A serious or prolonged failure to deal with a grievance can breach the implied term of trust and confidence and support a claim of constructive dismissal, and an unreasonable failure to follow the Code can lead to a 25% uplift in a successful claim.",
+        takeaway: "A good grievance procedure is written, prompt and impartial, and ends with a written decision and an appeal."
+      }
+    ]
+  },
+  {
+    id: "L4", title: "Effective Date of Termination", icon: "📅", color: "#8B6F9E",
+    intro: "The effective date of termination (EDT) is defined in section 97 of the Employment Rights Act 1996. Where the employer gives notice, it is the date the notice expires. Where the contract ends without notice, it is the date the termination takes effect. Where a fixed-term contract ends without being renewed, which is itself a dismissal, it is the date the term expires. The date matters because it fixes whether the employee has the qualifying service for an unfair dismissal claim (two years until 1 January 2027, then six months), when the time limit for claiming begins to run (six months for dismissals on or after 1 October 2026, previously three months, extended by early conciliation), and the length of service used for the basic award. A dismissal takes effect only once it has been communicated: for a letter, when the employee reads it or has had a reasonable opportunity of reading it, not when it is posted. Where an employer dismisses without notice, or with less than the statutory minimum notice in section 86, section 97(2) extends the EDT to the date the statutory notice would have expired for some purposes, including the qualifying period (Robert Cort & Son Ltd v Charman [1981] IRLR 437). An internal appeal does not postpone the EDT: if the appeal fails, the original date stands (Savage v J Sainsbury Ltd [1981] ICR 1).",
+    questions: [
+      {
+        id: "dt10",
+        scenario: "On Friday 6 March an employer posts a letter dismissing Tariq without notice. Tariq is on holiday abroad, and does not open his post until he gets home on Monday 16 March.",
+        question: "When does the dismissal take effect?",
+        options: [
+          "On 16 March, when Tariq read it (or earlier if he had a reasonable opportunity to), as a dismissal takes effect when communicated",
+          "On 6 March, when the letter was posted, because the ordinary contract rule that a posted letter takes effect on posting decides the date",
+          "On the day the letter arrived at his house, even though he was abroad and had no reasonable opportunity of reading it",
+          "On the date the employer decided to dismiss him, because the EDT is fixed by the employer's decision and not by when it is communicated"
+        ],
+        correct: 0,
+        explanation: "Section 97 defines the EDT as the date on which the termination 'takes effect', but a dismissal cannot take effect until the employee knows of it or has had a reasonable opportunity of finding out. The Supreme Court has held that the EDT is a statutory concept, to be read in the light of the purpose of the legislation, and not an ordinary contract-law notice rule: a dismissal by letter takes effect when the employee reads it or has had a reasonable opportunity of reading it, so posting or delivery alone does not fix the date. The approach protects employees, because the date starts the clock for the time limit and decides the employee's qualifying service. An employee's own conduct, such as deliberately avoiding the post, can be taken into account in deciding whether there was a reasonable opportunity, but Tariq was simply away on holiday. His dismissal takes effect when he read the letter, or earlier if he reasonably could have read it.",
+        takeaway: "A dismissal by letter takes effect when the employee reads it or has a reasonable opportunity to read it."
+      },
+      {
+        id: "dt11",
+        scenario: "Grace is dismissed without notice, and for no good reason, five days before she would have completed two years' service. Her employer says that she cannot claim unfair dismissal because she has not completed two years. The statutory minimum notice for her length of service would be one week.",
+        question: "Can Grace argue that she has the qualifying service?",
+        options: [
+          "No: the qualifying period is measured to the date the employer dismissed her, so she is five days short and the claim fails",
+          "Yes: where an employer dismisses without any notice the qualifying service rule is waived and she can claim whatever her service",
+          "Yes: section 97(2) extends her EDT by one week of statutory notice, so she passes two years' service, and she can bring a claim",
+          "No: the extension under section 97(2) applies only to the basic award and never to the qualifying period for unfair dismissal"
+        ],
+        correct: 2,
+        explanation: "Section 97(2) provides that where the employer terminates without notice, or with less notice than the statutory minimum in section 86, the EDT is treated as the date on which the statutory notice would have expired for certain purposes. These include the qualifying period for unfair dismissal (section 108(1)) and the basic award. Grace's EDT therefore moves one week later, past her second anniversary (see Robert Cort & Son Ltd v Charman [1981] IRLR 437). The extension is limited to the statutory minimum, it does not move the date from which the time limit for claiming runs, and it is not available where the employer was entitled to dismiss without notice for the employee's own repudiatory conduct, which is not suggested here. From 1 January 2027 the qualifying period falls to six months.",
+        takeaway: "Dismissing without notice can extend the EDT by the statutory minimum notice, which may give the employee the qualifying service."
+      },
+      {
+        id: "dt12",
+        scenario: "Mo is dismissed with immediate effect on 4 November 2026. He has the qualifying service and wants to claim unfair dismissal. He has heard that employment tribunal time limits changed recently.",
+        question: "How long does Mo normally have to bring his claim?",
+        options: [
+          "Three months less one day from the effective date of termination, because the time limit for unfair dismissal has not changed",
+          "Normally six months from the effective date of termination, extended by the time spent in early conciliation through Acas",
+          "Six months from the date he first decides that the dismissal was unfair, however long after the dismissal that may be",
+          "Twelve months from the effective date of termination, because tribunal claims follow the limitation period for ordinary civil claims"
+        ],
+        correct: 1,
+        explanation: "The Employment Rights Act 2025 extended the time limit for most employment tribunal claims from three months to six months, for matters on or after 1 October 2026. The time runs from the EDT, which is why the date matters. A claimant must normally contact Acas for early conciliation first, and the time limit is extended by the period of conciliation. A tribunal can allow a late unfair dismissal claim only if it was not reasonably practicable to bring it in time and it was brought within a further reasonable period. Dismissals before 1 October 2026 remain subject to the three-month limit.",
+        takeaway: "For dismissals from 1 October 2026 the time limit is six months from the EDT, plus any early conciliation extension."
+      }
+    ]
+  },
+  {
+    id: "L5", title: "Automatically Unfair Dismissals", icon: "🚫", color: "#E07B39",
+    intro: "Some dismissals are automatically unfair. If the tribunal finds that the reason, or principal reason, was one of the prohibited reasons, the dismissal is unfair without any inquiry into whether the employer acted reasonably. Most of these protections need no qualifying service. Examples include dismissal connected with pregnancy, childbirth or maternity (section 99 of the Employment Rights Act 1996), making a protected disclosure (section 103A), health and safety activities (section 100), asserting a statutory right (section 104), trade union membership or activities (section 152 of the Trade Union and Labour Relations (Consolidation) Act 1992), jury service (section 98B) and taking part in protected industrial action (section 238A of the same Act). A few categories still need qualifying service, such as dismissal connected with a TUPE transfer. Where an employee lacks the usual qualifying service, she generally has to prove the reason for her dismissal. The Employment Rights Act 2025 is also expected to make dismissal for refusing a contractual variation (fire and rehire) automatically unfair in most cases, from March 2027.",
+    questions: [
+      {
+        id: "dt13",
+        scenario: "Nadia, a care assistant with seven months' service, emails her manager that residents are being left unattended overnight. Two weeks later she is dismissed for a 'poor attitude'. The employer has no record of any earlier complaint about her attitude.",
+        question: "Can Nadia bring an unfair dismissal claim?",
+        options: [
+          "No: she has under two years' service, so she cannot claim unfair dismissal whatever the reason for her dismissal",
+          "Yes, but only after she has two years' service, because whistleblowing claims have the same qualifying period as ordinary unfair dismissal",
+          "No: whistleblowing law protects workers only against detriment short of dismissal, so her only remedy is a claim for breach of contract",
+          "Yes: if the main reason was her protected disclosure, the dismissal is automatically unfair and no qualifying service is needed"
+        ],
+        correct: 3,
+        explanation: "Section 103A makes a dismissal automatically unfair if the reason, or principal reason, is that the employee made a protected disclosure. Telling the employer that people's health or safety is being endangered is a qualifying disclosure made to the employer. There is no qualifying service requirement, so Nadia's seven months do not matter. Because she lacks the usual qualifying service, the burden is on her to prove that the reason, or principal reason, was her disclosure (Smith v Hayle Town Council [1978] ICR 996). By contrast, an employee with the qualifying service need only produce some evidence of the reason she asserts, and the employer must then prove its own (Kuzel v Roche Products Ltd [2008] EWCA Civ 380). The timing, and the lack of any record of an earlier complaint about her attitude, are evidence that will help Nadia. If she proves the reason, the tribunal does not ask whether the employer acted reasonably.",
+        takeaway: "Dismissal because of whistleblowing is automatically unfair, with no qualifying service needed."
+      },
+      {
+        id: "dt14",
+        scenario: "Ravi takes part in a lawful, properly balloted, official strike that has lasted four months. His employer dismisses all the strikers, including Ravi, for unauthorised absence.",
+        question: "How does the Employment Rights Act 2025 affect Ravi's position?",
+        options: [
+          "Dismissal for protected industrial action is automatically unfair, and the old 12-week limit was removed from 18 February 2026",
+          "Nothing has changed: strikers can always be dismissed for breaching their contracts, and the 2025 Act left that rule in place",
+          "His dismissal is fair after 12 weeks, because protection ends once a strike has lasted that long and that limit is still in force",
+          "It is automatically unfair only if the employer singled Ravi out, since dismissing every striker alike is always treated as fair"
+        ],
+        correct: 0,
+        explanation: "Under section 238A of the Trade Union and Labour Relations (Consolidation) Act 1992 a dismissal is automatically unfair if the reason is that the employee took part in protected industrial action. Before the Employment Rights Act 2025, that protection applied only for a limited period, broadly the first 12 weeks of the action with some extensions, after which dismissal could be fair. From 18 February 2026 the 12-week limit was removed, so the length of the strike no longer makes the dismissal fair. Because the dismissal is automatically unfair, the tribunal does not ask whether the employer acted reasonably, and it makes no difference whether the employer dismissed every striker. Unofficial or otherwise unprotected action remains unprotected.",
+        takeaway: "Dismissal for taking part in protected industrial action is automatically unfair, and the old 12-week limit has gone."
+      },
+      {
+        id: "dt15",
+        scenario: "Callum, a bar worker with eight months' service, tells his manager that he has not been given his paid holiday and that he will go to a tribunal if it is not put right. The next day he is dismissed for 'restructuring', but the employer produces no plan. It turns out that his holiday entitlement had in fact been calculated correctly.",
+        question: "What must Callum show to succeed in a claim under section 104 of the Employment Rights Act 1996?",
+        options: [
+          "That his holiday entitlement was in fact wrongly calculated, because an assertion of a right that was never infringed is not protected",
+          "That he has two years' service, because the protection for asserting a statutory right has the same qualifying period as ordinary unfair dismissal",
+          "That the main reason for dismissal was his assertion of the right; it is enough that he claimed it in good faith, even if it was not infringed",
+          "Nothing at all, because the employer must prove that the dismissal was not linked to his assertion once he has said that it was"
+        ],
+        correct: 2,
+        explanation: "Section 104 makes a dismissal automatically unfair if the reason, or principal reason, is that the employee brought proceedings against the employer to enforce a relevant statutory right, or alleged that the employer had infringed it. Rights under the Working Time Regulations 1998, including paid annual leave, are relevant statutory rights. Under section 104(2) it is immaterial whether the employee has the right or whether it has been infringed, provided that the claim to the right was made in good faith. No qualifying service is needed. Because Callum has under two years' service, he would normally have to show the principal reason himself, and the employer's inability to produce a restructuring plan strongly supports his case.",
+        takeaway: "Asserting a statutory right in good faith is protected, even if the right turns out not to have been infringed."
+      }
+    ]
+  },
+  {
+    id: "L6", title: "Termination at Common Law", icon: "📜", color: "#4FA8A0",
+    intro: "At common law a contract of employment can end by notice from either side, by agreement, by the expiry of a fixed term, by frustration, or by a repudiatory breach that the innocent party accepts. The notice required is the contractual notice, or reasonable notice if the contract is silent, but never less than the statutory minimum in section 86 of the Employment Rights Act 1996: one week after one month's service, then one week for each complete year up to a maximum of twelve weeks. An employer who dismisses without notice and without justification commits a wrongful dismissal, a breach of contract. Damages are normally limited to the pay and benefits for the notice period, and do not include compensation for the manner of the dismissal (Addis v Gramophone Co Ltd [1909] AC 488; Johnson v Unisys Ltd [2001] UKHL 13; Edwards v Chesterfield Royal Hospital NHS Foundation Trust [2011] UKSC 58). Gross misconduct may justify summary dismissal, and misconduct discovered afterwards can justify it too (Boston Deep Sea Fishing and Ice Co v Ansell (1888) 39 Ch D 339). In unfair dismissal, by contrast, later-discovered misconduct cannot make the dismissal fair but may reduce compensation (W Devis & Sons Ltd v Atkins [1977] AC 931). Under the elective theory, a repudiatory breach ends the contract only when the innocent party accepts it (Société Générale, London Branch v Geys [2012] UKSC 63).",
+    questions: [
+      {
+        id: "dt16",
+        scenario: "Sofia, a marketing director on three months' contractual notice, is dismissed without notice or a hearing, in front of colleagues, for a minor error. She suffers humiliation and finds it hard to get another job. She sues in the High Court for breach of contract, claiming damages for her humiliation and for the harm to her reputation.",
+        question: "What can Sofia recover for the wrongful dismissal?",
+        options: [
+          "Damages for humiliation and lost reputation as well, since a dismissal in front of colleagues breaches the implied term of trust and confidence",
+          "Her pay and benefits for the three-month notice period, but the common law gives no damages for the manner of the dismissal, e.g. humiliation",
+          "Nothing, because a claim for wrongful dismissal is available only to employees with two years' service and a breach of notice gives no claim",
+          "All the salary she would have earned until retirement, because a wrongful dismissal ends the contract only when a court says that it has ended"
+        ],
+        correct: 1,
+        explanation: "A dismissal without notice and without justification is a wrongful dismissal, a breach of contract. Damages are normally limited to the pay and benefits Sofia would have received during the notice period, less anything she earns elsewhere. The common law does not award damages for the manner of dismissal, such as humiliation or injured feelings (Addis v Gramophone Co Ltd [1909] AC 488). Loss flowing from the dismissal process, including a breach of a contractual disciplinary procedure, falls within the 'Johnson exclusion area' (Johnson v Unisys Ltd [2001] UKHL 13; Edwards v Chesterfield Royal Hospital NHS Foundation Trust [2011] UKSC 58). Remedies for the way an employee was dismissed lie in unfair dismissal, which has its own statutory compensation. No qualifying service is needed for a breach of contract claim.",
+        takeaway: "Damages for wrongful dismissal are limited to pay for the notice period, not humiliation or reputation."
+      },
+      {
+        id: "dt17",
+        scenario: "Frank, a delivery driver with an unblemished record, swears at a customer once when annoyed. His employer dismisses him without notice, saying that his contract describes 'any abusive language' as gross misconduct. Frank says that it was a single lapse and that he apologised immediately.",
+        question: "When can an employer dismiss without notice at common law?",
+        options: [
+          "Where the conduct is itself a repudiatory breach, showing disregard of an essential condition of the contract; the contractual label does not decide it",
+          "Whenever the contract describes the behaviour as gross misconduct, because the label in the contract conclusively decides whether the breach is repudiatory",
+          "Whenever the employer has lost confidence in the employee, because trust and confidence is the only test and no breach is needed",
+          "Only after two written warnings, because summary dismissal is lawful only once the whole disciplinary ladder has been followed"
+        ],
+        correct: 0,
+        explanation: "An employer may dismiss without notice only if the employee's conduct is a repudiatory breach of contract, going to the root of the contract, which the employer accepts by dismissing. The question is whether the conduct shows disregard of an essential condition of the contract (Laws v London Chronicle (Indicator Newspapers) Ltd [1959] 1 WLR 698). A single act can be enough if it is serious, but not every lapse is, and the courts look at the substance: a contractual label of 'gross misconduct' is evidence, not a conclusive test. If the employer has no justification, the dismissal is a wrongful dismissal and the employee can recover pay for the notice period. Whether the dismissal was fair under the Employment Rights Act 1996 is a separate question for the tribunal. At common law, warnings are not a precondition of summary dismissal for serious misconduct.",
+        takeaway: "Dismissal without notice is lawful only for a repudiatory breach, and a contractual label does not decide that."
+      },
+      {
+        id: "dt18",
+        scenario: "Amir has worked for his employer for six years. His contract says that either side must give two weeks' notice. The employer dismisses him, giving two weeks' notice, with no suggestion of gross misconduct.",
+        question: "What notice is Amir entitled to?",
+        options: [
+          "Two weeks, because the notice in the contract binds both sides and the statutory minimum applies only where the contract is silent",
+          "Twelve weeks, because six years of service puts him in the top band, where the maximum statutory notice is always due",
+          "One week, because statutory notice is a single week for every employee who has completed more than one month of service",
+          "At least six weeks, as the contract cannot give him less than the statutory minimum of one week per complete year of service"
+        ],
+        correct: 3,
+        explanation: "Section 86 of the Employment Rights Act 1996 sets the minimum notice an employer must give: one week for service of between one month and two years; one week for each complete year of service from two to twelve years; and twelve weeks after twelve years. A contract may give more notice, but not less. Amir has six complete years, so he is entitled to at least six weeks. If the employer gives less than the statutory minimum, the shortfall is a breach of contract, and section 97(2) can extend the EDT for the qualifying period. An employee must give the employer at least one week's notice after one month's service, or the longer period in the contract.",
+        takeaway: "Statutory notice is one week for each complete year of service up to twelve, and a contract cannot go below it."
+      }
+    ]
+  }
+];
+
+const DT_BUCKETS = [
+  { id: "cap", label: "Capability", icon: "📉", color: "#C9A84C", hint: "Skill, aptitude, health or qualifications" },
+  { id: "conduct", label: "Conduct", icon: "⚠️", color: "#4A90B8", hint: "Something the employee did or failed to do" },
+  { id: "sosr", label: "Other substantial reason", icon: "🧩", color: "#E07B39", hint: "A genuine business or third-party reason" }
+];
+
+const DT_SORT_CARDS = [
+  { id: "c1", name: "The missed deadlines", emoji: "⏰", desc: "A designer repeatedly delivers work late and below standard, despite a clear brief, training and a review period.", answer: "cap" },
+  { id: "c2", name: "The till shortfall", emoji: "💷", desc: "Camera footage shows a cashier putting notes from the till into her own bag.", answer: "conduct" },
+  { id: "c3", name: "The new shift pattern", emoji: "🔄", desc: "After a genuine reorganisation and consultation, a worker refuses to accept the new working hours that the business needs.", answer: "sosr" },
+  { id: "c4", name: "The unfit surveyor", emoji: "🩺", desc: "After a long illness, medical evidence says that a surveyor cannot do the physical work that his job requires.", answer: "cap" },
+  { id: "c5", name: "The false timesheets", emoji: "📝", desc: "A contractor is found to have claimed pay for hours that she did not work.", answer: "conduct" },
+  { id: "c6", name: "The client's demand", emoji: "🏢", desc: "A key client insists that a consultant is removed from its account, and the employer has no other suitable work for him.", answer: "sosr" },
+  { id: "c7", name: "The failed exams", emoji: "🎓", desc: "A trainee accountant fails the professional exams that the job description makes a condition of continuing in the role.", answer: "cap" },
+  { id: "c8", name: "The punch-up", emoji: "🥊", desc: "A warehouse operative punches a colleague during an argument in the loading bay.", answer: "conduct" }
+];
+
+const DT_INTERACTIVES = {
+  L1: { type: "sort", title: "Sort the Reasons", tag: "Sort scenarios", icon: "🏷️", color: "#C9A84C", itemNoun: "scenario", blurb: "Classify eight dismissals as capability, conduct or some other substantial reason." },
+  L2: {
+    type: "truefalse", title: "Myth or Fact?", tag: "True or false", icon: "❓", color: "#4A90B8",
+    blurb: "Test your grasp of the Acas Code and the effect of procedural failures.",
+    items: [
+      { text: "The Acas Code is a statute, so breaching it is itself unlawful.", answer: false, note: "False. The Code is a statutory code of practice, but it is not itself law: a breach is not unlawful in itself, though tribunals must take it into account." },
+      { text: "A tribunal can increase an award by up to 25% if the employer unreasonably fails to follow the Acas Code.", answer: true, note: "True. Section 207A of the Trade Union and Labour Relations (Consolidation) Act 1992 allows an uplift of up to 25% if it is just and equitable." },
+      { text: "If a fair procedure would have made no difference to the outcome, the dismissal is automatically fair.", answer: false, note: "False. Under Polkey, the missing procedure normally makes the dismissal unfair; the 'no difference' point goes to compensation." },
+      { text: "The Acas Code applies in full to redundancy dismissals.", answer: false, note: "False. The Code does not cover redundancy dismissals or the non-renewal of fixed-term contracts." },
+      { text: "An employee's own unreasonable failure to follow the Code can reduce an award by up to 25%.", answer: true, note: "True. The adjustment under section 207A works both ways, for example if an employee refuses to attend a meeting or to appeal." }
+    ]
+  },
+  L3: {
+    type: "match", title: "Discipline, Grievance or Both?", tag: "Connect pairs", icon: "🔗", color: "#7B9E87",
+    blurb: "Tap a feature, then tap the procedure it belongs to.",
+    statuses: [
+      { id: "disc", label: "Discipline", color: "#C9A84C" },
+      { id: "griev", label: "Grievance", color: "#4A90B8" },
+      { id: "both", label: "Both", color: "#E07B39" }
+    ],
+    rights: [
+      { text: "The employer sets out the alleged misconduct and the evidence in writing before the meeting", status: "disc" },
+      { text: "The employee raises the matter in writing with a manager who is not the subject of it", status: "griev" },
+      { text: "The employee may be accompanied by a trade union representative or a colleague", status: "both" },
+      { text: "Where practicable, different people investigate the matter and decide the outcome", status: "disc" },
+      { text: "The meeting deals with the employee's own complaint about how they have been treated, not an allegation against them", status: "griev" },
+      { text: "The employer confirms its decision in writing and offers the right of appeal", status: "both" }
+    ]
+  },
+  L4: {
+    type: "slider", title: "Notice and Time Limits", tag: "Estimate", icon: "🔢", color: "#8B6F9E",
+    blurb: "Estimate three figures that matter when a contract ends.",
+    rounds: [
+      { scenario: "An employee has five complete years' service. How many weeks of statutory minimum notice must the employer give?", lo: 5, hi: 5, min: 0, max: 14, suffix: " weeks", verdict: "Five weeks. Section 86 gives one week for each complete year of service from two to twelve years, so the minimum is five weeks. The contract may give more, but not less." },
+      { scenario: "For a dismissal on or after 1 October 2026, how many months does the employee normally have to bring an unfair dismissal claim, starting with the EDT?", lo: 6, hi: 6, min: 0, max: 12, suffix: " months", verdict: "Six months, extended by the period of early conciliation. Before 1 October 2026 the limit was three months." },
+      { scenario: "By what maximum percentage can a tribunal increase an award for an unreasonable failure to follow the Acas Code?", lo: 25, hi: 25, min: 0, max: 60, suffix: "%", verdict: "Up to 25%, if it considers that just and equitable in all the circumstances. A party's own unreasonable failure can reduce an award by the same maximum." }
+    ]
+  },
+  L5: {
+    type: "pickN", title: "Pick the Protected Reasons", tag: "Pick the 3", icon: "🎯", color: "#E07B39",
+    blurb: "Select the three reasons that make a dismissal automatically unfair.",
+    resultNote: "Dismissal for being pregnant, for making a protected disclosure or for trade union membership is automatically unfair, and none needs two years' service. By contrast, poor performance, genuine redundancy and proven gross misconduct are potentially fair reasons, and the tribunal then asks whether the employer acted reasonably.",
+    options: [
+      { text: "Dismissal because the employee is pregnant", correct: true },
+      { text: "Dismissal after repeated failure to meet performance standards, despite training", correct: false },
+      { text: "Dismissal because the employee made a protected disclosure", correct: true },
+      { text: "Dismissal in a genuine redundancy, after fair selection and consultation", correct: false },
+      { text: "Dismissal because the employee is a trade union member", correct: true },
+      { text: "Dismissal for gross misconduct, proved after a fair investigation", correct: false }
+    ],
+    need: 3
+  },
+  L6: {
+    type: "flip", title: "Wrongful or Lawful?", tag: "Flip to reveal", icon: "📜", color: "#4FA8A0",
+    lead: "The employer…", ask: "What is the legal position?", revealLabel: "THE RULING",
+    blurb: "Decide the legal position on each scenario, then flip to check.",
+    cards: [
+      { label: "Dismisses a worker on the spot for a minor lapse that does not go to the root of the contract, and gives no notice", options: ["Acts lawfully, because the contract mentions misconduct and the label settles the matter", "Commits no breach, because the common law has no notice requirement", "Commits a wrongful dismissal, and the worker can recover pay for the notice period"], correct: 2, reveal: "A wrongful dismissal (Laws v London Chronicle). Summary dismissal needs a repudiatory breach. Damages are normally limited to pay for the notice period." },
+      { label: "Dismisses a worker without notice and only afterwards discovers that she had been dishonestly taking commission", options: ["Can rely on the later-discovered misconduct to justify the summary dismissal at common law", "Cannot rely on it, because it was unknown when the decision was made", "Can rely on it only if the discovery was made within twenty-eight days"], correct: 0, reveal: "It can rely on it (Boston Deep Sea Fishing v Ansell). For unfair dismissal it cannot make the dismissal fair, but it can reduce compensation (Devis v Atkins)." },
+      { label: "Dismisses a worker after breaching the contractual disciplinary procedure, and the worker claims damages for the harm caused by the dismissal process", options: ["Must pay damages for the lost chance of a fairer procedure in every case", "Faces no common law damages for that harm, which falls within the Johnson exclusion area", "Faces damages only if the worker has two years' service"], correct: 1, reveal: "No common law damages for the manner of dismissal (Johnson v Unisys; Edwards v Chesterfield). The remedy lies in the statutory claim for unfair dismissal." },
+      { label: "Lets a fixed-term contract run out and chooses not to renew it", options: ["Dismisses the worker for the purposes of employment protection law", "Does not dismiss the worker, because the contract ended on its own terms", "Breaches the contract, because every fixed-term contract must be renewed"], correct: 0, reveal: "The expiry and non-renewal of a fixed term is a dismissal under section 95(1)(b) of the Employment Rights Act 1996. The Acas Code does not apply to it." }
+    ]
+  }
+};
+
+const DT_CASE_ANSWER = "Gisda Cyf v Barratt [2010] UKSC 41";
+const DT_CLUES = [
+  { fragment: "Gisda", icon: "🏴", note: "The first word of the employer's name: a small charity." },
+  { fragment: "Cyf", icon: "🏢", note: "A Welsh abbreviation, short for 'cyfyngedig', meaning limited. It tells you that the employer was a company." },
+  { fragment: "v", icon: "⚖️", note: "The usual 'versus'. The employer was the appellant in the final appeal, which is why its name comes first." },
+  { fragment: "Barratt", icon: "✉️", note: "The name of the employee: she was dismissed by a letter, and the question was when her dismissal took effect." },
+  { fragment: "[2010]", icon: "📅", note: "The year of the decision, handed down by the UK Supreme Court." },
+  { fragment: "UKSC 41", icon: "🔢", note: "The neutral citation: the forty-first judgment of the Supreme Court that year. Lord Kerr gave the leading judgment and the employer's appeal was dismissed." }
+];
+
 /* ─────────── CHAPTER REGISTRY ───────────
    Each chapter bundles its content. Add new chapters here as you build them.
    `released: true` shows it on the home screen (per your setup: chapters appear
@@ -3050,8 +3435,37 @@ const CHAPTERS = [
     interactives: MP_INTERACTIVES,
     clues: MP_CLUES,
     caseAnswer: MP_CASE_ANSWER
+  },
+  {
+    id: "discipline-termination",
+    week: 8,
+    releaseDate: "2026-11-16",
+    title: "Disciplinary Procedures and Termination of the Contract",
+    subtitle: "Week commencing 16 November 2026 — fair reasons for dismissal, disciplinary and grievance procedures, the effective date of termination, automatically unfair dismissals and termination at common law.",
+    accent: "#C9A84C",
+    badge: BADGE_IMG,
+    heroLine1: "Discipline and",
+    heroLine2: "Termination",
+    heroSubtitle: "Fair reasons for dismissal, why procedures matter, good disciplinary and grievance procedures, the effective date of termination, automatically unfair dismissals and termination at common law.",
+    tagline: "\"A fair reason is not enough; the way you dismiss must be fair too.\"",
+    guideIntro: "Welcome to Disciplinary Procedures and Termination of the Contract — your preparation for Lecture 08 and Seminar 08. This chapter covers the potentially fair reasons for dismissal in section 98 of the Employment Rights Act 1996 and the test of reasonableness; why employers adopt disciplinary and grievance procedures, including the Acas Code of Practice and the Polkey principle; the features of a good disciplinary procedure and an effective grievance procedure; the effective date of termination and why it matters; the dismissals that are automatically unfair; and termination of the contract under the common law, including notice, wrongful dismissal and summary dismissal. These lessons are designed to support and underpin your weekly reading, which in turn supports both the weekly lecture and seminar. Here's everything you need to know.",
+    objectives: [
+      "Identify the potentially fair reasons for dismissal in section 98 of the Employment Rights Act 1996 and apply the test of reasonableness, including the Burchell test in conduct cases.",
+      "Explain why procedures matter and describe the features of a good disciplinary procedure and an effective grievance procedure under the Acas Code.",
+      "Determine the effective date of termination under section 97 and explain why it affects qualifying service and time limits.",
+      "Distinguish automatically unfair dismissals and apply the common law on notice, wrongful dismissal and summary dismissal."
+    ],
+    mysteryIntro: "Complete each lesson to collect a fragment. Assemble all six to reveal the Supreme Court decision in which a charity worker, dismissed by a letter that she did not read until days later, won her argument about when her dismissal took effect.",
+    mysteryWhyItMatters: "The employee, Lauren Barratt, worked for a small charity. After a disciplinary hearing she was told to expect the outcome by letter. A recorded delivery letter dismissing her for gross misconduct arrived at her home on 30 November 2006, but she was away, and she did not read it until 4 December. She brought her tribunal claim on 2 March 2007, so whether it was in time depended on the date of her dismissal: counted from the day the letter arrived, it was just out of time, and counted from the day she read it, it was just in time. The Supreme Court, giving a judgment written by Lord Kerr, unanimously dismissed the employer's appeal. The effective date of termination is a statutory concept, and a dismissal by letter takes effect when the employee reads it or has had a reasonable opportunity of reading it. The decision protects employees, because that date starts the clock for the time limit and fixes the length of service that counts.",
+    completionBlurb: "You've covered the fair reasons for dismissal, why procedures matter, good disciplinary and grievance procedures, the effective date of termination, automatically unfair dismissals and termination at common law.",
+    lessons: DT_LESSONS,
+    buckets: DT_BUCKETS,
+    sortCards: DT_SORT_CARDS,
+    interactives: DT_INTERACTIVES,
+    clues: DT_CLUES,
+    caseAnswer: DT_CASE_ANSWER
   }
-  // ,{ id: "...", week: 8, releaseDate: "2026-11-16", title: "...", ... }  ← add next week here
+  // ,{ id: "...", week: 9, releaseDate: "2026-11-23", title: "...", ... }  ← add next week here
 ];
 
 function ChapterEngine({ chapter, moduleScore, restored, caseSolved, onProgress, onExit }) {
