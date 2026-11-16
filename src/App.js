@@ -3174,12 +3174,12 @@ const DT_INTERACTIVES = {
       { id: "both", label: "Both", color: "#E07B39" }
     ],
     rights: [
-      { text: "The employer sets out the alleged misconduct and the evidence in writing before the meeting", status: "disc" },
-      { text: "The employee raises the matter in writing with a manager who is not the subject of it", status: "griev" },
       { text: "The employee may be accompanied by a trade union representative or a colleague", status: "both" },
+      { text: "The employer sets out the alleged misconduct and the evidence in writing before the meeting", status: "disc" },
+      { text: "The employer confirms its decision in writing and offers the right of appeal", status: "both" },
+      { text: "The employee raises the matter in writing with a manager who is not the subject of it", status: "griev" },
       { text: "Where practicable, different people investigate the matter and decide the outcome", status: "disc" },
-      { text: "The meeting deals with the employee's own complaint about how they have been treated, not an allegation against them", status: "griev" },
-      { text: "The employer confirms its decision in writing and offers the right of appeal", status: "both" }
+      { text: "The meeting deals with the employee's own complaint about how they have been treated, not an allegation against them", status: "griev" }
     ]
   },
   L4: {
