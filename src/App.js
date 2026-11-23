@@ -3228,6 +3228,397 @@ const DT_CLUES = [
   { fragment: "UKSC 41", icon: "🔢", note: "The neutral citation: the forty-first judgment of the Supreme Court that year. Lord Kerr gave the leading judgment and the employer's appeal was dismissed." }
 ];
 
+/* ─────────── WEEK 9: TERMINATION, REDUNDANCY AND TRADE UNIONS ─────────── */
+const RU_LESSONS = [
+  {
+    id: "L1", title: "Ending the Contract", icon: "🚪", color: "#C9A84C",
+    blurb: "How a contract can end: resignation, constructive dismissal, frustration and settlement agreements.",
+    intro: "A contract of employment can end in several ways: either side can give notice, a fixed term can expire, or the parties can agree to end it, including by a settlement agreement. An employee who resigns because of the employer's repudiatory breach is treated as dismissed (constructive dismissal, section 95(1)(c) of the Employment Rights Act 1996). In Western Excavating (ECC) Ltd v Sharp [1978] ICR 221 the Court of Appeal held that the employer's conduct must be a significant breach going to the root of the contract, the employee must resign in response to it, and she must not delay so long that she affirms the contract. A contract may also be frustrated, so that it ends automatically without any dismissal, where an event such as a very long prison sentence makes performance impossible or radically different; the courts apply the doctrine cautiously (FC Shepherd & Co Ltd v Jerrom [1986] ICR 802). An agreement to waive statutory claims is effective only if the conditions in section 203(3) of the 1996 Act are met: it must be in writing, relate to the particular complaint or proceedings, and the employee must have received advice from a relevant independent adviser who is insured and named in the agreement.",
+    questions: [
+      {
+        id: "ru1",
+        scenario: "Karen's employer cuts her pay by 15% without her agreement. She objects in one short email, carries on working normally for eight months, and then resigns and claims constructive dismissal.",
+        question: "How is a tribunal likely to see her claim?",
+        options: [
+          "Likely to succeed: she may resign and claim constructive dismissal whenever she chooses, however long she waits",
+          "Likely to fail: constructive dismissal needs the employer to have ended the contract by a written notice of dismissal",
+          "Likely to fail: the pay cut was a repudiatory breach, but probably affirmed the contract by working on for months",
+          "Likely to succeed: any breach of contract by the employer is enough, even a minor one, if she gives full notice"
+        ],
+        correct: 2,
+        explanation: "An employee is constructively dismissed under section 95(1)(c) of the Employment Rights Act 1996 only if the employer's conduct is a repudiatory breach, a significant breach going to the root of the contract; she resigns in response to it; and she does not delay so long that she affirms the contract (Western Excavating (ECC) Ltd v Sharp [1978] ICR 221). A unilateral pay cut of 15% is a repudiatory breach. But by working on for eight months with only a brief protest, Karen has probably shown that she accepts the new terms, and the right to resign and treat herself as dismissed is lost. There is no fixed period: it depends on the facts, and an employee who protests clearly, or works on under protest while she looks for another job, is in a stronger position. A minor breach is not enough, and the employer does not need to have given a written dismissal.",
+        takeaway: "Constructive dismissal needs a repudiatory breach and a prompt resignation; working on for too long can affirm the contract."
+      },
+      {
+        id: "ru2",
+        scenario: "Tom, a warehouse operative with six years' service, is sentenced to three years' imprisonment for an offence committed outside work. His employer treats the contract as at an end and replaces him. Tom later claims that he was unfairly dismissed.",
+        question: "What is the key legal question?",
+        options: [
+          "Whether the sentence frustrated the contract: if it did, it ended automatically, so there was no dismissal or claim",
+          "Whether the employer first gave him a written warning, since a contract cannot be frustrated unless a warning was given",
+          "Whether the offence was connected with his work, because imprisonment can never frustrate a contract of employment",
+          "Whether twelve months had passed, since a contract can be frustrated only after a full year of absence"
+        ],
+        correct: 0,
+        explanation: "A contract of employment is frustrated where a supervening event, not caused by either party, makes performance impossible or radically different from what was agreed. If so, it ends automatically: there is no dismissal, and so no claim for unfair dismissal or for notice pay. A long prison sentence can frustrate a contract (FC Shepherd & Co Ltd v Jerrom [1986] ICR 802, where an apprentice was sentenced to Borstal training), but a short sentence usually will not, and the courts apply the doctrine cautiously. They look at the length of the absence, the nature of the job, whether the employer can reasonably cover the work and how long the employee has been employed. A tribunal would therefore ask first whether the contract was frustrated. If it was not, treating the contract as ended is a dismissal that has to be fair. No warning and no fixed period of absence is needed.",
+        takeaway: "A frustrated contract ends automatically with no dismissal, but courts apply frustration cautiously."
+      },
+      {
+        id: "ru3",
+        scenario: "Lena's employer offers her £8,000 to leave. Lena signs a short agreement waiving 'all claims' and takes no advice. She later brings an unfair dismissal claim.",
+        question: "Is her waiver of the claim valid?",
+        options: [
+          "Yes: an employee can always sign away statutory rights, provided that the employer pays her a reasonable sum",
+          "No: a waiver of statutory claims is ineffective unless the section 203 conditions are met, with independent advice",
+          "Yes: the agreement is valid once she has signed it, because a signature shows that she understood its effect",
+          "No: statutory employment rights can never be settled, whatever advice the employee receives and whatever she is paid"
+        ],
+        correct: 1,
+        explanation: "Under section 203 of the Employment Rights Act 1996 an agreement that tries to exclude or limit statutory employment rights is void, unless an exception applies. A settlement agreement is valid for this purpose only if the conditions in section 203(3) are met: it is in writing, it relates to the particular complaint or proceedings, the employee has received advice from a relevant independent adviser (such as a solicitor) on its terms and effect, the adviser has insurance covering the risk of a claim, the agreement identifies the adviser, and it states that the conditions are satisfied. Lena had no advice, so her waiver does not stop her claim, however much she was paid. Statutory claims can be settled, but only in this way, or by an Acas-conciliated settlement.",
+        takeaway: "A settlement agreement waives statutory claims only if the section 203 conditions are met, including independent advice."
+      }
+    ]
+  },
+  {
+    id: "L2", title: "What Is a Redundancy?", icon: "📉", color: "#4A90B8",
+    blurb: "What counts as redundancy, the Burrell test, and how redundancy pay is worked out.",
+    intro: "Redundancy has a statutory definition in section 139 of the Employment Rights Act 1996. A dismissal is for redundancy if it is wholly or mainly attributable to the employer ceasing, or intending to cease, to carry on the business or to carry it on at the place where the employee worked, or to the fact that the business's requirements for employees to carry out work of a particular kind, or to do so at that place, have ceased or diminished or are expected to. In Safeway Stores plc v Burrell [1997] ICR 523 the Employment Appeal Tribunal (Peter Clark J) said that, once a dismissal is established, a tribunal asks two questions: has the employer's requirement for employees to carry out work of a particular kind ceased or diminished, or is it expected to, and was the dismissal wholly or mainly caused by that state of affairs? The focus is on the employer's need for employees, not on whether the work itself has gone, and not on the wording of the contract. The House of Lords later endorsed this approach, while warning against departing from the statutory wording, and rejected both the 'contract test' and the 'function test'. A dismissal is presumed to be for redundancy unless the employer shows otherwise (section 163(2)). An employee with two years' service can claim a statutory redundancy payment: half a week's pay for each year of service under 22, one week's pay for each year aged 22 to 40, and one and a half weeks' pay for each year aged 41 or over, counting up to 20 years, with a cap on a week's pay (£751 for dismissals on or after 6 April 2026), so the maximum payment is £22,530.",
+    questions: [
+      {
+        id: "ru4",
+        scenario: "Sales at a bakery fall sharply. The owner decides that one shop supervisor, not two, is enough, and the remaining supervisor can take on the work. The same shop work carries on. She dismisses supervisor Carla, who says that she cannot be redundant because the work has not disappeared.",
+        question: "Is Carla's dismissal attributable to redundancy?",
+        options: [
+          "No: redundancy needs the work itself to have disappeared, and supervising the shop is still being done by someone else",
+          "No: the owner has not closed the shop, so section 139 can never apply unless the business or the workplace shuts down",
+          "Yes, but only if Carla's contract named the shop as her place of work and set out a supervisor's duties in detail",
+          "Yes: the business's requirement for employees to do supervisory work has diminished, though the work has not ended"
+        ],
+        correct: 3,
+        explanation: "Section 139(1)(b) of the Employment Rights Act 1996 is concerned with a diminution in the business's requirements for employees to carry out work of a particular kind, not with whether work still needs doing. Where the same work continues but fewer employees are needed to do it, the requirement for employees has diminished, and a dismissal caused by that is a redundancy. Safeway Stores plc v Burrell [1997] ICR 523 puts the focus on the employer's requirement for employees of that kind, and the House of Lords later endorsed that approach and rejected a contract test, so the wording of Carla's contract is at most evidence. Closing the whole business or workplace is one way to have a redundancy under section 139, but it is not the only one. Whether Carla's dismissal was fair is a separate question: she should be consulted and fairly selected from an appropriate pool.",
+        takeaway: "Redundancy turns on a diminished requirement for employees, not on whether the work itself has gone."
+      },
+      {
+        id: "ru5",
+        scenario: "Safeway reorganised and replaced the post of petrol station manager with a lower-paid petrol station controller post doing much the same work. Mr Burrell did not apply for the new post, his employment ended and he claimed unfair dismissal. A tribunal held that Safeway had not shown a redundancy because the new job involved the same work.",
+        question: "What did the Employment Appeal Tribunal say in Safeway Stores plc v Burrell about that approach?",
+        options: [
+          "It was the right question: a replacement job doing much the same work means that there can never be a redundancy",
+          "It was the wrong question: ask whether employees of that kind were needed less, and whether that caused dismissal",
+          "It was the wrong question: a redundancy needs a fall in the employer's profits or the closure of the petrol station",
+          "It was the right question, but the tribunal should have looked only at what Mr Burrell's written contract said"
+        ],
+        correct: 1,
+        explanation: "In Safeway Stores plc v Burrell [1997] ICR 523 the Employment Appeal Tribunal (Peter Clark J) held that the tribunal had applied the wrong test and sent the case back. Once a dismissal is established, the statutory definition in section 139(1)(b) raises two questions: has the employer's requirement for employees to carry out work of a particular kind ceased or diminished, or is it expected to, and was the dismissal wholly or mainly attributable to that? The tribunal had compared the old and new jobs and asked whether the work was the same. That is not the statutory question: a reorganisation that replaces a post with a different or lower-paid one can reduce the employer's requirement for employees of the kind who were doing the old job. The House of Lords later endorsed this approach and rejected a contract test.",
+        takeaway: "Burrell: ask whether the employer's need for employees of that kind has diminished and whether that caused the dismissal."
+      },
+      {
+        id: "ru6",
+        scenario: "Dev is 30, has worked for the same employer since he was 24, and earns £600 a week, which is below the statutory cap on a week's pay. He is dismissed for redundancy.",
+        question: "What statutory redundancy payment is he entitled to?",
+        options: [
+          "£3,600: one week's pay for each of six years of service, because all of his service falls in the ages 22 to 40 band",
+          "£5,400: one and a half weeks' pay for each of six years of service, because the higher rate applies to every employee",
+          "£1,800: half a week's pay for each of six years of service, because the lower rate applies until an employee is 41",
+          "£7,200: two weeks' pay for each of six years of service, because the rate doubles once service passes five years"
+        ],
+        correct: 0,
+        explanation: "A statutory redundancy payment counts complete years of service, up to 20, and pays for each year half a week's pay for a year in which the employee was under 22, one week's pay for a year in which he was aged 22 to 40, and one and a half weeks' pay for a year in which he was 41 or over. A week's pay is capped (£751 for dismissals on or after 6 April 2026), and the maximum payment is 30 weeks' pay. Dev was between 24 and 30 throughout, so every year counts at one week: six weeks at £600 is £3,600. He qualifies because he has at least two years' continuous service.",
+        takeaway: "Redundancy pay is half, one or one and a half weeks' pay per year of service, depending on age, up to 20 years and the weekly cap."
+      }
+    ]
+  },
+  {
+    id: "L3", title: "Managing Redundancy Fairly", icon: "🧭", color: "#7B9E87",
+    blurb: "Fair pools and selection, alternative jobs, trial periods and automatically unfair selection.",
+    intro: "A genuine redundancy can still be an unfair dismissal if the employer handles it badly. Acas guidance and the case law set out good practice. The employer should plan, try to avoid redundancies (for example by a recruitment freeze, retraining or voluntary redundancy), identify a pool of employees doing the same or similar work, use objective, measurable selection criteria applied consistently and backed by written evidence, consult employees individually, consider suitable alternative employment, allow an appeal and give notice. In Williams v Compair Maxam Ltd [1982] ICR 156 the Employment Appeal Tribunal listed the principles that a reasonable employer will usually follow in a unionised workplace: warn and consult the union, use criteria that can be objectively checked, check that selection was applied fairly, and consider alternatives to dismissal. Selection for an inadmissible reason is automatically unfair: for example selecting an employee because of pregnancy, a protected disclosure, or trade union membership or activities (section 105 of the Employment Rights Act 1996 and section 153 of the Trade Union and Labour Relations (Consolidation) Act 1992). An employee who accepts suitable alternative employment has a statutory four-week trial period (section 138), and loses the right to a redundancy payment if she unreasonably refuses a suitable offer (section 141). Pregnant employees and those on maternity leave have priority for suitable alternative vacancies. An employee with two years' service has the right to reasonable paid time off to look for work during notice (section 52).",
+    questions: [
+      {
+        id: "ru7",
+        scenario: "A retailer needs to cut three of twelve sales assistants. The manager picks the three who, in her view, 'don't fit in', with no scoring, no written evidence and no explanation to the staff.",
+        question: "How is a tribunal likely to view the selection?",
+        options: [
+          "It is fair, because a manager's personal judgment is the best measure of who is needed in a small team",
+          "It is fair, because the employer has no duty to explain how an individual was selected if the redundancy is genuine",
+          "It is automatically unfair, because selection for redundancy always needs a written agreement with a trade union",
+          "It is open to challenge as unfair, because the criteria were subjective, unscored and could not be checked"
+        ],
+        correct: 3,
+        explanation: "A genuine redundancy can still be an unfair dismissal if the selection was unreasonable (section 98(4) of the Employment Rights Act 1996). Tribunals do not substitute their own view for the employer's, and it is enough that the employer set up a reasonable selection process and applied it reasonably. But the process must be objective and capable of being checked: a defined pool, criteria based on measurable facts such as skills, performance and attendance (leaving out absence connected with disability, pregnancy or maternity), a scoring system applied consistently, and evidence for each score (Williams v Compair Maxam Ltd [1982] ICR 156; Acas guidance). A manager's impression of who 'fits in' is the kind of subjective criterion that is hard to defend. There is no general rule that a union must agree the selection, so it is not automatically unfair.",
+        takeaway: "Selection criteria should be objective, scored consistently and backed by written evidence."
+      },
+      {
+        id: "ru8",
+        scenario: "Zara is told that her post is redundant, and accepts a different job that her employer offers instead. After two weeks she finds that it is unsuitable and resigns.",
+        question: "What is her position on her redundancy payment?",
+        options: [
+          "She loses it: accepting a replacement job waives the right for good, and the statutory trial period is not available to her",
+          "She loses it: a trial period lasts for twelve weeks, so she cannot claim until that period has ended",
+          "She keeps it if she left within the four-week trial period, unless the employer shows she unreasonably left a suitable job",
+          "She keeps it only if the employer agreed in writing, before she started, that she could try the new job"
+        ],
+        correct: 2,
+        explanation: "Under section 138 of the Employment Rights Act 1996, an employee who accepts a new or renewed contract has a statutory trial period of four weeks (longer if agreed in writing for retraining). If she ends the new contract, or gives notice, during that period for a reason connected with the change in terms, she is treated as having been dismissed on the date the old contract ended, for the original reason, which is redundancy, so she keeps her right to a payment. But under section 141, if the new job was suitable and she unreasonably terminated it, she loses the payment, so the question is whether the job was suitable for her and her reasons for leaving were reasonable (factors include pay, status, hours, location and health). Staying in the new job beyond the trial period, without agreeing a longer one, ends the right. The trial period is a statutory right and needs no written agreement.",
+        takeaway: "An employee can try a replacement job for four weeks and still claim redundancy pay if it proves unsuitable."
+      },
+      {
+        id: "ru9",
+        scenario: "Marcus, a warehouse operative with one year's service, led a campaign outside working hours for a union to be recognised. When four jobs go, the employer includes him in the pool and selects him because of his campaigning.",
+        question: "Can Marcus claim unfair dismissal even though he has under two years' service?",
+        options: [
+          "Yes: selection for redundancy because of union activities is automatically unfair, and no qualifying service is needed",
+          "No: unfair dismissal claims in a redundancy always need two years' service, whatever the reason for selecting the employee",
+          "No: his union activities are protected only if the employer already recognises the union, which it does not",
+          "Yes, but only if he proves that the redundancy was a sham and that no jobs needed to be cut at all"
+        ],
+        correct: 0,
+        explanation: "Section 153 of the Trade Union and Labour Relations (Consolidation) Act 1992 makes a dismissal for redundancy automatically unfair where the reason, or principal reason, for selecting the employee was a trade union reason under section 152(1), which includes taking part in the activities of an independent trade union at an appropriate time (such as outside working hours), and the circumstances applied equally to other employees in the pool who were not dismissed. No qualifying service is needed (section 154), and protection does not depend on the union being recognised. The redundancy itself may be genuine: the point is that the reason for selecting Marcus was prohibited. Because he lacks the usual qualifying service, he would have to prove the reason for his selection (Smith v Hayle Town Council [1978] ICR 996).",
+        takeaway: "Selecting an employee for redundancy because of union activities is automatically unfair, with no qualifying service."
+      }
+    ]
+  },
+  {
+    id: "L4", title: "Collective Consultation", icon: "📣", color: "#8B6F9E",
+    blurb: "When an employer must consult collectively, notify the government, and the protective award.",
+    intro: "When an employer proposes to dismiss as redundant 20 or more employees at one establishment within 90 days, section 188 of the Trade Union and Labour Relations (Consolidation) Act 1992 requires collective consultation. It must begin in good time and at least 30 days before the first dismissal takes effect where 20 to 99 dismissals are proposed, or 45 days where 100 or more are proposed. The employer must consult the representatives of a recognised trade union for the employees concerned; if there is none, it must consult elected employee representatives (section 188A). It must give them written information about the reasons for the proposals, the numbers and descriptions of the employees affected, the proposed method of selection, the proposed method of carrying out the dismissals and how any redundancy payments beyond the statutory minimum will be calculated, and consult about ways of avoiding the dismissals, reducing their number and mitigating their consequences, with a view to reaching agreement. The employer must also notify the Secretary of State on form HR1 before giving notice of dismissal, and at least 30 or 45 days before the first dismissal. If it fails to consult, a tribunal makes a protective award under section 189: up to 180 days' pay for each affected employee for dismissals taking effect on or after 6 April 2026 (the maximum was 90 days before that). Individual consultation is still needed for each dismissal to be fair (Polkey v A E Dayton Services Ltd [1987] UKHL 8). The Employment Rights Act 2025 is expected to add an organisation-wide threshold from April 2027.",
+    questions: [
+      {
+        id: "ru10",
+        scenario: "A factory with a recognised trade union proposes to make 25 employees at one site redundant over the next 60 days.",
+        question: "What must the employer do?",
+        options: [
+          "Consult each of the 25 employees individually and no one else, because union representatives are consulted only above 100 jobs",
+          "Consult for at least 45 days, because 45 days applies to any proposal to dismiss more than 20 employees at one site",
+          "Tell the union after the dismissals have taken effect, because consultation covers only the amount of the compensation",
+          "Consult the union's representatives from at least 30 days before the first dismissal, and notify the government on form HR1"
+        ],
+        correct: 3,
+        explanation: "Collective consultation under section 188 of the Trade Union and Labour Relations (Consolidation) Act 1992 applies where an employer proposes to dismiss as redundant 20 or more employees at one establishment within 90 days. For 20 to 99 dismissals, consultation must begin at least 30 days before the first dismissal takes effect; for 100 or more, at least 45 days. Where a union is recognised for the employees concerned, the employer must consult its representatives. The consultation must cover ways of avoiding the dismissals, reducing the numbers and mitigating the consequences, and the employer must give the written information required by section 188(4). It must also notify the Secretary of State on form HR1 before giving notice of dismissal, and at least 30 days before the first dismissal for a redundancy of this size. Consulting after the decision, or only about pay-outs, would not comply.",
+        takeaway: "20 or more proposed redundancies at one site means collective consultation for at least 30 days (45 days for 100 or more), plus an HR1."
+      },
+      {
+        id: "ru11",
+        scenario: "An employer proposes 40 redundancies at one site and dismisses all 40 with effect from November 2026 without consulting the recognised union at all. A tribunal upholds the union's complaint.",
+        question: "What is the tribunal's remedy?",
+        options: [
+          "A protective award fixed by law at exactly 90 days' pay for each employee, however serious or minor the failure to consult",
+          "An order requiring the employer to reinstate all 40 employees and to start the consultation again from the beginning",
+          "A protective award of up to 180 days' pay for each of the 40 affected employees, set by the seriousness of the failure",
+          "No remedy for the employees, because the duty to consult is owed only to the union, which alone can recover compensation"
+        ],
+        correct: 2,
+        explanation: "Under section 189 of the Trade Union and Labour Relations (Consolidation) Act 1992, if a tribunal upholds a complaint that an employer failed to comply with the duty to consult, it must make a protective award. The award is a payment to each affected employee, for a period that the tribunal decides, up to the maximum, which is 180 days' pay for dismissals taking effect on or after 6 April 2026 (it was 90 days before that). The award is punitive: the tribunal looks at how serious the employer's default was rather than at what the employees lost (Susie Radin Ltd v GMB [2004] EWCA Civ 180). The award is made in favour of the employees even though the union may bring the complaint, and a protective award does not give reinstatement.",
+        takeaway: "Failing to consult collectively leads to a protective award of up to 180 days' pay per employee."
+      },
+      {
+        id: "ru12",
+        scenario: "A company with no recognised union plans 30 redundancies at one site. It asks its managers to choose three employees to act as the staff representatives for the consultation.",
+        question: "Is that enough to satisfy the duty to consult?",
+        options: [
+          "Yes: with no recognised union, the employer may appoint any representatives it prefers, provided that they work at the site",
+          "No: with no recognised union, it must consult employee representatives elected by the affected employees in a fair vote",
+          "Yes: the employer may skip representatives entirely and write to all staff, because collective consultation is only for unions",
+          "No: the employer must instead hold a ballot of all staff and follow the majority view on every proposed redundancy"
+        ],
+        correct: 1,
+        explanation: "Where an employer proposes collective redundancies and there is a recognised trade union for the affected employees, it must consult the union's representatives. If there is none, the employer must consult appropriate representatives of the affected employees: existing representatives who have authority to be consulted, or representatives elected in an election that satisfies section 188A of the Trade Union and Labour Relations (Consolidation) Act 1992, which must be fair, with a secret ballot and candidates drawn from the affected employees. Appointing the representatives itself does not comply, and writing to employees does not replace the duty. Consultation aims at agreement, but staff do not have a veto, so no ballot of the workforce is needed.",
+        takeaway: "If there is no recognised union, the employer must consult elected employee representatives."
+      }
+    ]
+  },
+  {
+    id: "L5", title: "Trade Unions and Their Rights", icon: "🤝", color: "#E07B39",
+    blurb: "Union recognition, protection against detriment and dismissal, and the rights a union has.",
+    intro: "A trade union is an organisation of workers whose principal purposes include the regulation of relations between workers and employers (section 1 of the Trade Union and Labour Relations (Consolidation) Act 1992). An independent union holds a certificate from the Certification Officer and is free from employer control. An employer may recognise a union voluntarily for collective bargaining, or the union can apply under Schedule A1 for statutory recognition through the Central Arbitration Committee (CAC). Since 6 April 2026 a union applying to the CAC no longer has to show that most workers in the proposed bargaining unit are likely to support recognition, and where a recognition ballot is held the 40% support requirement has gone, so a simple majority of the votes cast is enough. Statutory recognition entitles the union to bargain over pay, hours and holidays. Workers are protected against being penalised for union membership or activities: detriment short of dismissal (section 146), dismissal (section 152, automatically unfair with no qualifying service) and selection for redundancy (section 153). An official of a recognised union has the right to reasonable paid time off for union duties and training (section 168), and the rules on unions' access to workplaces were updated from 30 October 2026.",
+    questions: [
+      {
+        id: "ru13",
+        scenario: "A union with 600 members among 2,000 workers applies to the CAC for statutory recognition. The employer argues that the application must fail because the union cannot show that most of the workers in the proposed bargaining unit are likely to support recognition.",
+        question: "How does the law, as it has stood since 6 April 2026, affect the employer's argument?",
+        options: [
+          "It fails: unions no longer need to show likely majority support, and a ballot needs only a simple majority of votes cast",
+          "It succeeds: a union must still show that a majority of the bargaining unit is likely to support recognition",
+          "It succeeds: an employer has a veto over statutory recognition, which the Employment Rights Act 2025 confirmed",
+          "It fails, but only because the union has more than half of the workers in the bargaining unit as paid-up members of the union"
+        ],
+        correct: 0,
+        explanation: "Statutory recognition under Schedule A1 to the Trade Union and Labour Relations (Consolidation) Act 1992 lets a union apply to the CAC when the employer will not recognise it voluntarily. The Employment Rights Act 2025 changed the process for applications from 6 April 2026: the union no longer has to show that most of the workers in the proposed bargaining unit are likely to support recognition, and the old requirement that at least 40% of the bargaining unit vote in favour at a ballot has been removed, so a simple majority of the votes cast is enough. The employer has no veto: the CAC decides, and the union must still meet the other statutory tests, such as having at least 10% of the bargaining unit as members (the Act allows that figure to be lowered by regulations). From 30 October 2026, workers recruited after an application is made can be left out of the process.",
+        takeaway: "Since 6 April 2026, a recognition application needs no proof of likely majority support, and a ballot needs a simple majority."
+      },
+      {
+        id: "ru14",
+        scenario: "Rosa, who has worked for her employer for five months, attends union meetings after work. Her manager removes her from the overtime rota, saying 'You can have overtime when you stop going to those meetings.' She is not dismissed.",
+        question: "Does the law protect her?",
+        options: [
+          "No: protection against union-related detriment applies only on dismissal, so she cannot complain while she remains employed",
+          "No: she needs two years' service before she can bring any complaint about how an employer treats union members",
+          "Yes, but only if the employer already recognises the union for collective bargaining, which gives its members protection",
+          "Yes: detriment for union membership or activities is unlawful under section 146, whatever her length of service"
+        ],
+        correct: 3,
+        explanation: "Section 146 of the Trade Union and Labour Relations (Consolidation) Act 1992 protects a worker against detriment short of dismissal, for the sole or main purpose of preventing or deterring her from being a union member, penalising her for it, or preventing or penalising her for taking part in the activities of an independent trade union at an appropriate time (outside working hours, or within working hours with the employer's consent). Removing Rosa from the overtime rota because she attends union meetings is such a detriment. There is no qualifying period, and the protection does not depend on the union being recognised. The complaint is to an employment tribunal within the time limit.",
+        takeaway: "Penalising a worker for union membership or activities is unlawful, even without dismissal and with no qualifying service."
+      },
+      {
+        id: "ru15",
+        scenario: "After a statutory recognition process, the CAC declares that a union is recognised for a bargaining unit of 300 warehouse staff. The employer asks what recognition actually means.",
+        question: "What does statutory recognition give the union?",
+        options: [
+          "The right to take over day-to-day management, and to decide whom the employer hires, disciplines and dismisses",
+          "The right to bargain collectively for the unit on pay, hours and holidays, by a method agreed or specified by the CAC",
+          "The right to a seat on the board and to a fixed share of the profits, as in some works councils abroad",
+          "The right to have every dispute settled by a tribunal, since recognition removes the employer's power to decide anything"
+        ],
+        correct: 1,
+        explanation: "Under Schedule A1 to the Trade Union and Labour Relations (Consolidation) Act 1992, once a union is recognised for a bargaining unit, it is entitled to conduct collective bargaining on behalf of the workers in that unit. For statutory recognition, collective bargaining means negotiation about pay, hours and holidays. The parties may agree a method for bargaining; if they cannot, the CAC specifies one. Recognition also brings other rights, such as consultation about collective redundancies, disclosure of information for collective bargaining and time off for officials. It does not give the union a management role, a board seat or a share of the profits, and it does not take the employer's decisions to a tribunal.",
+        takeaway: "Statutory recognition gives a union the right to bargain collectively for the unit on pay, hours and holidays."
+      }
+    ]
+  },
+  {
+    id: "L6", title: "Unions in the Workplace", icon: "🏭", color: "#4FA8A0",
+    blurb: "Collective agreements, time off for union duties and the rules on industrial action.",
+    intro: "Trade unions perform several roles in the workplace. Through collective bargaining, a recognised union negotiates pay, hours and other terms with the employer. A collective agreement is presumed not to be legally enforceable between the union and the employer unless it is in writing and states that it is intended to be (section 179 of the Trade Union and Labour Relations (Consolidation) Act 1992), but its terms can become enforceable by being incorporated into individual contracts, if they are apt for incorporation (Alexander v Standard Telephones and Cables Ltd (No 2) [1991] IRLR 286; Kaur v MG Rover Group Ltd [2004] EWCA Civ 1507). Unions represent members, and a worker has the right to be accompanied by a trade union representative at disciplinary and grievance hearings. A recognised union must be consulted about collective redundancies and appoints safety representatives. Officials of a recognised union are entitled to reasonable paid time off for their duties and for relevant training (section 168), accredited learning representatives for their functions (section 168A), and members to reasonable unpaid time off for union activities (section 170). From 30 October 2026 union equality representatives are also entitled to reasonable time off. On industrial action, since 18 February 2026 a union must give 10 days' notice (it was 14), a ballot mandate lasts 12 months (it was six), and dismissal for taking part in protected industrial action is automatically unfair without the former 12-week limit.",
+    questions: [
+      {
+        id: "ru16",
+        scenario: "A recognised union and an employer sign a written collective agreement giving a 5% pay rise from 1 April. The agreement does not say whether it is intended to be legally enforceable. The employer later refuses to pay, and the union says that it can sue the employer for breach of the agreement.",
+        question: "What is the legal effect of the collective agreement between the union and the employer?",
+        options: [
+          "It is legally enforceable by the union, because every written collective agreement binds in the same way as a commercial contract",
+          "It is void, because trade unions have no capacity to make agreements with employers about pay and working conditions",
+          "It is presumed not to be legally enforceable, but apt terms may still be incorporated into employees' individual contracts",
+          "It binds only the union's members, who must enforce it directly because the union itself is not a party to the agreement"
+        ],
+        correct: 2,
+        explanation: "Section 179 of the Trade Union and Labour Relations (Consolidation) Act 1992 presumes that a collective agreement is not intended to be a legally enforceable contract between the parties, unless it is in writing and states that it is intended to be. This agreement is silent, so the union cannot sue on it. But the pay rise may still be recoverable by employees: terms of a collective agreement can be incorporated into individual contracts of employment, expressly or by implication, if they are apt for incorporation (Alexander v Standard Telephones and Cables Ltd (No 2) [1991] IRLR 286). Specific terms such as a pay rise are more likely to be apt than aspirational promises such as a guarantee of no compulsory redundancies (Kaur v MG Rover Group Ltd [2004] EWCA Civ 1507).",
+        takeaway: "Collective agreements are presumed unenforceable between union and employer, but apt terms can bind through individual contracts."
+      },
+      {
+        id: "ru17",
+        scenario: "Aisha is an elected official of a trade union that her employer recognises. She asks her manager for time off during working hours to attend a one-day union training course on her representative duties. The manager says, 'Fine, but it's unpaid, because it's union business.'",
+        question: "What is Aisha's entitlement?",
+        options: [
+          "No entitlement at all: time off for union training is entirely at the manager's discretion and may always be unpaid",
+          "Paid time off for any union purpose she likes, because the officials of a recognised union have an unlimited right to it",
+          "Unpaid time off only, because paid time off covers union officials' day-to-day duties but never training for them",
+          "Reasonable paid time off in working hours for training relevant to her duties, if approved by her union or the TUC"
+        ],
+        correct: 3,
+        explanation: "Under section 168 of the Trade Union and Labour Relations (Consolidation) Act 1992, an official of a recognised independent trade union is entitled to reasonable paid time off during working hours to carry out duties concerned with collective bargaining or other agreed functions, and to undergo training relevant to those duties, provided that the training is approved by the TUC or by her union. The Acas Code of Practice on time off for trade union duties and activities explains what is reasonable. An official can complain to a tribunal if time off is refused or unpaid. Members who are not officials have a separate right to reasonable unpaid time off for union activities (section 170). From 30 October 2026 union equality representatives also have a right to reasonable time off.",
+        takeaway: "Officials of a recognised union get reasonable paid time off for their duties and relevant training."
+      },
+      {
+        id: "ru18",
+        scenario: "A union wins a valid ballot and plans a strike by its members. It wants to know how much notice of the action it must give the employer under the rules in force since 18 February 2026.",
+        question: "How much notice must the union give?",
+        options: [
+          "At least 10 days' notice of the action, which the Employment Rights Act 2025 shortened from 14 days to 10 days",
+          "At least 28 days' notice, because notice of a strike must mirror the notice required for a collective redundancy",
+          "At least 14 days' notice, because the Employment Rights Act 2025 left the notice requirement unchanged by any reform",
+          "No notice at all, because once a ballot has been won a union may call a strike without informing the employer"
+        ],
+        correct: 0,
+        explanation: "Industrial action is protected by the immunities in section 219 of the Trade Union and Labour Relations (Consolidation) Act 1992 only if the union follows the statutory procedure, including a ballot (section 226 onwards) and notice of the action to the employer (section 234A). The Employment Rights Act 2025 reduced the notice from 14 days to 10 days from 18 February 2026. The same changes lengthened a ballot mandate from six to 12 months, removed the requirement for a picket supervisor, and made dismissal for taking part in protected industrial action automatically unfair without the former 12-week limit. A union that does not give the notice, or breaks the procedure in some other way, risks losing its immunity.",
+        takeaway: "Since 18 February 2026, a union must give at least 10 days' notice of industrial action."
+      }
+    ]
+  }
+];
+
+const RU_BUCKETS = [
+  { id: "fair", label: "Fair criterion", icon: "✅", color: "#C9A84C", hint: "Objective, measurable and applied consistently" },
+  { id: "risky", label: "Unfair or risky", icon: "⚠️", color: "#4A90B8", hint: "Subjective, arbitrary or potentially discriminatory" },
+  { id: "auto", label: "Automatically unfair", icon: "🚫", color: "#E07B39", hint: "Selected for a prohibited reason" }
+];
+
+const RU_SORT_CARDS = [
+  { id: "c1", name: "The part-timers", emoji: "⏱️", desc: "The employer decides to select the part-time staff first because they are cheaper to lose.", answer: "risky" },
+  { id: "c2", name: "The appraisal scores", emoji: "📊", desc: "Each employee in the pool is scored on their last two appraisals, on the same scale for everyone, with the scores recorded in writing.", answer: "fair" },
+  { id: "c3", name: "The whistleblower", emoji: "📢", desc: "An employee is selected a few weeks after he reported unsafe working practices to a regulator.", answer: "auto" },
+  { id: "c4", name: "The skills matrix", emoji: "🧮", desc: "The employer and the recognised union agree a skills matrix for the pool, and managers score each person against it with evidence.", answer: "fair" },
+  { id: "c5", name: "The volunteers", emoji: "🙋", desc: "The employer invites volunteers for redundancy and accepts those whose departure it can manage without losing key skills.", answer: "fair" },
+  { id: "c6", name: "The gut feeling", emoji: "🤔", desc: "A manager picks the people she thinks have 'the wrong attitude', without scores or examples.", answer: "risky" },
+  { id: "c7", name: "The union campaigner", emoji: "📣", desc: "An employee is selected because she led a campaign outside working hours for her union to be recognised.", answer: "auto" },
+  { id: "c8", name: "The absence count", emoji: "🗓️", desc: "Attendance scores count every day of absence, including time off caused by an employee's disability.", answer: "risky" }
+];
+
+const RU_INTERACTIVES = {
+  L1: {
+    type: "truefalse", title: "Resigned or Dismissed?", tag: "True or false", icon: "❓", color: "#C9A84C",
+    blurb: "Test your grasp of resignation, constructive dismissal, frustration and settlement agreements.",
+    items: [
+      { text: "Constructive dismissal needs a breach by the employer that goes to the root of the contract.", answer: true, note: "True. The breach must be repudiatory, and the employee must resign in response to it." },
+      { text: "A settlement agreement can validly waive an unfair dismissal claim even if the employee took no advice.", answer: false, note: "False. Section 203(3) requires advice from a relevant independent adviser, among other conditions." },
+      { text: "An employee who resigns in response to a breach may lose the right to claim if she waits too long.", answer: true, note: "True. Working on without protest can amount to affirming the contract (Western Excavating v Sharp)." },
+      { text: "A resignation can never amount to a dismissal.", answer: false, note: "False. If the employer commits a repudiatory breach and the employee resigns in response, she is treated as dismissed (section 95(1)(c))." },
+      { text: "If a contract is frustrated, the employer is treated as having dismissed the employee.", answer: false, note: "False. A frustrated contract ends automatically, so there is no dismissal." }
+    ]
+  },
+  L2: {
+    type: "slider", title: "Redundancy by Numbers", tag: "Estimate", icon: "🔢", color: "#4A90B8",
+    blurb: "Estimate three figures from the statutory redundancy payment scheme.",
+    rounds: [
+      { scenario: "How many years of continuous service does an employee need to qualify for a statutory redundancy payment?", lo: 2, hi: 2, min: 0, max: 10, suffix: " years", verdict: "Two years' continuous service. This is not the same as the qualifying period for ordinary unfair dismissal, which falls to six months on 1 January 2027." },
+      { scenario: "What is the maximum number of years of service that counts when calculating a statutory redundancy payment?", lo: 20, hi: 20, min: 0, max: 40, suffix: " years", verdict: "20 years. Service before that, counting back from the dismissal, adds nothing to the payment." },
+      { scenario: "What is the maximum number of weeks' pay that a statutory redundancy payment can reach?", lo: 30, hi: 30, min: 0, max: 60, suffix: " weeks", verdict: "30 weeks: 20 years at one and a half weeks for each year. With a weekly pay cap of £751 for dismissals on or after 6 April 2026, the maximum payment is £22,530." }
+    ]
+  },
+  L3: { type: "sort", title: "Sort the Criteria", tag: "Sort scenarios", icon: "🏷️", color: "#7B9E87", itemNoun: "scenario", blurb: "Classify eight selection approaches as a fair criterion, unfair or risky, or automatically unfair." },
+  L4: {
+    type: "match", title: "Thirty, Forty-Five or Both?", tag: "Connect pairs", icon: "🔗", color: "#8B6F9E",
+    blurb: "Tap a statement, then tap the consultation period or periods it describes.",
+    statuses: [
+      { id: "d30", label: "30 days", color: "#C9A84C" },
+      { id: "d45", label: "45 days", color: "#4A90B8" },
+      { id: "both", label: "Both", color: "#E07B39" }
+    ],
+    rights: [
+      { text: "For 100 or more proposed dismissals at one establishment within 90 days: the minimum consultation period", status: "d45" },
+      { text: "A redundancy of 60 jobs at one site: the minimum consultation period before the first dismissal", status: "d30" },
+      { text: "Notifying the Secretary of State on form HR1 before notices of dismissal are issued", status: "both" },
+      { text: "For 20 to 99 proposed dismissals at one establishment within 90 days: the minimum consultation period", status: "d30" },
+      { text: "A redundancy of 150 jobs at one site: the minimum consultation period before the first dismissal", status: "d45" },
+      { text: "Consulting the representatives of a recognised trade union where there is one", status: "both" }
+    ]
+  },
+  L5: {
+    type: "flip", title: "Is That Lawful?", tag: "Flip to reveal", icon: "📜", color: "#E07B39",
+    lead: "The employer…", ask: "Is that lawful?", revealLabel: "THE LAW",
+    blurb: "Decide whether each action is lawful, then flip to check.",
+    cards: [
+      { label: "Dismisses a worker with four months' service because she joined a trade union", options: ["Lawful, because she has under two years' service and cannot claim unfair dismissal", "Unlawful: the dismissal is automatically unfair and needs no qualifying service", "Lawful, provided that the employer gives her the correct notice"], correct: 1, reveal: "Automatically unfair (section 152 of the Trade Union and Labour Relations (Consolidation) Act 1992). No qualifying service is needed, and giving notice makes no difference." },
+      { label: "Selects a union representative for redundancy because of his union activities", options: ["Lawful, because an employer may choose anyone in the pool for any reason it likes", "Lawful, because union representatives are protected only when they take part in a strike", "Unlawful: this is automatically unfair selection for redundancy, with no qualifying service"], correct: 2, reveal: "Automatically unfair selection (section 153 of the 1992 Act). The redundancy may be genuine, but the reason for selecting him was a prohibited one." },
+      { label: "Removes a worker from the overtime rota because she attends union meetings after work", options: ["Unlawful: it is a detriment under section 146, even though she has not been dismissed", "Lawful, because overtime is voluntary and can be withdrawn for any reason", "Lawful, because she has under two years' service"], correct: 0, reveal: "Unlawful detriment (section 146). There is no qualifying period, and the protection does not depend on the union being recognised." },
+      { label: "Declines a union's request to recognise it voluntarily for collective bargaining", options: ["Unlawful, because every employer must recognise a union if one worker asks", "Lawful: there is no duty to recognise voluntarily, but the union may apply to the CAC", "Lawful, and the union then has no other way of seeking recognition"], correct: 1, reveal: "Lawful. Voluntary recognition is a choice, but a union can apply for statutory recognition under Schedule A1 to the CAC, and since 6 April 2026 it no longer has to show likely majority support." }
+    ]
+  },
+  L6: {
+    type: "pickN", title: "Pick the Union Roles", tag: "Pick the 3", icon: "🎯", color: "#4FA8A0",
+    blurb: "Select the three things that a recognised trade union can do.",
+    resultNote: "A recognised union negotiates pay, hours and holidays through collective bargaining, can accompany members at disciplinary and grievance hearings, and must be consulted about collective redundancies. It does not decide which employees the employer selects, set the employer's budget or discipline members on the employer's behalf.",
+    options: [
+      { text: "Deciding which individual employees the employer must select for redundancy", correct: false },
+      { text: "Negotiating pay, hours and holidays with the employer through collective bargaining", correct: true },
+      { text: "Setting the employer's budget and approving each manager's appointment", correct: false },
+      { text: "Being consulted about proposed collective redundancies where the union is recognised", correct: true },
+      { text: "Accompanying a member to a disciplinary or grievance hearing", correct: true },
+      { text: "Acting as the employer's agent to discipline members who breach their contracts", correct: false }
+    ],
+    need: 3
+  }
+};
+
+const RU_CASE_ANSWER = "Murray v Foyle Meats Ltd [1999] UKHL 30";
+const RU_CLUES = [
+  { fragment: "Murray", icon: "🧑", note: "The surname of the first of two meat plant operatives who brought the claim. They were the appellants in the final appeal, which is why their names come first." },
+  { fragment: "v", icon: "⚖️", note: "The usual 'versus'." },
+  { fragment: "Foyle", icon: "🌊", note: "The first word of the employer's name: a meat processor in Londonderry, a city on the River Foyle." },
+  { fragment: "Meats Ltd", icon: "🏭", note: "The rest of the employer's name: a company running a slaughtering business, whose decision to cut a production line led to the dismissals." },
+  { fragment: "[1999]", icon: "📅", note: "The year of the decision, handed down by the House of Lords, which was then the UK's final court of appeal." },
+  { fragment: "UKHL 30", icon: "🔢", note: "The neutral citation: the thirtieth judgment of the House of Lords that year. The employees' appeal was dismissed." }
+];
+
 /* ─────────── CHAPTER REGISTRY ───────────
    Each chapter bundles its content. Add new chapters here as you build them.
    `released: true` shows it on the home screen (per your setup: chapters appear
@@ -3464,8 +3855,37 @@ const CHAPTERS = [
     interactives: DT_INTERACTIVES,
     clues: DT_CLUES,
     caseAnswer: DT_CASE_ANSWER
+  },
+  {
+    id: "redundancy-unions",
+    week: 9,
+    releaseDate: "2026-11-23",
+    title: "Termination, Redundancy and Trade Unions",
+    subtitle: "Week commencing 23 November 2026 — ending the contract, redundancy and the Burrell test, fair selection and collective consultation, and the role of trade unions in the workplace.",
+    accent: "#C9A84C",
+    badge: BADGE_IMG,
+    heroLine1: "Redundancy and",
+    heroLine2: "Trade Unions",
+    heroSubtitle: "Resignation and frustration, the meaning of redundancy, fair redundancy procedures, collective consultation, and the rights and role of trade unions.",
+    tagline: "\"A redundancy can be genuine and still be unfair: consult, select fairly and respect the union.\"",
+    guideIntro: "Welcome to Termination, Redundancy and Trade Unions — your preparation for Lecture 09 and Seminar 09. This chapter covers how a contract can end by resignation, constructive dismissal, frustration or agreement, and when a settlement agreement validly waives statutory claims; the statutory definition of redundancy in section 139 and the test in Safeway Stores plc v Burrell, and how a statutory redundancy payment is calculated; the redundancy procedure, including fair selection, suitable alternative employment and the trial period; collective consultation, HR1 notification and the protective award; and the role of trade unions in the workplace, including recognition, protection against detriment and dismissal, collective bargaining and collective agreements, time off and industrial action. These lessons are designed to support and underpin your weekly reading, which in turn supports both the weekly lecture and seminar. Here's everything you need to know.",
+    objectives: [
+      "Explain how a contract can end by resignation, constructive dismissal, frustration or agreement, and when a settlement agreement validly waives statutory claims.",
+      "Apply the statutory definition of redundancy in section 139 and the test in Safeway Stores plc v Burrell, and calculate a statutory redundancy payment.",
+      "Describe a fair redundancy procedure, including selection, suitable alternative employment, and collective consultation with its HR1 and protective award rules.",
+      "Explain the role of trade unions: recognition, protection against detriment and dismissal, collective agreements, time off and industrial action."
+    ],
+    mysteryIntro: "Complete each lesson to collect a fragment. Assemble all six to reveal the House of Lords decision in which two meat plant operatives, dismissed when their employer cut a production line, argued that they were not redundant because their contracts allowed the employer to move them elsewhere.",
+    mysteryWhyItMatters: "The employer was a meat processor in Londonderry. Falling business led it to cut the number of killing lines in its slaughter hall from two to one, and about 35 jobs were proposed for redundancy. After consulting the union and settling selection criteria, it dismissed the two claimants, meat plant operatives who normally worked in the slaughter hall but whose contracts allowed them to be moved to other work. They argued that they were not redundant: 'work of a particular kind' meant the work their contracts required of them, and the employer still needed employees who could do that work somewhere in the plant. The House of Lords rejected this 'contract test' (and the opposing 'function test'). It held that the statute, which in Northern Ireland used the same wording as section 139(1)(b), asks two questions of fact: whether the business's requirements for employees to carry out work of a particular kind had diminished, and whether the dismissals were attributable to that. It endorsed the analysis in Safeway Stores plc v Burrell, while warning against departing from the statutory wording, and the employees' appeal was dismissed. It remains the leading authority on the meaning of redundancy.",
+    completionBlurb: "You've covered how contracts end, the meaning of redundancy and the Burrell test, fair selection and alternatives, collective consultation, and the rights and role of trade unions.",
+    lessons: RU_LESSONS,
+    buckets: RU_BUCKETS,
+    sortCards: RU_SORT_CARDS,
+    interactives: RU_INTERACTIVES,
+    clues: RU_CLUES,
+    caseAnswer: RU_CASE_ANSWER
   }
-  // ,{ id: "...", week: 9, releaseDate: "2026-11-23", title: "...", ... }  ← add next week here
+  // ,{ id: "...", week: 10, releaseDate: "2026-11-30", title: "...", ... }  ← add next week here
 ];
 
 function ChapterEngine({ chapter, moduleScore, restored, caseSolved, onProgress, onExit }) {
@@ -4210,7 +4630,13 @@ function ChapterEngine({ chapter, moduleScore, restored, caseSolved, onProgress,
                       <span style={{ fontSize: 11, color: "#4A4440", fontFamily: "'Crimson Text',serif" }}>{qDone}/{l.questions.length}</span>
                     </div>
                     <h3 style={{ fontSize: 16, fontWeight: 600, marginBottom: 3, color: done ? "#FFD700" : "#E8E0D0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{l.title}</h3>
-                    <p style={{ fontSize: 13, color: "#5A5450", fontFamily: "'Crimson Text',serif", lineHeight: 1.35 }}>{l.intro}</p>
+                    <p style={{ fontSize: 13, color: "#5A5450", fontFamily: "'Crimson Text',serif", lineHeight: 1.35 }}>{l.blurb || l.intro}</p>
+                    {l.blurb && (
+                      <details onClick={e => e.stopPropagation()} style={{ marginTop: 6 }}>
+                        <summary style={{ fontSize: 12, color: l.color, fontFamily: "'Crimson Text',serif", cursor: "pointer", letterSpacing: 0.5 }}>Lesson notes</summary>
+                        <p style={{ fontSize: 13, color: "#8A8070", fontFamily: "'Crimson Text',serif", lineHeight: 1.45, marginTop: 6 }}>{l.intro}</p>
+                      </details>
+                    )}
                   </div>
                 </div>
                 {done && <div style={{ marginTop: 10, display: "flex", alignItems: "center", gap: 6, borderTop: `1px solid ${l.color}22`, paddingTop: 10 }}><span style={{ color: "#C9A84C", fontSize: 12 }}>✓</span><span style={{ fontSize: 12, color: "#C9A84C88", fontFamily: "'Crimson Text',serif", letterSpacing: 0.5 }}>MASTERED · TAP TO REVIEW</span></div>}
